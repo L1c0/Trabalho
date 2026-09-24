@@ -1,3 +1,6 @@
+// Autor: Lincoln Luiz (L1c0)
+// Trabalho: Monitoramento de temperatura de freezer
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
