@@ -1,0 +1,6 @@
+node_modules/
+out/
+.DS_Store
+# Locução de teste: não versionar (repositório público, texto não conforme).
+public/audio/*.mp3
+public/audio/sfx/
