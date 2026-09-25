@@ -18,7 +18,7 @@ export const Ruby: React.FC<{texto: string; x: number; topo: number; inicio: num
       top: topo,
       writingMode: 'vertical-rl',
       fontFamily: fontes.apoio,
-      fontWeight: fontes.peso.apoio,
+      fontWeight: fontes.peso.legenda,
       fontSize: tamanho,
       letterSpacing: proporcoes.espacoRuby,
       lineHeight: 1,

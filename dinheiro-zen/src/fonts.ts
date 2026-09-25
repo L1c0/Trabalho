@@ -1,11 +1,11 @@
 import {getInfo as infoShippori, loadFont as carregarShippori} from '@remotion/google-fonts/ShipporiMincho';
 import {getInfo as infoZenKaku, loadFont as carregarZenKaku} from '@remotion/google-fonts/ZenKakuGothicNew';
 import {getInfo as infoNotoSerif, loadFont as carregarNotoSerif} from '@remotion/google-fonts/NotoSerifJP';
-import {textoCompleto} from './data/textos';
+import {textoCompleto} from './data/roteiro';
 import {fontes} from './theme';
 
 // Fontes CJK vêm em ~120 fatias de unicode. Carrega só as fatias que contêm
-// algum caractere de data/textos.ts — trocar o texto atualiza isto sozinho.
+// algum caractere do roteiro — trocar o texto atualiza isto sozinho.
 const faixas = (unicodeRange: string) =>
   unicodeRange.split(',').map((parte) => {
     const [a, b] = parte.trim().replace(/^U\+/i, '').split('-');

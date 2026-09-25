@@ -1,6 +1,6 @@
 import React, {useId} from 'react';
 import {interpolate, useCurrentFrame} from 'remotion';
-import {curvas, motion} from '../theme';
+import {motion} from '../theme';
 import {FiltroTinta, idSvg} from './Tinta';
 
 const clamp = {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'} as const;
@@ -24,7 +24,7 @@ export const Nijimi: React.FC<{
   const t = interpolate(frame, [inicio, inicio + n.crescer], [0, 1], clamp);
   const r = raio * Math.sqrt(t);
   const seco =
-    secarEm === undefined ? 1 : interpolate(frame, [secarEm, secarEm + motion.quadrados.secarMancha], [1, 0], clamp);
+    secarEm === undefined ? 1 : interpolate(frame, [secarEm, secarEm + n.secar], [1, 0], clamp);
   const opacidadeDoAnel = (o: number) =>
     n.opacidade *
     (n.frente +
@@ -56,50 +56,6 @@ export const Nijimi: React.FC<{
         </radialGradient>
       </defs>
       <circle cx={cx} cy={cy} r={r} fill={`url(#g${id})`} filter={`url(#f${id})`} />
-    </svg>
-  );
-};
-
-// A mancha secando e condensando em quadrados pequenos de tinta.
-export const QuadradosDeTinta: React.FC<{
-  centros: readonly {x: number; y: number}[];
-  lado: number;
-  inicio: number;
-  cor: string;
-}> = ({centros, lado, inicio, cor}) => {
-  const frame = useCurrentFrame();
-  const id = idSvg(useId());
-  const q = motion.quadrados;
-  if (frame < inicio) return null;
-  const passo = q.condensar / (centros.length * 2);
-  return (
-    <svg style={{position: 'absolute', inset: 0, overflow: 'visible'}} width="100%" height="100%">
-      {centros.map((c, i) => {
-        const t0 = inicio + i * passo;
-        const t = interpolate(frame, [t0, t0 + q.condensar], [0, 1], {...clamp, easing: curvas.pincel});
-        return (
-          <g key={i}>
-            <defs>
-              <FiltroTinta
-                id={`q${id}${i}`}
-                frequencia={q.frequencia}
-                oitavas={q.oitavas}
-                deslocamento={q.deslocamento + lado * q.bordaInicial * (1 - t)}
-                semente={motion.nijimi.semente + i}
-              />
-            </defs>
-            <rect
-              x={c.x - lado / 2}
-              y={c.y - lado / 2}
-              width={lado}
-              height={lado}
-              fill={cor}
-              opacity={t}
-              filter={`url(#q${id}${i})`}
-            />
-          </g>
-        );
-      })}
     </svg>
   );
 };

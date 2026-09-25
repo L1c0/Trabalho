@@ -1,38 +1,34 @@
 import React from 'react';
 import {AbsoluteFill, Html5Audio, Sequence, staticFile} from 'remotion';
-import {ordemDasCenas} from './data/cenas';
+import {blocos, cues} from './data/roteiro';
 import {cenas} from './scenes';
-import {audio, janelas, tempo} from './theme';
 import {Fusuma} from './motion/Fusuma';
+import {Legenda} from './components/Legenda';
 import {Washi} from './components/Washi';
 
 export const Ad: React.FC = () => (
   <AbsoluteFill>
     <Washi />
-    {ordemDasCenas.map((id) => {
-      const Cena = cenas[id];
-      const j = janelas[id];
+    {blocos.map((b) => {
+      const Cena = cenas[b.id];
       return (
-        <Sequence key={id} name={id} from={j.de} durationInFrames={j.ate - j.de}>
+        <Sequence key={b.id} name={b.id} from={b.de} durationInFrames={b.ate - b.de}>
           <Cena />
         </Sequence>
       );
     })}
-    <Fusuma inicio={tempo.fusuma1} />
-    <Fusuma inicio={tempo.fusuma2} />
+    <Fusuma inicio={cues.fusuma1} />
+    <Fusuma inicio={cues.fusuma2} />
+    <Legenda />
 
-    <Html5Audio src={staticFile(audio.narracao)} />
+    <Html5Audio src={staticFile('audio/narracao.mp3')} />
 
-    {/* SFX a -24 dB — descomentar (e importar dbParaVolume de ./theme) quando existirem em public/audio/sfx/
-    <Sequence from={tempo.ma.kakijun}><Html5Audio src={staticFile('audio/sfx/pincel.mp3')} volume={dbParaVolume(audio.sfxDb)} /></Sequence>
-    <Sequence from={tempo.kakeibo.kakijun}><Html5Audio src={staticFile('audio/sfx/pincel.mp3')} volume={dbParaVolume(audio.sfxDb)} /></Sequence>
-    <Sequence from={tempo.fusuma1}><Html5Audio src={staticFile('audio/sfx/painel-madeira.mp3')} volume={dbParaVolume(audio.sfxDb)} /></Sequence>
-    <Sequence from={tempo.fusuma2}><Html5Audio src={staticFile('audio/sfx/painel-madeira.mp3')} volume={dbParaVolume(audio.sfxDb)} /></Sequence>
-    <Sequence from={tempo.dinheiroZen.hanko}><Html5Audio src={staticFile('audio/sfx/hanko.mp3')} volume={dbParaVolume(audio.sfxDb)} /></Sequence>
-    */}
-
-    {/* Trilha a -20 dB: koto ou shakuhachi solo, 55–65 BPM, sem percussão
-    <Html5Audio src={staticFile('audio/trilha.mp3')} volume={dbParaVolume(audio.trilhaDb)} />
+    {/* SFX a -24 dB — descomentar (e importar heros, dbParaVolume e audio) quando existirem em public/audio/sfx/
+    <Sequence from={heros.ma.kakijun}><Html5Audio src={staticFile('audio/sfx/pincel.mp3')} volume={dbParaVolume(audio.sfxDb)} /></Sequence>
+    <Sequence from={heros.kakeibo.kakijun}><Html5Audio src={staticFile('audio/sfx/pincel.mp3')} volume={dbParaVolume(audio.sfxDb)} /></Sequence>
+    <Sequence from={cues.fusuma1}><Html5Audio src={staticFile('audio/sfx/madeira.mp3')} volume={dbParaVolume(audio.sfxDb)} /></Sequence>
+    <Sequence from={cues.fusuma2}><Html5Audio src={staticFile('audio/sfx/madeira.mp3')} volume={dbParaVolume(audio.sfxDb)} /></Sequence>
+    <Sequence from={cues.hanko}><Html5Audio src={staticFile('audio/sfx/hanko.mp3')} volume={dbParaVolume(audio.sfxDb)} /></Sequence>
     */}
   </AbsoluteFill>
 );

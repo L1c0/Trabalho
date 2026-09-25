@@ -1,17 +1,25 @@
 import type React from 'react';
-import type {CenaId} from '../data/cenas';
-import {DinheiroSome} from './DinheiroSome';
-import {DinheiroZen} from './DinheiroZen';
-import {Kakeibo} from './Kakeibo';
+import type {BlocoId} from '../data/roteiro';
+import {Gancho} from './Gancho';
 import {Ma} from './Ma';
-import {QuatroPerguntas} from './QuatroPerguntas';
+import {Pausa} from './Pausa';
 import {TresSegundos} from './TresSegundos';
+import {Controle} from './Controle';
+import {Ano} from './Ano';
+import {Caderno} from './Caderno';
+import {Kakeibo} from './Kakeibo';
+import {Zen} from './Zen';
+import {Cta} from './Cta';
 
-export const cenas: Record<CenaId, React.FC> = {
+export const cenas: Record<BlocoId, React.FC> = {
+  gancho: Gancho,
   ma: Ma,
+  pausa: Pausa,
   tresSegundos: TresSegundos,
-  dinheiroSome: DinheiroSome,
-  quatroPerguntas: QuatroPerguntas,
+  controle: Controle,
+  ano: Ano,
+  caderno: Caderno,
   kakeibo: Kakeibo,
-  dinheiroZen: DinheiroZen,
+  zen: Zen,
+  cta: Cta,
 };
