@@ -28,33 +28,37 @@ export const DinheiroZen: React.FC = () => {
           color: cores.sumi,
         }}
       />
-      <Escrita
-        linhas={t.subtitulo}
-        inicio={q(T.subtitulo)}
-        direita={c.subtitulo.direita}
-        topo={c.subtitulo.topo}
-        estilo={{
-          fontFamily: fontes.display,
-          fontWeight: fontes.peso.corpo,
-          fontSize: L.tipo.subtitulo,
-          lineHeight: proporcoes.entrelinha,
-          color: cores.ai,
-        }}
-      />
-      <Escrita
-        linhas={t.aviso}
-        inicio={q(T.aviso)}
-        direita={c.aviso.direita}
-        topo={c.aviso.topo}
-        quadrosPorLetra={motion.escrita.quadrosPorLetraAviso}
-        estilo={{
-          fontFamily: fontes.apoio,
-          fontWeight: fontes.peso.apoio,
-          fontSize: L.tipo.aviso,
-          lineHeight: proporcoes.entrelinha,
-          color: cores.rikyu,
-        }}
-      />
+      {t.subtitulo && t.subtitulo.length > 0 ? (
+        <Escrita
+          linhas={t.subtitulo}
+          inicio={q(T.subtitulo)}
+          direita={c.subtitulo.direita}
+          topo={c.subtitulo.topo}
+          estilo={{
+            fontFamily: fontes.display,
+            fontWeight: fontes.peso.corpo,
+            fontSize: L.tipo.subtitulo,
+            lineHeight: proporcoes.entrelinha,
+            color: cores.ai,
+          }}
+        />
+      ) : null}
+      {t.aviso && t.aviso.length > 0 ? (
+        <Escrita
+          linhas={t.aviso}
+          inicio={q(T.aviso)}
+          direita={c.aviso.direita}
+          topo={c.aviso.topo}
+          quadrosPorLetra={motion.escrita.quadrosPorLetraAviso}
+          estilo={{
+            fontFamily: fontes.apoio,
+            fontWeight: fontes.peso.apoio,
+            fontSize: L.tipo.aviso,
+            lineHeight: proporcoes.entrelinha,
+            color: cores.rikyu,
+          }}
+        />
+      ) : null}
     </AbsoluteFill>
   );
 };

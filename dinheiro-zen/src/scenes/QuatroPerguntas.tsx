@@ -2,6 +2,7 @@ import React from 'react';
 import {AbsoluteFill, useCurrentFrame} from 'remotion';
 import {textos} from '../data/textos';
 import {cores, escala, fontes, local, motion, proporcoes, tempo, useLayout} from '../theme';
+import {Contador} from '../motion/Contador';
 import {Enso} from '../motion/Enso';
 import {Losango} from '../motion/Hanko';
 import {duracaoDaLinha, mascaraDeEscrita, useEscrita} from '../components/Escrita';
@@ -44,8 +45,28 @@ export const QuatroPerguntas: React.FC = () => {
   const q = (f: number) => local('quatroPerguntas', f);
   const T = tempo.quatroPerguntas;
   const caderno: Linha[] = c.linhas.map((y) => ({x1: c.dir, y1: y, x2: c.esq, y2: y}));
+  const ano = textos.quatroPerguntas.ano;
   return (
     <AbsoluteFill>
+      {ano && ano.length > 0 ? (
+        <Contador
+          valores={ano}
+          inicio={q(T.ano)}
+          passo={motion.contador.passoAno}
+          estilo={{
+            position: 'absolute',
+            left: 0,
+            width: c.ano.direita,
+            top: c.ano.topo,
+            textAlign: 'right',
+            fontFamily: fontes.display,
+            fontWeight: fontes.peso.corpo,
+            fontSize: L.tipo.ano,
+            lineHeight: 1,
+            color: cores.sumi,
+          }}
+        />
+      ) : null}
       <Pauta linhas={caderno} inicio={q(T.pauta)} espessura={L.px(motion.pauta.espessura)} />
       {textos.quatroPerguntas.perguntas.map((texto, i) => (
         <Pergunta key={texto} texto={texto} inicio={q(T.perguntas[i])} direita={c.direita} topo={c.perguntas[i].topo} />

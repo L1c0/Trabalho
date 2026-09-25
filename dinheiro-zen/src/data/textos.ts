@@ -1,30 +1,47 @@
-// Todo texto que aparece na tela. Cada array é uma linha (a quebra é intencional).
-// CONFORMIDADE Meta Ads: nada de promessa de resultado, valores em R$, percentuais,
-// "renda extra", "liberdade financeira", "saia das dívidas", antes/depois ou "toque no link".
+// Todo texto que aparece na tela. Cada item de array é uma linha (a quebra é intencional).
+// Campos opcionais vazios não aparecem na tela.
+// VERSÃO DE TESTE: o texto acompanha a locução de teste. Render descartável, não publicar.
 
-export const textos = {
+type Linhas = readonly string[];
+
+type Textos = {
+  ma: {kanji: string; ruby: string; legenda: Linhas};
+  tresSegundos: {
+    querer: {kanji: string; ruby: string};
+    comprar: {kanji: string; ruby: string};
+    contagem: Linhas;
+    legenda: Linhas;
+  };
+  dinheiroSome: {categorias: number; legenda: Linhas};
+  quatroPerguntas: {ano?: Linhas; perguntas: Linhas};
+  kakeibo: {
+    kanji: readonly {kanji: string; ruby: string}[];
+    nome?: Linhas;
+    risco?: {antes: string; riscada: string; nova: string};
+    autora?: string;
+  };
+  dinheiroZen: {hanko: string; titulo: Linhas; subtitulo?: Linhas; aviso?: Linhas};
+};
+
+export const textos: Textos = {
   ma: {
     kanji: '間',
     ruby: 'ma',
-    legenda: ['o espaço entre', 'duas coisas'],
+    legenda: ['a pausa'],
   },
   tresSegundos: {
     querer: {kanji: '欲', ruby: 'yoku'},
     comprar: {kanji: '買', ruby: 'kau'},
     contagem: ['3', '2', '1'],
-    legenda: ['três segundos', 'entre querer', 'e comprar'],
+    legenda: ['TRÊS', 'SEGUNDOS'],
   },
   dinheiroSome: {
     categorias: 4,
-    legenda: ['é aí que o', 'dinheiro some'],
+    legenda: ['entre querer', 'e comprar'],
   },
   quatroPerguntas: {
-    perguntas: [
-      'Quanto você tem?',
-      'Quanto quer guardar?',
-      'Quanto está gastando?',
-      'Como pode melhorar?',
-    ],
+    ano: ['1900', '1901', '1902', '1903', '1904'],
+    perguntas: ['Quanto você tem?', 'Quanto quer guardar?', 'Quanto está gastando?', 'Como pode melhorar?'],
   },
   kakeibo: {
     kanji: [
@@ -32,20 +49,13 @@ export const textos = {
       {kanji: '計', ruby: 'kei'},
       {kanji: '簿', ruby: 'bo'},
     ],
-    risco: {antes: 'um', riscada: 'aplicativo', nova: 'caderno'},
-    ano: ['1900', '1901', '1902', '1903', '1904'],
-    autora: 'Hani Motoko',
+    nome: ['Kakeibo'],
   },
   dinheiroZen: {
     hanko: '禅',
     titulo: ['Dinheiro', 'Zen'],
-    subtitulo: ['O guia completo do', 'método Kakeibo.'],
-    aviso: [
-      'Conteúdo educativo sobre organização das finanças pessoais.',
-      'Não constitui recomendação financeira ou de investimento.',
-    ],
   },
-} as const;
+};
 
 const todasAsStrings = (v: unknown): string[] => {
   if (typeof v === 'string') return [v];

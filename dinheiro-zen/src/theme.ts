@@ -48,6 +48,7 @@ export const proporcoes = {
   entrelinhaTitulo: 1.08,
   espacoRuby: '0.28em',
   espacoAutora: '0.18em',
+  espacoCaixaAlta: '0.06em',
   // meia largura da tinta em fração da caixa do kanji (KanjiVG e glifo tipográfico)
   tintaKanjiVG: 0.42,
   tintaFonte: 0.47,
@@ -96,7 +97,7 @@ export const motion = {
     orla: 0.35,
   },
   quadrados: {condensar: 22, lado: 30, passo: 64, secarMancha: 44, deslocamento: 2.2, frequencia: 0.08, oitavas: 2, bordaInicial: 0.5},
-  pautaCaderno: {linhas: 6, primeira: 0.1, passo: 0.12},
+  pautaCaderno: {linhas: 6, primeira: 0.31, passo: 0.12},
   enso: {
     traco: 26,
     raio: 380,
@@ -107,7 +108,7 @@ export const motion = {
     larguraFim: 7,
     curva: 0.9,
     recuo: 285, // centro a esta distância à esquerda do alinhamento das perguntas
-    centroY: 0.4,
+    centroY: 0.61,
   },
   contador: {passoTresDoisUm: 30, passoAno: 4, entrada: 6, larguraDigito: 0.62},
   // larguras do risco em fração do corpo do texto
@@ -152,6 +153,7 @@ export const tempo = {
     absorcao: 586,
   },
   quatroPerguntas: {
+    ano: 613, // logo depois de "1904" ser falado
     pauta: 613, // ← 600 caía em "1904"
     perguntas: [627, 666, 706, 750], // ← 620/665/710/755 caíam em palavras
     enso: 765, // ← 760 caía em "app"
@@ -161,7 +163,7 @@ export const tempo = {
     kakijun: 820,
     riscoTexto: 895, // "um aplicativo" precisa estar escrito antes do risco (pausa após "mês")
     risco: 928, // ← 920 caía em "chama"
-    ano: 959, // ← 950 caía em "Kakeibo"
+    nome: 928, // pausa antes de "Kakeibo" ser falado
     autora: 970,
     absorcao: 986,
   },
@@ -201,7 +203,8 @@ const composicao = {
   ma: {kanjiTopo: 0.02, rubyTopo: 0.1, legendaTopo: 0.97},
   tresSegundos: {quererTopo: 0.02, comprarTopo: 0.8, folga: 0.03, contadorCentro: 0.43, legendaTopo: 0.53},
   dinheiroSome: {legendaTopo: 0.62},
-  kakeibo: {kanjiTopo: 0.02, vao: 18, riscoTopo: 0.12, anoTopo: 0.27, autoraTopo: 0.42},
+  quatroPerguntas: {anoTopo: 0},
+  kakeibo: {kanjiTopo: 0.02, vao: 18, riscoTopo: 0.12, nomeTopo: 0.29, autoraTopo: 0.42},
   dinheiroZen: {tituloTopo: 0.26, subtituloTopo: 0.47, hankoTopo: 0.63, avisoTopo: 0.9},
 } as const;
 
@@ -281,6 +284,7 @@ const layoutPara = (formato: Formato, W: number) => {
       esq,
       dir,
       direita,
+      ano: {direita, topo: y(composicao.quatroPerguntas.anoTopo)},
       perguntas: linhas.slice(1, 5).map((linha) => ({base: linha, topo: linha - tamanho * 1.15})),
       enso: {cx: direita - px(e.recuo), cy: y(e.centroY) - tamanho / 2, raio: px(e.raio)},
     };
@@ -294,7 +298,7 @@ const layoutPara = (formato: Formato, W: number) => {
       kanji: [0, 1, 2].map((i) => ({cx: espinha, topo: y(c.kanjiTopo) + i * (tamanho + vao), tamanho})),
       rubyX: rubyX(tamanho, proporcoes.tintaKanjiVG),
       risco: {direita: textoDireita, topo: y(c.riscoTopo)},
-      ano: {direita: textoDireita, topo: y(c.anoTopo)},
+      nome: {direita: textoDireita, topo: y(c.nomeTopo)},
       autora: {direita: textoDireita, topo: y(c.autoraTopo)},
     };
   })();

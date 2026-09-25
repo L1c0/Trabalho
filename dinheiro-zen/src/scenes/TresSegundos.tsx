@@ -91,6 +91,7 @@ export const TresSegundos: React.FC = () => {
             fontWeight: fontes.peso.corpo,
             fontSize: L.tipo.corpo,
             lineHeight: proporcoes.entrelinha,
+            letterSpacing: proporcoes.espacoCaixaAlta,
             color: cores.sumi,
           }}
         />
