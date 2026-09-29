@@ -1,0 +1,6 @@
+node_modules/
+out/
+.DS_Store
+# Áudio fica fora do repositório público (voz, trilha e efeitos com licença própria).
+public/audio/
+public/sfx/
