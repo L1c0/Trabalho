@@ -71,8 +71,10 @@ export const edit = {
     {id: 't07-correndo', pasta: T, de: 1660, bloco: 'travessia', duracao: 3.5, foco: 0.45}, // ← 1650
     {id: 't04-ceu', pasta: T, de: 1781, bloco: 'travessia', duracao: 3, foco: 0.5}, // ← 1800: respiro, nada por cima
     // ─── VIRADA ───
-    {id: 'v06-maracana', pasta: V, de: 1926, bloco: 'virada', duracao: 3, foco: 0.5, faltando: true}, // ← 1920
-    {id: 'v04-corrida', pasta: V, de: 2095, bloco: 'virada', duracao: 3.5, foco: 0.5, faltando: true}, // ← 2070
+    // só o 2º plano do drone (a fusão do original não entra): 3,33 s, desacelera a ~0,59
+    {id: 'v06-maracana', pasta: V, de: 1926, bloco: 'virada', duracao: 3.33, foco: 0.62}, // ← 1920
+    // o lance dos bastidores de Corinthians 1 x 0 Vasco (só o plano aberto da área)
+    {id: 'v04-corrida', pasta: V, de: 2095, bloco: 'virada', duracao: 5.43, foco: 0.45}, // ← 2070
     {id: 'v01-gol-camisa10', pasta: V, de: 2223, bloco: 'virada', duracao: 4, foco: 0.55}, // ← 2220
     {id: 'v02-lance-goleiro', pasta: V, de: 2380, bloco: 'virada', duracao: 3, foco: 0.45}, // ← 2400
     {id: 'v03-penalti', pasta: V, de: 2497, bloco: 'virada', duracao: 4, foco: 0.65}, // ← 2490
