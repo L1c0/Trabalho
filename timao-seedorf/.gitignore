@@ -1,0 +1,10 @@
+node_modules/
+out/
+.DS_Store
+# Footage (ge/globo, Corinthians TV) e áudio ficam fora do repositório público.
+public/01-queda/
+public/02-travessia/
+public/03-virada/
+public/04-gloria/
+public/audio/
+public/escudos/
