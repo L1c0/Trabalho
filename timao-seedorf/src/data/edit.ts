@@ -56,7 +56,8 @@ export const edit = {
     {id: 'q08-tres-cabisbaixos', pasta: Q, de: 60, bloco: 'queda', duracao: 3, foco: 0.42},
     {id: 'q01-cabeca-baixa', pasta: Q, de: 180, bloco: 'queda', duracao: 3, foco: 0.4},
     {id: 'q09-rosto-fechado', pasta: Q, de: 330, bloco: 'queda', duracao: 3, foco: 0.35},
-    {id: 'q10-ajoelhado', pasta: Q, de: 409, bloco: 'queda', duracao: 3, foco: 0.5, faltando: true}, // ← 420
+    // foto (640x480) do jogador ajoelhado na eliminação da Libertadores, parada; o zoom do clipe dá o movimento
+    {id: 'q10-ajoelhado', pasta: Q, de: 409, bloco: 'queda', duracao: 4, foco: 0.35}, // ← 420
     {id: 'q03-reclamacao', pasta: Q, de: 510, bloco: 'queda', duracao: 3, foco: 0.55},
     {id: 'q06-goleiro-chuva', pasta: Q, de: 608, bloco: 'queda', duracao: 3.5, foco: 0.2}, // ← 600
     {id: 'q04-chao-chuva', pasta: Q, de: 672, bloco: 'queda', duracao: 3, foco: 0.6}, // ← 690
@@ -69,7 +70,8 @@ export const edit = {
     {id: 't03-faixa-cabeca', pasta: T, de: 1350, bloco: 'travessia', duracao: 3, foco: 0.38},
     {id: 't06-tecnico-bone', pasta: T, de: 1486, bloco: 'travessia', duracao: 3, foco: 0.3}, // ← 1500
     {id: 't07-correndo', pasta: T, de: 1660, bloco: 'travessia', duracao: 3.5, foco: 0.45}, // ← 1650
-    {id: 't04-ceu', pasta: T, de: 1781, bloco: 'travessia', duracao: 3, foco: 0.5}, // ← 1800: respiro, nada por cima
+    // o escudo de drones no céu sobre a arena (2,17 s, câmera parada): desacelera a ~0,45
+    {id: 't04-ceu', pasta: T, de: 1781, bloco: 'travessia', duracao: 2.17, foco: 0.44}, // ← 1800: respiro, nada por cima
     // ─── VIRADA ───
     // só o 2º plano do drone (a fusão do original não entra): 3,33 s, desacelera a ~0,59
     {id: 'v06-maracana', pasta: V, de: 1926, bloco: 'virada', duracao: 3.33, foco: 0.62}, // ← 1920
@@ -96,13 +98,14 @@ export const edit = {
   // NENHUM CARD NA TRAVESSIA. Nunca dois seguidos no mesmo canto.
   cards: [
     {casa: 'Palmeiras', golsCasa: 4, fora: 'Corinthians', golsFora: 1, rotulo: 'Brasileirão', x: 0.58, y: 0.72, frame: 180, dur: 120},
-    {casa: '?', golsCasa: 0, fora: '?', golsFora: 0, rotulo: 'Eliminado', x: 0.08, y: 0.18, frame: 750, dur: 110, pendente: true}, // ← 780
+    // Libertadores, volta (a ida foi 1 x 1)
+    {casa: 'Corinthians', golsCasa: 0, fora: 'Estudiantes', golsFora: 1, rotulo: 'Eliminado', x: 0.08, y: 0.18, frame: 750, dur: 110}, // ← 780
     {casa: 'Vasco', golsCasa: 1, fora: 'Corinthians', golsFora: 1, rotulo: 'Final', x: 0.62, y: 0.2, frame: 2223, dur: 130}, // ← 2220
     {casa: 'Vasco', golsCasa: 1, fora: 'Corinthians', golsFora: 2, rotulo: 'Campeão', x: 0.3, y: 0.76, frame: 2898, dur: 90}, // ← 2910
   ] as Card[],
 
   // escudos: public/escudos/<time>.png
-  escudos: {Palmeiras: 'escudos/palmeiras.png', Corinthians: 'escudos/corinthians.png', Vasco: 'escudos/vasco.png'} as Record<string, string>,
+  escudos: {Palmeiras: 'escudos/palmeiras.png', Corinthians: 'escudos/corinthians.png', Vasco: 'escudos/vasco.png', Estudiantes: 'escudos/estudiantes.png'} as Record<string, string>,
 
   // o gol, o pênalti, o apito final
   pulsos: [2223, 2497, 2610], // ← 2220, 2490
