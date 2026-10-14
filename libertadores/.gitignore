@@ -1,0 +1,8 @@
+node_modules/
+out/
+.DS_Store
+# Footage (ge/globo/ESPN), narração, escudos e logo ficam fora do repositório público.
+public/broll/
+public/audio/
+public/escudos/
+public/logo/
