@@ -22,7 +22,7 @@ export const Ficha: React.FC<{time: TimeId; atributos: {texto: string; frame: nu
       <div style={{position: 'absolute', left: x0, top: y0, width: largura, opacity: entra}}>
         <div style={{display: 'flex', alignItems: 'center', gap: 24}}>
           <Img src={staticFile(t.escudo!)} style={{width: m.escudo * fm.k, height: m.escudo * fm.k, objectFit: 'contain'}} />
-          <div style={{fontFamily: fontes.display, fontSize: m.nome * fm.k * 1.5, color: paleta.texto, textTransform: 'uppercase', lineHeight: 1}}>{t.nome}</div>
+          <div style={{fontFamily: fontes.display, fontSize: m.nome * fm.k, color: paleta.texto, textTransform: 'uppercase', lineHeight: 1}}>{t.nome}</div>
         </div>
         <div style={{marginTop: 48 * fm.k, display: 'flex', flexDirection: 'column', gap: 30 * fm.k}}>
           {atributos.map((a) => {

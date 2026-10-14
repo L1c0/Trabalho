@@ -275,10 +275,11 @@ export const video02: DadosVideo = {
 
     // ─── o papel dos treinadores ───
     {tipo: 'cartela', frame: 3134, titulo: 'O PAPEL DOS TREINADORES'},
-    {tipo: 'broll', frame: 3195, arquivo: 'broll/tecnico-na-beira.mp4', faltando: 'técnico na beira'}, // ← 3150
+    // B-ROLL "técnico na beira" (3150) não recebido: o campo entra já em "Os técnicos serão
+    // avaliados… pela capacidade de corrigir o jogo", e a zona e as setas esperam suas palavras.
     {
       tipo: 'campo',
-      frame: 3295, // ← 3270: "Se o adversário bloquear a saída, será preciso criar uma alternativa."
+      frame: 3195, // ← 3270: "Se o adversário bloquear a saída, será preciso criar uma alternativa."
       time: 'neutro',
       mostrar: [3, 4, 5, 2],
       pos: {3: p(0.14, 0.64), 4: p(0.14, 0.36), 5: p(0.27, 0.5), 2: p(0.25, 0.9)},
