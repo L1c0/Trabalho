@@ -1,0 +1,6 @@
+node_modules/
+out/
+.DS_Store
+# Mangá (Haruko Ichikawa), pranchas e áudio ficam fora do repositório público.
+public/
+mockup-mohs.png
