@@ -1,7 +1,7 @@
 import React from 'react';
 import {AbsoluteFill, useCurrentFrame} from 'remotion';
 import {fim} from '../data/componentes';
-import {pretoFinal} from './papel';
+import {pretoFinal} from './corDoPapel';
 
 /**
  * O TERCEIRO PRETO no quadro: enquanto o papel vai a preto puro, o preto do quadro desce a
