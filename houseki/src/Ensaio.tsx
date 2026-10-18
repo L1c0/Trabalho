@@ -56,25 +56,29 @@ const trechosDoLeito = (() => {
   return t;
 })();
 
-export const Ensaio: React.FC = () => {
+// soSom: só a trilha sonora, sem imagem — para extrair o áudio do render sem montar o grão
+// frame a frame. O filme é sempre soSom = false.
+export const Ensaio: React.FC<{soSom: boolean}> = ({soSom}) => {
   const [narracao, leito, ...trilhas] = som;
   return (
     <AbsoluteFill>
-      <Grao>
-        <Papel />
-        {planos.map((p) => (
-          <Sequence key={p.de} from={p.de} durationInFrames={p.ate - p.de} name={p.peca ?? 'papel'}>
-            <Plano p={p} />
-          </Sequence>
-        ))}
-        {blocos
-          .filter((b) => b.titulo)
-          .map((b) => (
-            <Sequence key={b.id} from={b.de} durationInFrames={CARTELA} name={`cartela ${b.id}`}>
-              <TituloBloco texto={titulos[b.id]} />
+      {soSom ? null : (
+        <Grao>
+          <Papel />
+          {planos.map((p) => (
+            <Sequence key={p.de} from={p.de} durationInFrames={p.ate - p.de} name={p.peca ?? 'papel'}>
+              <Plano p={p} />
             </Sequence>
           ))}
-      </Grao>
+          {blocos
+            .filter((b) => b.titulo)
+            .map((b) => (
+              <Sequence key={b.id} from={b.de} durationInFrames={CARTELA} name={`cartela ${b.id}`}>
+                <TituloBloco texto={titulos[b.id]} />
+              </Sequence>
+            ))}
+        </Grao>
+      )}
 
       {/* SOM — tudo em volume 1.0, sem ganho nenhum: a mixagem já está feita */}
       <Sequence from={narracao.de} durationInFrames={narracao.frames} name="narração" layout="none">

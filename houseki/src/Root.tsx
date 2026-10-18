@@ -5,5 +5,5 @@ import {Ensaio} from './Ensaio';
 import {altura, fps, largura} from './theme';
 
 export const RemotionRoot: React.FC = () => (
-  <Composition id="Ensaio" component={Ensaio} durationInFrames={TOTAL} fps={fps} width={largura} height={altura} />
+  <Composition id="Ensaio" component={Ensaio} defaultProps={{soSom: false}} durationInFrames={TOTAL} fps={fps} width={largura} height={altura} />
 );
