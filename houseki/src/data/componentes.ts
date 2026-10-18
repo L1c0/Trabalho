@@ -16,5 +16,24 @@ export const citacao = {de: 7410};
 
 // plano 2060–2595: "Escala de 70% a 150% ao longo de 2060->2480, enquadramento descendo para o
 // torso do gigante… De 2480 a 2595 fica parado no detalhe."
-// O torso (onde estão as pessoas da armadura) foi medido na gravura: centro em (0,50; 0,215).
-export const leviata = {de: 2060, ate: 2480, alturaInicial: 0.7, alturaFinal: 1.5, torso: {x: 0.5, y: 0.215}};
+// README (correção): no fim "a gravura sangrando para fora da tela nos quatro lados… o torso do
+// gigante um pouco acima do centro… reduza o alvo… em vez de abrir mão do sangramento".
+// A 150% da altura a gravura (retrato, 0,63) só tem 1016 px de largura: sobra papel dos lados.
+// Então o fim é o maior entre 150% e a menor altura em que ela sangra dos lados com 3% de folga
+// (`sangria`), que dá 292%. O torso (as pessoas da armadura), medido na gravura em (0,50; 0,215),
+// termina a 42% da altura da tela.
+export const leviata = {
+  de: 2060,
+  ate: 2480,
+  alturaInicial: 0.7,
+  alturaFinal: 1.5,
+  sangria: 1.03,
+  torso: {x: 0.5, y: 0.215},
+  torsoNaTela: 0.42,
+};
+
+// o terceiro preto (timeline.ts, pretos[2]): "O papel vai para preto puro em 20 frames enquanto o
+// quadro `minuscula` fica em cena… papel e imagem viram a mesma coisa". O preto do quadro não é
+// zero: o céu medido no arquivo fica entre 30 e 38 (p10–p90). Nos mesmos 20 frames do papel, o
+// ponto preto do quadro desce de 0 até 38: o céu vai a zero, o branco continua em 255.
+export const fim = {pretoDoQuadro: 38};

@@ -75,14 +75,19 @@ export const Tingido: React.FC<{peca: Peca; ancora: Ancora; inicio: number}> = (
   let caixa: {x: number; y: number; w: number; h: number};
   let escala = deriva;
   if (peca.id === 'leviata' && ancora === 'CHEIO') {
-    // o único zoom longo do filme: 70% → 150% da altura, indo para o torso do gigante
+    // o único zoom longo do filme: de 70% da altura até sangrar nos quatro lados, indo para o
+    // torso do gigante. A escala anda em proporção (log), então a velocidade aparente é a mesma
+    // do começo ao fim; o torso sai do centro e termina um pouco acima dele.
     const t = Math.min(1, Math.max(0, (f - leviata.de) / (leviata.ate - leviata.de)));
     const e = t * t * (3 - 2 * t);
-    const H = altura * (leviata.alturaInicial + (leviata.alturaFinal - leviata.alturaInicial) * e);
+    const H0 = altura * leviata.alturaInicial;
+    const H1 = Math.max(altura * leviata.alturaFinal, (largura * leviata.sangria * h) / w);
+    const H = H0 * Math.pow(H1 / H0, e);
     const W = (H * w) / h;
     const fx = 0.5 + (leviata.torso.x - 0.5) * e;
     const fy = 0.5 + (leviata.torso.y - 0.5) * e;
-    caixa = {x: largura / 2 - fx * W, y: altura / 2 - fy * H, w: W, h: H};
+    const ty = 0.5 + (leviata.torsoNaTela - 0.5) * e;
+    caixa = {x: largura / 2 - fx * W, y: altura * ty - fy * H, w: W, h: H};
     escala = 1;
   } else if (ancora === 'CHEIO') {
     const k = Math.min(largura / w, altura / h);

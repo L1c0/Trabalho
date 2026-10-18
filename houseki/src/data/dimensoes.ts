@@ -3,10 +3,10 @@
 export const dimensoes: Record<string, [number, number]> = {
   'classico/c01-navio-exekias.png': [2040, 1593],
   'classico/c02-busto-plutarco.png': [1466, 2200],
-  'classico/c03-leviata.png': [1379, 2200],
+  'classico/c03-leviata.png': [2208, 3521],
   'classico/c04-locke.png': [1159, 1300],
   'classico/c05-hume.png': [1816, 2200],
-  'classico/c06-treatise-folha.png': [1393, 2200],
+  'classico/c06-treatise-folha.png': [1404, 2217],
   'classico/c07-bodhisattva.png': [2200, 1650],
   'classico/c08-vajra.png': [2200, 1251],
   'classico/c09-yama.png': [2044, 2200],
@@ -32,5 +32,5 @@ export const dimensoes: Record<string, [number, number]> = {
   'manga/m18-descida-lunarianos.png': [1986, 1850],
   'manga/m19-lunariano-lotus.png': [1120, 1600],
   'manga/m22-admirabilis.png': [1014, 770],
-  'manga/m23-figura-minuscula.png': [1984, 2912],
+  'manga/m23-figura-minuscula.png': [1984, 1116],
 };

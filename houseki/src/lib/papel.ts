@@ -41,6 +41,9 @@ const passos: Passo[] = (() => {
 
 const INICIO = chave(blocos[0].papel);
 
+/** O terceiro preto, de 0 a 1, com a mesma curva do papel: o quadro em cena desce junto. */
+export const pretoFinal = (f: number) => suave(Math.min(1, Math.max(0, (f - pretos[2].de) / PRETO_FINAL)));
+
 export const papelNo = (f: number): string => {
   let c = rgb(INICIO);
   for (const p of passos) {

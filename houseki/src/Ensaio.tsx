@@ -9,6 +9,7 @@ import {cor} from './theme';
 import {Grao} from './lib/Grao';
 import {Painel} from './lib/Painel';
 import {Papel} from './lib/Papel';
+import {PretoAZero} from './lib/PretoAZero';
 import {Regua} from './lib/Regua';
 import {Citacao, TextoEscurecendo, TituloBloco} from './lib/Texto';
 import {Tingido} from './lib/Tingido';
@@ -25,7 +26,15 @@ const TRANSICAO_PRETO_2 = 30; // "O preto entra no texto ao longo de 30 frames"
 const Plano: React.FC<{p: TPlano}> = ({p}) => {
   if (p.peca) {
     const peca = pega(p.peca);
-    return peca.tipo === 'quadro' ? <Painel peca={peca} ancora={p.ancora} /> : <Tingido peca={peca} ancora={p.ancora} inicio={p.de} />;
+    if (peca.tipo !== 'quadro') return <Tingido peca={peca} ancora={p.ancora} inicio={p.de} />;
+    // o quadro que atravessa o terceiro preto desce o preto dele a zero junto com o papel
+    if (p.de <= pretos[2].de && pretos[2].de < p.ate)
+      return (
+        <PretoAZero inicio={p.de}>
+          <Painel peca={peca} ancora={p.ancora} />
+        </PretoAZero>
+      );
+    return <Painel peca={peca} ancora={p.ancora} />;
   }
   if (p.de === pretos[0].de) return <Citacao linhas={[pergunta]} cor={cor.preto} />;
   if (p.de === pretos[1].de) return <TextoEscurecendo linhas={[rendicao]} quadros={TRANSICAO_PRETO_2} />;
@@ -51,20 +60,21 @@ export const Ensaio: React.FC = () => {
   const [narracao, leito, ...trilhas] = som;
   return (
     <AbsoluteFill>
-      <Papel />
-      {planos.map((p) => (
-        <Sequence key={p.de} from={p.de} durationInFrames={p.ate - p.de} name={p.peca ?? 'papel'}>
-          <Plano p={p} />
-        </Sequence>
-      ))}
-      {blocos
-        .filter((b) => b.titulo)
-        .map((b) => (
-          <Sequence key={b.id} from={b.de} durationInFrames={CARTELA} name={`cartela ${b.id}`}>
-            <TituloBloco texto={titulos[b.id]} />
+      <Grao>
+        <Papel />
+        {planos.map((p) => (
+          <Sequence key={p.de} from={p.de} durationInFrames={p.ate - p.de} name={p.peca ?? 'papel'}>
+            <Plano p={p} />
           </Sequence>
         ))}
-      <Grao />
+        {blocos
+          .filter((b) => b.titulo)
+          .map((b) => (
+            <Sequence key={b.id} from={b.de} durationInFrames={CARTELA} name={`cartela ${b.id}`}>
+              <TituloBloco texto={titulos[b.id]} />
+            </Sequence>
+          ))}
+      </Grao>
 
       {/* SOM — tudo em volume 1.0, sem ganho nenhum: a mixagem já está feita */}
       <Sequence from={narracao.de} durationInFrames={narracao.frames} name="narração" layout="none">

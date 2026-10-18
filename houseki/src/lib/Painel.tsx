@@ -12,9 +12,9 @@ import {MOLDURA, RESPIRO, dimensao, medidasPainel, posicionar} from './layout';
  * interno. 70% da altura da tela (55%–78%), nas âncoras esquerda-alta, direita-baixa,
  * centro-alto. Os muito estreitos (phosVertical) usam a altura total menos as margens.
  *
- * Âncora CHEIO (tiras largas e os dois quadros finais de página inteira): tela cheia, sem
- * moldura, com a margem branca do escaneamento recortada. A tira ocupa a largura toda; o
- * quadro de página ocupa a altura toda, na espinha.
+ * Âncora CHEIO (tiras largas, o andYet de página inteira e o minuscula em 16:9): sem moldura,
+ * com a margem branca do escaneamento recortada. A tira ocupa a largura toda; o quadro de
+ * página ocupa a altura toda, na espinha; o quadro 16:9 preenche a tela inteira.
  */
 export const Painel: React.FC<{peca: Peca; ancora: Ancora}> = ({peca, ancora}) => {
   const escala = useDeriva();
@@ -47,11 +47,13 @@ const Cheio: React.FC<{peca: Peca; escala: number}> = ({peca, escala}) => {
   const rc = recortes[peca.id];
   const {w: W, h: H} = dimensao(peca.arq);
   const c = rc ?? {x: 0, y: 0, w: W, h: H};
-  const largo = c.w / c.h > largura / altura;
-  // tira: largura da tela; página: altura da tela, encostada na espinha
-  const k = largo ? largura / c.w : altura / c.h;
+  const r = c.w / c.h;
+  // tira (bem mais larga que a tela): largura da tela; página (retrato): altura da tela,
+  // encostada na espinha; quadro de tela (16:9, o último plano): cobre a tela inteira
+  const forma = r > 2.5 ? 'tira' : r < 1.2 ? 'pagina' : 'tela';
+  const k = forma === 'tira' ? largura / c.w : forma === 'pagina' ? altura / c.h : Math.max(largura / c.w, altura / c.h);
   const [vw, vh] = [c.w * k, c.h * k];
-  const x = largo ? 0 : grade.esq;
+  const x = forma === 'pagina' ? grade.esq : (largura - vw) / 2;
   const y = (altura - vh) / 2;
   return (
     <div style={{position: 'absolute', left: x, top: y, width: vw, height: vh, overflow: 'hidden', transform: `scale(${escala})`, transformOrigin: 'center'}}>

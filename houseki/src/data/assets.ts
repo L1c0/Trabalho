@@ -62,7 +62,7 @@ export const manga: Peca[] = [
   { id: 'admirabilis', arq: 'manga/m22-admirabilis.png',        tipo: 'quadro',
     nota: 'Representa CARNE no triptico das tres especies.' },
   { id: 'minuscula',   arq: 'manga/m23-figura-minuscula.png',   tipo: 'quadro',
-    nota: 'Figura minima no capim estrelado. A ultima imagem do filme.' },
+    nota: 'RECORTADO EM 16:9 (1984x1116). Preenche a tela inteira, sem margem. O horizonte fica a 38% da altura e a figurinha branca logo acima dele, a esquerda do centro. Esta e a imagem que funde com o preto final.' },
 ];
 
 export const classico: Peca[] = [
@@ -71,7 +71,7 @@ export const classico: Peca[] = [
   { id: 'plutarco', arq: 'classico/c02-busto-plutarco.png',  tipo: 'prancha',
     nota: 'Busto de Delfos, sec. II. NUNCA legendar como "Plutarco": a identificacao e so provavel.' },
   { id: 'leviata',  arq: 'classico/c03-leviata.png',         tipo: 'gravura',
-    nota: 'Abraham Bosse, 1651. O gigante feito de gente. Zoom lento ate o torso. ATENCAO: fonte veio em 960px; se o zoom borrar, e isso. Peca scan maior.' },
+    nota: 'Abraham Bosse, 1651. O gigante feito de gente. Zoom lento ate o torso. Curva de tinta refeita: a hachura agora chega em cor.tinta na tela em vez de virar cinza. Arquivo 2208x3521, ampliado de fonte de 960px.' },
   { id: 'hobbes',   arq: 'classico/c11-hobbes.png',          tipo: 'prancha',
     nota: 'John Michael Wright, c. 1669-70. Entra logo antes do Leviata: primeiro o homem, depois o livro dele, depois o zoom para dentro do livro.' },
   { id: 'locke',    arq: 'classico/c04-locke.png',           tipo: 'prancha',

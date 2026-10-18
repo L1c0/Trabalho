@@ -113,8 +113,14 @@ aqui é deixar tudo pequeno demais e o filme virar PowerPoint.
 
 ### `<Papel>`
 Fundo de tela cheia. Lê o estado atual de `papel` e interpola. Por cima
-de tudo, inclusive do papel vazio, uma camada de grão a 2,8% regenerada
-a cada frame — grão estático vira textura e aparece.
+de tudo, inclusive do papel vazio, uma camada de grão regenerada a cada
+frame — grão estático vira textura e aparece.
+
+**A força do grão tem um número, não uma porcentagem.** Numa área de
+papel vazio, o desvio padrão local da luminância (depois de remover a
+tendência com um filtro de média 5x5) tem que ficar **entre 6 e 8** na
+escala 0–255. Abaixo de 3 o papel fica morto e as imagens parecem
+coladas por cima dele; acima de 10 vira chuvisco. Meça, não estime.
 
 ### `<Painel>` — para os quadros de mangá
 Desenha o quadro com uma moldura de 2px em `cor.tinta` e 20px de respiro
@@ -133,9 +139,19 @@ e desenha **sem moldura nenhuma**. Gravura pousa direto no papel;
 prancha flutua com a borda já esfumada no arquivo.
 
 Pranchas de retrato ocupam **45% a 60% da altura**. O Leviatã é a
-exceção: começa em 70% e sobe até 150% ao longo de 12 segundos, com o
-enquadramento indo para o torso do gigante — é o único zoom longo do
-filme, e é o que revela que a armadura dele é feita de gente.
+exceção: começa em 70% e sobe até 150% ao longo de 14 segundos (frames
+2060 a 2480 — o `timeline.ts` manda), com a gravura **sangrando para
+fora da tela nos quatro lados** no fim do movimento e o torso do gigante
+um pouco acima do centro. Nenhuma faixa de papel sobrando em volta: a
+150% o espectador tem que se sentir *dentro* da gravura, não olhando
+para ela. É o único zoom longo do filme, e é o que revela que a armadura
+dele é feita de gente.
+
+O arquivo do Leviatã tem 1379x2200, mas foi ampliado de uma fonte de
+960px — o teto real de detalhe é mais baixo do que a contagem de pixels
+sugere. Confira que os bonecos da armadura continuam legíveis no fim do
+movimento; se não estiverem, reduza o alvo de 150% para 130% em vez de
+abrir mão do sangramento.
 
 ### `<Regua>` — a escala de Mohs
 Componente, não imagem. Régua horizontal de 1 a 10, margem esquerda em
@@ -169,7 +185,7 @@ abaixo da imagem. Largura de 28% da tela cada, com 4% de intervalo.
 
 ### `<Citacao>`, `<TituloBloco>`, `<Grao>`
 Texto em Cormorant, alinhado à esquerda na margem de 240. Título de bloco
-em corpo 64, sozinho no papel vazio por 3 a 4 segundos. São seis ao longo
+em corpo 64, sozinho no papel vazio por 3 a 4 segundos. São sete ao longo
 do filme e funcionam como metrônomo.
 
 ---
