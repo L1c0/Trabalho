@@ -106,17 +106,19 @@ const Revelacao: React.FC<{ id: string; k: number; progresso: number; escala: nu
       const ctx = ref.current.getContext('2d')!;
       const out = ctx.createImageData(d.w, d.h);
       // r = clamp((limite - campo) / largura): a borda do avanço tem a
-      // largura de uma gota, não de um degradê
+      // largura de uma gota, não de um degradê. O campo vem em 16 bits
+      // (alto no vermelho, baixo no verde); um campo cinza de 8 bits lê
+      // igual (v * 257 / 65535 = v / 255).
       const lw = passo.largura;
       const limite = -lw + progresso * (1 + 2 * lw);
-      const lut = new Uint16Array(256);
-      for (let v = 0; v < 256; v++) {
-        lut[v] = Math.round(Math.min(1, Math.max(0, (limite - v / 255) / lw)) * 256);
+      const lut = new Uint16Array(65536);
+      for (let v = 0; v < 65536; v++) {
+        lut[v] = Math.round(Math.min(1, Math.max(0, (limite - v / 65535) / lw)) * 256);
       }
       const { a, b, campo } = d;
       const o = out.data;
       for (let i = 0; i < o.length; i += 4) {
-        const r = lut[campo[i]];
+        const r = lut[(campo[i] << 8) | campo[i + 1]];
         o[i] = a[i] + (((b[i] - a[i]) * r) >> 8);
         o[i + 1] = a[i + 1] + (((b[i + 1] - a[i + 1]) * r) >> 8);
         o[i + 2] = a[i + 2] + (((b[i + 2] - a[i + 2]) * r) >> 8);

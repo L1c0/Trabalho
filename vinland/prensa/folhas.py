@@ -81,6 +81,7 @@ class Folha:
         self.estados = [{}]      # cada estado: {nome: forca}; o 0 é o papel
         self.passos = []         # um por estado depois do 0: como revelar
         self.base = {}           # o que já está impresso no estado 0
+        self.pecas = []          # (tipo, x0, y0, x1, y1) em px da folha: cada linha, fio e quadro composto
 
     # --- unidades ---------------------------------------------------
     def x(self, v):
@@ -99,8 +100,13 @@ class Folha:
     def tipo(self, ch, texto, fonte, corpo, x, y, ancora="esq", tracking=0.0,
              semente=0, tremor=0.0):
         f = P.fonte(fonte, max(1, round(corpo * self.e)))
-        return P.linha(ch, texto, f, self.x(x), self.y(y), tracking=tracking,
-                       semente=semente, tremor=tremor * self.e, ancora=ancora) / self.e
+        X, Y = self.x(x), self.y(y)
+        total = P.linha(ch, texto, f, X, Y, tracking=tracking,
+                        semente=semente, tremor=tremor * self.e, ancora=ancora)
+        x0 = X - {"centro": total / 2, "dir": total}.get(ancora, 0)
+        _, t, _, b = f.getbbox(texto)
+        self.pecas.append(("tipo", x0, Y + t, x0 + total, Y + b))
+        return total / self.e
 
     def quadro(self, ch, arq, x, y, largura=None, altura=None, recorte=None,
                branco=0.95, preto=0.12):
@@ -120,10 +126,12 @@ class Folha:
         a = np.asarray(im, float) / 255
         cob = np.clip((branco - a) / (branco - preto), 0, 1)
         peca = Image.fromarray((cob * 255).astype(np.uint8))
+        self.pecas.append(("quadro", self.x(x), self.y(y), self.x(x) + w, self.y(y) + h))
         return P.colar_chapa(ch, peca, self.x(x), self.y(y)), (largura, h / self.e)
 
     def fio(self, ch, x0, y0, x1, y1):
         ImageDraw.Draw(ch).rectangle([self.x(x0), self.y(y0), self.x(x1), self.y(y1)], fill=255)
+        self.pecas.append(("fio", self.x(x0), self.y(y0), self.x(x1) + 1, self.y(y1) + 1))
         return ch
 
     # --- o que passa na prensa --------------------------------------
@@ -197,10 +205,12 @@ class Folha:
         # (movimento.py) usa 0,095 numa caixa de três linhas; aqui as caixas
         # são bem maiores, e com 0,095 a frente vira um degradê de centenas de
         # pixels (fade, não tinta). Estreita: a borda irregular é o ruído.
-        largura = {"leitura": 0.035, "coluna": 0.035, "baixo": 0.06, "radial": 0.05}.get(opcoes["modo"], 0.035)
+        largura = {"coluna": 0.035, "baixo": 0.06, "radial": 0.05}.get(opcoes["modo"], 0.035)
         if modo == "leitura":
-            # linha por linha, da esquerda pra direita; o ruído só deixa a
-            # borda do avanço irregular (tinta chegando, não cortina)
+            cru = (np.abs(b.mean(2) - a.mean(2)) > 3)[y0:y1, x0:x1]
+            c, largura = self.campo_leitura(cru, x0, y0, g)
+        elif modo == "mancha":
+            # a diagonal de movimento.py: de cima à esquerda pra baixo à direita
             c = ruido * 0.17 + yy * 0.56 + xx * 0.27
         elif modo == "coluna":
             # coluna a coluna (a esquerda inteira antes da direita)
@@ -228,8 +238,109 @@ class Folha:
         else:
             raise ValueError(modo)
         c = (c - c.min()) / (c.max() - c.min() + 1e-9)
-        Image.fromarray((c * 255).astype(np.uint8)).save(f"{OUT}/{self.id}-o{k}.png", optimize=True)
-        return dict(caixa=[int(x0), int(y0), int(W), int(H)], largura=largura, modo=modo)
+        # 16 bits (alto no vermelho, baixo no verde): com várias linhas num
+        # passo, cada linha fica com uma fatia do campo, e 8 bits davam
+        # degraus de dezenas de pixels na frente de uma linha só
+        v = np.round(c * 65535).astype(np.uint32)
+        rgb = np.zeros((H, W, 3), np.uint8)
+        rgb[..., 0], rgb[..., 1] = v >> 8, v & 255
+        Image.fromarray(rgb, "RGB").save(f"{OUT}/{self.id}-o{k}.png", optimize=True)
+        return dict(caixa=[int(x0), int(y0), int(W), int(H)], largura=round(float(largura), 6), modo=modo)
+
+    def pecas_do_passo(self, cru, x0, y0):
+        """As peças (linha de tipo, fio, quadro) que ganharam tinta neste
+        passo, em coordenadas da caixa e na ordem em que se lê."""
+        H, W = cru.shape
+        sel = []
+        for tipo, a0, b0, a1, b1 in self.pecas:
+            lx0, ly0 = max(0, int(a0) - x0), max(0, int(b0) - y0)
+            lx1, ly1 = min(W, int(np.ceil(a1)) - x0), min(H, int(np.ceil(b1)) - y0)
+            if lx1 <= lx0 or ly1 <= ly0:
+                continue
+            if cru[ly0:ly1, lx0:lx1].sum() >= max(20, 0.02 * (lx1 - lx0) * (ly1 - ly0)):
+                sel.append((tipo, lx0, ly0, lx1, ly1))
+        if not sel:
+            # desenho que não passou por tipo/fio/quadro (as partes do g01):
+            # cada faixa de linhas da folha com tinta nova é uma linha
+            faixas = []
+            for r in np.where(cru.any(1))[0]:
+                if faixas and r - faixas[-1][1] <= max(3, int(4 * self.e)):
+                    faixas[-1][1] = r
+                else:
+                    faixas.append([r, r])
+            for p, q in faixas or [[0, H - 1]]:
+                cols = np.where(cru[p:q + 1].any(0))[0]
+                sel.append(("tipo", int(cols.min()), int(p), int(cols.max()) + 1, int(q) + 1))
+        vertical = lambda p: p[0] == "fio" and (p[4] - p[2]) > (p[3] - p[1])
+        # fileira: peças na mesma altura (sobrepostas em pelo menos metade da
+        # MAIOR das duas) se leem da esquerda pra direita
+        filas = []
+        for p in sorted((p for p in sel if not vertical(p)), key=lambda p: p[2]):
+            for fila in filas:
+                if min(fila[1], p[4]) - max(fila[0], p[2]) >= 0.5 * max(fila[1] - fila[0], p[4] - p[2]):
+                    fila[0], fila[1] = min(fila[0], p[2]), max(fila[1], p[4])
+                    fila[2].append(p)
+                    break
+            else:
+                filas.append([p[2], p[4], [p]])
+        ordem = [q for fila in sorted(filas, key=lambda f: f[0]) for q in sorted(fila[2], key=lambda q: q[1])]
+        # o fio que divide colunas entra por último: a palavra dita não espera o fio
+        return ordem + sorted((p for p in sel if vertical(p)), key=lambda p: p[1])
+
+    def campo_leitura(self, cru, x0, y0, g):
+        """ORDEM DE LEITURA de verdade: uma linha inteira, da esquerda pra
+        direita, antes da seguinte. A frente anda na mesma velocidade em
+        todas as linhas (tinta saindo do rolo, não tempo fixo por linha), e o
+        ruído só deixa a borda dela irregular, na escala da letra.
+
+        Normalizar y pela caixa (como em movimento.py) fazia, numa linha só,
+        a tinta descer de cima pra baixo dentro das letras: cortina, não
+        tinta. Quadro e fio vertical correm 4x e 2x mais depressa que o tipo
+        (e com a borda proporcionalmente mais larga): a imagem chega, o
+        texto se lê.
+
+        Devolve o campo (0..1) e a largura da frente na unidade do campo."""
+        H, W = cru.shape
+        ordem = self.pecas_do_passo(cru, x0, y0)
+        alt = [p[4] - p[2] for p in ordem if p[0] == "tipo"] or [min(p[3] - p[1], p[4] - p[2]) for p in ordem]
+        hm = float(np.median(alt))
+
+        def comprimento(p):
+            w, h = p[3] - p[1], p[4] - p[2]
+            if p[0] == "quadro":
+                return 0.25 * max(w, h)
+            if p[0] == "fio" and h > w:
+                return 0.5 * h
+            return w
+
+        L = np.array([comprimento(p) for p in ordem], float)
+        S = np.concatenate([[0.0], np.cumsum(L)[:-1]])
+        Y = np.arange(H, dtype=float)[:, None]
+        X = np.arange(W, dtype=float)[None, :]
+        # cada pixel é da peça mais perto: a tinta que a torção da chapa
+        # empurra pra fora do retângulo vai junto com a linha dela
+        dist = np.full((H, W), np.inf)
+        c = np.zeros((H, W))
+        for j, (tipo, a0, b0, a1, b1) in enumerate(ordem):
+            d = np.maximum(np.maximum(a0 - X, X - a1), 0) ** 2 + np.maximum(np.maximum(b0 - Y, Y - b1), 0) ** 2
+            xp = np.clip((X - a0) / max(1, a1 - a0), 0, 1)
+            yp = np.clip((Y - b0) / max(1, b1 - b0), 0, 1)
+            if tipo == "quadro":
+                pr = 0.62 * yp + 0.38 * xp
+            elif tipo == "fio" and (b1 - b0) > (a1 - a0):
+                pr = np.broadcast_to(yp, (H, W))
+            else:
+                pr = np.broadcast_to(xp, (H, W))
+            m = d < dist
+            dist[m] = d[m]
+            c[m] = (S[j] + pr * L[j])[m]
+        # borda irregular: ruído na escala da letra, desvio de 12% da altura
+        n = ndimage.gaussian_filter(g.random((H, W)), float(np.clip(0.18 * hm, 3, 30)))
+        n = (n - n.mean()) / (n.std() + 1e-9)
+        c = c + 0.12 * hm * n
+        lo, hi = c.min(), c.max()
+        frente = float(np.clip(0.30 * hm, 8 * self.e, 64 * self.e))
+        return (c - lo) / (hi - lo), frente / (hi - lo)
 
 
 # ===================================================================== #
@@ -275,7 +386,9 @@ def cartela(n, tom=None):
         f.tipo(ch, "VINLAND SAGA, CAPÍTULO 96", "oswald.ttf", 23, ESQ, 872, tracking=0.19, semente=43)
         f.el("vazado", ch, vazado=True, tinta=TURFA, semente=49, ganho=0.55, mordida=0.22,
              batida=0.26, falha=0.85, torcao=0.14)
-        f.passo({"vazado": 1}, modo="leitura")
+        # o que chega aqui é o fundo (o tipo é reserva): a tinta inunda a
+        # folha na diagonal, e as letras aparecem porque ela não as cobre
+        f.passo({"vazado": 1}, modo="mancha")
     elif n == 5:
         ano = f.chapa()
         f.tipo(ano, "1893", "anton.ttf", 300, ESQ - 10, 300, tracking=-0.02, semente=50, tremor=1.3)
