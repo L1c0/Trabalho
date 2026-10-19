@@ -1,0 +1,1957 @@
+{
+ "c1": {
+  "id": "c1",
+  "w": 2970,
+  "h": 1670,
+  "uw": 2227.2,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "guerra",
+  "estados": 2,
+  "passos": [
+   {
+    "caixa": [
+     518,
+     912,
+     1455,
+     492
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.38
+ },
+ "t1a": {
+  "id": "t1a",
+  "w": 2970,
+  "h": 1670,
+  "uw": 2227.2,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "guerra",
+  "estados": 3,
+  "passos": [
+   {
+    "caixa": [
+     516,
+     661,
+     1446,
+     155
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     520,
+     895,
+     1577,
+     61
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.14
+ },
+ "q1a": {
+  "id": "q1a",
+  "w": 2970,
+  "h": 2333,
+  "uw": 2227.2,
+  "uh": 1749.6000000000001,
+  "escala": 1.3333333333333333,
+  "tom": "guerra",
+  "estados": 2,
+  "passos": [
+   {
+    "caixa": [
+     1125,
+     439,
+     1389,
+     1691
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.18,
+  "quadro": [
+   1040,
+   1403.2
+  ]
+ },
+ "q1b": {
+  "id": "q1b",
+  "w": 2970,
+  "h": 1670,
+  "uw": 2227.2,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "guerra",
+  "estados": 2,
+  "passos": [
+   {
+    "caixa": [
+     111,
+     126,
+     2747,
+     1500
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.13,
+  "quadro": [
+   2140,
+   1150.5
+  ]
+ },
+ "t1b": {
+  "id": "t1b",
+  "w": 2970,
+  "h": 1670,
+  "uw": 2227.2,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "guerra",
+  "estados": 3,
+  "passos": [
+   {
+    "caixa": [
+     1342,
+     582,
+     1193,
+     59
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     1524,
+     715,
+     1010,
+     245
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.19
+ },
+ "q1c": {
+  "id": "q1c",
+  "w": 2970,
+  "h": 1670,
+  "uw": 2227.2,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "guerra",
+  "estados": 2,
+  "passos": [
+   {
+    "caixa": [
+     1267,
+     218,
+     1234,
+     1321
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.15,
+  "quadro": [
+   960,
+   1025.2
+  ]
+ },
+ "t1c": {
+  "id": "t1c",
+  "w": 2970,
+  "h": 1670,
+  "uw": 2227.2,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "guerra",
+  "estados": 3,
+  "passos": [
+   {
+    "caixa": [
+     503,
+     507,
+     1290,
+     392
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     514,
+     977,
+     1286,
+     82
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.14
+ },
+ "c2": {
+  "id": "c2",
+  "w": 2970,
+  "h": 1670,
+  "uw": 2227.2,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "perda",
+  "estados": 2,
+  "passos": [
+   {
+    "caixa": [
+     513,
+     463,
+     1092,
+     637
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.23
+ },
+ "t2a": {
+  "id": "t2a",
+  "w": 2970,
+  "h": 1670,
+  "uw": 2227.2,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "perda",
+  "estados": 3,
+  "passos": [
+   {
+    "caixa": [
+     514,
+     596,
+     935,
+     188
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     520,
+     821,
+     773,
+     103
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.19
+ },
+ "t2b": {
+  "id": "t2b",
+  "w": 2970,
+  "h": 1670,
+  "uw": 2227.2,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "perda",
+  "estados": 4,
+  "passos": [
+   {
+    "caixa": [
+     510,
+     639,
+     839,
+     494
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     510,
+     640,
+     1889,
+     514
+    ],
+    "largura": 0.035,
+    "modo": "coluna"
+   },
+   {
+    "caixa": [
+     510,
+     640,
+     1889,
+     514
+    ],
+    "largura": 0.035,
+    "modo": "coluna"
+   }
+  ],
+  "grao_folha": 8.17
+ },
+ "t2c": {
+  "id": "t2c",
+  "w": 2970,
+  "h": 1670,
+  "uw": 2227.2,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "perda",
+  "estados": 4,
+  "passos": [
+   {
+    "caixa": [
+     1457,
+     545,
+     1080,
+     323
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     1627,
+     907,
+     907,
+     85
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     1529,
+     1086,
+     1008,
+     104
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.18
+ },
+ "t2d": {
+  "id": "t2d",
+  "w": 2970,
+  "h": 1670,
+  "uw": 2227.2,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "perda",
+  "estados": 2,
+  "passos": [
+   {
+    "caixa": [
+     516,
+     727,
+     1312,
+     151
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.16
+ },
+ "t2e": {
+  "id": "t2e",
+  "w": 2970,
+  "h": 1670,
+  "uw": 2227.2,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "perda",
+  "estados": 5,
+  "passos": [
+   {
+    "caixa": [
+     512,
+     451,
+     1021,
+     176
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     516,
+     652,
+     793,
+     176
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     515,
+     852,
+     324,
+     153
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     510,
+     1108,
+     1358,
+     160
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.21
+ },
+ "t2f": {
+  "id": "t2f",
+  "w": 2970,
+  "h": 1670,
+  "uw": 2227.2,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "perda",
+  "estados": 3,
+  "passos": [
+   {
+    "caixa": [
+     519,
+     557,
+     623,
+     55
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     514,
+     656,
+     1144,
+     311
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.17
+ },
+ "q2a": {
+  "id": "q2a",
+  "w": 3328,
+  "h": 1670,
+  "uw": 2496.0,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "perda",
+  "estados": 2,
+  "passos": [
+   {
+    "caixa": [
+     241,
+     372,
+     2756,
+     1105
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.16,
+  "quadro": [
+   2220,
+   859.5
+  ]
+ },
+ "t2g": {
+  "id": "t2g",
+  "w": 2970,
+  "h": 1670,
+  "uw": 2227.2,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "perda",
+  "estados": 2,
+  "passos": [
+   {
+    "caixa": [
+     515,
+     548,
+     1464,
+     471
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.18
+ },
+ "c3": {
+  "id": "c3",
+  "w": 2970,
+  "h": 1670,
+  "uw": 2227.2,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "ferro",
+  "estados": 2,
+  "passos": [
+   {
+    "caixa": [
+     1078,
+     691,
+     1459,
+     508
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.18
+ },
+ "q3a": {
+  "id": "q3a",
+  "w": 2970,
+  "h": 1670,
+  "uw": 2227.2,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "ferro",
+  "estados": 2,
+  "passos": [
+   {
+    "caixa": [
+     550,
+     318,
+     1277,
+     1104
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.17,
+  "quadro": [
+   1000,
+   868.5
+  ]
+ },
+ "q3b": {
+  "id": "q3b",
+  "w": 2970,
+  "h": 1958,
+  "uw": 2227.2,
+  "uh": 1468.8000000000002,
+  "escala": 1.3333333333333333,
+  "tom": "ferro",
+  "estados": 2,
+  "passos": [
+   {
+    "caixa": [
+     1416,
+     192,
+     1052,
+     1536
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.2,
+  "quadro": [
+   840,
+   1172.2
+  ]
+ },
+ "q3c": {
+  "id": "q3c",
+  "w": 2970,
+  "h": 1670,
+  "uw": 2227.2,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "ferro",
+  "estados": 4,
+  "passos": [
+   {
+    "caixa": [
+     663,
+     388,
+     1232,
+     894
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     2034,
+     741,
+     233,
+     53
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     2031,
+     812,
+     558,
+     134
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.15,
+  "quadro": [
+   1080,
+   697.5
+  ]
+ },
+ "q3d": {
+  "id": "q3d",
+  "w": 2970,
+  "h": 1670,
+  "uw": 2227.2,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "ferro",
+  "estados": 4,
+  "passos": [
+   {
+    "caixa": [
+     520,
+     351,
+     850,
+     935
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     1534,
+     365,
+     758,
+     919
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     514,
+     1275,
+     1452,
+     111
+    ],
+    "largura": 0.035,
+    "modo": "coluna"
+   }
+  ],
+  "grao_folha": 8.15
+ },
+ "q3e": {
+  "id": "q3e",
+  "w": 2970,
+  "h": 1670,
+  "uw": 2227.2,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "ferro",
+  "estados": 4,
+  "passos": [
+   {
+    "caixa": [
+     1212,
+     416,
+     1287,
+     866
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     515,
+     518,
+     415,
+     167
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     514,
+     749,
+     385,
+     214
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.19,
+  "quadro": [
+   1000,
+   681.8
+  ]
+ },
+ "q3f": {
+  "id": "q3f",
+  "w": 2970,
+  "h": 1670,
+  "uw": 2227.2,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "ferro",
+  "estados": 4,
+  "passos": [
+   {
+    "caixa": [
+     515,
+     531,
+     589,
+     781
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     1209,
+     325,
+     586,
+     986
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     1900,
+     536,
+     593,
+     776
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.19
+ },
+ "t3a": {
+  "id": "t3a",
+  "w": 2970,
+  "h": 1670,
+  "uw": 2227.2,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "ferro",
+  "estados": 3,
+  "passos": [
+   {
+    "caixa": [
+     515,
+     437,
+     929,
+     545
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     1527,
+     472,
+     481,
+     498
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.13
+ },
+ "q3g": {
+  "id": "q3g",
+  "w": 2970,
+  "h": 1670,
+  "uw": 2227.2,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "ferro",
+  "estados": 4,
+  "passos": [
+   {
+    "caixa": [
+     1879,
+     473,
+     542,
+     693
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     516,
+     541,
+     829,
+     263
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     515,
+     904,
+     478,
+     221
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.15,
+  "quadro": [
+   440,
+   555.8
+  ]
+ },
+ "q3i": {
+  "id": "q3i",
+  "w": 2970,
+  "h": 1670,
+  "uw": 2227.2,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "ferro",
+  "estados": 2,
+  "passos": [
+   {
+    "caixa": [
+     182,
+     193,
+     2495,
+     1323
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.16,
+  "quadro": [
+   2040,
+   1008.0
+  ]
+ },
+ "c4": {
+  "id": "c4",
+  "w": 2970,
+  "h": 1670,
+  "uw": 2227.2,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "fazenda",
+  "estados": 2,
+  "passos": [
+   {
+    "caixa": [
+     0,
+     0,
+     2970,
+     1670
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.15
+ },
+ "q4a": {
+  "id": "q4a",
+  "w": 3584,
+  "h": 1670,
+  "uw": 2688.0,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "fazenda",
+  "estados": 2,
+  "passos": [
+   {
+    "caixa": [
+     398,
+     65,
+     2935,
+     1473
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.18,
+  "quadro": [
+   2400,
+   1188.0
+  ]
+ },
+ "q4b": {
+  "id": "q4b",
+  "w": 3789,
+  "h": 1670,
+  "uw": 2841.6,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "fazenda",
+  "estados": 2,
+  "passos": [
+   {
+    "caixa": [
+     343,
+     297,
+     3207,
+     1078
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.15,
+  "quadro": [
+   2580,
+   900.8
+  ]
+ },
+ "q4c": {
+  "id": "q4c",
+  "w": 2970,
+  "h": 2102,
+  "uw": 2227.2,
+  "uh": 1576.8,
+  "escala": 1.3333333333333333,
+  "tom": "fazenda",
+  "estados": 2,
+  "passos": [
+   {
+    "caixa": [
+     1021,
+     163,
+     1258,
+     1773
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.14,
+  "quadro": [
+   1000,
+   1356.8
+  ]
+ },
+ "cs": {
+  "id": "cs",
+  "w": 2970,
+  "h": 1670,
+  "uw": 2227.2,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "socos",
+  "estados": 2,
+  "passos": [
+   {
+    "caixa": [
+     422,
+     412,
+     2060,
+     849
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.13,
+  "quadro": [
+   1651.2,
+   693.8
+  ]
+ },
+ "si": {
+  "id": "si",
+  "w": 4454,
+  "h": 2506,
+  "uw": 2227.2,
+  "uh": 1252.8,
+  "escala": 2.0,
+  "tom": "socos",
+  "estados": 2,
+  "passos": [
+   {
+    "caixa": [
+     758,
+     278,
+     1372,
+     1955
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.17,
+  "quadro": [
+   729.2,
+   993.5
+  ]
+ },
+ "c5": {
+  "id": "c5",
+  "w": 2970,
+  "h": 1670,
+  "uw": 2227.2,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "socos",
+  "estados": 2,
+  "passos": [
+   {
+    "caixa": [
+     504,
+     623,
+     939,
+     805
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.19
+ },
+ "t5a": {
+  "id": "t5a",
+  "w": 2970,
+  "h": 1670,
+  "uw": 2227.2,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "socos",
+  "estados": 3,
+  "passos": [
+   {
+    "caixa": [
+     515,
+     612,
+     1240,
+     163
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     516,
+     863,
+     640,
+     185
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.17
+ },
+ "t5b": {
+  "id": "t5b",
+  "w": 2970,
+  "h": 1670,
+  "uw": 2227.2,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "socos",
+  "estados": 4,
+  "passos": [
+   {
+    "caixa": [
+     1575,
+     477,
+     959,
+     274
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     1849,
+     850,
+     689,
+     366
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     1584,
+     1251,
+     954,
+     62
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.14
+ },
+ "t5c": {
+  "id": "t5c",
+  "w": 2970,
+  "h": 1670,
+  "uw": 2227.2,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "socos",
+  "estados": 5,
+  "passos": [
+   {
+    "caixa": [
+     512,
+     584,
+     556,
+     245
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     1154,
+     580,
+     547,
+     248
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     1792,
+     520,
+     441,
+     305
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     517,
+     981,
+     800,
+     78
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.14
+ },
+ "t5d": {
+  "id": "t5d",
+  "w": 2970,
+  "h": 1670,
+  "uw": 2227.2,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "socos",
+  "estados": 3,
+  "passos": [
+   {
+    "caixa": [
+     1844,
+     572,
+     691,
+     285
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     1928,
+     966,
+     608,
+     58
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.18
+ },
+ "c6": {
+  "id": "c6",
+  "w": 2970,
+  "h": 1670,
+  "uw": 2227.2,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "baltico",
+  "estados": 5,
+  "passos": [
+   {
+    "caixa": [
+     515,
+     498,
+     1138,
+     454
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     1499,
+     596,
+     515,
+     335
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     514,
+     596,
+     497,
+     333
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     514,
+     1114,
+     1164,
+     138
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.11
+ },
+ "q6a": {
+  "id": "q6a",
+  "w": 3328,
+  "h": 1670,
+  "uw": 2496.0,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "baltico",
+  "estados": 2,
+  "passos": [
+   {
+    "caixa": [
+     241,
+     385,
+     2758,
+     1184
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.14,
+  "quadro": [
+   2220,
+   971.2
+  ]
+ },
+ "q6b": {
+  "id": "q6b",
+  "w": 2970,
+  "h": 1670,
+  "uw": 2227.2,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "baltico",
+  "estados": 3,
+  "passos": [
+   {
+    "caixa": [
+     556,
+     243,
+     1190,
+     1190
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     1870,
+     679,
+     529,
+     342
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.12,
+  "quadro": [
+   940,
+   939.8
+  ]
+ },
+ "h7": {
+  "id": "h7",
+  "w": 3584,
+  "h": 2333,
+  "uw": 2688.0,
+  "uh": 1749.6000000000001,
+  "escala": 1.3333333333333333,
+  "tom": "neve",
+  "estados": 2,
+  "passos": [
+   {
+    "caixa": [
+     123,
+     137,
+     3337,
+     2196
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.16,
+  "quadro": [
+   2480,
+   1860.0
+  ]
+ },
+ "t7a": {
+  "id": "t7a",
+  "w": 2970,
+  "h": 1670,
+  "uw": 2227.2,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "neve",
+  "estados": 7,
+  "passos": [
+   {
+    "caixa": [
+     758,
+     410,
+     1555,
+     133
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     780,
+     566,
+     452,
+     130
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     780,
+     719,
+     521,
+     130
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     780,
+     873,
+     754,
+     131
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     781,
+     1033,
+     805,
+     130
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     597,
+     1182,
+     504,
+     134
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.11
+ },
+ "g7": {
+  "id": "g7",
+  "w": 2970,
+  "h": 1670,
+  "uw": 2227.2,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "neve",
+  "estados": 5,
+  "passos": [
+   {
+    "caixa": [
+     207,
+     245,
+     1809,
+     1167
+    ],
+    "largura": 0.05,
+    "modo": "radial"
+   },
+   {
+    "caixa": [
+     1638,
+     597,
+     944,
+     688
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     1043,
+     589,
+     407,
+     206
+    ],
+    "largura": 0.017241379310344827,
+    "modo": "escada"
+   },
+   {
+    "caixa": [
+     1428,
+     415,
+     303,
+     200
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.12,
+  "marcas": 28
+ },
+ "c7": {
+  "id": "c7",
+  "w": 2970,
+  "h": 1670,
+  "uw": 2227.2,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "neve",
+  "estados": 2,
+  "passos": [
+   {
+    "caixa": [
+     500,
+     565,
+     1070,
+     898
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 7.98
+ },
+ "q7a": {
+  "id": "q7a",
+  "w": 2970,
+  "h": 1670,
+  "uw": 2227.2,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "neve",
+  "estados": 2,
+  "passos": [
+   {
+    "caixa": [
+     111,
+     126,
+     2747,
+     1500
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.12,
+  "quadro": [
+   2140,
+   1150.5
+  ]
+ },
+ "t7b": {
+  "id": "t7b",
+  "w": 2970,
+  "h": 1670,
+  "uw": 2227.2,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "neve",
+  "estados": 2,
+  "passos": [
+   {
+    "caixa": [
+     512,
+     630,
+     1158,
+     307
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.17
+ },
+ "t8a": {
+  "id": "t8a",
+  "w": 2970,
+  "h": 1670,
+  "uw": 2227.2,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "broto",
+  "estados": 3,
+  "passos": [
+   {
+    "caixa": [
+     514,
+     471,
+     925,
+     484
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     1527,
+     490,
+     749,
+     447
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.06
+ },
+ "q8a": {
+  "id": "q8a",
+  "w": 2970,
+  "h": 1670,
+  "uw": 2227.2,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "broto",
+  "estados": 4,
+  "passos": [
+   {
+    "caixa": [
+     1699,
+     328,
+     792,
+     970
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     513,
+     647,
+     858,
+     107
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     515,
+     814,
+     585,
+     101
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 7.84,
+  "quadro": [
+   640,
+   768.0
+  ]
+ },
+ "q8b": {
+  "id": "q8b",
+  "w": 3584,
+  "h": 1670,
+  "uw": 2688.0,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "broto",
+  "estados": 2,
+  "passos": [
+   {
+    "caixa": [
+     397,
+     65,
+     2936,
+     1473
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.05,
+  "quadro": [
+   2400,
+   1188.0
+  ]
+ },
+ "c2-broto": {
+  "id": "c2-broto",
+  "w": 2970,
+  "h": 1670,
+  "uw": 2227.2,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "broto",
+  "estados": 2,
+  "passos": [
+   {
+    "caixa": [
+     513,
+     462,
+     1093,
+     638
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.12
+ },
+ "t8b": {
+  "id": "t8b",
+  "w": 2970,
+  "h": 1670,
+  "uw": 2227.2,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "broto",
+  "estados": 4,
+  "passos": [
+   {
+    "caixa": [
+     514,
+     577,
+     1304,
+     141
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     516,
+     727,
+     1093,
+     139
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     516,
+     871,
+     1359,
+     112
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 8.06
+ },
+ "q8c": {
+  "id": "q8c",
+  "w": 2970,
+  "h": 2333,
+  "uw": 2227.2,
+  "uh": 1749.6000000000001,
+  "escala": 1.3333333333333333,
+  "tom": "broto",
+  "estados": 2,
+  "passos": [
+   {
+    "caixa": [
+     1124,
+     439,
+     1390,
+     1691
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 7.51,
+  "quadro": [
+   1040,
+   1403.2
+  ]
+ },
+ "t8c": {
+  "id": "t8c",
+  "w": 2970,
+  "h": 1670,
+  "uw": 2227.2,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "broto",
+  "estados": 4,
+  "passos": [
+   {
+    "caixa": [
+     519,
+     502,
+     1343,
+     56
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     515,
+     596,
+     1484,
+     273
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     516,
+     923,
+     816,
+     152
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 7.96
+ },
+ "q8d": {
+  "id": "q8d",
+  "w": 2970,
+  "h": 1670,
+  "uw": 2227.2,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "broto",
+  "estados": 4,
+  "passos": [
+   {
+    "caixa": [
+     1533,
+     312,
+     967,
+     966
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     513,
+     570,
+     962,
+     214
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     514,
+     878,
+     753,
+     217
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 7.98,
+  "quadro": [
+   760,
+   759.8
+  ]
+ },
+ "h8": {
+  "id": "h8",
+  "w": 3584,
+  "h": 2333,
+  "uw": 2688.0,
+  "uh": 1749.6000000000001,
+  "escala": 1.3333333333333333,
+  "tom": "broto",
+  "estados": 2,
+  "passos": [
+   {
+    "caixa": [
+     123,
+     137,
+     3337,
+     2196
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 7.72,
+  "quadro": [
+   2480,
+   1860.0
+  ]
+ },
+ "t8e": {
+  "id": "t8e",
+  "w": 2970,
+  "h": 1670,
+  "uw": 2227.2,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "broto",
+  "estados": 3,
+  "passos": [
+   {
+    "caixa": [
+     513,
+     647,
+     1296,
+     116
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   },
+   {
+    "caixa": [
+     515,
+     810,
+     667,
+     113
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 7.94
+ },
+ "q8e": {
+  "id": "q8e",
+  "w": 2970,
+  "h": 1958,
+  "uw": 2227.2,
+  "uh": 1468.8000000000002,
+  "escala": 1.3333333333333333,
+  "tom": "broto",
+  "estados": 2,
+  "passos": [
+   {
+    "caixa": [
+     936,
+     269,
+     1152,
+     1689
+    ],
+    "largura": 0.06,
+    "modo": "baixo"
+   }
+  ],
+  "grao_folha": 8.05,
+  "quadro": [
+   860,
+   1416.8
+  ]
+ },
+ "c8": {
+  "id": "c8",
+  "w": 2970,
+  "h": 1670,
+  "uw": 2227.2,
+  "uh": 1252.8,
+  "escala": 1.3333333333333333,
+  "tom": "broto",
+  "estados": 2,
+  "passos": [
+   {
+    "caixa": [
+     516,
+     749,
+     1173,
+     275
+    ],
+    "largura": 0.035,
+    "modo": "leitura"
+   }
+  ],
+  "grao_folha": 7.77
+ }
+}
