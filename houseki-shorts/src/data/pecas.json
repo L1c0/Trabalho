@@ -1,0 +1,1238 @@
+{
+ "mem": {
+  "id": "mem",
+  "w": 1426,
+  "h": 2381,
+  "ox": 173,
+  "oy": 230,
+  "tons": [
+   "fosfofilita",
+   "agata",
+   "ouro",
+   "lapis",
+   "perola"
+  ],
+  "papel": [
+   {
+    "caixa": [
+     0,
+     0,
+     1426,
+     2381
+    ],
+    "largura": 0.08,
+    "modo": "mancha",
+    "nome": null
+   },
+   {
+    "caixa": [
+     0,
+     0,
+     1426,
+     2381
+    ],
+    "largura": 0.08,
+    "modo": "mancha",
+    "nome": null
+   },
+   {
+    "caixa": [
+     0,
+     0,
+     1426,
+     2381
+    ],
+    "largura": 0.08,
+    "modo": "mancha",
+    "nome": null
+   },
+   {
+    "caixa": [
+     0,
+     0,
+     1426,
+     2381
+    ],
+    "largura": 0.08,
+    "modo": "mancha",
+    "nome": null
+   }
+  ],
+  "grao_folha": 8.81,
+  "tinta": [
+   {
+    "caixa": [
+     262,
+     1184,
+     384,
+     54
+    ],
+    "largura": 0.026508,
+    "modo": "leitura",
+    "nome": "a2"
+   },
+   {
+    "caixa": [
+     254,
+     1250,
+     803,
+     156
+    ],
+    "largura": 0.048148,
+    "modo": "leitura",
+    "nome": "a3"
+   },
+   {
+    "caixa": [
+     260,
+     1427,
+     432,
+     68
+    ],
+    "largura": 0.032324,
+    "modo": "leitura",
+    "nome": "a4"
+   },
+   {
+    "caixa": [
+     0,
+     0,
+     1,
+     1
+    ],
+    "largura": 1,
+    "modo": "corte",
+    "nome": "corte-148"
+   },
+   {
+    "caixa": [
+     259,
+     471,
+     378,
+     52
+    ],
+    "largura": 0.025693,
+    "modo": "leitura",
+    "nome": "rot-corpo"
+   },
+   {
+    "caixa": [
+     493,
+     520,
+     340,
+     482
+    ],
+    "largura": 0.010294,
+    "modo": "unidades",
+    "nome": "corpo"
+   },
+   {
+    "caixa": [
+     493,
+     663,
+     49,
+     51
+    ],
+    "largura": 0.25,
+    "modo": "inteiro",
+    "nome": "sai"
+   },
+   {
+    "caixa": [
+     494,
+     666,
+     49,
+     51
+    ],
+    "largura": 0.25,
+    "modo": "inteiro",
+    "nome": "entra"
+   },
+   {
+    "caixa": [
+     260,
+     1078,
+     501,
+     67
+    ],
+    "largura": 0.026983,
+    "modo": "leitura",
+    "nome": "b1"
+   },
+   {
+    "caixa": [
+     256,
+     1157,
+     647,
+     151
+    ],
+    "largura": 0.049547,
+    "modo": "leitura",
+    "nome": "b2"
+   },
+   {
+    "caixa": [
+     262,
+     1333,
+     472,
+     64
+    ],
+    "largura": 0.026725,
+    "modo": "leitura",
+    "nome": "b3"
+   },
+   {
+    "caixa": [
+     0,
+     0,
+     1,
+     1
+    ],
+    "largura": 1,
+    "modo": "corte",
+    "nome": "corte-452"
+   },
+   {
+    "caixa": [
+     260,
+     1119,
+     256,
+     64
+    ],
+    "largura": 0.051796,
+    "modo": "leitura",
+    "nome": "c1"
+   },
+   {
+    "caixa": [
+     254,
+     1197,
+     570,
+     189
+    ],
+    "largura": 0.083706,
+    "modo": "leitura",
+    "nome": "c2"
+   },
+   {
+    "caixa": [
+     260,
+     1414,
+     412,
+     60
+    ],
+    "largura": 0.029628,
+    "modo": "leitura",
+    "nome": "c3"
+   },
+   {
+    "caixa": [
+     0,
+     0,
+     1,
+     1
+    ],
+    "largura": 1,
+    "modo": "corte",
+    "nome": "corte-516"
+   },
+   {
+    "caixa": [
+     0,
+     0,
+     1,
+     1
+    ],
+    "largura": 1,
+    "modo": "corte",
+    "nome": "torso"
+   },
+   {
+    "caixa": [
+     260,
+     1078,
+     321,
+     54
+    ],
+    "largura": 0.033182,
+    "modo": "leitura",
+    "nome": "d1"
+   },
+   {
+    "caixa": [
+     255,
+     1145,
+     649,
+     205
+    ],
+    "largura": 0.07664,
+    "modo": "leitura",
+    "nome": "d2"
+   },
+   {
+    "caixa": [
+     260,
+     1372,
+     319,
+     66
+    ],
+    "largura": 0.043836,
+    "modo": "leitura",
+    "nome": "d3"
+   },
+   {
+    "caixa": [
+     0,
+     0,
+     1,
+     1
+    ],
+    "largura": 1,
+    "modo": "corte",
+    "nome": "corte-692"
+   },
+   {
+    "caixa": [
+     260,
+     1078,
+     411,
+     65
+    ],
+    "largura": 0.033381,
+    "modo": "leitura",
+    "nome": "e1"
+   },
+   {
+    "caixa": [
+     588,
+     617,
+     148,
+     195
+    ],
+    "largura": 0.25,
+    "modo": "inteiro",
+    "nome": "ferrugem"
+   },
+   {
+    "caixa": [
+     256,
+     1158,
+     648,
+     167
+    ],
+    "largura": 0.056926,
+    "modo": "leitura",
+    "nome": "e2"
+   },
+   {
+    "caixa": [
+     0,
+     0,
+     1,
+     1
+    ],
+    "largura": 1,
+    "modo": "corte",
+    "nome": "corte-782"
+   },
+   {
+    "caixa": [
+     260,
+     1121,
+     466,
+     64
+    ],
+    "largura": 0.028142,
+    "modo": "leitura",
+    "nome": "f1"
+   },
+   {
+    "caixa": [
+     262,
+     1183,
+     428,
+     55
+    ],
+    "largura": 0.024741,
+    "modo": "leitura",
+    "nome": "f2"
+   },
+   {
+    "caixa": [
+     254,
+     1250,
+     805,
+     134
+    ],
+    "largura": 0.039972,
+    "modo": "leitura",
+    "nome": "f3"
+   },
+   {
+    "caixa": [
+     259,
+     1411,
+     387,
+     65
+    ],
+    "largura": 0.034671,
+    "modo": "leitura",
+    "nome": "f4"
+   },
+   {
+    "caixa": [
+     0,
+     0,
+     1,
+     1
+    ],
+    "largura": 1,
+    "modo": "corte",
+    "nome": "corte-934"
+   },
+   {
+    "caixa": [
+     258,
+     779,
+     502,
+     69
+    ],
+    "largura": 0.029585,
+    "modo": "leitura",
+    "nome": "g1"
+   },
+   {
+    "caixa": [
+     254,
+     861,
+     802,
+     184
+    ],
+    "largura": 0.056187,
+    "modo": "leitura",
+    "nome": "g2"
+   },
+   {
+    "caixa": [
+     254,
+     1032,
+     428,
+     226
+    ],
+    "largura": 0.107536,
+    "modo": "leitura",
+    "nome": "g3"
+   }
+  ],
+  "estados": 34
+ },
+ "ped-tipo": {
+  "id": "ped-tipo",
+  "w": 1426,
+  "h": 2381,
+  "ox": 173,
+  "oy": 230,
+  "tons": [
+   "pedra"
+  ],
+  "papel": [],
+  "grao_folha": 8.84,
+  "tinta": [
+   {
+    "caixa": [
+     259,
+     978,
+     573,
+     54
+    ],
+    "largura": 0.018746,
+    "modo": "leitura",
+    "nome": "p1"
+   },
+   {
+    "caixa": [
+     260,
+     1035,
+     273,
+     51
+    ],
+    "largura": 0.031434,
+    "modo": "leitura",
+    "nome": "p2"
+   },
+   {
+    "caixa": [
+     253,
+     1076,
+     585,
+     285
+    ],
+    "largura": 0.085175,
+    "modo": "leitura",
+    "nome": "p3"
+   },
+   {
+    "caixa": [
+     262,
+     1386,
+     628,
+     65
+    ],
+    "largura": 0.022501,
+    "modo": "leitura",
+    "nome": "p4"
+   },
+   {
+    "caixa": [
+     260,
+     1452,
+     632,
+     65
+    ],
+    "largura": 0.020618,
+    "modo": "leitura",
+    "nome": "p5"
+   },
+   {
+    "caixa": [
+     0,
+     0,
+     1,
+     1
+    ],
+    "largura": 1,
+    "modo": "corte",
+    "nome": "corte-855"
+   },
+   {
+    "caixa": [
+     259,
+     979,
+     415,
+     53
+    ],
+    "largura": 0.024824,
+    "modo": "leitura",
+    "nome": "q1"
+   },
+   {
+    "caixa": [
+     255,
+     1042,
+     802,
+     164
+    ],
+    "largura": 0.045348,
+    "modo": "leitura",
+    "nome": "q2"
+   },
+   {
+    "caixa": [
+     260,
+     1232,
+     358,
+     63
+    ],
+    "largura": 0.034274,
+    "modo": "leitura",
+    "nome": "q3"
+   },
+   {
+    "caixa": [
+     0,
+     0,
+     1,
+     1
+    ],
+    "largura": 1,
+    "modo": "corte",
+    "nome": "corte-946"
+   },
+   {
+    "caixa": [
+     260,
+     978,
+     352,
+     65
+    ],
+    "largura": 0.038665,
+    "modo": "leitura",
+    "nome": "r1"
+   },
+   {
+    "caixa": [
+     253,
+     1057,
+     700,
+     262
+    ],
+    "largura": 0.075681,
+    "modo": "leitura",
+    "nome": "r2"
+   },
+   {
+    "caixa": [
+     261,
+     1343,
+     463,
+     66
+    ],
+    "largura": 0.029854,
+    "modo": "leitura",
+    "nome": "r3"
+   },
+   {
+    "caixa": [
+     0,
+     0,
+     1,
+     1
+    ],
+    "largura": 1,
+    "modo": "corte",
+    "nome": "corte-1055"
+   },
+   {
+    "caixa": [
+     259,
+     978,
+     456,
+     67
+    ],
+    "largura": 0.028887,
+    "modo": "leitura",
+    "nome": "s1"
+   },
+   {
+    "caixa": [
+     253,
+     1037,
+     644,
+     286
+    ],
+    "largura": 0.081616,
+    "modo": "leitura",
+    "nome": "s2"
+   },
+   {
+    "caixa": [
+     261,
+     1344,
+     348,
+     54
+    ],
+    "largura": 0.028537,
+    "modo": "leitura",
+    "nome": "s3"
+   }
+  ],
+  "estados": 18
+ },
+ "nav-dois": {
+  "id": "nav-dois",
+  "w": 1426,
+  "h": 2381,
+  "ox": 173,
+  "oy": 230,
+  "tons": [
+   "fosfofilita"
+  ],
+  "papel": [],
+  "grao_folha": 8.75,
+  "tinta": [
+   {
+    "caixa": [
+     353,
+     1021,
+     137,
+     45
+    ],
+    "largura": 0.058775,
+    "modo": "leitura",
+    "nome": "forma"
+   },
+   {
+    "caixa": [
+     813,
+     1020,
+     174,
+     54
+    ],
+    "largura": 0.058744,
+    "modo": "leitura",
+    "nome": "materia"
+   },
+   {
+    "caixa": [
+     260,
+     1118,
+     291,
+     64
+    ],
+    "largura": 0.049472,
+    "modo": "leitura",
+    "nome": "q1"
+   },
+   {
+    "caixa": [
+     256,
+     1193,
+     798,
+     131
+    ],
+    "largura": 0.038114,
+    "modo": "leitura",
+    "nome": "q2"
+   },
+   {
+    "caixa": [
+     0,
+     0,
+     1,
+     1
+    ],
+    "largura": 1,
+    "modo": "corte",
+    "nome": "corte-1104"
+   },
+   {
+    "caixa": [
+     259,
+     1123,
+     479,
+     60
+    ],
+    "largura": 0.025186,
+    "modo": "leitura",
+    "nome": "r1"
+   },
+   {
+    "caixa": [
+     260,
+     1189,
+     120,
+     49
+    ],
+    "largura": 0.069871,
+    "modo": "leitura",
+    "nome": "r2"
+   },
+   {
+    "caixa": [
+     253,
+     1250,
+     511,
+     162
+    ],
+    "largura": 0.073852,
+    "modo": "leitura",
+    "nome": "r3"
+   },
+   {
+    "caixa": [
+     259,
+     1434,
+     496,
+     112
+    ],
+    "largura": 0.015855,
+    "modo": "leitura",
+    "nome": "r4"
+   },
+   {
+    "caixa": [
+     0,
+     0,
+     1,
+     1
+    ],
+    "largura": 1,
+    "modo": "corte",
+    "nome": "corte-1291"
+   },
+   {
+    "caixa": [
+     261,
+     1147,
+     452,
+     67
+    ],
+    "largura": 0.030595,
+    "modo": "leitura",
+    "nome": "f1"
+   },
+   {
+    "caixa": [
+     255,
+     1206,
+     804,
+     192
+    ],
+    "largura": 0.057702,
+    "modo": "leitura",
+    "nome": "f2"
+   }
+  ],
+  "estados": 13
+ },
+ "lev": {
+  "id": "lev",
+  "w": 3900,
+  "h": 4500,
+  "ox": 846,
+  "oy": 489,
+  "tons": [
+   "neutro"
+  ],
+  "papel": [],
+  "grao_folha": 4.24,
+  "tinta": [
+   {
+    "caixa": [
+     1820,
+     1174,
+     113,
+     103
+    ],
+    "largura": 0.02,
+    "modo": "angulo",
+    "nome": "circulo"
+   }
+  ],
+  "estados": 2
+ },
+ "nav-vaso": {
+  "id": "nav-vaso",
+  "w": 1426,
+  "h": 2381,
+  "ox": 173,
+  "oy": 230,
+  "tons": [
+   "fosfofilita"
+  ],
+  "papel": [],
+  "grao_folha": 8.79,
+  "tinta": [
+   {
+    "caixa": [
+     254,
+     1110,
+     811,
+     190
+    ],
+    "largura": 0.058488,
+    "modo": "leitura",
+    "nome": "p2"
+   },
+   {
+    "caixa": [
+     256,
+     1313,
+     499,
+     149
+    ],
+    "largura": 0.070821,
+    "modo": "leitura",
+    "nome": "p3"
+   },
+   {
+    "caixa": [
+     260,
+     1483,
+     733,
+     67
+    ],
+    "largura": 0.018852,
+    "modo": "leitura",
+    "nome": "p4"
+   }
+  ],
+  "estados": 4
+ },
+ "nav-busto": {
+  "id": "nav-busto",
+  "w": 1426,
+  "h": 2381,
+  "ox": 173,
+  "oy": 230,
+  "tons": [
+   "fosfofilita"
+  ],
+  "papel": [],
+  "grao_folha": 8.79,
+  "tinta": [
+   {
+    "caixa": [
+     260,
+     1137,
+     666,
+     68
+    ],
+    "largura": 0.02044,
+    "modo": "leitura",
+    "nome": "p1"
+   },
+   {
+    "caixa": [
+     253,
+     1216,
+     694,
+     150
+    ],
+    "largura": 0.046259,
+    "modo": "leitura",
+    "nome": "p2"
+   },
+   {
+    "caixa": [
+     260,
+     1390,
+     400,
+     51
+    ],
+    "largura": 0.022215,
+    "modo": "leitura",
+    "nome": "p3"
+   },
+   {
+    "caixa": [
+     261,
+     1446,
+     377,
+     49
+    ],
+    "largura": 0.023954,
+    "modo": "leitura",
+    "nome": "p4"
+   }
+  ],
+  "estados": 5
+ },
+ "ped-a": {
+  "id": "ped-a",
+  "w": 1426,
+  "h": 2381,
+  "ox": 173,
+  "oy": 230,
+  "tons": [
+   "pedra"
+  ],
+  "papel": [],
+  "grao_folha": 8.85,
+  "tinta": [
+   {
+    "caixa": [
+     260,
+     826,
+     839,
+     88
+    ],
+    "largura": 0.023773,
+    "modo": "leitura",
+    "nome": "a3"
+   },
+   {
+    "caixa": [
+     254,
+     927,
+     540,
+     176
+    ],
+    "largura": 0.064836,
+    "modo": "leitura",
+    "nome": "a4"
+   },
+   {
+    "caixa": [
+     253,
+     1091,
+     803,
+     220
+    ],
+    "largura": 0.061997,
+    "modo": "leitura",
+    "nome": "a5"
+   },
+   {
+    "caixa": [
+     254,
+     1317,
+     696,
+     193
+    ],
+    "largura": 0.061667,
+    "modo": "leitura",
+    "nome": "a6"
+   }
+  ],
+  "estados": 5
+ },
+ "ped-regua": {
+  "id": "ped-regua",
+  "w": 1426,
+  "h": 2381,
+  "ox": 173,
+  "oy": 230,
+  "tons": [
+   "pedra"
+  ],
+  "papel": [],
+  "grao_folha": 8.89,
+  "tinta": [
+   {
+    "caixa": [
+     274,
+     592,
+     89,
+     790
+    ],
+    "largura": 0.03,
+    "modo": "regua",
+    "nome": "regua"
+   },
+   {
+    "caixa": [
+     313,
+     636,
+     521,
+     364
+    ],
+    "largura": 0.084296,
+    "modo": "leitura",
+    "nome": "m35"
+   },
+   {
+    "caixa": [
+     422,
+     1024,
+     336,
+     61
+    ],
+    "largura": 0.036737,
+    "modo": "leitura",
+    "nome": "fos"
+   },
+   {
+    "caixa": [
+     314,
+     1274,
+     493,
+     174
+    ],
+    "largura": 0.056166,
+    "modo": "leitura",
+    "nome": "m10"
+   }
+  ],
+  "estados": 5
+ },
+ "nav-tabuas": {
+  "id": "nav-tabuas",
+  "w": 1426,
+  "h": 2381,
+  "ox": 173,
+  "oy": 230,
+  "tons": [
+   "fosfofilita"
+  ],
+  "papel": [],
+  "grao_folha": 8.79,
+  "tinta": [
+   {
+    "caixa": [
+     260,
+     1119,
+     280,
+     54
+    ],
+    "largura": 0.036371,
+    "modo": "leitura",
+    "nome": "p1"
+   },
+   {
+    "caixa": [
+     253,
+     1182,
+     810,
+     159
+    ],
+    "largura": 0.046159,
+    "modo": "leitura",
+    "nome": "p2"
+   },
+   {
+    "caixa": [
+     255,
+     1350,
+     579,
+     159
+    ],
+    "largura": 0.063171,
+    "modo": "leitura",
+    "nome": "p3"
+   }
+  ],
+  "estados": 4
+ },
+ "nav-teseu": {
+  "id": "nav-teseu",
+  "w": 1426,
+  "h": 2381,
+  "ox": 173,
+  "oy": 230,
+  "tons": [
+   "fosfofilita"
+  ],
+  "papel": [],
+  "grao_folha": 8.72,
+  "tinta": [
+   {
+    "caixa": [
+     259,
+     1217,
+     741,
+     67
+    ],
+    "largura": 0.018192,
+    "modo": "leitura",
+    "nome": "p1"
+   },
+   {
+    "caixa": [
+     254,
+     1296,
+     810,
+     121
+    ],
+    "largura": 0.034331,
+    "modo": "leitura",
+    "nome": "p2"
+   }
+  ],
+  "estados": 3
+ },
+ "nav-hobbes": {
+  "id": "nav-hobbes",
+  "w": 1426,
+  "h": 2381,
+  "ox": 173,
+  "oy": 230,
+  "tons": [
+   "fosfofilita"
+  ],
+  "papel": [],
+  "grao_folha": 8.8,
+  "tinta": [
+   {
+    "caixa": [
+     261,
+     1179,
+     541,
+     63
+    ],
+    "largura": 0.025377,
+    "modo": "leitura",
+    "nome": "p1"
+   },
+   {
+    "caixa": [
+     254,
+     1257,
+     803,
+     169
+    ],
+    "largura": 0.048131,
+    "modo": "leitura",
+    "nome": "p2"
+   }
+  ],
+  "estados": 3
+ },
+ "ped-foto": {
+  "id": "ped-foto",
+  "w": 1426,
+  "h": 2381,
+  "ox": 173,
+  "oy": 230,
+  "tons": [
+   "pedra"
+  ],
+  "papel": [],
+  "grao_folha": 8.81,
+  "tinta": [],
+  "estados": 1
+ },
+ "lev-mat": {
+  "id": "lev-mat",
+  "w": 1080,
+  "h": 770,
+  "ox": 0,
+  "oy": -1150,
+  "tons": [
+   "neutro"
+  ],
+  "papel": [],
+  "grao_folha": 6.25,
+  "tinta": [
+   {
+    "caixa": [
+     85,
+     76,
+     575,
+     63
+    ],
+    "largura": 0.021123,
+    "modo": "leitura",
+    "nome": "q1"
+   },
+   {
+    "caixa": [
+     86,
+     130,
+     192,
+     51
+    ],
+    "largura": 0.049934,
+    "modo": "leitura",
+    "nome": "q2"
+   }
+  ],
+  "estados": 3
+ },
+ "carta-m08a": {
+  "id": "carta-m08a",
+  "carta": true,
+  "w": 924,
+  "h": 565
+ },
+ "carta-m01": {
+  "id": "carta-m01",
+  "carta": true,
+  "w": 864,
+  "h": 628
+ },
+ "carta-m03b": {
+  "id": "carta-m03b",
+  "carta": true,
+  "w": 924,
+  "h": 572
+ },
+ "carta-m04b": {
+  "id": "carta-m04b",
+  "carta": true,
+  "w": 984,
+  "h": 317
+ },
+ "carta-m05": {
+  "id": "carta-m05",
+  "carta": true,
+  "w": 424,
+  "h": 605
+ },
+ "carta-m23": {
+  "id": "carta-m23",
+  "carta": true,
+  "w": 944,
+  "h": 550
+ }
+}
