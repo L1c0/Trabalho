@@ -86,7 +86,7 @@
    "camadas": [
     {
      "id": "pintura-koboku",
-     "src": "pecas/17a15dcdd8cd.jpg",
+     "src": "pecas/3002a00f4934.jpg",
      "x": 744,
      "y": 40,
      "w": 432.13,
@@ -97,55 +97,55 @@
       37,
       22
      ],
-     "campo": "campos/3b5d4166ef77.png",
+     "campo": "campos/0c8a86014e8d.png",
      "borda": 0.24
     },
     {
      "id": "pintura-titulo",
-     "src": "pecas/c3f0882d35ea.png",
+     "src": "pecas/0dbcf1a0dfa3.png",
      "x": 1285.5,
-     "y": 420.25,
-     "w": 444.75,
-     "h": 71.25,
-     "iw": 593,
-     "ih": 95,
+     "y": 421.0,
+     "w": 447.5,
+     "h": 70.5,
+     "iw": 895,
+     "ih": 141,
      "chega": [
       933,
       18
      ],
-     "campo": "campos/2ac3cabf9d17.png",
+     "campo": "campos/ef489a45e287.png",
      "borda": 0.22
     },
     {
      "id": "pintura-bem",
-     "src": "pecas/b72b37383f03.png",
+     "src": "pecas/f7cbaafeecbf.png",
      "x": 1285.5,
-     "y": 510.0,
-     "w": 557.25,
-     "h": 38.25,
-     "iw": 743,
-     "ih": 51,
+     "y": 510.5,
+     "w": 556.5,
+     "h": 37.5,
+     "iw": 1113,
+     "ih": 75,
      "chega": [
       1008,
       16
      ],
-     "campo": "campos/a86fd6cc738a.png",
+     "campo": "campos/dc8e026afcf0.png",
      "borda": 0.22
     },
     {
      "id": "pintura-museu",
-     "src": "pecas/85a578ec7093.png",
+     "src": "pecas/f54ec0648d6a.png",
      "x": 1285.5,
      "y": 562.0,
-     "w": 467.25,
-     "h": 31.5,
-     "iw": 623,
-     "ih": 42,
+     "w": 467.0,
+     "h": 32.0,
+     "iw": 934,
+     "ih": 64,
      "chega": [
       1121,
       16
      ],
-     "campo": "campos/454a9de377ee.png",
+     "campo": "campos/f50d10193431.png",
      "borda": 0.22
     }
    ]
@@ -167,34 +167,34 @@
    "camadas": [
     {
      "id": "nome-nome",
-     "src": "pecas/7eacb501c621.png",
-     "x": 510.35,
-     "y": 408.0,
-     "w": 900.0,
-     "h": 123.0,
-     "iw": 1200,
-     "ih": 164,
+     "src": "pecas/ce3a31c2e898.png",
+     "x": 509.12,
+     "y": 408.5,
+     "w": 902.5,
+     "h": 122.5,
+     "iw": 1805,
+     "ih": 245,
      "chega": [
       1339,
       20
      ],
-     "campo": "campos/3cd80f6570c4.png",
+     "campo": "campos/80cf6f6495d4.png",
      "borda": 0.22
     },
     {
      "id": "nome-existiu",
-     "src": "pecas/14a67c48fbe2.png",
+     "src": "pecas/aca4c5b02df1.png",
      "x": 833.34,
-     "y": 591.0,
-     "w": 251.25,
-     "h": 55.5,
-     "iw": 335,
-     "ih": 74,
+     "y": 590.5,
+     "w": 251.0,
+     "h": 56.5,
+     "iw": 502,
+     "ih": 113,
      "chega": [
       1451,
       16
      ],
-     "campo": "campos/ff212aebdbb0.png",
+     "campo": "campos/bd206c8e3945.png",
      "borda": 0.22
     }
    ]
@@ -208,7 +208,7 @@
    "ox": 936,
    "oy": 966,
    "caixa": [
-    -80.0,
+    -91.1,
     -80.0,
     2000.0,
     1367.6
@@ -216,162 +216,162 @@
    "camadas": [
     {
      "id": "registros-rotulo",
-     "src": "pecas/4482a0658a3f.png",
+     "src": "pecas/2f612f3ea9d4.png",
      "x": 175.5,
-     "y": 138.0,
-     "w": 632.25,
+     "y": 138.5,
+     "w": 631.5,
      "h": 37.5,
-     "iw": 843,
-     "ih": 50,
+     "iw": 1263,
+     "ih": 75,
      "chega": [
       1588,
       16
      ],
-     "campo": "campos/842511cbbfca.png",
+     "campo": "campos/5bccee1c0cee.png",
      "borda": 0.22
     },
     {
      "id": "registros-chegada-n",
-     "src": "pecas/436311e652ac.png",
+     "src": "pecas/ae59c7a31376.png",
      "x": 175.5,
-     "y": 223.25,
-     "w": 275.25,
-     "h": 142.5,
-     "iw": 367,
-     "ih": 190,
+     "y": 222.5,
+     "w": 275.5,
+     "h": 144.0,
+     "iw": 551,
+     "ih": 288,
      "chega": [
       1739,
       18
      ],
-     "campo": "campos/e73a9d224286.png",
+     "campo": "campos/3bd4defb7ad0.png",
      "borda": 0.22
     },
     {
      "id": "registros-chegada-t",
-     "src": "pecas/62a31f685cb5.png",
-     "x": 484.95,
-     "y": 268.62,
-     "w": 483.0,
-     "h": 63.75,
-     "iw": 644,
-     "ih": 85,
+     "src": "pecas/917a529d0d6d.png",
+     "x": 485.45,
+     "y": 269.12,
+     "w": 485.0,
+     "h": 64.0,
+     "iw": 970,
+     "ih": 128,
      "chega": [
       1719,
       16
      ],
-     "campo": "campos/4fce28d8250f.png",
+     "campo": "campos/acfbcd9baa27.png",
      "borda": 0.22
     },
     {
      "id": "registros-valor",
-     "src": "pecas/223194be9744.png",
+     "src": "pecas/66e079f0ae29.png",
      "x": 175.5,
-     "y": 446.75,
-     "w": 377.25,
+     "y": 446.0,
+     "w": 375.5,
      "h": 61.5,
-     "iw": 503,
-     "ih": 82,
+     "iw": 751,
+     "ih": 123,
      "chega": [
       1777,
       16
      ],
-     "campo": "campos/0f25262c68c7.png",
+     "campo": "campos/d3e1f6f0a501.png",
      "borda": 0.22
     },
     {
      "id": "registros-casa",
-     "src": "pecas/e6197cf9305e.png",
+     "src": "pecas/99b9d56fc088.png",
      "x": 175.5,
-     "y": 532.75,
-     "w": 430.5,
+     "y": 532.0,
+     "w": 428.5,
      "h": 48.0,
-     "iw": 574,
-     "ih": 64,
+     "iw": 857,
+     "ih": 96,
      "chega": [
       1814,
       16
      ],
-     "campo": "campos/2f818b2b5013.png",
+     "campo": "campos/f6731d2e8d2e.png",
      "borda": 0.22
     },
     {
      "id": "registros-saude",
-     "src": "pecas/ef24b2096515.png",
+     "src": "pecas/b3644ede0eff.png",
      "x": 175.5,
-     "y": 591.75,
-     "w": 690.0,
-     "h": 48.0,
-     "iw": 920,
-     "ih": 64,
+     "y": 591.0,
+     "w": 686.5,
+     "h": 49.0,
+     "iw": 1373,
+     "ih": 98,
      "chega": [
       1849,
       16
      ],
-     "campo": "campos/046715b4485b.png",
+     "campo": "campos/75865bdb27eb.png",
      "borda": 0.22
     },
     {
      "id": "registros-morte",
-     "src": "pecas/fb47610de654.png",
+     "src": "pecas/47b1cb00492e.png",
      "x": 175.5,
-     "y": 664.25,
-     "w": 313.5,
-     "h": 48.0,
-     "iw": 418,
-     "ih": 64,
+     "y": 664.0,
+     "w": 312.0,
+     "h": 48.5,
+     "iw": 624,
+     "ih": 97,
      "chega": [
       1910,
       16
      ],
-     "campo": "campos/9f691d3e682d.png",
+     "campo": "campos/6b9dcb8acd1b.png",
      "borda": 0.22
     },
     {
      "id": "registros-morte-data-n",
-     "src": "pecas/e306fba24143.png",
+     "src": "pecas/7d402ce2aa38.png",
      "x": 175.5,
-     "y": 798.25,
+     "y": 797.5,
      "w": 276.0,
-     "h": 142.5,
-     "iw": 368,
-     "ih": 190,
+     "h": 144.5,
+     "iw": 552,
+     "ih": 289,
      "chega": [
       2072,
       18
      ],
-     "campo": "campos/382fe835527d.png",
+     "campo": "campos/e4e6002644d3.png",
      "borda": 0.22
     },
     {
      "id": "registros-morte-data-t",
-     "src": "pecas/594369f97da8.png",
-     "x": 488.7,
-     "y": 843.62,
-     "w": 591.0,
+     "src": "pecas/aeee3871ae6d.png",
+     "x": 488.45,
+     "y": 844.12,
+     "w": 594.5,
      "h": 51.0,
-     "iw": 788,
-     "ih": 68,
+     "iw": 1189,
+     "ih": 102,
      "chega": [
       1950,
       18
      ],
-     "campo": "campos/8ed9dd99f741.png",
+     "campo": "campos/9d80fe9b195f.png",
      "borda": 0.22
     },
     {
      "id": "registros-sublinha",
-     "src": "pecas/c8cbdcb6f1c8.png",
+     "src": "pecas/63effd7d493d.png",
      "x": 148.0,
      "y": 476.0,
      "w": 438.81,
      "h": 57.0,
-     "iw": 585,
-     "ih": 76,
+     "iw": 878,
+     "ih": 114,
      "chega": [
       2503,
       14
      ],
-     "campo": "campos/322168e45326.png",
+     "campo": "campos/3e86d7af07a2.png",
      "borda": 0.24
     }
    ]
@@ -393,74 +393,385 @@
    "camadas": [
     {
      "id": "kyakubun-vassalo",
-     "src": "pecas/b8e7a69710f8.png",
-     "x": 743.89,
+     "src": "pecas/fabf4f58d7e3.png",
+     "x": 744.32,
      "y": 261.0,
-     "w": 160.5,
-     "h": 54.0,
-     "iw": 214,
-     "ih": 72,
+     "w": 160.0,
+     "h": 52.5,
+     "iw": 320,
+     "ih": 105,
      "chega": [
       2142,
       16
      ],
-     "campo": "campos/902c6106c500.png",
+     "campo": "campos/89ae629d800c.png",
      "borda": 0.22
     },
     {
      "id": "kyakubun-hospede",
-     "src": "pecas/b775df82803c.png",
-     "x": 1014.75,
+     "src": "pecas/1d220d5feb48.png",
+     "x": 1015.0,
      "y": 261.0,
-     "w": 189.75,
-     "h": 68.25,
-     "iw": 253,
-     "ih": 91,
+     "w": 189.0,
+     "h": 67.0,
+     "iw": 378,
+     "ih": 134,
      "chega": [
       2169,
       16
      ],
-     "campo": "campos/1c3b4bfa3039.png",
+     "campo": "campos/3cf090837d39.png",
      "borda": 0.22
     },
     {
      "id": "kyakubun-kyakubun",
-     "src": "pecas/26299ac2a675.png",
-     "x": 679.19,
-     "y": 397.25,
-     "w": 561.75,
-     "h": 142.5,
-     "iw": 749,
-     "ih": 190,
+     "src": "pecas/a965d12cc4ed.png",
+     "x": 678.93,
+     "y": 397.0,
+     "w": 562.5,
+     "h": 142.0,
+     "iw": 1125,
+     "ih": 284,
      "chega": [
       2245,
       20
      ],
-     "campo": "campos/4f3d4b15e5b8.png",
+     "campo": "campos/9e80fcd3b878.png",
      "borda": 0.22
     },
     {
      "id": "kyakubun-convidado",
-     "src": "pecas/bc18e8425d56.png",
-     "x": 745.69,
+     "src": "pecas/2e6b207c7794.png",
+     "x": 746.2,
      "y": 601.0,
-     "w": 430.5,
-     "h": 56.25,
-     "iw": 574,
-     "ih": 75,
+     "w": 430.0,
+     "h": 56.0,
+     "iw": 860,
+     "ih": 112,
      "chega": [
       2294,
       16
      ],
-     "campo": "campos/2940be008850.png",
+     "campo": "campos/df9821a4a79a.png",
      "borda": 0.22
     }
    ]
   },
-  "vazio": {
-   "tom": null,
-   "ox": 524,
-   "oy": 891,
+  "livro": {
+   "tom": [
+    0.9784,
+    0.9781,
+    0.9771
+   ],
+   "ox": 709,
+   "oy": 876,
+   "caixa": [
+    -80.0,
+    -80.0,
+    2040.0,
+    1160.0
+   ],
+   "camadas": [
+    {
+     "id": "livro-pagina",
+     "src": "pecas/5a661b5f496d.jpg",
+     "x": 200,
+     "y": 150,
+     "w": 532.5,
+     "h": 780.0,
+     "iw": 710,
+     "ih": 1040,
+     "cor": "pecas/5a661b5f496d-cor.jpg",
+     "chega": [
+      2596,
+      20
+     ],
+     "campo": "campos/c6a2d04f3e93.png",
+     "borda": 0.22
+    },
+    {
+     "id": "livro-titulo",
+     "src": "pecas/7e3af3f8d2d3.png",
+     "x": 877.0,
+     "y": 389.0,
+     "w": 600.5,
+     "h": 81.5,
+     "iw": 1201,
+     "ih": 163,
+     "chega": [
+      2726,
+      20
+     ],
+     "campo": "campos/e48109a987ab.png",
+     "borda": 0.22
+    },
+    {
+     "id": "livro-sub",
+     "src": "pecas/da3a4f707b1c.png",
+     "x": 876.0,
+     "y": 521.0,
+     "w": 536.0,
+     "h": 51.5,
+     "iw": 1072,
+     "ih": 103,
+     "chega": [
+      2781,
+      18
+     ],
+     "campo": "campos/b2384ce5fa79.png",
+     "borda": 0.22
+    }
+   ]
+  },
+  "idades": {
+   "tom": [
+    0.9784,
+    0.9781,
+    0.9771
+   ],
+   "ox": 2086,
+   "oy": 890,
+   "caixa": [
+    -180.0,
+    -80.0,
+    1980.0,
+    1220.0
+   ],
+   "camadas": [
+    {
+     "id": "idades-rotulo",
+     "src": "pecas/b310df4f0153.png",
+     "x": 195.0,
+     "y": 144.0,
+     "w": 435.0,
+     "h": 32.0,
+     "iw": 870,
+     "ih": 64,
+     "chega": [
+      2882,
+      16
+     ],
+     "campo": "campos/c9a189d936eb.png",
+     "borda": 0.22
+    },
+    {
+     "id": "idades-i13",
+     "src": "pecas/e5449ed29e1c.png",
+     "x": 195.0,
+     "y": 244.0,
+     "w": 106.0,
+     "h": 117.0,
+     "iw": 212,
+     "ih": 234,
+     "chega": [
+      2938,
+      16
+     ],
+     "campo": "campos/887e492dfc19.png",
+     "borda": 0.22
+    },
+    {
+     "id": "idades-l13",
+     "src": "pecas/1bde1bebdb59.png",
+     "x": 196.0,
+     "y": 392.5,
+     "w": 188.0,
+     "h": 37.5,
+     "iw": 376,
+     "ih": 75,
+     "chega": [
+      2999,
+      16
+     ],
+     "campo": "campos/df0ab1621910.png",
+     "borda": 0.22
+    },
+    {
+     "id": "idades-i16",
+     "src": "pecas/b230b0205958.png",
+     "x": 465.0,
+     "y": 243.0,
+     "w": 107.5,
+     "h": 117.5,
+     "iw": 215,
+     "ih": 235,
+     "chega": [
+      3051,
+      16
+     ],
+     "campo": "campos/b558104a5657.png",
+     "borda": 0.22
+    },
+    {
+     "id": "idades-l16",
+     "src": "pecas/3131216da793.png",
+     "x": 467.0,
+     "y": 392.5,
+     "w": 232.0,
+     "h": 37.5,
+     "iw": 464,
+     "ih": 75,
+     "chega": [
+      3069,
+      16
+     ],
+     "campo": "campos/66861559ba56.png",
+     "borda": 0.22
+    },
+    {
+     "id": "idades-i21",
+     "src": "pecas/dfc9d98d97bd.png",
+     "x": 737.0,
+     "y": 243.5,
+     "w": 103.5,
+     "h": 116.0,
+     "iw": 207,
+     "ih": 232,
+     "chega": [
+      3104,
+      16
+     ],
+     "campo": "campos/206117379e81.png",
+     "borda": 0.22
+    },
+    {
+     "id": "idades-l21",
+     "src": "pecas/599eee043f16.png",
+     "x": 737.0,
+     "y": 392.0,
+     "w": 126.5,
+     "h": 47.5,
+     "iw": 253,
+     "ih": 95,
+     "chega": [
+      3138,
+      16
+     ],
+     "campo": "campos/d49754a77d11.png",
+     "borda": 0.22
+    },
+    {
+     "id": "idades-i2829",
+     "src": "pecas/1b7f294930ce.png",
+     "x": 1007.0,
+     "y": 243.0,
+     "w": 295.5,
+     "h": 130.5,
+     "iw": 591,
+     "ih": 261,
+     "chega": [
+      3295,
+      16
+     ],
+     "campo": "campos/8fe5676e8eda.png",
+     "borda": 0.22
+    },
+    {
+     "id": "idades-l2829",
+     "src": "pecas/8cd94e0dfd45.png",
+     "x": 1007.0,
+     "y": 402.0,
+     "w": 74.5,
+     "h": 28.0,
+     "iw": 149,
+     "ih": 56,
+     "chega": [
+      3351,
+      16
+     ],
+     "campo": "campos/f4aa53e90f38.png",
+     "borda": 0.22
+    },
+    {
+     "id": "idades-soma",
+     "src": "pecas/5a9c452b2cd4.png",
+     "x": 158.0,
+     "y": 450.0,
+     "w": 1162.0,
+     "h": 70.0,
+     "iw": 2324,
+     "ih": 140,
+     "chega": [
+      3231,
+      16
+     ],
+     "campo": "campos/7ce7189f8666.png",
+     "borda": 0.24
+    },
+    {
+     "id": "idades-n60",
+     "src": "pecas/c886191147f5.png",
+     "x": 202.5,
+     "y": 551.5,
+     "w": 320.5,
+     "h": 301.5,
+     "iw": 641,
+     "ih": 603,
+     "chega": [
+      3427,
+      18
+     ],
+     "campo": "campos/889b482f276e.png",
+     "borda": 0.22
+    },
+    {
+     "id": "idades-combates",
+     "src": "pecas/94db2dfd947a.png",
+     "x": 578.83,
+     "y": 601.66,
+     "w": 228.0,
+     "h": 56.0,
+     "iw": 456,
+     "ih": 112,
+     "chega": [
+      3442,
+      16
+     ],
+     "campo": "campos/f310b617bead.png",
+     "borda": 0.22
+    },
+    {
+     "id": "idades-invicto",
+     "src": "pecas/d1f71be8173f.png",
+     "x": 578.33,
+     "y": 710.34,
+     "w": 252.0,
+     "h": 65.5,
+     "iw": 504,
+     "ih": 131,
+     "chega": [
+      3537,
+      18
+     ],
+     "campo": "campos/bab27ad7919a.png",
+     "borda": 0.22
+    },
+    {
+     "id": "idades-risca",
+     "src": "pecas/4c1e8897f7cb.png",
+     "x": 100.0,
+     "y": 625.07,
+     "w": 522.83,
+     "h": 171.16,
+     "iw": 1046,
+     "ih": 342,
+     "chega": [
+      4398,
+      16
+     ],
+     "campo": "campos/48c1dc2281dd.png",
+     "borda": 0.24
+    }
+   ]
+  },
+  "curriculo": {
+   "tom": [
+    0.9784,
+    0.9781,
+    0.9771
+   ],
+   "ox": 470,
+   "oy": 842,
    "caixa": [
     -80.0,
     -80.0,
@@ -469,14 +780,3847 @@
    ],
    "camadas": [
     {
-     "id": "vazio-falta",
-     "src": "pecas/cafcdbb5a72f.png",
-     "x": 872.6,
-     "y": 524.0,
-     "w": 174.75,
-     "h": 28.5,
-     "iw": 233,
-     "ih": 38
+     "id": "curriculo-m08",
+     "src": "pecas/bc81f6568da7.jpg",
+     "x": 240,
+     "y": 44,
+     "w": 1440,
+     "h": 993.75,
+     "iw": 1920,
+     "ih": 1325,
+     "chega": [
+      3576,
+      16
+     ],
+     "campo": "campos/bdcb7120d787.png",
+     "borda": 0.22
+    }
+   ]
+  },
+  "frase": {
+   "tom": null,
+   "ox": 447,
+   "oy": 696,
+   "caixa": [
+    -100.0,
+    -100.0,
+    2020.0,
+    1140.0
+   ],
+   "camadas": [
+    {
+     "id": "frase-rotulo",
+     "src": "pecas/c1a24a5201fb.png",
+     "x": 295.0,
+     "y": 230.0,
+     "w": 223.5,
+     "h": 32.0,
+     "iw": 447,
+     "ih": 64,
+     "chega": [
+      3765,
+      16
+     ],
+     "campo": "campos/34d8933c6f53.png",
+     "borda": 0.22
+    },
+    {
+     "id": "frase-data",
+     "src": "pecas/8bd90423536a.png",
+     "x": 533.97,
+     "y": 220.12,
+     "w": 89.0,
+     "h": 50.5,
+     "iw": 178,
+     "ih": 101,
+     "chega": [
+      4579,
+      16
+     ],
+     "campo": "campos/e575cc312b62.png",
+     "borda": 0.22
+    },
+    {
+     "id": "frase-l1",
+     "src": "pecas/d61a590a1bfd.png",
+     "x": 296.0,
+     "y": 310.0,
+     "w": 736.5,
+     "h": 153.0,
+     "iw": 1473,
+     "ih": 306,
+     "chega": [
+      3765,
+      20
+     ],
+     "campo": "campos/654901f551d7.png",
+     "borda": 0.22
+    },
+    {
+     "id": "frase-l2",
+     "src": "pecas/2514b01e53b4.png",
+     "x": 294.0,
+     "y": 543.4,
+     "w": 858.5,
+     "h": 148.0,
+     "iw": 1717,
+     "ih": 296,
+     "chega": [
+      3870,
+      20
+     ],
+     "campo": "campos/8fa618be3fe7.png",
+     "borda": 0.22
+    }
+   ]
+  },
+  "atribui": {
+   "tom": null,
+   "ox": 1538,
+   "oy": 491,
+   "caixa": [
+    -80.0,
+    -100.0,
+    2040.0,
+    1140.0
+   ],
+   "camadas": [
+    {
+     "id": "atribui-talento",
+     "src": "pecas/ac509ca02eba.png",
+     "x": 296.0,
+     "y": 320.5,
+     "w": 370.5,
+     "h": 57.5,
+     "iw": 741,
+     "ih": 115,
+     "chega": [
+      4092,
+      18
+     ],
+     "campo": "campos/a2ee3b72d13f.png",
+     "borda": 0.22
+    },
+    {
+     "id": "atribui-ceu",
+     "src": "pecas/6b3fb9dd1e17.png",
+     "x": 296.0,
+     "y": 446.0,
+     "w": 378.5,
+     "h": 57.0,
+     "iw": 757,
+     "ih": 114,
+     "chega": [
+      4129,
+      18
+     ],
+     "campo": "campos/1f94a98ff4fb.png",
+     "borda": 0.22
+    },
+    {
+     "id": "atribui-escolas",
+     "src": "pecas/55da1d50fbfe.png",
+     "x": 296.0,
+     "y": 570.5,
+     "w": 826.0,
+     "h": 74.0,
+     "iw": 1652,
+     "ih": 148,
+     "chega": [
+      4190,
+      18
+     ],
+     "campo": "campos/55fe781470e6.png",
+     "borda": 0.22
+    }
+   ]
+  },
+  "conhece": {
+   "tom": [
+    0.9784,
+    0.9781,
+    0.9771
+   ],
+   "ox": 1084,
+   "oy": 328,
+   "caixa": [
+    -100.0,
+    -80.0,
+    2020.0,
+    1160.0
+   ],
+   "camadas": [
+    {
+     "id": "conhece-gravura",
+     "src": "pecas/6682fcb38924.jpg",
+     "x": 330,
+     "y": 90,
+     "w": 438.16,
+     "h": 900.0,
+     "iw": 584,
+     "ih": 1200,
+     "cor": "pecas/6682fcb38924-cor.jpg",
+     "chega": [
+      4636,
+      20
+     ],
+     "campo": "campos/9297dddf8da0.png",
+     "borda": 0.22
+    },
+    {
+     "id": "conhece-inoue",
+     "src": "pecas/5b90bb41cc78.jpg",
+     "x": 1010,
+     "y": 240,
+     "w": 600,
+     "h": 600.0,
+     "iw": 800,
+     "ih": 800,
+     "cor": "pecas/5b90bb41cc78-cor.jpg",
+     "chega": [
+      4711,
+      20
+     ],
+     "campo": "campos/1c469b6f26f0.png",
+     "borda": 0.22
+    }
+   ]
+  },
+  "yoshikawa": {
+   "tom": [
+    0.9784,
+    0.9781,
+    0.9771
+   ],
+   "ox": 978,
+   "oy": 368,
+   "caixa": [
+    -80.0,
+    -90.0,
+    2180.0,
+    1160.0
+   ],
+   "camadas": [
+    {
+     "id": "yoshikawa-capa",
+     "src": "pecas/7bc49b06f8f8.jpg",
+     "x": 220,
+     "y": 170,
+     "w": 497.42,
+     "h": 720.0,
+     "iw": 663,
+     "ih": 960,
+     "cor": "pecas/7bc49b06f8f8-cor.jpg",
+     "chega": [
+      4825,
+      20
+     ],
+     "campo": "campos/beafad89525c.png",
+     "borda": 0.22
+    },
+    {
+     "id": "yoshikawa-retrato",
+     "src": "pecas/6ff64fec1f64.jpg",
+     "x": 820,
+     "y": 170,
+     "w": 342.4,
+     "h": 480.0,
+     "iw": 457,
+     "ih": 640,
+     "cor": "pecas/6ff64fec1f64-cor.jpg",
+     "chega": [
+      4894,
+      18
+     ],
+     "campo": "campos/08979b09392b.png",
+     "borda": 0.22
+    },
+    {
+     "id": "yoshikawa-nome",
+     "src": "pecas/0080821dbb1f.png",
+     "x": 815.0,
+     "y": 681.5,
+     "w": 261.0,
+     "h": 56.0,
+     "iw": 522,
+     "ih": 112,
+     "chega": [
+      4904,
+      16
+     ],
+     "campo": "campos/bfdd8b64f360.png",
+     "borda": 0.22
+    },
+    {
+     "id": "yoshikawa-jornal",
+     "src": "pecas/dde75e773898.png",
+     "x": 1284.5,
+     "y": 324.0,
+     "w": 251.5,
+     "h": 34.0,
+     "iw": 503,
+     "ih": 68,
+     "chega": [
+      4994,
+      16
+     ],
+     "campo": "campos/b47d846db6d6.png",
+     "borda": 0.22
+    },
+    {
+     "id": "yoshikawa-datas",
+     "src": "pecas/d691e1885e8f.png",
+     "x": 1285.0,
+     "y": 383.0,
+     "w": 472.5,
+     "h": 118.0,
+     "iw": 945,
+     "ih": 236,
+     "chega": [
+      5061,
+      20
+     ],
+     "campo": "campos/56a10ca0c165.png",
+     "borda": 0.22
+    }
+   ]
+  },
+  "virou": {
+   "tom": null,
+   "ox": 1755,
+   "oy": 373,
+   "caixa": [
+    -80.0,
+    -80.0,
+    2040.0,
+    1160.0
+   ],
+   "camadas": [
+    {
+     "id": "virou-livro",
+     "src": "pecas/5153f3adc5bf.png",
+     "x": 295.5,
+     "y": 460.5,
+     "w": 136.0,
+     "h": 63.0,
+     "iw": 272,
+     "ih": 126,
+     "chega": [
+      5254,
+      16
+     ],
+     "campo": "campos/515f23447aa0.png",
+     "borda": 0.22
+    },
+    {
+     "id": "virou-p1",
+     "src": "pecas/5d9d915d13b4.png",
+     "x": 458.57,
+     "y": 491.0,
+     "w": 21.0,
+     "h": 21.0,
+     "iw": 42,
+     "ih": 42,
+     "chega": [
+      5344,
+      16
+     ],
+     "campo": "campos/6889a473e3c4.png",
+     "borda": 0.22
+    },
+    {
+     "id": "virou-filme",
+     "src": "pecas/08bec3dbbdcf.png",
+     "x": 506.34,
+     "y": 460.5,
+     "w": 148.0,
+     "h": 62.5,
+     "iw": 296,
+     "ih": 125,
+     "chega": [
+      5349,
+      16
+     ],
+     "campo": "campos/6dd25a6f9d7c.png",
+     "borda": 0.22
+    },
+    {
+     "id": "virou-p2",
+     "src": "pecas/5d9d915d13b4.png",
+     "x": 680.51,
+     "y": 491.0,
+     "w": 21.0,
+     "h": 21.0,
+     "iw": 42,
+     "ih": 42,
+     "chega": [
+      5368,
+      16
+     ],
+     "campo": "campos/6889a473e3c4.png",
+     "borda": 0.22
+    },
+    {
+     "id": "virou-novela",
+     "src": "pecas/01b3b3b8c276.png",
+     "x": 728.28,
+     "y": 460.5,
+     "w": 513.0,
+     "h": 63.0,
+     "iw": 1026,
+     "ih": 126,
+     "chega": [
+      5373,
+      16
+     ],
+     "campo": "campos/9f60ef2133d2.png",
+     "borda": 0.22
+    }
+   ]
+  },
+  "elenco": {
+   "tom": [
+    0.9784,
+    0.9781,
+    0.9771
+   ],
+   "ox": 629,
+   "oy": 680,
+   "caixa": [
+    -100.0,
+    -80.0,
+    2232.1,
+    1160.0
+   ],
+   "camadas": [
+    {
+     "id": "elenco-otsu-t",
+     "src": "pecas/e05b26faa75e.png",
+     "x": 198.0,
+     "y": 202.0,
+     "w": 466.0,
+     "h": 57.0,
+     "iw": 932,
+     "ih": 114,
+     "chega": [
+      5522,
+      12
+     ],
+     "campo": "campos/035d226d99da.png",
+     "borda": 0.24
+    },
+    {
+     "id": "elenco-otsu-d",
+     "src": "pecas/02969dd230f7.png",
+     "x": 602.0,
+     "y": 198.0,
+     "w": 56.0,
+     "h": 625.0,
+     "iw": 112,
+     "ih": 1250,
+     "chega": [
+      5525,
+      12
+     ],
+     "campo": "campos/7da363a80c1a.png",
+     "borda": 0.24
+    },
+    {
+     "id": "elenco-otsu-b",
+     "src": "pecas/d2530482ee38.png",
+     "x": 197.0,
+     "y": 762.0,
+     "w": 464.0,
+     "h": 57.0,
+     "iw": 928,
+     "ih": 114,
+     "chega": [
+      5528,
+      12
+     ],
+     "campo": "campos/053a93fb918e.png",
+     "borda": 0.24
+    },
+    {
+     "id": "elenco-otsu-e",
+     "src": "pecas/6232fa9d6d6f.png",
+     "x": 202.0,
+     "y": 196.0,
+     "w": 56.0,
+     "h": 626.0,
+     "iw": 112,
+     "ih": 1252,
+     "chega": [
+      5531,
+      12
+     ],
+     "campo": "campos/81acd4820676.png",
+     "borda": 0.24
+    },
+    {
+     "id": "elenco-otsu-n",
+     "src": "pecas/b37a5642e83d.png",
+     "x": 380.74,
+     "y": 827.0,
+     "w": 100.0,
+     "h": 44.0,
+     "iw": 200,
+     "ih": 88,
+     "chega": [
+      5528,
+      16
+     ],
+     "campo": "campos/ce4c0ec100ff.png",
+     "borda": 0.22
+    },
+    {
+     "id": "elenco-mata-t",
+     "src": "pecas/3870261ccbd8.png",
+     "x": 728.0,
+     "y": 202.0,
+     "w": 466.0,
+     "h": 57.0,
+     "iw": 932,
+     "ih": 114,
+     "chega": [
+      5739,
+      12
+     ],
+     "campo": "campos/b76d5705e4d2.png",
+     "borda": 0.24
+    },
+    {
+     "id": "elenco-mata-d",
+     "src": "pecas/349c6a39fd0f.png",
+     "x": 1132.0,
+     "y": 198.0,
+     "w": 56.0,
+     "h": 625.0,
+     "iw": 112,
+     "ih": 1250,
+     "chega": [
+      5742,
+      12
+     ],
+     "campo": "campos/0ab2325fc691.png",
+     "borda": 0.24
+    },
+    {
+     "id": "elenco-mata-b",
+     "src": "pecas/75fc7244f1e5.png",
+     "x": 727.0,
+     "y": 762.0,
+     "w": 464.0,
+     "h": 57.0,
+     "iw": 928,
+     "ih": 114,
+     "chega": [
+      5745,
+      12
+     ],
+     "campo": "campos/c321e5e7d582.png",
+     "borda": 0.24
+    },
+    {
+     "id": "elenco-mata-e",
+     "src": "pecas/8258b0e41e91.png",
+     "x": 732.0,
+     "y": 196.0,
+     "w": 56.0,
+     "h": 626.0,
+     "iw": 112,
+     "ih": 1252,
+     "chega": [
+      5748,
+      12
+     ],
+     "campo": "campos/a1eb84cb3322.png",
+     "borda": 0.24
+    },
+    {
+     "id": "elenco-mata-n",
+     "src": "pecas/ce023aa5a82a.png",
+     "x": 858.61,
+     "y": 825.0,
+     "w": 203.0,
+     "h": 45.5,
+     "iw": 406,
+     "ih": 91,
+     "chega": [
+      5745,
+      16
+     ],
+     "campo": "campos/1389f9c84d19.png",
+     "borda": 0.22
+    },
+    {
+     "id": "elenco-takuan",
+     "src": "pecas/7ac1bb42ff86.jpg",
+     "x": 1290,
+     "y": 230,
+     "w": 400,
+     "h": 560.51,
+     "iw": 533,
+     "ih": 747,
+     "chega": [
+      5822,
+      18
+     ],
+     "campo": "campos/5c30625dedb8.png",
+     "borda": 0.22
+    },
+    {
+     "id": "elenco-taku-t",
+     "src": "pecas/5463bae7971b.png",
+     "x": 1258.0,
+     "y": 202.0,
+     "w": 466.0,
+     "h": 57.0,
+     "iw": 932,
+     "ih": 114,
+     "chega": [
+      5820,
+      12
+     ],
+     "campo": "campos/1c306fa16166.png",
+     "borda": 0.24
+    },
+    {
+     "id": "elenco-taku-d",
+     "src": "pecas/a78c975e3ede.png",
+     "x": 1662.0,
+     "y": 198.0,
+     "w": 56.0,
+     "h": 625.0,
+     "iw": 112,
+     "ih": 1250,
+     "chega": [
+      5823,
+      12
+     ],
+     "campo": "campos/4f721494cd47.png",
+     "borda": 0.24
+    },
+    {
+     "id": "elenco-taku-b",
+     "src": "pecas/107b5165af66.png",
+     "x": 1257.0,
+     "y": 762.0,
+     "w": 464.0,
+     "h": 57.0,
+     "iw": 928,
+     "ih": 114,
+     "chega": [
+      5826,
+      12
+     ],
+     "campo": "campos/f822e64e3cca.png",
+     "borda": 0.24
+    },
+    {
+     "id": "elenco-taku-e",
+     "src": "pecas/bc3f4d663d89.png",
+     "x": 1262.0,
+     "y": 196.0,
+     "w": 56.0,
+     "h": 626.0,
+     "iw": 112,
+     "ih": 1252,
+     "chega": [
+      5829,
+      12
+     ],
+     "campo": "campos/26ff698c5dce.png",
+     "borda": 0.24
+    },
+    {
+     "id": "elenco-taku-n",
+     "src": "pecas/d0d273081554.png",
+     "x": 1416.64,
+     "y": 825.0,
+     "w": 147.0,
+     "h": 46.0,
+     "iw": 294,
+     "ih": 92,
+     "chega": [
+      5830,
+      16
+     ],
+     "campo": "campos/f188eba675ae.png",
+     "borda": 0.22
+    }
+   ]
+  },
+  "arvore": {
+   "tom": [
+    0.9784,
+    0.9781,
+    0.9771
+   ],
+   "ox": 1722,
+   "oy": 874,
+   "caixa": [
+    -110.0,
+    -80.0,
+    2010.0,
+    1160.0
+   ],
+   "camadas": [
+    {
+     "id": "arvore-m17",
+     "src": "pecas/6fc31aff0ac9.jpg",
+     "x": 150,
+     "y": 110,
+     "w": 1150,
+     "h": 850.87,
+     "iw": 1533,
+     "ih": 1134,
+     "chega": [
+      6053,
+      22
+     ],
+     "campo": "campos/69122ca6bf15.png",
+     "borda": 0.22
+    },
+    {
+     "id": "arvore-ficcao",
+     "src": "pecas/3dcec17ce2b0.png",
+     "x": 1375.0,
+     "y": 401.0,
+     "w": 327.5,
+     "h": 61.0,
+     "iw": 655,
+     "ih": 122,
+     "chega": [
+      6307,
+      16
+     ],
+     "campo": "campos/0ed5e1564176.png",
+     "borda": 0.22
+    },
+    {
+     "id": "arvore-1935",
+     "src": "pecas/b772b28e384c.png",
+     "x": 1376.0,
+     "y": 483.0,
+     "w": 310.5,
+     "h": 162.0,
+     "iw": 621,
+     "ih": 324,
+     "chega": [
+      6345,
+      18
+     ],
+     "campo": "campos/51090388556f.png",
+     "borda": 0.22
+    }
+   ]
+  },
+  "dois-autores": {
+   "tom": [
+    0.9784,
+    0.9781,
+    0.9771
+   ],
+   "ox": 1989,
+   "oy": 726,
+   "caixa": [
+    -80.0,
+    -100.0,
+    2000.0,
+    1140.0
+   ],
+   "camadas": [
+    {
+     "id": "dois-autores-yoshi",
+     "src": "pecas/6ff64fec1f64.jpg",
+     "x": 520,
+     "y": 230,
+     "w": 342.4,
+     "h": 480.0,
+     "iw": 457,
+     "ih": 640,
+     "cor": "pecas/6ff64fec1f64-cor.jpg",
+     "chega": [
+      6426,
+      18
+     ],
+     "campo": "campos/08979b09392b.png",
+     "borda": 0.22
+    },
+    {
+     "id": "dois-autores-inoue",
+     "src": "pecas/ac6be47eb26a.jpg",
+     "x": 1000,
+     "y": 230,
+     "w": 414.72,
+     "h": 480.0,
+     "iw": 553,
+     "ih": 640,
+     "cor": "pecas/ac6be47eb26a-cor.jpg",
+     "chega": [
+      6472,
+      18
+     ],
+     "campo": "campos/f0e878a1beb2.png",
+     "borda": 0.22
+    },
+    {
+     "id": "dois-autores-yoshi-n",
+     "src": "pecas/46a3457d9f11.png",
+     "x": 515.0,
+     "y": 752.0,
+     "w": 238.5,
+     "h": 52.0,
+     "iw": 477,
+     "ih": 104,
+     "chega": [
+      6432,
+      16
+     ],
+     "campo": "campos/8a63ee6f8460.png",
+     "borda": 0.22
+    },
+    {
+     "id": "dois-autores-inoue-n",
+     "src": "pecas/ae7fa90a6321.png",
+     "x": 995.0,
+     "y": 752.0,
+     "w": 257.0,
+     "h": 41.0,
+     "iw": 514,
+     "ih": 82,
+     "chega": [
+      6478,
+      16
+     ],
+     "campo": "campos/d4d7db578e45.png",
+     "borda": 0.22
+    }
+   ]
+  },
+  "registro": {
+   "tom": null,
+   "ox": 1293,
+   "oy": 345,
+   "caixa": [
+    -80.0,
+    -100.0,
+    2040.0,
+    1140.0
+   ],
+   "camadas": [
+    {
+     "id": "registro-pode",
+     "src": "pecas/951ab5237100.png",
+     "x": 295.5,
+     "y": 320.5,
+     "w": 616.5,
+     "h": 77.5,
+     "iw": 1233,
+     "ih": 155,
+     "chega": [
+      6511,
+      18
+     ],
+     "campo": "campos/2c4ff5f63517.png",
+     "borda": 0.22
+    },
+    {
+     "id": "registro-absorvida",
+     "src": "pecas/cc08f4efe6a9.png",
+     "x": 296.0,
+     "y": 460.5,
+     "w": 1086.5,
+     "h": 78.0,
+     "iw": 2173,
+     "ih": 156,
+     "chega": [
+      6589,
+      20
+     ],
+     "campo": "campos/b9c2e0736486.png",
+     "borda": 0.22
+    },
+    {
+     "id": "registro-registro",
+     "src": "pecas/f978658a936a.png",
+     "x": 296.0,
+     "y": 556.2,
+     "w": 577.5,
+     "h": 78.5,
+     "iw": 1155,
+     "ih": 157,
+     "chega": [
+      6626,
+      18
+     ],
+     "campo": "campos/c9415279b9db.png",
+     "borda": 0.22
+    },
+    {
+     "id": "registro-sublinha",
+     "src": "pecas/6565e00cfd13.png",
+     "x": 628.45,
+     "y": 599.2,
+     "w": 278.58,
+     "h": 57.0,
+     "iw": 557,
+     "ih": 114,
+     "chega": [
+      6646,
+      14
+     ],
+     "campo": "campos/606a5913e3c8.png",
+     "borda": 0.24
+    }
+   ]
+  },
+  "plateia": {
+   "tom": [
+    0.9784,
+    0.9781,
+    0.9771
+   ],
+   "ox": 284,
+   "oy": 52,
+   "caixa": [
+    -100.0,
+    -80.0,
+    2020.0,
+    1160.0
+   ],
+   "camadas": [
+    {
+     "id": "plateia-barcos",
+     "src": "pecas/44e8feab2e6b.jpg",
+     "x": 300,
+     "y": 70,
+     "w": 1320,
+     "h": 775.5,
+     "iw": 1760,
+     "ih": 1034,
+     "cor": "pecas/44e8feab2e6b-cor.jpg",
+     "chega": [
+      6667,
+      22
+     ],
+     "campo": "campos/7ca4e189f689.png",
+     "borda": 0.22
+    }
+   ]
+  },
+  "pedra": {
+   "tom": [
+    0.9353,
+    0.9298,
+    0.9083
+   ],
+   "ox": 1283,
+   "oy": 174,
+   "caixa": [
+    -80.0,
+    -80.0,
+    2000.0,
+    1279.8
+   ],
+   "camadas": [
+    {
+     "id": "pedra-rotulo",
+     "src": "pecas/b715530c67cd.png",
+     "x": 175.0,
+     "y": 144.0,
+     "w": 645.0,
+     "h": 32.0,
+     "iw": 1290,
+     "ih": 64,
+     "chega": [
+      6892,
+      16
+     ],
+     "campo": "campos/c1e75ca17c7e.png",
+     "borda": 0.22
+    },
+    {
+     "id": "pedra-data-n",
+     "src": "pecas/077703d4144f.png",
+     "x": 176.0,
+     "y": 222.5,
+     "w": 329.5,
+     "h": 171.0,
+     "iw": 659,
+     "ih": 342,
+     "chega": [
+      7011,
+      18
+     ],
+     "campo": "campos/3fe2fc8eecf7.png",
+     "borda": 0.22
+    },
+    {
+     "id": "pedra-data-t",
+     "src": "pecas/ede20b01f814.png",
+     "x": 546.34,
+     "y": 281.75,
+     "w": 631.5,
+     "h": 64.5,
+     "iw": 1263,
+     "ih": 129,
+     "chega": [
+      6957,
+      16
+     ],
+     "campo": "campos/13b09fc74c6f.png",
+     "borda": 0.22
+    },
+    {
+     "id": "pedra-iori",
+     "src": "pecas/c228021af549.png",
+     "x": 175.5,
+     "y": 476.25,
+     "w": 828.0,
+     "h": 62.0,
+     "iw": 1656,
+     "ih": 124,
+     "chega": [
+      7050,
+      16
+     ],
+     "campo": "campos/ea6d1605d15e.png",
+     "borda": 0.22
+    },
+    {
+     "id": "pedra-nove",
+     "src": "pecas/fb830f92e517.png",
+     "x": 175.0,
+     "y": 551.75,
+     "w": 528.0,
+     "h": 60.5,
+     "iw": 1056,
+     "ih": 121,
+     "chega": [
+      7161,
+      16
+     ],
+     "campo": "campos/2daf39ada617.png",
+     "borda": 0.22
+    },
+    {
+     "id": "pedra-ganryu",
+     "src": "pecas/69278b8854a4.png",
+     "x": 175.0,
+     "y": 701.25,
+     "w": 594.5,
+     "h": 61.5,
+     "iw": 1189,
+     "ih": 123,
+     "chega": [
+      8456,
+      16
+     ],
+     "campo": "campos/b32344126feb.png",
+     "borda": 0.22
+    },
+    {
+     "id": "pedra-espada",
+     "src": "pecas/39253723ce08.png",
+     "x": 175.5,
+     "y": 776.25,
+     "w": 1020.5,
+     "h": 61.0,
+     "iw": 2041,
+     "ih": 122,
+     "chega": [
+      8568,
+      16
+     ],
+     "campo": "campos/bbc0184f7181.png",
+     "borda": 0.22
+    },
+    {
+     "id": "pedra-centenas",
+     "src": "pecas/366a1a41c368.png",
+     "x": 175.5,
+     "y": 626.25,
+     "w": 866.5,
+     "h": 49.0,
+     "iw": 1733,
+     "ih": 98,
+     "chega": [
+      7700,
+      18
+     ],
+     "campo": "campos/cc89a8c18357.png",
+     "borda": 0.22
+    }
+   ]
+  },
+  "ichijoji": {
+   "tom": [
+    0.9784,
+    0.9781,
+    0.9771
+   ],
+   "ox": 400,
+   "oy": 1003,
+   "caixa": [
+    -80.0,
+    -80.0,
+    2000.0,
+    1160.0
+   ],
+   "camadas": [
+    {
+     "id": "ichijoji-m05",
+     "src": "pecas/88cd84360db8.jpg",
+     "x": 452,
+     "y": 60,
+     "w": 1015.26,
+     "h": 960.0,
+     "iw": 1354,
+     "ih": 1280,
+     "chega": [
+      7416,
+      20
+     ],
+     "campo": "campos/a1c6fb300b0e.png",
+     "borda": 0.22
+    }
+   ]
+  },
+  "chuva": {
+   "tom": [
+    0.9784,
+    0.9781,
+    0.9771
+   ],
+   "ox": 1827,
+   "oy": 284,
+   "caixa": [
+    -80.0,
+    -80.0,
+    2000.0,
+    1160.0
+   ],
+   "camadas": [
+    {
+     "id": "chuva-m06",
+     "src": "pecas/ad7efad2e2d4.jpg",
+     "x": 320,
+     "y": 58,
+     "w": 1280,
+     "h": 963.33,
+     "iw": 1707,
+     "ih": 1284,
+     "chega": [
+      7586,
+      20
+     ],
+     "campo": "campos/2df724a3d33e.png",
+     "borda": 0.22
+    }
+   ]
+  },
+  "ganryujima": {
+   "tom": [
+    0.9784,
+    0.9781,
+    0.9771
+   ],
+   "ox": 57,
+   "oy": 157,
+   "caixa": [
+    -80.0,
+    -80.0,
+    2000.0,
+    1160.0
+   ],
+   "camadas": [
+    {
+     "id": "ganryujima-fundo",
+     "src": "pecas/6511b745d967.jpg",
+     "x": 0,
+     "y": 52.5,
+     "w": 1920,
+     "h": 975.0,
+     "iw": 2944,
+     "ih": 1495,
+     "cor": "pecas/6511b745d967-cor.jpg"
+    },
+    {
+     "id": "ganryujima-pinho",
+     "src": "pecas/efecf528f77c.jpg",
+     "x": 0,
+     "y": 52.5,
+     "w": 1920,
+     "h": 975.0,
+     "iw": 2944,
+     "ih": 1495,
+     "cor": "pecas/efecf528f77c-cor.jpg",
+     "plano": "pinho",
+     "alfa": "pecas/6e9772a29b2d-alfa.png"
+    }
+   ]
+  },
+  "data-duelo": {
+   "tom": [
+    0.9353,
+    0.9298,
+    0.9083
+   ],
+   "ox": 1488,
+   "oy": 928,
+   "caixa": [
+    -80.0,
+    -80.0,
+    2000.0,
+    1160.0
+   ],
+   "camadas": [
+    {
+     "id": "data-duelo-rotulo",
+     "src": "pecas/a09fb94b1619.png",
+     "x": 175.5,
+     "y": 288.0,
+     "w": 454.5,
+     "h": 38.0,
+     "iw": 909,
+     "ih": 76,
+     "chega": [
+      8048,
+      16
+     ],
+     "campo": "campos/963da3bf5de0.png",
+     "borda": 0.22
+    },
+    {
+     "id": "data-duelo-data-n",
+     "src": "pecas/5cdbb4d7aeb0.png",
+     "x": 176.0,
+     "y": 372.5,
+     "w": 299.5,
+     "h": 170.0,
+     "iw": 599,
+     "ih": 340,
+     "chega": [
+      8164,
+      18
+     ],
+     "campo": "campos/56d3d3fc96ae.png",
+     "borda": 0.22
+    },
+    {
+     "id": "data-duelo-data-t",
+     "src": "pecas/54ba8b06de7f.png",
+     "x": 520.91,
+     "y": 432.25,
+     "w": 354.5,
+     "h": 51.0,
+     "iw": 709,
+     "ih": 102,
+     "chega": [
+      8116,
+      16
+     ],
+     "campo": "campos/d2cb21f4860b.png",
+     "borda": 0.22
+    }
+   ]
+  },
+  "nao-cita": {
+   "tom": null,
+   "ox": 175,
+   "oy": 675,
+   "caixa": [
+    -80.0,
+    -100.0,
+    2000.0,
+    1140.0
+   ],
+   "camadas": [
+    {
+     "id": "nao-cita-rotulo",
+     "src": "pecas/b74db71fb581.png",
+     "x": 848.27,
+     "y": 324.0,
+     "w": 223.5,
+     "h": 32.0,
+     "iw": 447,
+     "ih": 64,
+     "chega": [
+      8319,
+      16
+     ],
+     "campo": "campos/5ed399c15b87.png",
+     "borda": 0.22
+    },
+    {
+     "id": "nao-cita-ganryujima",
+     "src": "pecas/4270fa5280a6.png",
+     "x": 634.63,
+     "y": 423.0,
+     "w": 656.0,
+     "h": 136.0,
+     "iw": 1312,
+     "ih": 272,
+     "chega": [
+      8350,
+      22
+     ],
+     "campo": "campos/8bde695a517e.png",
+     "borda": 0.22
+    },
+    {
+     "id": "nao-cita-nenhuma",
+     "src": "pecas/273c426fe397.png",
+     "x": 803.52,
+     "y": 631.0,
+     "w": 311.0,
+     "h": 53.0,
+     "iw": 622,
+     "ih": 106,
+     "chega": [
+      8367,
+      16
+     ],
+     "campo": "campos/9ab330612633.png",
+     "borda": 0.22
+    }
+   ]
+  },
+  "salamandra": {
+   "tom": [
+    0.9784,
+    0.9781,
+    0.9771
+   ],
+   "ox": 227,
+   "oy": 102,
+   "caixa": [
+    -80.0,
+    -80.0,
+    2000.0,
+    1160.0
+   ],
+   "camadas": [
+    {
+     "id": "salamandra-g03",
+     "src": "pecas/566aa657d852.jpg",
+     "x": 616,
+     "y": 40,
+     "w": 687.61,
+     "h": 1000.0,
+     "iw": 1620,
+     "ih": 2356,
+     "cor": "pecas/566aa657d852-cor.jpg",
+     "chega": [
+      8680,
+      22
+     ],
+     "campo": "campos/f15154afbb84.png",
+     "borda": 0.22
+    }
+   ]
+  },
+  "nitenki": {
+   "tom": [
+    0.9353,
+    0.9298,
+    0.9083
+   ],
+   "ox": 1694,
+   "oy": 518,
+   "caixa": [
+    -80.0,
+    -80.0,
+    2000.0,
+    1249.6
+   ],
+   "camadas": [
+    {
+     "id": "nitenki-nome",
+     "src": "pecas/ba4a59dfe76a.png",
+     "x": 175.0,
+     "y": 238.0,
+     "w": 441.5,
+     "h": 99.0,
+     "iw": 883,
+     "ih": 198,
+     "chega": [
+      9009,
+      20
+     ],
+     "campo": "campos/82d9cc77a872.png",
+     "borda": 0.22
+    },
+    {
+     "id": "nitenki-data-n",
+     "src": "pecas/5cfcb1b8b9c1.png",
+     "x": 176.0,
+     "y": 442.5,
+     "w": 329.0,
+     "h": 170.0,
+     "iw": 658,
+     "ih": 340,
+     "chega": [
+      9060,
+      18
+     ],
+     "campo": "campos/fa44cd2c450a.png",
+     "borda": 0.22
+    },
+    {
+     "id": "nitenki-data-t",
+     "src": "pecas/47be2f39cbbf.png",
+     "x": 550.34,
+     "y": 502.25,
+     "w": 767.5,
+     "h": 64.0,
+     "iw": 1535,
+     "ih": 128,
+     "chega": [
+      9110,
+      18
+     ],
+     "campo": "campos/6c72b8597028.png",
+     "borda": 0.22
+    },
+    {
+     "id": "nitenki-relato",
+     "src": "pecas/4410bedf8071.png",
+     "x": 175.0,
+     "y": 751.0,
+     "w": 954.5,
+     "h": 61.0,
+     "iw": 1909,
+     "ih": 122,
+     "chega": [
+      9228,
+      18
+     ],
+     "campo": "campos/4bd938bd83bd.png",
+     "borda": 0.22
+    },
+    {
+     "id": "nitenki-primeiro",
+     "src": "pecas/a95d379ec6b6.png",
+     "x": 175.5,
+     "y": 840.5,
+     "w": 719.0,
+     "h": 78.0,
+     "iw": 1438,
+     "ih": 156,
+     "chega": [
+      9344,
+      18
+     ],
+     "campo": "campos/992ed345c4a3.png",
+     "borda": 0.22
+    }
+   ]
+  },
+  "kojiro": {
+   "tom": [
+    0.9784,
+    0.9781,
+    0.9771
+   ],
+   "ox": 324,
+   "oy": 991,
+   "caixa": [
+    -80.0,
+    -80.0,
+    2000.0,
+    1160.0
+   ],
+   "camadas": [
+    {
+     "id": "kojiro-m02",
+     "src": "pecas/67b1db917f16.jpg",
+     "x": 300,
+     "y": 60,
+     "w": 725.63,
+     "h": 960.0,
+     "iw": 968,
+     "ih": 1280,
+     "cor": "pecas/67b1db917f16-cor.jpg",
+     "chega": [
+      9382,
+      20
+     ],
+     "campo": "campos/10583f13a972.png",
+     "borda": 0.22
+    },
+    {
+     "id": "kojiro-nome",
+     "src": "pecas/0fb8927cf52a.png",
+     "x": 1096.0,
+     "y": 459.0,
+     "w": 539.0,
+     "h": 107.0,
+     "iw": 1078,
+     "ih": 214,
+     "chega": [
+      9397,
+      20
+     ],
+     "campo": "campos/b19c9b55b6a8.png",
+     "borda": 0.22
+    }
+   ]
+  },
+  "cartucho": {
+   "tom": [
+    0.9784,
+    0.9781,
+    0.9771
+   ],
+   "ox": 1398,
+   "oy": 509,
+   "caixa": [
+    -100.0,
+    -80.0,
+    2020.0,
+    1160.0
+   ],
+   "camadas": [
+    {
+     "id": "cartucho-kojiro",
+     "src": "pecas/5a681eaf2a33.jpg",
+     "x": 120,
+     "y": 65,
+     "w": 1253.61,
+     "h": 950.0,
+     "iw": 1671,
+     "ih": 1267,
+     "cor": "pecas/5a681eaf2a33-cor.jpg",
+     "chega": [
+      9502,
+      20
+     ],
+     "campo": "campos/b5e1ff9f1bc3.png",
+     "borda": 0.22
+    },
+    {
+     "id": "cartucho-ganryu",
+     "src": "pecas/219e60d05e40.png",
+     "x": 1313.7,
+     "y": 769.66,
+     "w": 66.0,
+     "h": 206.66,
+     "iw": 132,
+     "ih": 413,
+     "chega": [
+      9561,
+      14
+     ],
+     "campo": "campos/d20ac871b88c.png",
+     "borda": 0.24
+    },
+    {
+     "id": "cartucho-ganryu-t",
+     "src": "pecas/49ea789afaaa.png",
+     "x": 1393.7,
+     "y": 842.51,
+     "w": 231.5,
+     "h": 78.5,
+     "iw": 463,
+     "ih": 157,
+     "chega": [
+      9563,
+      16
+     ],
+     "campo": "campos/627490fb09da.png",
+     "borda": 0.22
+    },
+    {
+     "id": "cartucho-sasaki",
+     "src": "pecas/6428969309b9.png",
+     "x": 1313.7,
+     "y": 612.96,
+     "w": 66.0,
+     "h": 200.78,
+     "iw": 132,
+     "ih": 402,
+     "chega": [
+      9607,
+      14
+     ],
+     "campo": "campos/62ec01c34318.png",
+     "borda": 0.24
+    },
+    {
+     "id": "cartucho-sasaki-t",
+     "src": "pecas/e77f7eb9b518.png",
+     "x": 1393.2,
+     "y": 680.85,
+     "w": 190.0,
+     "h": 62.5,
+     "iw": 380,
+     "ih": 125,
+     "chega": [
+      9609,
+      16
+     ],
+     "campo": "campos/9c361c430d7c.png",
+     "borda": 0.22
+    },
+    {
+     "id": "cartucho-kabuki",
+     "src": "pecas/5189cfefd05f.png",
+     "x": 1392.7,
+     "y": 221.0,
+     "w": 379.5,
+     "h": 61.0,
+     "iw": 759,
+     "ih": 122,
+     "chega": [
+      9685,
+      16
+     ],
+     "campo": "campos/b91ebfef99b9.png",
+     "borda": 0.22
+    },
+    {
+     "id": "cartucho-volta",
+     "src": "pecas/c668b370ccb9.png",
+     "x": 1392.2,
+     "y": 312.0,
+     "w": 196.0,
+     "h": 51.5,
+     "iw": 392,
+     "ih": 103,
+     "chega": [
+      9738,
+      14
+     ],
+     "campo": "campos/3f36f386918f.png",
+     "borda": 0.22
+    },
+    {
+     "id": "cartucho-1730",
+     "src": "pecas/f4d25aafaac6.png",
+     "x": 1393.2,
+     "y": 377.5,
+     "w": 292.5,
+     "h": 153.0,
+     "iw": 585,
+     "ih": 306,
+     "chega": [
+      9752,
+      18
+     ],
+     "campo": "campos/6af8459fb08a.png",
+     "borda": 0.22
+    }
+   ]
+  },
+  "baleia": {
+   "tom": [
+    0.9784,
+    0.9781,
+    0.9771
+   ],
+   "ox": 637,
+   "oy": 545,
+   "caixa": [
+    -80.0,
+    -80.0,
+    2000.0,
+    1160.0
+   ],
+   "camadas": [
+    {
+     "id": "baleia-fundo",
+     "src": "pecas/603be6c0b52b.jpg",
+     "x": 0,
+     "y": 72.3,
+     "w": 1920,
+     "h": 935.4,
+     "iw": 2944,
+     "ih": 1434,
+     "cor": "pecas/603be6c0b52b-cor.jpg"
+    },
+    {
+     "id": "baleia-baleia",
+     "src": "pecas/b2d935d8b863.jpg",
+     "x": 0,
+     "y": 72.3,
+     "w": 1920,
+     "h": 935.4,
+     "iw": 2944,
+     "ih": 1434,
+     "cor": "pecas/b2d935d8b863-cor.jpg",
+     "plano": "baleia",
+     "alfa": "pecas/b9b70e41b6a4-alfa.png"
+    }
+   ]
+  },
+  "chamada": {
+   "tom": null,
+   "ox": 885,
+   "oy": 1017,
+   "caixa": [
+    -80.0,
+    -80.0,
+    2000.0,
+    1160.0
+   ],
+   "camadas": [
+    {
+     "id": "chamada-l1",
+     "src": "pecas/348edada56a8.png",
+     "x": 145.5,
+     "y": 421.0,
+     "w": 704.0,
+     "h": 70.5,
+     "iw": 1408,
+     "ih": 141,
+     "chega": [
+      10065,
+      18
+     ],
+     "campo": "campos/a225e1f5633c.png",
+     "borda": 0.22
+    },
+    {
+     "id": "chamada-l2",
+     "src": "pecas/54d29825755b.png",
+     "x": 145.5,
+     "y": 503.5,
+     "w": 513.5,
+     "h": 70.0,
+     "iw": 1027,
+     "ih": 140,
+     "chega": [
+      10139,
+      18
+     ],
+     "campo": "campos/de05cc8e4077.png",
+     "borda": 0.22
+    },
+    {
+     "id": "chamada-l3",
+     "src": "pecas/c5f9f94aec3f.png",
+     "x": 145.5,
+     "y": 585.5,
+     "w": 593.0,
+     "h": 70.0,
+     "iw": 1186,
+     "ih": 140,
+     "chega": [
+      10174,
+      18
+     ],
+     "campo": "campos/d9c1bdbb1e18.png",
+     "borda": 0.22
+    },
+    {
+     "id": "chamada-selo",
+     "src": "pecas/cdeb63445ee3.png",
+     "x": 1420,
+     "y": 300,
+     "w": 330,
+     "h": 430,
+     "iw": 440,
+     "ih": 573,
+     "carimbo": [
+      9995,
+      -2.4
+     ]
+    }
+   ]
+  },
+  "monte": {
+   "tom": [
+    0.9784,
+    0.9781,
+    0.9771
+   ],
+   "ox": 547,
+   "oy": 606,
+   "caixa": [
+    -100.0,
+    -80.0,
+    2020.0,
+    1160.0
+   ],
+   "camadas": [
+    {
+     "id": "monte-escada",
+     "src": "pecas/dd4afbb0a8ec.jpg",
+     "x": 200,
+     "y": 170,
+     "w": 1000,
+     "h": 666.25,
+     "iw": 1333,
+     "ih": 888,
+     "cor": "pecas/dd4afbb0a8ec-cor.jpg",
+     "chega": [
+      10369,
+      20
+     ],
+     "campo": "campos/2b4a13c915b4.png",
+     "borda": 0.22
+    },
+    {
+     "id": "monte-mes",
+     "src": "pecas/871bc2ac480a.png",
+     "x": 1295.5,
+     "y": 321.5,
+     "w": 273.0,
+     "h": 45.5,
+     "iw": 546,
+     "ih": 91,
+     "chega": [
+      10450,
+      16
+     ],
+     "campo": "campos/c46dcb18341d.png",
+     "borda": 0.22
+    },
+    {
+     "id": "monte-1643",
+     "src": "pecas/0b6742cc19c6.png",
+     "x": 1296.0,
+     "y": 393.0,
+     "w": 309.0,
+     "h": 161.5,
+     "iw": 618,
+     "ih": 323,
+     "chega": [
+      10472,
+      18
+     ],
+     "campo": "campos/7b2729f613dc.png",
+     "borda": 0.22
+    },
+    {
+     "id": "monte-monte",
+     "src": "pecas/6282b721b922.png",
+     "x": 1295.5,
+     "y": 613.5,
+     "w": 212.0,
+     "h": 34.5,
+     "iw": 424,
+     "ih": 69,
+     "chega": [
+      10552,
+      16
+     ],
+     "campo": "campos/373300e95494.png",
+     "borda": 0.22
+    }
+   ]
+  },
+  "reigando": {
+   "tom": [
+    0.9784,
+    0.9781,
+    0.9771
+   ],
+   "ox": 1183,
+   "oy": 394,
+   "caixa": [
+    -92.6,
+    -80.0,
+    2000.0,
+    1160.0
+   ],
+   "camadas": [
+    {
+     "id": "reigando-boca",
+     "src": "pecas/aa063563781b.jpg",
+     "x": 160,
+     "y": 90,
+     "w": 1112.96,
+     "h": 900.0,
+     "iw": 2226,
+     "ih": 1800,
+     "cor": "pecas/aa063563781b-cor.jpg",
+     "chega": [
+      10554,
+      22
+     ],
+     "campo": "campos/1391520321fc.png",
+     "borda": 0.22
+    },
+    {
+     "id": "reigando-nome",
+     "src": "pecas/bd2e8ecc1796.png",
+     "x": 1338.46,
+     "y": 369.5,
+     "w": 347.5,
+     "h": 96.0,
+     "iw": 695,
+     "ih": 192,
+     "chega": [
+      10642,
+      18
+     ],
+     "campo": "campos/0863b583288d.png",
+     "borda": 0.22
+    },
+    {
+     "id": "reigando-templo",
+     "src": "pecas/22c3b5ce423c.png",
+     "x": 1338.46,
+     "y": 513.5,
+     "w": 202.5,
+     "h": 34.5,
+     "iw": 405,
+     "ih": 69,
+     "chega": [
+      10763,
+      16
+     ],
+     "campo": "campos/224777863a8c.png",
+     "borda": 0.22
+    },
+    {
+     "id": "reigando-kumamoto",
+     "src": "pecas/e8f15abfc479.png",
+     "x": 1338.46,
+     "y": 561.5,
+     "w": 173.0,
+     "h": 34.5,
+     "iw": 346,
+     "ih": 69,
+     "chega": [
+      10818,
+      16
+     ],
+     "campo": "campos/9bb6cc14fd8a.png",
+     "borda": 0.22
+    }
+   ]
+  },
+  "arhats": {
+   "tom": [
+    0.9784,
+    0.9781,
+    0.9771
+   ],
+   "ox": 888,
+   "oy": 477,
+   "caixa": [
+    -110.0,
+    -80.0,
+    2010.0,
+    1160.0
+   ],
+   "camadas": [
+    {
+     "id": "arhats-arhats",
+     "src": "pecas/19c2107917ae.jpg",
+     "x": 120,
+     "y": 120,
+     "w": 1260,
+     "h": 839.79,
+     "iw": 1680,
+     "ih": 1120,
+     "cor": "pecas/19c2107917ae-cor.jpg",
+     "chega": [
+      10819,
+      22
+     ],
+     "campo": "campos/816b36b21845.png",
+     "borda": 0.22
+    },
+    {
+     "id": "arhats-500",
+     "src": "pecas/214767d02e04.png",
+     "x": 1467.5,
+     "y": 373.0,
+     "w": 254.0,
+     "h": 162.0,
+     "iw": 508,
+     "ih": 324,
+     "chega": [
+      10948,
+      18
+     ],
+     "campo": "campos/3f54f64f9d5a.png",
+     "borda": 0.22
+    },
+    {
+     "id": "arhats-figuras",
+     "src": "pecas/9a3db4b3f762.png",
+     "x": 1465.0,
+     "y": 591.5,
+     "w": 296.5,
+     "h": 58.0,
+     "iw": 593,
+     "ih": 116,
+     "chega": [
+      10966,
+      16
+     ],
+     "campo": "campos/65103a6d2591.png",
+     "borda": 0.22
+    }
+   ]
+  },
+  "entrega": {
+   "tom": [
+    0.9353,
+    0.9298,
+    0.9083
+   ],
+   "ox": 758,
+   "oy": 1106,
+   "caixa": [
+    -80.0,
+    -80.0,
+    2000.0,
+    1160.0
+   ],
+   "camadas": [
+    {
+     "id": "entrega-terminou",
+     "src": "pecas/366ece275e63.png",
+     "x": 176.0,
+     "y": 225.0,
+     "w": 228.5,
+     "h": 49.0,
+     "iw": 457,
+     "ih": 98,
+     "chega": [
+      11088,
+      16
+     ],
+     "campo": "campos/bdb66d6f3602.png",
+     "borda": 0.22
+    },
+    {
+     "id": "entrega-data-n",
+     "src": "pecas/67180a75d360.png",
+     "x": 176.0,
+     "y": 352.5,
+     "w": 328.0,
+     "h": 171.0,
+     "iw": 656,
+     "ih": 342,
+     "chega": [
+      11166,
+      18
+     ],
+     "campo": "campos/6e9b861df1a7.png",
+     "borda": 0.22
+    },
+    {
+     "id": "entrega-data-t",
+     "src": "pecas/051a6bb69107.png",
+     "x": 550.34,
+     "y": 412.25,
+     "w": 354.5,
+     "h": 51.0,
+     "iw": 709,
+     "ih": 102,
+     "chega": [
+      11111,
+      16
+     ],
+     "campo": "campos/f26be64ab5f6.png",
+     "borda": 0.22
+    },
+    {
+     "id": "entrega-discipulo",
+     "src": "pecas/8509dc1e1ae6.png",
+     "x": 175.5,
+     "y": 631.0,
+     "w": 427.5,
+     "h": 62.0,
+     "iw": 855,
+     "ih": 124,
+     "chega": [
+      11260,
+      16
+     ],
+     "campo": "campos/efa0279c497e.png",
+     "borda": 0.22
+    },
+    {
+     "id": "entrega-terao",
+     "src": "pecas/f3fe77730851.png",
+     "x": 175.5,
+     "y": 709.5,
+     "w": 578.0,
+     "h": 96.0,
+     "iw": 1156,
+     "ih": 192,
+     "chega": [
+      11281,
+      18
+     ],
+     "campo": "campos/89dcbdc806b4.png",
+     "borda": 0.22
+    }
+   ]
+  },
+  "dokkodo": {
+   "tom": [
+    0.9784,
+    0.9781,
+    0.9771
+   ],
+   "ox": 1401,
+   "oy": 57,
+   "caixa": [
+    -100.0,
+    -80.0,
+    2020.0,
+    1160.0
+   ],
+   "camadas": [
+    {
+     "id": "dokkodo-linha00-0",
+     "src": "pecas/fd20fc258ac4.png",
+     "x": 1711.65,
+     "y": 157.06,
+     "w": 43.63,
+     "h": 129.16,
+     "iw": 87,
+     "ih": 258,
+     "chega": [
+      11367,
+      12
+     ],
+     "campo": "campos/d93844c493d0.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha00-1",
+     "src": "pecas/162fe85ab4cc.png",
+     "x": 1707.07,
+     "y": 299.55,
+     "w": 49.83,
+     "h": 246.36,
+     "iw": 100,
+     "ih": 493,
+     "chega": [
+      11367,
+      12
+     ],
+     "campo": "campos/7eda4c28c950.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha00-2",
+     "src": "pecas/6a6ae4e903c6.png",
+     "x": 1707.22,
+     "y": 552.63,
+     "w": 47.69,
+     "h": 250.33,
+     "iw": 95,
+     "ih": 501,
+     "chega": [
+      11367,
+      12
+     ],
+     "campo": "campos/fe1098a133c8.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha01-0",
+     "src": "pecas/9a1fc9c6dcf5.png",
+     "x": 1674.11,
+     "y": 151.18,
+     "w": 45.22,
+     "h": 163.51,
+     "iw": 90,
+     "ih": 327,
+     "chega": [
+      11368,
+      12
+     ],
+     "campo": "campos/19c6f914c0f0.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha01-1",
+     "src": "pecas/6a2bef03bbf5.png",
+     "x": 1673.51,
+     "y": 300.43,
+     "w": 45.12,
+     "h": 262.06,
+     "iw": 90,
+     "ih": 524,
+     "chega": [
+      11368,
+      12
+     ],
+     "campo": "campos/407d530c7e8e.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha02-0",
+     "src": "pecas/10783f3ef282.png",
+     "x": 1632.07,
+     "y": 141.49,
+     "w": 47.93,
+     "h": 169.68,
+     "iw": 96,
+     "ih": 339,
+     "chega": [
+      11369,
+      12
+     ],
+     "campo": "campos/bbd71ed35a8c.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha02-1",
+     "src": "pecas/49756ac3fde8.png",
+     "x": 1634.51,
+     "y": 309.44,
+     "w": 46.55,
+     "h": 190.64,
+     "iw": 93,
+     "ih": 381,
+     "chega": [
+      11369,
+      12
+     ],
+     "campo": "campos/bebd35c1ca2d.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha02-2",
+     "src": "pecas/3711c56bf783.png",
+     "x": 1633.97,
+     "y": 502.5,
+     "w": 46.44,
+     "h": 295.49,
+     "iw": 93,
+     "ih": 591,
+     "chega": [
+      11369,
+      12
+     ],
+     "campo": "campos/ee52e79a93dc.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha03-0",
+     "src": "pecas/6f7ad065f30c.png",
+     "x": 1599.09,
+     "y": 138.04,
+     "w": 45.89,
+     "h": 179.09,
+     "iw": 92,
+     "ih": 358,
+     "chega": [
+      11370,
+      12
+     ],
+     "campo": "campos/b192720b4068.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha03-1",
+     "src": "pecas/31cfed0bc3ea.png",
+     "x": 1599.78,
+     "y": 301.59,
+     "w": 44.24,
+     "h": 186.09,
+     "iw": 88,
+     "ih": 372,
+     "chega": [
+      11370,
+      12
+     ],
+     "campo": "campos/7a3c5a6d4a81.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha03-2",
+     "src": "pecas/4ab007c6ea8f.png",
+     "x": 1596.7,
+     "y": 471.16,
+     "w": 48.95,
+     "h": 170.2,
+     "iw": 98,
+     "ih": 340,
+     "chega": [
+      11370,
+      12
+     ],
+     "campo": "campos/5951ceba2343.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha04-0",
+     "src": "pecas/a0539a745347.png",
+     "x": 1569.14,
+     "y": 138.01,
+     "w": 46.9,
+     "h": 248.04,
+     "iw": 94,
+     "ih": 496,
+     "chega": [
+      11371,
+      12
+     ],
+     "campo": "campos/d6ede84be9be.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha04-1",
+     "src": "pecas/dcc384c736bc.png",
+     "x": 1566.49,
+     "y": 384.5,
+     "w": 51.06,
+     "h": 268.63,
+     "iw": 102,
+     "ih": 537,
+     "chega": [
+      11371,
+      12
+     ],
+     "campo": "campos/6e08b8c6de05.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha05-0",
+     "src": "pecas/c4ab1fa8a2f3.png",
+     "x": 1532.94,
+     "y": 164.51,
+     "w": 47.19,
+     "h": 252.89,
+     "iw": 94,
+     "ih": 506,
+     "chega": [
+      11372,
+      12
+     ],
+     "campo": "campos/d39745327732.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha05-1",
+     "src": "pecas/f88e5e101a5f.png",
+     "x": 1535.62,
+     "y": 406.22,
+     "w": 44.1,
+     "h": 256.14,
+     "iw": 88,
+     "ih": 512,
+     "chega": [
+      11372,
+      12
+     ],
+     "campo": "campos/e16729f5807b.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha05-2",
+     "src": "pecas/67c1b8eeb012.png",
+     "x": 1537.1,
+     "y": 649.52,
+     "w": 42.34,
+     "h": 185.33,
+     "iw": 85,
+     "ih": 371,
+     "chega": [
+      11372,
+      12
+     ],
+     "campo": "campos/9ab847d10666.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha06-0",
+     "src": "pecas/03d04fd1ce95.png",
+     "x": 1498.21,
+     "y": 138.02,
+     "w": 47.17,
+     "h": 225.98,
+     "iw": 94,
+     "ih": 452,
+     "chega": [
+      11373,
+      12
+     ],
+     "campo": "campos/665c214977a3.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha06-1",
+     "src": "pecas/222e907da4ab.png",
+     "x": 1501.18,
+     "y": 348.52,
+     "w": 45.17,
+     "h": 195.59,
+     "iw": 90,
+     "ih": 391,
+     "chega": [
+      11373,
+      12
+     ],
+     "campo": "campos/99f12033f64b.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha06-2",
+     "src": "pecas/5bafd212c8ef.png",
+     "x": 1498.63,
+     "y": 548.3,
+     "w": 47.87,
+     "h": 203.62,
+     "iw": 96,
+     "ih": 407,
+     "chega": [
+      11373,
+      12
+     ],
+     "campo": "campos/bb04f61632e6.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha07-0",
+     "src": "pecas/e583be96f425.png",
+     "x": 1465.0,
+     "y": 149.79,
+     "w": 45.98,
+     "h": 221.14,
+     "iw": 92,
+     "ih": 442,
+     "chega": [
+      11374,
+      12
+     ],
+     "campo": "campos/f106d9437128.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha07-1",
+     "src": "pecas/c8d3d9a9ca48.png",
+     "x": 1465.03,
+     "y": 379.06,
+     "w": 45.01,
+     "h": 117.82,
+     "iw": 90,
+     "ih": 236,
+     "chega": [
+      11374,
+      12
+     ],
+     "campo": "campos/ab58356d85e0.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha07-2",
+     "src": "pecas/5f87f7769fcc.png",
+     "x": 1468.88,
+     "y": 488.26,
+     "w": 40.35,
+     "h": 113.09,
+     "iw": 81,
+     "ih": 226,
+     "chega": [
+      11374,
+      12
+     ],
+     "campo": "campos/36652e20b8ca.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha07-3",
+     "src": "pecas/baaf4546a865.png",
+     "x": 1463.32,
+     "y": 588.1,
+     "w": 50.08,
+     "h": 94.44,
+     "iw": 100,
+     "ih": 189,
+     "chega": [
+      11374,
+      12
+     ],
+     "campo": "campos/28e10a368916.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha08-0",
+     "src": "pecas/e5644904823a.png",
+     "x": 1427.14,
+     "y": 149.71,
+     "w": 39.65,
+     "h": 163.97,
+     "iw": 79,
+     "ih": 328,
+     "chega": [
+      11375,
+      12
+     ],
+     "campo": "campos/dd117ea66d1f.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha08-1",
+     "src": "pecas/fd388b1a4755.png",
+     "x": 1426.22,
+     "y": 328.26,
+     "w": 45.34,
+     "h": 192.41,
+     "iw": 91,
+     "ih": 385,
+     "chega": [
+      11375,
+      12
+     ],
+     "campo": "campos/598915ea892c.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha08-2",
+     "src": "pecas/70c980ce538e.png",
+     "x": 1428.02,
+     "y": 530.89,
+     "w": 40.94,
+     "h": 97.25,
+     "iw": 82,
+     "ih": 195,
+     "chega": [
+      11375,
+      12
+     ],
+     "campo": "campos/9125c7662813.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha09-0",
+     "src": "pecas/5136dea476e8.png",
+     "x": 1389.53,
+     "y": 148.42,
+     "w": 48.19,
+     "h": 306.15,
+     "iw": 96,
+     "ih": 612,
+     "chega": [
+      11376,
+      12
+     ],
+     "campo": "campos/e3281026f83f.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha09-1",
+     "src": "pecas/cb9ed1e12f16.png",
+     "x": 1391.8,
+     "y": 439.88,
+     "w": 46.41,
+     "h": 194.52,
+     "iw": 93,
+     "ih": 389,
+     "chega": [
+      11376,
+      12
+     ],
+     "campo": "campos/93dca197ecc2.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha09-2",
+     "src": "pecas/a91813806366.png",
+     "x": 1393.06,
+     "y": 643.97,
+     "w": 42.35,
+     "h": 171.38,
+     "iw": 85,
+     "ih": 343,
+     "chega": [
+      11376,
+      12
+     ],
+     "campo": "campos/f4d82bc5e62a.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha10-0",
+     "src": "pecas/b4a16830d353.png",
+     "x": 1354.2,
+     "y": 149.0,
+     "w": 42.84,
+     "h": 165.51,
+     "iw": 86,
+     "ih": 331,
+     "chega": [
+      11377,
+      12
+     ],
+     "campo": "campos/1d853bd47bc7.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha10-1",
+     "src": "pecas/54441a05304c.png",
+     "x": 1356.29,
+     "y": 304.82,
+     "w": 42.66,
+     "h": 211.81,
+     "iw": 85,
+     "ih": 424,
+     "chega": [
+      11377,
+      12
+     ],
+     "campo": "campos/db9312fa3def.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha10-2",
+     "src": "pecas/145a0a120d3a.png",
+     "x": 1355.33,
+     "y": 532.07,
+     "w": 41.91,
+     "h": 253.04,
+     "iw": 84,
+     "ih": 506,
+     "chega": [
+      11377,
+      12
+     ],
+     "campo": "campos/c65a0bdb6a35.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha11-0",
+     "src": "pecas/fad228ace0c7.png",
+     "x": 1325.68,
+     "y": 147.37,
+     "w": 43.96,
+     "h": 270.49,
+     "iw": 88,
+     "ih": 541,
+     "chega": [
+      11378,
+      12
+     ],
+     "campo": "campos/c6a145aa4001.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha11-1",
+     "src": "pecas/234f96adcd6e.png",
+     "x": 1327.99,
+     "y": 428.6,
+     "w": 38.59,
+     "h": 223.11,
+     "iw": 77,
+     "ih": 446,
+     "chega": [
+      11378,
+      12
+     ],
+     "campo": "campos/5028e4473fe2.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha12-0",
+     "src": "pecas/924dba284ed0.png",
+     "x": 1291.14,
+     "y": 145.49,
+     "w": 41.61,
+     "h": 162.88,
+     "iw": 83,
+     "ih": 326,
+     "chega": [
+      11379,
+      12
+     ],
+     "campo": "campos/89a3a652ac38.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha12-1",
+     "src": "pecas/d50ced303f50.png",
+     "x": 1289.79,
+     "y": 322.55,
+     "w": 43.46,
+     "h": 290.88,
+     "iw": 87,
+     "ih": 582,
+     "chega": [
+      11379,
+      12
+     ],
+     "campo": "campos/3371ad90864a.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha12-2",
+     "src": "pecas/99ec2ab051d9.png",
+     "x": 1288.92,
+     "y": 627.98,
+     "w": 46.91,
+     "h": 119.44,
+     "iw": 94,
+     "ih": 239,
+     "chega": [
+      11379,
+      12
+     ],
+     "campo": "campos/97aada3a6634.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha13-0",
+     "src": "pecas/09d169694c93.png",
+     "x": 1258.69,
+     "y": 157.86,
+     "w": 38.85,
+     "h": 177.11,
+     "iw": 78,
+     "ih": 354,
+     "chega": [
+      11380,
+      12
+     ],
+     "campo": "campos/ea80446d42ba.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha13-1",
+     "src": "pecas/80471a2b37f7.png",
+     "x": 1256.64,
+     "y": 345.5,
+     "w": 41.65,
+     "h": 122.69,
+     "iw": 83,
+     "ih": 245,
+     "chega": [
+      11380,
+      12
+     ],
+     "campo": "campos/08e3378b555d.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha13-2",
+     "src": "pecas/89aa50417b2b.png",
+     "x": 1256.96,
+     "y": 450.54,
+     "w": 43.7,
+     "h": 237.55,
+     "iw": 87,
+     "ih": 475,
+     "chega": [
+      11380,
+      12
+     ],
+     "campo": "campos/f1b771652303.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha14-0",
+     "src": "pecas/f701e72ca6bb.png",
+     "x": 1212.03,
+     "y": 152.57,
+     "w": 46.38,
+     "h": 280.13,
+     "iw": 93,
+     "ih": 560,
+     "chega": [
+      11381,
+      12
+     ],
+     "campo": "campos/08bc97c894cf.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha14-1",
+     "src": "pecas/05122658259e.png",
+     "x": 1215.73,
+     "y": 426.22,
+     "w": 44.17,
+     "h": 275.59,
+     "iw": 88,
+     "ih": 551,
+     "chega": [
+      11381,
+      12
+     ],
+     "campo": "campos/3ac6e2f00d7e.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha15-0",
+     "src": "pecas/abeab4149e84.png",
+     "x": 1186.43,
+     "y": 169.45,
+     "w": 41.72,
+     "h": 247.41,
+     "iw": 83,
+     "ih": 495,
+     "chega": [
+      11382,
+      12
+     ],
+     "campo": "campos/f11c5d3004c3.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha15-1",
+     "src": "pecas/ee096d184160.png",
+     "x": 1186.69,
+     "y": 400.58,
+     "w": 41.68,
+     "h": 215.34,
+     "iw": 83,
+     "ih": 431,
+     "chega": [
+      11382,
+      12
+     ],
+     "campo": "campos/3a4bad8cf248.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha15-2",
+     "src": "pecas/1d3474edb474.png",
+     "x": 1185.88,
+     "y": 600.13,
+     "w": 41.55,
+     "h": 268.6,
+     "iw": 83,
+     "ih": 537,
+     "chega": [
+      11382,
+      12
+     ],
+     "campo": "campos/40f2ea329137.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha16-0",
+     "src": "pecas/6f8643f35932.png",
+     "x": 1147.91,
+     "y": 141.69,
+     "w": 47.72,
+     "h": 207.61,
+     "iw": 95,
+     "ih": 415,
+     "chega": [
+      11383,
+      12
+     ],
+     "campo": "campos/b3884e4569ab.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha16-1",
+     "src": "pecas/60ea11c09ec1.png",
+     "x": 1147.4,
+     "y": 335.31,
+     "w": 46.13,
+     "h": 216.64,
+     "iw": 92,
+     "ih": 433,
+     "chega": [
+      11383,
+      12
+     ],
+     "campo": "campos/0e08a3de7df0.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha16-2",
+     "src": "pecas/73d9f6838667.png",
+     "x": 1146.58,
+     "y": 553.58,
+     "w": 49.37,
+     "h": 162.72,
+     "iw": 99,
+     "ih": 325,
+     "chega": [
+      11383,
+      12
+     ],
+     "campo": "campos/1074de09f5e0.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha17-0",
+     "src": "pecas/79e9a8cd46fb.png",
+     "x": 1111.97,
+     "y": 147.26,
+     "w": 47.89,
+     "h": 145.56,
+     "iw": 96,
+     "ih": 291,
+     "chega": [
+      11384,
+      12
+     ],
+     "campo": "campos/33f27626cd92.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha17-1",
+     "src": "pecas/16cf2bade1da.png",
+     "x": 1112.11,
+     "y": 286.89,
+     "w": 46.9,
+     "h": 239.94,
+     "iw": 94,
+     "ih": 480,
+     "chega": [
+      11384,
+      12
+     ],
+     "campo": "campos/5256751e6ca4.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha17-2",
+     "src": "pecas/3230c044b363.png",
+     "x": 1114.71,
+     "y": 510.74,
+     "w": 43.33,
+     "h": 147.23,
+     "iw": 87,
+     "ih": 294,
+     "chega": [
+      11384,
+      12
+     ],
+     "campo": "campos/cf7dfe3ddac7.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha18-0",
+     "src": "pecas/dd2bd0538366.png",
+     "x": 1072.44,
+     "y": 157.32,
+     "w": 49.07,
+     "h": 166.04,
+     "iw": 98,
+     "ih": 332,
+     "chega": [
+      11385,
+      12
+     ],
+     "campo": "campos/c1012e544f3b.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha18-1",
+     "src": "pecas/7e3c11f8efdf.png",
+     "x": 1077.59,
+     "y": 334.25,
+     "w": 40.0,
+     "h": 172.22,
+     "iw": 80,
+     "ih": 344,
+     "chega": [
+      11385,
+      12
+     ],
+     "campo": "campos/9904102a5896.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha18-2",
+     "src": "pecas/cba144aabaf4.png",
+     "x": 1074.63,
+     "y": 520.84,
+     "w": 46.42,
+     "h": 118.4,
+     "iw": 93,
+     "ih": 237,
+     "chega": [
+      11385,
+      12
+     ],
+     "campo": "campos/432185d2999c.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha19-0",
+     "src": "pecas/b15e9764f3b2.png",
+     "x": 1045.92,
+     "y": 141.36,
+     "w": 41.15,
+     "h": 191.05,
+     "iw": 82,
+     "ih": 382,
+     "chega": [
+      11386,
+      12
+     ],
+     "campo": "campos/565bdc0537cd.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha19-1",
+     "src": "pecas/c5265eea149b.png",
+     "x": 1042.77,
+     "y": 336.61,
+     "w": 46.72,
+     "h": 215.19,
+     "iw": 93,
+     "ih": 430,
+     "chega": [
+      11386,
+      12
+     ],
+     "campo": "campos/32b90089a0ff.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha19-2",
+     "src": "pecas/7ebe463a9a2e.png",
+     "x": 1044.83,
+     "y": 553.12,
+     "w": 42.18,
+     "h": 172.83,
+     "iw": 84,
+     "ih": 346,
+     "chega": [
+      11386,
+      12
+     ],
+     "campo": "campos/16747649a1c7.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha19-3",
+     "src": "pecas/84f93868e7c1.png",
+     "x": 1043.49,
+     "y": 731.25,
+     "w": 45.42,
+     "h": 153.32,
+     "iw": 91,
+     "ih": 307,
+     "chega": [
+      11386,
+      12
+     ],
+     "campo": "campos/722a2126422e.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha20-0",
+     "src": "pecas/0e0611c998fd.png",
+     "x": 1010.2,
+     "y": 150.77,
+     "w": 42.72,
+     "h": 265.54,
+     "iw": 85,
+     "ih": 531,
+     "chega": [
+      11387,
+      12
+     ],
+     "campo": "campos/2cd7ac6e139c.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-linha20-1",
+     "src": "pecas/9c863eed189c.png",
+     "x": 1007.96,
+     "y": 414.6,
+     "w": 44.05,
+     "h": 252.18,
+     "iw": 88,
+     "ih": 504,
+     "chega": [
+      11387,
+      12
+     ],
+     "campo": "campos/913a6e6e73f3.png",
+     "borda": 0.24
+    },
+    {
+     "id": "dokkodo-nome",
+     "src": "pecas/b4e801300914.png",
+     "x": 176.0,
+     "y": 158.5,
+     "w": 414.0,
+     "h": 87.5,
+     "iw": 828,
+     "ih": 175,
+     "chega": [
+      11413,
+      18
+     ],
+     "campo": "campos/2d907ee6afed.png",
+     "borda": 0.22
+    },
+    {
+     "id": "dokkodo-caminho",
+     "src": "pecas/3c04707e165c.png",
+     "x": 175.5,
+     "y": 321.0,
+     "w": 559.0,
+     "h": 49.0,
+     "iw": 1118,
+     "ih": 98,
+     "chega": [
+      11455,
+      16
+     ],
+     "campo": "campos/ab44e0eabab9.png",
+     "borda": 0.22
+    },
+    {
+     "id": "dokkodo-desejar",
+     "src": "pecas/4953b7c98598.png",
+     "x": 175.0,
+     "y": 511.5,
+     "w": 332.5,
+     "h": 61.5,
+     "iw": 665,
+     "ih": 123,
+     "chega": [
+      11569,
+      16
+     ],
+     "campo": "campos/38fa747351d7.png",
+     "borda": 0.22
+    },
+    {
+     "id": "dokkodo-arrepender",
+     "src": "pecas/54e8ae2b5098.png",
+     "x": 175.0,
+     "y": 597.5,
+     "w": 566.5,
+     "h": 61.0,
+     "iw": 1133,
+     "ih": 122,
+     "chega": [
+      11605,
+      16
+     ],
+     "campo": "campos/2ad606a904eb.png",
+     "borda": 0.22
+    },
+    {
+     "id": "dokkodo-preferencias",
+     "src": "pecas/5190820dd11e.png",
+     "x": 175.0,
+     "y": 683.5,
+     "w": 393.5,
+     "h": 60.5,
+     "iw": 787,
+     "ih": 121,
+     "chega": [
+      11667,
+      16
+     ],
+     "campo": "campos/bfd796418707.png",
+     "borda": 0.22
+    }
+   ]
+  },
+  "inoue": {
+   "tom": [
+    0.9784,
+    0.9781,
+    0.9771
+   ],
+   "ox": 309,
+   "oy": 471,
+   "caixa": [
+    -80.0,
+    -80.0,
+    2000.0,
+    1160.0
+   ],
+   "camadas": [
+    {
+     "id": "inoue-foto",
+     "src": "pecas/cdbd2af3c2af.jpg",
+     "x": 520,
+     "y": 120,
+     "w": 725.76,
+     "h": 840.0,
+     "iw": 968,
+     "ih": 1120,
+     "cor": "pecas/cdbd2af3c2af-cor.jpg",
+     "chega": [
+      12043,
+      20
+     ],
+     "campo": "campos/9a667f863864.png",
+     "borda": 0.22
+    },
+    {
+     "id": "inoue-nome",
+     "src": "pecas/445cda0f4ac0.png",
+     "x": 1300.76,
+     "y": 451.0,
+     "w": 294.5,
+     "h": 46.0,
+     "iw": 589,
+     "ih": 92,
+     "chega": [
+      12087,
+      16
+     ],
+     "campo": "campos/7b45ca5515e5.png",
+     "borda": 0.22
+    }
+   ]
+  },
+  "pagina": {
+   "tom": [
+    0.9784,
+    0.9781,
+    0.9771
+   ],
+   "ox": 1686,
+   "oy": 365,
+   "caixa": [
+    -145.2,
+    -80.0,
+    2020.0,
+    1160.0
+   ],
+   "camadas": [
+    {
+     "id": "pagina-m04",
+     "src": "pecas/50385e8c3aa1.jpg",
+     "x": 110,
+     "y": 120,
+     "w": 1180,
+     "h": 796.5,
+     "iw": 2124,
+     "ih": 1434,
+     "chega": [
+      12131,
+      20
+     ],
+     "campo": "campos/4e41b524c0bf.png",
+     "borda": 0.22
+    },
+    {
+     "id": "pagina-frase",
+     "src": "pecas/ce238e647a4a.png",
+     "x": 1364.5,
+     "y": 371.0,
+     "w": 369.5,
+     "h": 235.5,
+     "iw": 739,
+     "ih": 471,
+     "chega": [
+      12301,
+      22
+     ],
+     "campo": "campos/bb694a3fdb51.png",
+     "borda": 0.22
+    }
+   ]
+  },
+  "fazenda": {
+   "tom": [
+    0.9784,
+    0.9781,
+    0.9771
+   ],
+   "ox": 1247,
+   "oy": 132,
+   "caixa": [
+    -80.0,
+    -80.0,
+    2000.0,
+    1160.0
+   ],
+   "camadas": [
+    {
+     "id": "fazenda-m09",
+     "src": "pecas/09adf5c262e6.jpg",
+     "x": 274,
+     "y": 40,
+     "w": 1372.28,
+     "h": 1000.0,
+     "iw": 1830,
+     "ih": 1333,
+     "chega": [
+      12818,
+      20
+     ],
+     "campo": "campos/0122755731c5.png",
+     "borda": 0.22
+    }
+   ]
+  },
+  "cronologia": {
+   "tom": [
+    0.9353,
+    0.9298,
+    0.9083
+   ],
+   "ox": 1185,
+   "oy": 253,
+   "caixa": [
+    -80.0,
+    -180.4,
+    2000.0,
+    1160.0
+   ],
+   "camadas": [
+    {
+     "id": "cronologia-rotulo",
+     "src": "pecas/954753dd0763.png",
+     "x": 174.5,
+     "y": 104.0,
+     "w": 428.0,
+     "h": 32.0,
+     "iw": 856,
+     "ih": 64,
+     "chega": [
+      13055,
+      16
+     ],
+     "campo": "campos/f3892fd290c4.png",
+     "borda": 0.22
+    },
+    {
+     "id": "cronologia-c0-n",
+     "src": "pecas/7417f4ecb362.png",
+     "x": 175.0,
+     "y": 168.5,
+     "w": 163.0,
+     "h": 86.5,
+     "iw": 326,
+     "ih": 173,
+     "chega": [
+      13129,
+      16
+     ],
+     "campo": "campos/e0cd440f6dd5.png",
+     "borda": 0.22
+    },
+    {
+     "id": "cronologia-c0-t",
+     "src": "pecas/fed80a73c515.png",
+     "x": 352.87,
+     "y": 191.38,
+     "w": 427.0,
+     "h": 52.5,
+     "iw": 854,
+     "ih": 105,
+     "chega": [
+      13112,
+      16
+     ],
+     "campo": "campos/35c086fa4011.png",
+     "borda": 0.22
+    },
+    {
+     "id": "cronologia-c1-n",
+     "src": "pecas/09de7a6fa2d4.png",
+     "x": 175.5,
+     "y": 269.0,
+     "w": 134.5,
+     "h": 86.0,
+     "iw": 269,
+     "ih": 172,
+     "chega": [
+      13232,
+      16
+     ],
+     "campo": "campos/f1ce3e605ac7.png",
+     "borda": 0.22
+    },
+    {
+     "id": "cronologia-c1-t",
+     "src": "pecas/1dfaafa79333.png",
+     "x": 325.22,
+     "y": 291.38,
+     "w": 703.5,
+     "h": 51.5,
+     "iw": 1407,
+     "ih": 103,
+     "chega": [
+      13296,
+      16
+     ],
+     "campo": "campos/e79f7a21f0b0.png",
+     "borda": 0.22
+    },
+    {
+     "id": "cronologia-c2-n",
+     "src": "pecas/6f32db87e843.png",
+     "x": 176.0,
+     "y": 368.5,
+     "w": 176.5,
+     "h": 86.5,
+     "iw": 353,
+     "ih": 173,
+     "chega": [
+      13410,
+      16
+     ],
+     "campo": "campos/c4331fad1bac.png",
+     "borda": 0.22
+    },
+    {
+     "id": "cronologia-c2-t",
+     "src": "pecas/eb12b93e7fd7.png",
+     "x": 366.98,
+     "y": 391.38,
+     "w": 535.5,
+     "h": 52.0,
+     "iw": 1071,
+     "ih": 104,
+     "chega": [
+      13450,
+      16
+     ],
+     "campo": "campos/751bfbfbaf06.png",
+     "borda": 0.22
+    },
+    {
+     "id": "cronologia-c3-n",
+     "src": "pecas/466f574d163c.png",
+     "x": 176.0,
+     "y": 468.5,
+     "w": 162.0,
+     "h": 86.5,
+     "iw": 324,
+     "ih": 173,
+     "chega": [
+      13521,
+      16
+     ],
+     "campo": "campos/c84b2eccb004.png",
+     "borda": 0.22
+    },
+    {
+     "id": "cronologia-c3-t",
+     "src": "pecas/6027229ff67e.png",
+     "x": 352.37,
+     "y": 491.38,
+     "w": 442.0,
+     "h": 51.5,
+     "iw": 884,
+     "ih": 103,
+     "chega": [
+      13570,
+      16
+     ],
+     "campo": "campos/ff09310bbe93.png",
+     "borda": 0.22
+    },
+    {
+     "id": "cronologia-c4-n",
+     "src": "pecas/2b13f0dfe983.png",
+     "x": 176.0,
+     "y": 568.5,
+     "w": 162.5,
+     "h": 86.5,
+     "iw": 325,
+     "ih": 173,
+     "chega": [
+      13709,
+      16
+     ],
+     "campo": "campos/182b2117d032.png",
+     "borda": 0.22
+    },
+    {
+     "id": "cronologia-c4-t",
+     "src": "pecas/4701751ae1ae.png",
+     "x": 352.37,
+     "y": 591.38,
+     "w": 310.5,
+     "h": 46.5,
+     "iw": 621,
+     "ih": 93,
+     "chega": [
+      13738,
+      16
+     ],
+     "campo": "campos/460f7134ab7c.png",
+     "borda": 0.22
+    },
+    {
+     "id": "cronologia-c5-n",
+     "src": "pecas/db8193745d0c.png",
+     "x": 176.0,
+     "y": 668.5,
+     "w": 163.0,
+     "h": 86.5,
+     "iw": 326,
+     "ih": 173,
+     "chega": [
+      13784,
+      16
+     ],
+     "campo": "campos/6a9768436c57.png",
+     "borda": 0.22
+    },
+    {
+     "id": "cronologia-c5-t",
+     "src": "pecas/1a7182efe24a.png",
+     "x": 352.37,
+     "y": 691.38,
+     "w": 453.5,
+     "h": 52.0,
+     "iw": 907,
+     "ih": 104,
+     "chega": [
+      13810,
+      16
+     ],
+     "campo": "campos/bba98380d0a4.png",
+     "borda": 0.22
+    },
+    {
+     "id": "cronologia-c6-n",
+     "src": "pecas/cec96129d005.png",
+     "x": 176.0,
+     "y": 768.5,
+     "w": 162.5,
+     "h": 86.5,
+     "iw": 325,
+     "ih": 173,
+     "chega": [
+      13861,
+      16
+     ],
+     "campo": "campos/551cb76ff224.png",
+     "borda": 0.22
+    },
+    {
+     "id": "cronologia-c6-t",
+     "src": "pecas/bdabcb2b5ea5.png",
+     "x": 352.37,
+     "y": 791.38,
+     "w": 259.5,
+     "h": 52.0,
+     "iw": 519,
+     "ih": 104,
+     "chega": [
+      13846,
+      16
+     ],
+     "campo": "campos/39b7536b3235.png",
+     "borda": 0.22
+    },
+    {
+     "id": "cronologia-c7-n",
+     "src": "pecas/cec96129d005.png",
+     "x": 176.0,
+     "y": 868.5,
+     "w": 162.5,
+     "h": 86.5,
+     "iw": 325,
+     "ih": 173,
+     "chega": [
+      13933,
+      16
+     ],
+     "campo": "campos/551cb76ff224.png",
+     "borda": 0.22
+    },
+    {
+     "id": "cronologia-c7-t",
+     "src": "pecas/c27cd759eb9f.png",
+     "x": 353.37,
+     "y": 891.38,
+     "w": 577.0,
+     "h": 51.5,
+     "iw": 1154,
+     "ih": 103,
+     "chega": [
+      13923,
+      16
+     ],
+     "campo": "campos/2f179920c4e4.png",
+     "borda": 0.22
+    }
+   ]
+  },
+  "onze": {
+   "tom": null,
+   "ox": 970,
+   "oy": 375,
+   "caixa": [
+    -80.0,
+    -80.0,
+    2000.0,
+    1160.0
+   ],
+   "camadas": [
+    {
+     "id": "onze-onze",
+     "src": "pecas/244ca32b4927.png",
+     "x": 561.83,
+     "y": 437.5,
+     "w": 798.5,
+     "h": 162.5,
+     "iw": 1597,
+     "ih": 325,
+     "chega": [
+      14002,
+      20
+     ],
+     "campo": "campos/79207e2d1ca2.png",
+     "borda": 0.22
+    }
+   ]
+  },
+  "branco": {
+   "tom": [
+    0.9784,
+    0.9781,
+    0.9771
+   ],
+   "ox": 985,
+   "oy": 274,
+   "caixa": [
+    -100.0,
+    -80.0,
+    2020.0,
+    1160.0
+   ],
+   "camadas": [
+    {
+     "id": "branco-m11",
+     "src": "pecas/94e2df57a77d.jpg",
+     "x": 302,
+     "y": 60,
+     "w": 1315.2,
+     "h": 960.0,
+     "iw": 1754,
+     "ih": 1280,
+     "chega": [
+      14045,
+      22
+     ],
+     "campo": "campos/729965aad58c.png",
+     "borda": 0.22
+    }
+   ]
+  },
+  "dividas": {
+   "tom": null,
+   "ox": 1530,
+   "oy": 1154,
+   "caixa": [
+    -80.0,
+    -100.0,
+    2000.0,
+    1140.0
+   ],
+   "camadas": [
+    {
+     "id": "dividas-musashi",
+     "src": "pecas/4503f1fb813d.png",
+     "x": 504.31,
+     "y": 389.0,
+     "w": 340.5,
+     "h": 81.5,
+     "iw": 681,
+     "ih": 163,
+     "chega": [
+      14300,
+      18
+     ],
+     "campo": "campos/b82af7387b06.png",
+     "borda": 0.22
+    },
+    {
+     "id": "dividas-inoue",
+     "src": "pecas/d8520aa9048e.png",
+     "x": 1075.5,
+     "y": 394.0,
+     "w": 238.5,
+     "h": 76.5,
+     "iw": 477,
+     "ih": 153,
+     "chega": [
+      14306,
+      18
+     ],
+     "campo": "campos/c6bf3cd17072.png",
+     "borda": 0.22
+    },
+    {
+     "id": "dividas-dividas",
+     "src": "pecas/a219926e26e7.png",
+     "x": 763.82,
+     "y": 591.0,
+     "w": 392.0,
+     "h": 52.5,
+     "iw": 784,
+     "ih": 105,
+     "chega": [
+      14324,
+      16
+     ],
+     "campo": "campos/e6639d1c9928.png",
+     "borda": 0.22
+    }
+   ]
+  },
+  "praia": {
+   "tom": [
+    0.9784,
+    0.9781,
+    0.9771
+   ],
+   "ox": 267,
+   "oy": 31,
+   "caixa": [
+    -80.0,
+    -80.0,
+    2000.0,
+    1160.0
+   ],
+   "camadas": [
+    {
+     "id": "praia-m01",
+     "src": "pecas/f229bbafeb41.jpg",
+     "x": 620,
+     "y": 40,
+     "w": 659.42,
+     "h": 1000.0,
+     "iw": 879,
+     "ih": 1333,
+     "chega": [
+      14774,
+      20
+     ],
+     "campo": "campos/a13edfcee4f7.png",
+     "borda": 0.22
+    }
+   ]
+  },
+  "duelo": {
+   "tom": [
+    0.9784,
+    0.9781,
+    0.9771
+   ],
+   "ox": 1272,
+   "oy": 75,
+   "caixa": [
+    -80.0,
+    -80.0,
+    2000.0,
+    1160.0
+   ],
+   "camadas": [
+    {
+     "id": "duelo-m07",
+     "src": "pecas/b723812620d4.jpg",
+     "x": 249,
+     "y": 40,
+     "w": 1422.55,
+     "h": 1000.0,
+     "iw": 1897,
+     "ih": 1333,
+     "chega": [
+      14906,
+      20
+     ],
+     "campo": "campos/8232f1f0d708.png",
+     "borda": 0.22
+    }
+   ]
+  },
+  "saida": {
+   "tom": [
+    0.9784,
+    0.9781,
+    0.9771
+   ],
+   "ox": 690,
+   "oy": 704,
+   "caixa": [
+    -100.0,
+    -80.0,
+    2020.0,
+    1160.0
+   ],
+   "camadas": [
+    {
+     "id": "saida-climax",
+     "src": "pecas/050cb6b548ab.jpg",
+     "x": 120,
+     "y": 170,
+     "w": 800,
+     "h": 562.37,
+     "iw": 1067,
+     "ih": 750,
+     "chega": [
+      15276,
+      20
+     ],
+     "campo": "campos/0a3d508ffaa2.png",
+     "borda": 0.22
+    },
+    {
+     "id": "saida-fiel",
+     "src": "pecas/c0723a8e6c42.jpg",
+     "x": 1000,
+     "y": 56.76,
+     "w": 800,
+     "h": 788.84,
+     "iw": 1067,
+     "ih": 1052,
+     "chega": [
+      15382,
+      20
+     ],
+     "campo": "campos/1042bd4f13c7.png",
+     "borda": 0.22
+    },
+    {
+     "id": "saida-copias",
+     "src": "pecas/b3eecf6c36b1.png",
+     "x": 997.0,
+     "y": 891.0,
+     "w": 410.0,
+     "h": 61.0,
+     "iw": 820,
+     "ih": 122,
+     "chega": [
+      15476,
+      16
+     ],
+     "campo": "campos/bcbe55435ecd.png",
+     "borda": 0.22
+    }
+   ]
+  },
+  "fecho": {
+   "tom": [
+    0.9784,
+    0.9781,
+    0.9771
+   ],
+   "ox": 1644,
+   "oy": 1098,
+   "caixa": [
+    -80.0,
+    -80.0,
+    2480.0,
+    1160.0
+   ],
+   "camadas": [
+    {
+     "id": "fecho-koboku",
+     "src": "pecas/3002a00f4934.jpg",
+     "x": 744,
+     "y": 40,
+     "w": 432.13,
+     "h": 1000.0,
+     "iw": 885,
+     "ih": 2048,
+     "chega": [
+      15539,
+      22
+     ],
+     "campo": "campos/0c8a86014e8d.png",
+     "borda": 0.24,
+     "plano": "galho"
     }
    ]
   }
@@ -688,8 +4832,639 @@
   },
   {
    "de": 2549,
-   "ate": 16538,
-   "folha": "vazio",
+   "ate": 2876,
+   "folha": "livro",
+   "cam": [
+    [
+     1.0,
+     960,
+     540
+    ],
+    [
+     1.0,
+     1000,
+     540
+    ]
+   ]
+  },
+  {
+   "de": 2876,
+   "ate": 3222,
+   "folha": "idades",
+   "cam": [
+    [
+     1.0,
+     900,
+     540
+    ],
+    [
+     1.0,
+     940,
+     540
+    ]
+   ]
+  },
+  {
+   "de": 3222,
+   "ate": 3574,
+   "folha": "idades",
+   "cam": [
+    [
+     1.0,
+     860,
+     600
+    ],
+    [
+     1.05867,
+     860,
+     600
+    ]
+   ]
+  },
+  {
+   "de": 3574,
+   "ate": 3655,
+   "folha": "curriculo",
+   "cam": [
+    [
+     1.0,
+     960,
+     540
+    ],
+    [
+     1.0135,
+     960,
+     540
+    ]
+   ]
+  },
+  {
+   "de": 3655,
+   "ate": 3997,
+   "folha": "frase",
+   "cam": [
+    [
+     1.0,
+     960,
+     520
+    ],
+    [
+     1.057,
+     960,
+     520
+    ]
+   ]
+  },
+  {
+   "de": 3997,
+   "ate": 4252,
+   "folha": "atribui",
+   "cam": [
+    [
+     1.0,
+     960,
+     520
+    ],
+    [
+     1.0,
+     1000,
+     520
+    ]
+   ]
+  },
+  {
+   "de": 4252,
+   "ate": 4460,
+   "folha": "idades",
+   "cam": [
+    [
+     1.2,
+     760,
+     690
+    ],
+    [
+     1.2416,
+     760,
+     690
+    ]
+   ]
+  },
+  {
+   "de": 4460,
+   "ate": 4635,
+   "folha": "frase",
+   "cam": [
+    [
+     1.0,
+     940,
+     520
+    ],
+    [
+     1.0,
+     980,
+     520
+    ]
+   ]
+  },
+  {
+   "de": 4635,
+   "ate": 4803,
+   "folha": "conhece",
+   "cam": [
+    [
+     1.0,
+     940,
+     540
+    ],
+    [
+     1.0,
+     980,
+     540
+    ]
+   ]
+  },
+  {
+   "de": 4803,
+   "ate": 5130,
+   "folha": "yoshikawa",
+   "cam": [
+    [
+     1.0,
+     960,
+     540
+    ],
+    [
+     1.0,
+     1000,
+     540
+    ]
+   ]
+  },
+  {
+   "de": 5130,
+   "ate": 5246,
+   "folha": "yoshikawa",
+   "cam": [
+    [
+     1.2,
+     1300,
+     440
+    ],
+    [
+     1.2232,
+     1300,
+     440
+    ]
+   ]
+  },
+  {
+   "de": 5246,
+   "ate": 5430,
+   "folha": "virou",
+   "cam": [
+    [
+     1.0,
+     960,
+     540
+    ],
+    [
+     1.0,
+     1000,
+     540
+    ]
+   ]
+  },
+  {
+   "de": 5430,
+   "ate": 5518,
+   "folha": "yoshikawa",
+   "cam": [
+    [
+     1.0,
+     960,
+     540
+    ],
+    [
+     1.01467,
+     960,
+     540
+    ]
+   ]
+  },
+  {
+   "de": 5518,
+   "ate": 5876,
+   "folha": "elenco",
+   "cam": [
+    [
+     1.0,
+     940,
+     540
+    ],
+    [
+     1.0,
+     980,
+     540
+    ]
+   ]
+  },
+  {
+   "de": 5876,
+   "ate": 6051,
+   "folha": "elenco",
+   "cam": [
+    [
+     1.45,
+     1490.0,
+     540.0
+    ],
+    [
+     1.49229,
+     1490.0,
+     540.0
+    ]
+   ]
+  },
+  {
+   "de": 6051,
+   "ate": 6400,
+   "folha": "arvore",
+   "cam": [
+    [
+     1.0,
+     930,
+     540
+    ],
+    [
+     1.0,
+     970,
+     540
+    ]
+   ]
+  },
+  {
+   "de": 6400,
+   "ate": 6516,
+   "folha": "dois-autores",
+   "cam": [
+    [
+     1.0,
+     960,
+     520
+    ],
+    [
+     1.01933,
+     960,
+     520
+    ]
+   ]
+  },
+  {
+   "de": 6516,
+   "ate": 6665,
+   "folha": "registro",
+   "cam": [
+    [
+     1.0,
+     960,
+     520
+    ],
+    [
+     1.0,
+     1000,
+     520
+    ]
+   ]
+  },
+  {
+   "de": 6665,
+   "ate": 6882,
+   "folha": "plateia",
+   "cam": [
+    [
+     1.0,
+     940,
+     540
+    ],
+    [
+     1.0,
+     980,
+     540
+    ]
+   ]
+  },
+  {
+   "de": 6882,
+   "ate": 7154,
+   "folha": "pedra",
+   "cam": [
+    [
+     1.0,
+     960,
+     540
+    ],
+    [
+     1.04533,
+     960,
+     540
+    ]
+   ]
+  },
+  {
+   "de": 7154,
+   "ate": 7414,
+   "folha": "pedra",
+   "cam": [
+    [
+     1.2,
+     820,
+     520.25
+    ],
+    [
+     1.252,
+     820,
+     520.25
+    ]
+   ]
+  },
+  {
+   "de": 7414,
+   "ate": 7584,
+   "folha": "ichijoji",
+   "cam": [
+    [
+     1.0,
+     960,
+     540
+    ],
+    [
+     1.02833,
+     960,
+     540
+    ]
+   ]
+  },
+  {
+   "de": 7584,
+   "ate": 7694,
+   "folha": "chuva",
+   "cam": [
+    [
+     1.0,
+     960,
+     540
+    ],
+    [
+     1.01833,
+     960,
+     540
+    ]
+   ]
+  },
+  {
+   "de": 7694,
+   "ate": 7772,
+   "folha": "pedra",
+   "cam": [
+    [
+     1.12,
+     860,
+     575.25
+    ],
+    [
+     1.13456,
+     860,
+     575.25
+    ]
+   ]
+  },
+  {
+   "de": 7772,
+   "ate": 8041,
+   "folha": "ganryujima",
+   "cam": [
+    [
+     1.0,
+     960,
+     540
+    ],
+    [
+     1.04483,
+     960,
+     540
+    ]
+   ],
+   "px": {
+    "fundo": [
+     0,
+     0,
+     0
+    ],
+    "pinho": [
+     0.03,
+     -0.008,
+     0
+    ]
+   },
+   "clip": [
+    0,
+    52.5,
+    1920,
+    1027.5
+   ]
+  },
+  {
+   "de": 8041,
+   "ate": 8295,
+   "folha": "data-duelo",
+   "cam": [
+    [
+     1.0,
+     960,
+     540
+    ],
+    [
+     1.04233,
+     960,
+     540
+    ]
+   ]
+  },
+  {
+   "de": 8295,
+   "ate": 8400,
+   "folha": "nao-cita",
+   "cam": [
+    [
+     1.0,
+     960,
+     520
+    ],
+    [
+     1.0175,
+     960,
+     520
+    ]
+   ]
+  },
+  {
+   "de": 8400,
+   "ate": 8678,
+   "folha": "pedra",
+   "cam": [
+    [
+     1.15,
+     900,
+     730.25
+    ],
+    [
+     1.20328,
+     900,
+     730.25
+    ]
+   ]
+  },
+  {
+   "de": 8678,
+   "ate": 8793,
+   "folha": "salamandra",
+   "cam": [
+    [
+     1.85,
+     842.91002,
+     370.0
+    ],
+    [
+     1.88546,
+     842.91002,
+     370.0
+    ]
+   ]
+  },
+  {
+   "de": 8793,
+   "ate": 8942,
+   "folha": "salamandra",
+   "cam": [
+    [
+     1.0,
+     960,
+     540
+    ],
+    [
+     1.02483,
+     960,
+     540
+    ]
+   ]
+  },
+  {
+   "de": 8942,
+   "ate": 9211,
+   "folha": "nitenki",
+   "cam": [
+    [
+     1.0,
+     960,
+     540
+    ],
+    [
+     1.04483,
+     960,
+     540
+    ]
+   ]
+  },
+  {
+   "de": 9211,
+   "ate": 9380,
+   "folha": "nitenki",
+   "cam": [
+    [
+     1.15,
+     900,
+     700
+    ],
+    [
+     1.18239,
+     900,
+     700
+    ]
+   ]
+  },
+  {
+   "de": 9380,
+   "ate": 9500,
+   "folha": "kojiro",
+   "cam": [
+    [
+     1.0,
+     960,
+     540
+    ],
+    [
+     1.02,
+     960,
+     540
+    ]
+   ]
+  },
+  {
+   "de": 9500,
+   "ate": 9804,
+   "folha": "cartucho",
+   "cam": [
+    [
+     1.0,
+     940,
+     540
+    ],
+    [
+     1.0,
+     980,
+     540
+    ]
+   ]
+  },
+  {
+   "de": 9804,
+   "ate": 9985,
+   "folha": "baleia",
+   "cam": [
+    [
+     1.0,
+     960,
+     540
+    ],
+    [
+     1.05,
+     964.0,
+     523.44286
+    ]
+   ],
+   "px": {
+    "fundo": [
+     0,
+     0,
+     0
+    ],
+    "baleia": [
+     0,
+     0,
+     6
+    ]
+   },
+   "clip": [
+    0,
+    72.30000000000001,
+    1920,
+    1007.7
+   ]
+  },
+  {
+   "de": 9985,
+   "ate": 10367,
+   "folha": "chamada",
    "cam": [
     [
      1.0,
@@ -702,6 +5477,557 @@
      540
     ]
    ]
+  },
+  {
+   "de": 10367,
+   "ate": 10552,
+   "folha": "monte",
+   "cam": [
+    [
+     1.0,
+     940,
+     540
+    ],
+    [
+     1.0,
+     980,
+     540
+    ]
+   ]
+  },
+  {
+   "de": 10552,
+   "ate": 10817,
+   "folha": "reigando",
+   "cam": [
+    [
+     1.0,
+     960,
+     540
+    ],
+    [
+     1.04417,
+     960,
+     540
+    ]
+   ]
+  },
+  {
+   "de": 10817,
+   "ate": 11000,
+   "folha": "arhats",
+   "cam": [
+    [
+     1.0,
+     930,
+     540
+    ],
+    [
+     1.0,
+     970,
+     540
+    ]
+   ]
+  },
+  {
+   "de": 11000,
+   "ate": 11091,
+   "folha": "reigando",
+   "cam": [
+    [
+     1.5,
+     627.44444,
+     432.0
+    ],
+    [
+     1.52275,
+     627.44444,
+     432.0
+    ]
+   ]
+  },
+  {
+   "de": 11091,
+   "ate": 11350,
+   "folha": "entrega",
+   "cam": [
+    [
+     1.0,
+     960,
+     540
+    ],
+    [
+     1.04317,
+     960,
+     540
+    ]
+   ]
+  },
+  {
+   "de": 11350,
+   "ate": 11704,
+   "folha": "dokkodo",
+   "cam": [
+    [
+     1.0,
+     940,
+     540
+    ],
+    [
+     1.0,
+     980,
+     540
+    ]
+   ]
+  },
+  {
+   "de": 11704,
+   "ate": 11822,
+   "folha": "registros",
+   "cam": [
+    [
+     1.35,
+     700,
+     857.5
+    ],
+    [
+     1.37655,
+     700,
+     857.5
+    ]
+   ]
+  },
+  {
+   "de": 11822,
+   "ate": 12041,
+   "folha": "dokkodo",
+   "cam": [
+    [
+     1.0,
+     960,
+     540
+    ],
+    [
+     1.0365,
+     960,
+     540
+    ]
+   ]
+  },
+  {
+   "de": 12041,
+   "ate": 12128,
+   "folha": "inoue",
+   "cam": [
+    [
+     1.0,
+     960,
+     540
+    ],
+    [
+     1.0145,
+     960,
+     540
+    ]
+   ]
+  },
+  {
+   "de": 12128,
+   "ate": 12417,
+   "folha": "pagina",
+   "cam": [
+    [
+     1.0,
+     940,
+     540
+    ],
+    [
+     1.0,
+     980,
+     540
+    ]
+   ]
+  },
+  {
+   "de": 12417,
+   "ate": 12648,
+   "folha": "frase",
+   "cam": [
+    [
+     1.0,
+     960,
+     520
+    ],
+    [
+     1.0385,
+     960,
+     520
+    ]
+   ]
+  },
+  {
+   "de": 12648,
+   "ate": 12816,
+   "folha": "pagina",
+   "cam": [
+    [
+     1.6,
+     534.8,
+     382.845
+    ],
+    [
+     1.6448,
+     534.8,
+     382.845
+    ]
+   ]
+  },
+  {
+   "de": 12816,
+   "ate": 12930,
+   "folha": "fazenda",
+   "cam": [
+    [
+     1.0,
+     960,
+     540
+    ],
+    [
+     1.019,
+     960,
+     540
+    ]
+   ]
+  },
+  {
+   "de": 12930,
+   "ate": 13017,
+   "folha": "elenco",
+   "cam": [
+    [
+     1.0,
+     960,
+     540
+    ],
+    [
+     1.0145,
+     960,
+     540
+    ]
+   ]
+  },
+  {
+   "de": 13017,
+   "ate": 13206,
+   "folha": "cronologia",
+   "cam": [
+    [
+     1.3,
+     860,
+     315
+    ],
+    [
+     1.34095,
+     860,
+     315
+    ]
+   ]
+  },
+  {
+   "de": 13206,
+   "ate": 13410,
+   "folha": "cronologia",
+   "cam": [
+    [
+     1.15,
+     900,
+     415
+    ],
+    [
+     1.1891,
+     900,
+     415
+    ]
+   ]
+  },
+  {
+   "de": 13410,
+   "ate": 13694,
+   "folha": "cronologia",
+   "cam": [
+    [
+     1.15,
+     900,
+     535
+    ],
+    [
+     1.20443,
+     900,
+     535
+    ]
+   ]
+  },
+  {
+   "de": 13694,
+   "ate": 14006,
+   "folha": "cronologia",
+   "cam": [
+    [
+     1.0,
+     960,
+     540
+    ],
+    [
+     1.052,
+     960,
+     540
+    ]
+   ]
+  },
+  {
+   "de": 14006,
+   "ate": 14043,
+   "folha": "onze",
+   "cam": [
+    [
+     1.0,
+     960,
+     540
+    ],
+    [
+     1.0,
+     960,
+     540
+    ]
+   ]
+  },
+  {
+   "de": 14043,
+   "ate": 14210,
+   "folha": "branco",
+   "cam": [
+    [
+     1.0,
+     940,
+     540
+    ],
+    [
+     1.0,
+     980,
+     540
+    ]
+   ]
+  },
+  {
+   "de": 14210,
+   "ate": 14372,
+   "folha": "dividas",
+   "cam": [
+    [
+     1.0,
+     960,
+     520
+    ],
+    [
+     1.027,
+     960,
+     520
+    ]
+   ]
+  },
+  {
+   "de": 14372,
+   "ate": 14567,
+   "folha": "nao-cita",
+   "cam": [
+    [
+     1.0,
+     960,
+     520
+    ],
+    [
+     1.0325,
+     960,
+     520
+    ]
+   ]
+  },
+  {
+   "de": 14567,
+   "ate": 14772,
+   "folha": "dokkodo",
+   "cam": [
+    [
+     1.0,
+     980,
+     540
+    ],
+    [
+     1.0,
+     940,
+     540
+    ]
+   ]
+  },
+  {
+   "de": 14772,
+   "ate": 14904,
+   "folha": "praia",
+   "cam": [
+    [
+     1.0,
+     960,
+     540
+    ],
+    [
+     1.022,
+     960,
+     540
+    ]
+   ]
+  },
+  {
+   "de": 14904,
+   "ate": 15002,
+   "folha": "duelo",
+   "cam": [
+    [
+     1.0,
+     960,
+     540
+    ],
+    [
+     1.01633,
+     960,
+     540
+    ]
+   ]
+  },
+  {
+   "de": 15002,
+   "ate": 15219,
+   "folha": "pagina",
+   "cam": [
+    [
+     1.0,
+     960,
+     540
+    ],
+    [
+     1.03617,
+     960,
+     540
+    ]
+   ]
+  },
+  {
+   "de": 15219,
+   "ate": 15537,
+   "folha": "saida",
+   "cam": [
+    [
+     1.0,
+     940,
+     540
+    ],
+    [
+     1.0,
+     980,
+     540
+    ]
+   ]
+  },
+  {
+   "de": 15537,
+   "ate": 15730,
+   "folha": "fecho",
+   "cam": [
+    [
+     1.0,
+     960,
+     540
+    ],
+    [
+     1.03217,
+     960,
+     540
+    ]
+   ]
+  },
+  {
+   "de": 15730,
+   "ate": 15821,
+   "folha": "fecho",
+   "cam": [
+    [
+     1.75,
+     933.0,
+     342.5
+    ],
+    [
+     1.77654,
+     933.0,
+     342.5
+    ]
+   ]
+  },
+  {
+   "de": 15821,
+   "ate": 16109,
+   "folha": "fecho",
+   "cam": [
+    [
+     1.0,
+     960,
+     540
+    ],
+    [
+     1.048,
+     960,
+     540
+    ]
+   ],
+   "px": {
+    "fundo": [
+     0,
+     0,
+     0
+    ],
+    "galho": [
+     0,
+     0.02,
+     0
+    ]
+   }
+  },
+  {
+   "de": 16109,
+   "ate": 16538,
+   "folha": "fecho",
+   "cam": [
+    [
+     1.0,
+     1400,
+     540
+    ],
+    [
+     1.0,
+     1440,
+     540
+    ]
+   ],
+   "px": {
+    "fundo": [
+     0,
+     0,
+     0
+    ],
+    "galho": [
+     0,
+     -0.02,
+     0
+    ]
+   }
   }
  ]
 }

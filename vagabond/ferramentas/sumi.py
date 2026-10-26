@@ -157,21 +157,35 @@ def k_de(cor):
     return np.clip(np.array(cor, float) / np.array(WASHI_LIMPO, float), 0, 1)
 
 
-def abrir(src, recorte=None, apagar=None, modo='RGB'):
+def abrir(src, recorte=None, apagar=None, clonar=None, modo='RGB'):
     """Abre a peça original. `apagar`: retângulos (x0, y0, x1, y1) ou
     polígonos [(x, y), ...] em px da original que voltam a ser papel (balão
-    esvaziado, marca d'água). `recorte`: (x0, y0, x1, y1) em px."""
+    esvaziado, marca d'água). `clonar`: (x0, y0, x1, y1, dx, dy) cobre o
+    retângulo com o desenho que está (dx, dy) ao lado (letra em inglês por
+    cima de hachura). `recorte`: (x0, y0, x1, y1) em px."""
     im = Image.open(src).convert('RGB')
+    for x0, y0, x1, y1, dx, dy in (clonar or []):
+        pedaco = im.crop((x0 + dx, y0 + dy, x1 + dx, y1 + dy))
+        # borda macia: o remendo some na hachura em volta
+        m = Image.new('L', pedaco.size, 0)
+        ImageDraw.Draw(m).rectangle((3, 3, pedaco.width - 4, pedaco.height - 4), fill=255)
+        from PIL import ImageFilter
+        im.paste(pedaco, (x0, y0), m.filter(ImageFilter.GaussianBlur(2)))
     if apagar:
         a = np.asarray(im, float)
-        branco = np.percentile(a.reshape(-1, 3), 99, axis=0)
-        d = ImageDraw.Draw(im)
         for z in apagar:
-            cor = tuple(int(v) for v in branco)
+            m = Image.new('L', im.size, 0)
+            d = ImageDraw.Draw(m)
             if len(z) == 4 and not isinstance(z[0], (tuple, list)):
-                d.rectangle(z, fill=cor)
+                d.rectangle(z, fill=255)
             else:
-                d.polygon([tuple(p) for p in z], fill=cor)
+                d.polygon([tuple(p) for p in z], fill=255)
+            mk = np.asarray(m) > 0
+            # o papel em volta (anel de 14 px), não o branco geral da peça
+            anel = ndimage.binary_dilation(mk, iterations=14) & ~mk
+            cor = np.median(a[anel], axis=0) if anel.any() else np.percentile(a.reshape(-1, 3), 99, axis=0)
+            a[mk] = cor
+        im = Image.fromarray(np.clip(a, 0, 255).astype(np.uint8))
     if recorte:
         im = im.crop(tuple(int(v) for v in recorte))
     return im.convert(modo)
@@ -236,7 +250,7 @@ def transmitancia(cob, k):
     return 1 - cob[..., None] * (1 - np.asarray(k, float))[None, None, :]
 
 
-def cor_tinta(im, branco_pct=99.0, preto_pct=0.4, branco=None, preto=None):
+def cor_tinta(im, branco_pct=99.0, preto_pct=0.4, branco=None, preto=None, achatar=None):
     """Peça colorida (já no tamanho de saída) -> (T_cor, T_mono).
 
     O branco por canal sai do papel da própria peça (o papel envelhecido da
@@ -244,6 +258,10 @@ def cor_tinta(im, branco_pct=99.0, preto_pct=0.4, branco=None, preto=None):
     mesma luminância, no tom do sumi: é a peça com 0% de saturação. A
     partitura interpola as duas no Remotion."""
     a = np.asarray(im.convert('RGB'), float) / 255
+    if achatar:
+        # o papel da gravura não é uniforme (luz da foto, mancha, borda):
+        # cada canal dividido pelo papel em volta
+        a = np.stack([achatar_papel(a[..., k], achatar) for k in range(3)], axis=-1)
     w = np.percentile(a.reshape(-1, 3), branco_pct, axis=0) if branco is None else np.asarray(branco, float)
     t = np.clip(a / np.maximum(w, 1e-6)[None, None, :], 0, 1)
     lum = t @ LUM
@@ -457,15 +475,17 @@ def tinta_de(texto, nome, corpo, tracking=0.0):
     return _med[k]
 
 
-def tipo_em_tinta(ch, semente=0, mordida=0.30, sangra=0.45):
+def tipo_em_tinta(ch, semente=0, mordida=0.30, sangra=0.45, escala=1.0):
     """Chapa de tipo (L, 0..255) -> cobertura com tinta de pincel: a letra
-    bebe um pouco de papel em volta e a borda fica mais densa."""
+    bebe um pouco de papel em volta e a borda fica mais densa. `escala`: a
+    chapa está em `escala` vezes o 1440p."""
     a = np.asarray(ch, float) / 255
     H, W = a.shape
-    sang = ndimage.gaussian_filter(a, sangra * K)
+    k = K * escala
+    sang = ndimage.gaussian_filter(a, sangra * k)
     a = np.maximum(a, sang * 0.85)
-    fib = ruido(H, W, (2.4 * K, 0.6 * K), semente, angulo=4)
-    borda = np.abs(ndimage.gaussian_filter(a, 0.8 * K) - ndimage.gaussian_filter(a, 2.0 * K))
+    fib = ruido(H, W, (2.4 * k, 0.6 * k), semente, angulo=4)
+    borda = np.abs(ndimage.gaussian_filter(a, 0.8 * k) - ndimage.gaussian_filter(a, 2.0 * k))
     a = np.clip(a * (1 + 0.10 * fib * a) + borda * mordida, 0, 1)
     return a
 
@@ -473,7 +493,7 @@ def tipo_em_tinta(ch, semente=0, mordida=0.30, sangra=0.45):
 # ===================================================================== #
 #  PINCEL (traço gerado, sempre com kasure)                             #
 # ===================================================================== #
-def pincelada(W, H, pontos, espessura, semente=0, seco=0.5):
+def pincelada(W, H, pontos, espessura, semente=0, seco=0.5, escala=1.0):
     """Um traço de pincel ao longo de `pontos` (px), numa chapa W x H.
 
     O pincel encosta (entrada curta e cheia), corre, e sai levantando. O
@@ -526,7 +546,57 @@ def pincelada(W, H, pontos, espessura, semente=0, seco=0.5):
                 j = k + 1
             else:
                 j += 1
-    a = ndimage.gaussian_filter(np.asarray(im, float) / 255, 0.6)
+    a = ndimage.gaussian_filter(np.asarray(im, float) / 255, 0.6 * escala)
     # o papel bebe desigual
-    fib = ruido(H, W, (2.6 * K, 0.6 * K), semente + 2, angulo=4)
+    fib = ruido(H, W, (2.6 * K * escala, 0.6 * K * escala), semente + 2, angulo=4)
     return np.clip(a * (1.12 + 0.12 * fib), 0, 1)
+
+
+# ===================================================================== #
+#  CARIMBO                                                              #
+# ===================================================================== #
+def selo(lw, lh, linhas, semente=7):
+    """Um hanko: vermelhão irregular, letra em RESERVA (papel), borda
+    mordida, miolo entintado desigual. A letra nunca é desenhada por cima:
+    ela é o papel que o carimbo não cobriu. (De ferramentas/entregues/
+    carimbo-hanko.py, na escala do material.)"""
+    g = np.random.default_rng(semente)
+    a = np.ones((lh, lw))
+    yy, xx = np.mgrid[0:lh, 0:lw]
+    ru = ruido(lh, lw, 3.0 * K, semente)
+    borda = np.minimum.reduce([xx, yy, lw - 1 - xx, lh - 1 - yy]).astype(float)
+    a = a * np.clip((borda - 3 * K - ru * 2.6 * K) / (4.0 * K), 0, 1)
+    dens = ruido(lh, lw, 22.0 * K, semente + 1)
+    a = np.clip(a * (0.93 + 0.085 * dens), 0, 1)
+    poro = ruido(lh, lw, 2.2 * K, semente + 2)
+    perto = np.clip(1 - borda / (26.0 * K), 0, 1)
+    a = a * (1 - np.clip((poro * 0.5 + 0.42) * perto, 0, 1) * 0.55)
+    tipo = Image.new('L', (lw, lh), 0)
+    y = int(lh * 0.30)
+    for t, corpo in linhas:
+        linha(tipo, t, fonte(OSW, corpo), lw // 2, y, tracking=0.18, ancora='centro')
+        y += int(corpo * 1.72)
+    tt = np.clip(ndimage.gaussian_filter(np.asarray(tipo, float) / 255, 0.7 * K) * 1.9, 0, 1)
+    return np.clip(a * (1 - tt), 0, 1)
+
+
+# ===================================================================== #
+#  PROFUNDIDADE: tapar o buraco atrás de um plano recortado              #
+# ===================================================================== #
+def tapar(T, buraco):
+    """Preenche `buraco` (bool) de uma transmitância HxWx3 com o que está do
+    outro lado da borda, refletido: a textura do fundo (onda, céu, fibra)
+    continua no lugar de virar borrão. Só a faixa perto da borda aparece
+    quando o plano da frente se desloca; o miolo nunca é visto."""
+    H, W = buraco.shape
+    _, (iy, ix) = ndimage.distance_transform_edt(buraco, return_indices=True)
+    yy, xx = np.mgrid[0:H, 0:W]
+    ry = np.clip(2 * iy - yy, 0, H - 1)
+    rx = np.clip(2 * ix - xx, 0, W - 1)
+    ok = ~buraco[ry, rx]
+    out = np.array(T, float, copy=True)
+    a = buraco & ok
+    out[a] = out[ry[a], rx[a]]
+    b = buraco & ~ok
+    out[b] = out[iy[b], ix[b]]
+    return out

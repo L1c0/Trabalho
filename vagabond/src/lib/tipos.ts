@@ -25,6 +25,10 @@ export type Camada = {
   borda?: number;
   /** em que plano de profundidade a camada mora (só nos três momentos) */
   plano?: string;
+  /** o hanko: [frame em que cai, giro em graus] */
+  carimbo?: [number, number];
+  /** recorte opaco de um plano da frente: máscara (alfa) da camada */
+  alfa?: string;
 };
 
 export type Folha = {
@@ -38,8 +42,8 @@ export type Folha = {
   camadas: Camada[];
 };
 
-/** [ganho de escala, deriva horizontal em fração da largura] ao longo do plano */
-export type Profundidade = Record<string, [number, number]>;
+/** [ganho de escala, deriva horizontal em fração da largura, subida em px] ao longo do plano */
+export type Profundidade = Record<string, [number, number, number?]>;
 
 export type Plano = {
   de: number;
@@ -48,6 +52,8 @@ export type Plano = {
   cam: [Pose, Pose];
   /** só nos três momentos de profundidade: o movimento extra de cada plano */
   px?: Profundidade;
+  /** retângulo da folha (a peça) fora do qual os planos da frente não aparecem */
+  clip?: [number, number, number, number];
   nota?: string;
 };
 

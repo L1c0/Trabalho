@@ -194,17 +194,23 @@ class Folha:
 
     # -- peça (imagem) ------------------------------------------------- #
     def peca(self, nome, src, x, y, wd=None, ht=None, tipo='sumi', recorte=None, apagar=None, chega=None,
-             entradas=None, borda=0.22, plano=None, semente=3, mascara=None, res=1.0, janela=None, **trat):
+             entradas=None, borda=0.22, plano=None, semente=3, mascara=None, res=1.0, janela=None, clonar=None,
+             buraco=None, alfa=None, **trat):
         """Uma peça tratada na folha. `wd`/`ht` em px de quadro (um dos dois);
         `chega` = (frame, duração) ou None (já está na folha). `res` > 1 guarda
         o material mais fino que o 1440p (para plano fechado sem amolecer).
-        `mascara`: (nome, função (iw, ih) -> 0..1) que recorta a peça."""
-        im0 = S.abrir(os.path.join(ORI, src), recorte=recorte, apagar=apagar)
+        `mascara`: (nome, função (iw, ih) -> 0..1) que recorta a peça.
+        Profundidade: `buraco` = (nome, função (iw, ih) -> bool) tapa o que
+        um plano da frente cobre (tapar()); `alfa` = (nome, função (iw, ih)
+        -> 0..1) faz desta camada um recorte opaco, com papel próprio, para
+        um plano da frente."""
+        im0 = S.abrir(os.path.join(ORI, src), recorte=recorte, apagar=apagar, clonar=clonar)
         if wd is None:
             wd = ht * im0.width / im0.height
         ht = wd * im0.height / im0.width
         iw, ih = int(round(wd * K * res)), int(round(ht * K * res))
-        ch = _chave('peca', src, recorte, apagar, iw, ih, tipo, semente, trat, mascara[0] if mascara else None)
+        ch = _chave('peca', src, recorte, apagar, clonar, iw, ih, tipo, semente, trat, mascara[0] if mascara else None,
+                    buraco[0] if buraco else None)
         base = f'{self.id}-{nome}'
         arqs = INDICE.get(ch)
         cob = None
@@ -220,6 +226,9 @@ class Folha:
                 if mascara is not None:
                     mk = mascara[1](iw, ih)[..., None]
                     Tc, Tm = 1 - (1 - Tc) * mk, 1 - (1 - Tm) * mk
+                if buraco is not None:
+                    bu = buraco[1](iw, ih)
+                    Tc, Tm = S.tapar(Tc, bu), S.tapar(Tm, bu)
                 arqs = _material(ch, T=Tm, Tc=Tc)
             INDICE[ch] = arqs
         campo = None
@@ -232,18 +241,29 @@ class Folha:
                     cob = np.clip((1 - T) / (1 - S.k_sumi().mean()), 0, 1)
                 ent = entradas or [_centro_da_tinta(cob)]
                 _campo(chc, cob, ent, semente, janela=janela)
-        return self._camada(nome, arqs, x, y, wd, ht, iw, ih, chega, campo, borda, plano)
+        c = self._camada(nome, arqs, x, y, wd, ht, iw, ih, chega, campo, borda, plano)
+        if alfa is not None:
+            cha = _chave('alfa', alfa[0], iw, ih)
+            arq = f'pecas/{cha}-alfa.png'
+            if not os.path.exists(os.path.join(PUB, arq)):
+                a = np.clip(alfa[1](iw, ih), 0, 1)
+                rgba = np.zeros((ih, iw, 4), np.uint8)
+                rgba[..., 3] = np.round(a * 255).astype(np.uint8)
+                Image.fromarray(rgba, 'RGBA').save(os.path.join(PUB, arq), optimize=True)
+            c['alfa'] = arq
+        return c
 
     # -- tipo ---------------------------------------------------------- #
     def texto(self, nome, linhas, x, y, tinta='sumi', chega=None, entradas=None, borda=0.22, ancora='esq',
-              entrelinha=None, semente=5, plano=None):
+              entrelinha=None, semente=5, plano=None, res=1.5):
         """Linhas de tipo, empilhadas pela tinta medida (caixa_tinta), nunca
         por passo fixo. `linhas`: [(texto, fonte, corpo_em_px_de_quadro,
         tracking)]. (x, y) em px de quadro: x = origem da linha (esquerda,
         centro ou direita do avanço, pela âncora); y = topo da caixa-alta da
         primeira linha. Assim duas camadas com o mesmo y alinham pela letra,
         não pelo acento nem pela haste."""
-        lin = [(t, f, c * K, tr) for t, f, c, tr in linhas]
+        KT = K * res
+        lin = [(t, f, c * KT, tr) for t, f, c, tr in linhas]
         ch = _chave('texto', lin, tinta, ancora, entrelinha, semente)
         larg = max(S.largura(t, S.fonte(f, c), tr) for t, f, c, tr in lin)
         pad = int(max(c for _, _, c, _ in lin) * 0.9)
@@ -265,21 +285,21 @@ class Folha:
             xx = pad + {'esq': 0, 'centro': (larg - lw) / 2, 'dir': larg - lw}[ancora]
             S.linha(chapa, t, fnt, xx, alvo, tracking=tr)
             topo_tinta = S.caixa_tinta(chapa)[3]
-            gap = entrelinha * K if entrelinha is not None else 0.42 * c
+            gap = entrelinha * KT if entrelinha is not None else 0.42 * c
             # a próxima caixa-alta começa abaixo da base desta (pela linha
             # de base, não pela descendente)
             yy = alvo + hb[3] + gap
         cx = S.caixa_tinta(chapa)
-        m = int(6 * K)
+        m = int(6 * KT)
         x0, y0 = max(0, cx[0] - m), max(0, cx[1] - m)
         x1, y1 = min(lar_tot, cx[2] + m), min(alt_tot, cx[3] + m)
         ref_x = pad + {'esq': 0, 'centro': larg / 2, 'dir': larg}[ancora]
-        px = x - (ref_x - x0) / K
-        py = y - (pad - y0) / K
+        px = x - (ref_x - x0) / KT
+        py = y - (pad - y0) / KT
         iw, ih = x1 - x0, y1 - y0
         arqs = INDICE.get(ch)
         if not (arqs and all(os.path.exists(os.path.join(PUB, a)) for a in arqs)):
-            cob = S.tipo_em_tinta(chapa.crop((x0, y0, x1, y1)), semente=semente)
+            cob = S.tipo_em_tinta(chapa.crop((x0, y0, x1, y1)), semente=semente, escala=res)
             arqs = _material(ch, T=S.transmitancia(cob, TINTA[tinta]), png=True)
             INDICE[ch] = arqs
         campo = None
@@ -298,21 +318,37 @@ class Folha:
                 T = np.asarray(Image.open(os.path.join(PUB, arqs[0])).convert('L'), float) / 255
                 cob = np.clip((1 - T) * 3, 0, 1)
                 _campo(chc, cob, entradas, semente, atrai=1.8)
-        return self._camada(nome, arqs, px, py, iw / K, ih / K, iw, ih, chega, campo, borda, plano)
+        return self._camada(nome, arqs, px, py, iw / KT, ih / KT, iw, ih, chega, campo, borda, plano)
+
+    # -- carimbo ------------------------------------------------------ #
+    def carimbo(self, nome, linhas, x, y, wd, ht, quando, semente=7, giro=-2.4):
+        """O hanko cai em `quando`: escala 1,05 -> 1,0 e a tinta subindo em 7
+        frames, torto como todo carimbo. `linhas`: [(texto, corpo px de quadro)]."""
+        iw, ih = int(round(wd * K)), int(round(ht * K))
+        ch = _chave('selo', linhas, iw, ih, semente)
+        arqs = INDICE.get(ch)
+        if not (arqs and all(os.path.exists(os.path.join(PUB, a)) for a in arqs)):
+            cob = S.selo(iw, ih, [(t, c * K) for t, c in linhas], semente=semente)
+            arqs = _material(ch, T=S.transmitancia(cob, TINTA['vermelhao']), png=True)
+            INDICE[ch] = arqs
+        c = self._camada(nome, arqs, x, y, wd, ht, iw, ih, None, None, None, None)
+        c['carimbo'] = [int(quando), giro]
+        return c
 
     # -- pincel -------------------------------------------------------- #
     def traco(self, nome, pontos, espessura, seco=0.5, tinta='sumi', chega=None, borda=0.24, semente=7,
-              plano=None):
+              plano=None, res=1.5):
         """Traço de pincel gerado (sempre com kasure). Pontos em px de quadro."""
         pts = np.asarray(pontos, float)
         m = espessura * 2 + 8
         x0, y0 = pts.min(0) - m
         x1, y1 = pts.max(0) + m
-        iw, ih = int(round((x1 - x0) * K)), int(round((y1 - y0) * K))
-        ch = _chave('traco', pontos, espessura, seco, tinta, semente)
+        KT = K * res
+        iw, ih = int(round((x1 - x0) * KT)), int(round((y1 - y0) * KT))
+        ch = _chave('traco', pontos, espessura, seco, tinta, semente, res)
         arqs = INDICE.get(ch)
         if not (arqs and all(os.path.exists(os.path.join(PUB, a)) for a in arqs)):
-            cob = S.pincelada(iw, ih, (pts - [x0, y0]) * K, espessura * K, semente=semente, seco=seco)
+            cob = S.pincelada(iw, ih, (pts - [x0, y0]) * KT, espessura * KT, semente=semente, seco=seco, escala=res)
             arqs = _material(ch, T=S.transmitancia(cob, TINTA[tinta]), png=True)
             INDICE[ch] = arqs
         campo = None
@@ -341,11 +377,21 @@ class Montagem:
         self.folhas[id] = f
         return f
 
-    def plano(self, de, ate, folha, cam_de, cam_ate=None, px=None, nota=''):
+    def plano(self, de, ate, folha, cam_de, cam_ate=None, px=None, clip=None, nota=''):
+        """`px`: {plano: [ganho de escala, deriva em fração da largura, subida
+        em px]} ao longo do plano; o primeiro é o fundo. `clip`: retângulo da
+        folha (o da peça) fora do qual os planos da frente não aparecem."""
         cam_ate = cam_ate or cam_de
+        if px:
+            for nome, v in px.items():
+                g, d = v[0], v[1]
+                s0, s1 = cam_de[0], cam_ate[0]
+                assert (s1 / s0) * (1 + g) <= 1.13 + 1e-9, f'{nome}: ganho total acima de 13%'
+                assert abs(d) < 0.035, f'{nome}: deriva acima de 3,5% da largura'
         self.planos.append(dict(de=int(de), ate=int(ate), folha=folha.id if isinstance(folha, Folha) else folha,
                                 cam=[[round(v, 5) for v in cam_de], [round(v, 5) for v in cam_ate]],
-                                **({'px': px} if px else {}), **({'nota': nota} if nota else {})))
+                                **({'px': px} if px else {}), **({'clip': clip} if clip else {}),
+                                **({'nota': nota} if nota else {})))
 
     def escrever(self, papel, fibra, partitura):
         planos = sorted(self.planos, key=lambda p: p['de'])
@@ -395,6 +441,13 @@ def parado(s, cx, cy):
     return [s, cx, cy], [s, cx, cy]
 
 
+def empurra_para(s0, s1, c0, p):
+    """Empurrão ancorado num ponto `p` da folha (ele fica parado na tela):
+    o centro da câmera anda em direção a ele na proporção da escala."""
+    (cx0, cy0), (px, py) = c0, p
+    return [s0, cx0, cy0], [s1, px - (px - cx0) * s0 / s1, py - (py - cy0) * s0 / s1]
+
+
 def borda_suave(frac=0.04):
     """Máscara que some com a peça nas bordas (o papel da peça vira o nosso
     sem desenhar retângulo)."""
@@ -404,6 +457,18 @@ def borda_suave(frac=0.04):
         y = np.minimum(np.arange(ih), np.arange(ih)[::-1]) / m
         return np.clip(np.minimum(y[:, None], x[None, :]), 0, 1) ** 1.5
     return (f'borda{frac}', f)
+
+
+def borda_tinta(frac=0.012, semente=5):
+    """Borda de peça impressa a pincel: o papel come a borda de forma
+    irregular, como no carimbo. Sem degradê (degradê é desfoque)."""
+    def f(iw, ih):
+        yy, xx = np.mgrid[0:ih, 0:iw]
+        d = np.minimum.reduce([xx, yy, iw - 1 - xx, ih - 1 - yy]).astype(float)
+        ru = S.ruido(ih, iw, 6 * K, semente) * 0.6 + S.ruido(ih, iw, 1.5 * K, semente + 1) * 0.4
+        m = frac * min(iw, ih)
+        return np.clip((d - m * (0.5 + 0.35 * ru)) / (1.2 * K), 0, 1)
+    return (f'tinta{frac}-{semente}', f)
 
 
 def altura(texto, fonte, corpo, tracking=0.0):
