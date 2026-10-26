@@ -82,10 +82,11 @@ def _energia():
     return _db
 
 
-def corte(marca, folga=24):
+def corte(marca, folga=24, minimo=15):
     """Onde cortar perto de uma marca do AUDIO.md: dentro da pausa real mais
     próxima, 3 frames antes da fala voltar (a imagem chega um tico antes da
-    voz). Pausa = 150 ms ou mais sem fala."""
+    voz). Pausa = `minimo` janelas de 10 ms sem fala (150 ms; 60 a 70 ms
+    para um respiro entre duas palavras)."""
     fala = _energia()
     melhor = None
     a = max(0, int((marca - folga) / 0.3))
@@ -96,7 +97,7 @@ def corte(marca, folga=24):
             j = i
             while j < len(fala) and not fala[j]:
                 j += 1
-            if j - i >= 15:
+            if j - i >= minimo:
                 ini, fim = i * 0.3, j * 0.3
                 alvo = max(ini, fim - 3)
                 if melhor is None or abs(alvo - marca) < abs(melhor - marca):
@@ -125,11 +126,11 @@ def papel_e_fibra():
     """O washi periódico (um ladrilho) e a fibra fina da frente da tinta."""
     pw, ph = 2800, 1580
     arq = 'papel/washi.jpg'
-    ch = _chave('papel', pw, ph, S.GRAO, S.WASHI_LIMPO)
+    ch = _chave('papel', pw, ph, S.GRAO, S.WASHI_LIMPO, 95)
     if not _feito(ch, [arq]):
         p = S.papel(pw, ph, semente=1)
         os.makedirs(os.path.join(PUB, 'papel'), exist_ok=True)
-        Image.fromarray(np.clip(np.round(p), 0, 255).astype(np.uint8)).save(os.path.join(PUB, arq), quality=93,
+        Image.fromarray(np.clip(np.round(p), 0, 255).astype(np.uint8)).save(os.path.join(PUB, arq), quality=95,
                                                                           subsampling=0)
         INDICE[ch] = [arq]
     fib = 'campos/fibra.png'
@@ -457,6 +458,19 @@ def borda_suave(frac=0.04):
         y = np.minimum(np.arange(ih), np.arange(ih)[::-1]) / m
         return np.clip(np.minimum(y[:, None], x[None, :]), 0, 1) ** 1.5
     return (f'borda{frac}', f)
+
+
+def borda_lados(esq=0.03, dir=0.03, topo=0.03, base=0.03):
+    """Diluição da peça nas bordas, lado a lado (fração da largura para
+    esquerda/direita, da altura para topo/base). Densidade caindo, não
+    desfoque: é a aguada se perdendo no papel."""
+    def f(iw, ih):
+        x = np.arange(iw) + 0.5
+        y = np.arange(ih) + 0.5
+        fx = np.minimum(x / max(esq * iw, 1e-6), (iw - x) / max(dir * iw, 1e-6))
+        fy = np.minimum(y / max(topo * ih, 1e-6), (ih - y) / max(base * ih, 1e-6))
+        return np.clip(np.minimum(fy[:, None], fx[None, :]), 0, 1) ** 1.6
+    return (f'lados{esq}-{dir}-{topo}-{base}', f)
 
 
 def borda_tinta(frac=0.012, semente=5):

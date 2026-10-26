@@ -67,9 +67,11 @@ def ruido(H, W, sigma, semente, angulo=0.0):
 # ===================================================================== #
 #  PAPEL                                                                #
 # ===================================================================== #
-# grão calibrado (ver ferramentas/calibrar.py): desvio local 5x5 numa área
-# lisa, medido no master 1440p já comprimido, alvo da casa 6 a 8.
-GRAO = dict(nuvem=2.6, mancha=2.0, fibra=5.4, fibra2=3.2, fino=7.4, kozo=5.0)
+# grão calibrado: desvio local 5x5 numa área lisa, medido no master 1440p
+# já comprimido (CRF 16), alvo da casa 6 a 8. O navegador filtra o ladrilho
+# (a escala 4/3 e o empurrão põem o papel em fração de pixel): o grão que
+# sai na tela é ~0,75 do que está no arquivo, então o arquivo mede ~9.
+GRAO = dict(nuvem=2.6, mancha=2.0, fibra=7.0, fibra2=4.2, fino=9.6, kozo=5.0)
 
 
 def papel(W, H, tom=WASHI_LIMPO, semente=0, grao=None):

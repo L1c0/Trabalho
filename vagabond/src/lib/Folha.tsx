@@ -37,10 +37,13 @@ const CamadaParada: React.FC<{ c: Camada; sat: number }> = ({ c, sat }) => {
   );
 };
 
-/** O papel da folha num retângulo dela (alinhado com o resto da folha). */
-const Papel: React.FC<{ m: Montagem; folha: Folha; x: number; y: number; w: number; h: number }> = ({
-  m, folha, x, y, w, h,
-}) => {
+/** O papel da folha num retângulo dela. (x, y) posiciona o retângulo no
+ * pai; (fx, fy) é onde a origem dele cai na folha (por padrão, x e y): o
+ * ladrilho do washi fica sempre no mesmo lugar da folha, então o recorte da
+ * frente começa com o mesmo papel do fundo, sem emenda. */
+const Papel: React.FC<{
+  m: Montagem; folha: Folha; x: number; y: number; w: number; h: number; fx?: number; fy?: number;
+}> = ({ m, folha, x, y, w, h, fx = x, fy = y }) => {
   const [x0, y0] = folha.caixa;
   return (
     <>
@@ -53,7 +56,7 @@ const Papel: React.FC<{ m: Montagem; folha: Folha; x: number; y: number; w: numb
           height: h,
           backgroundImage: `url(${staticFile(m.papel.src)})`,
           backgroundSize: `${m.papel.w}px ${m.papel.h}px`,
-          backgroundPosition: `${x0 - folha.ox - x}px ${y0 - folha.oy - y}px`,
+          backgroundPosition: `${x0 - folha.ox - fx}px ${y0 - folha.oy - fy}px`,
           backgroundRepeat: 'repeat',
         }}
       />
@@ -94,7 +97,7 @@ const Recorte: React.FC<{ m: Montagem; folha: Folha; c: Camada; sat: number }> =
         isolation: 'isolate',
       }}
     >
-      <Papel m={m} folha={folha} x={0} y={0} w={c.w} h={c.h} />
+      <Papel m={m} folha={folha} x={0} y={0} w={c.w} h={c.h} fx={c.x} fy={c.y} />
       <div style={{ position: 'absolute', left: -c.x, top: -c.y, width: 1, height: 1 }}>
         <CamadaParada c={c} sat={sat} />
       </div>

@@ -4,14 +4,14 @@
 Soma direto, sem ducking (LEIA-PRIMEIRO): a narração a -16 LUFS, a trilha
 com o envelope que segue a saturação (muda na abertura e no fecho) e o
 leito a -50, em loop perfeito de 20 s, o vídeo inteiro. O documento mede a
-soma em -16,0 LUFS / -1,5 dBTP; aqui ela é medida de novo, e só se o pico
-verdadeiro passar de -1,5 entra um limitador em 4x (soxr), como nos Shorts.
+soma em -16,0 LUFS / -1,5 dBTP; aqui ela é medida de novo (deu -0,9 dBTP
+com a página), e o pico desce num limitador em 4x (soxr), como nos Shorts.
 
 A página (sfx-pagina) entra só onde o roteiro fala de página: quando a
 primeira página do mangá aparece, e nas duas falas sobre "uma página do
 Vagabond" / "na sua própria página". No nível em que veio.
 
-Uso: python3 -I mixagem.py <projeto>  ->  public/audio/vag-mix.flac
+Uso: python3 -I mixagem.py <projeto>  ->  public/audio/vag-mix.mp3
 """
 import json
 import os
@@ -78,19 +78,25 @@ def main():
     os.remove(bruto + '.f32')
     I, tp = medir(bruto)
     print(f'soma direta: {I:.1f} LUFS, pico verdadeiro {tp:.1f} dBTP')
-    saida = os.path.join(A, 'vag-mix.flac')
-    if tp > -1.5:
-        lim = 10 ** (-1.7 / 20)
+    # o arquivo do filme é MP3 de 320 kbps (a gravação original já é MP3 de
+    # 128 kbps: FLAC só triplicava o tamanho). O MP3 e depois o AAC do
+    # render passam um pouco do pico, então o teto desce até o MP3 medir
+    # -1,7 dBTP ou menos
+    saida = os.path.join(A, 'vag-mix.mp3')
+    teto = -1.7
+    while True:
+        lim = 10 ** (teto / 20)
         af = f'aresample={SR * 4}:resampler=soxr,alimiter=limit={lim:.4f}:attack=1:release=60:level=disabled,' \
              f'aresample={SR}:resampler=soxr'
-        subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', bruto, '-af', af, '-c:a', 'flac', '-sample_fmt', 's32',
-                        saida], check=True)
-    else:
-        subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', bruto, '-c:a', 'flac', '-sample_fmt', 's32', saida],
-                       check=True)
+        subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', bruto, '-af', af, '-c:a', 'libmp3lame', '-b:a', '320k',
+                        '-ar', str(SR), saida], check=True)
+        I, tp = medir(saida)
+        if tp <= -1.7 or teto < -3:
+            break
+        teto -= 0.2
     os.remove(bruto)
-    I, tp = medir(saida)
-    print(f'mixagem: {I:.1f} LUFS, pico verdadeiro {tp:.1f} dBTP, {FRAMES / FPS:.2f} s; páginas em {quando}')
+    print(f'mixagem: {I:.1f} LUFS, pico verdadeiro {tp:.1f} dBTP (teto do limitador {teto:.1f}), '
+          f'{FRAMES / FPS:.2f} s; páginas em {quando}')
 
 
 if __name__ == '__main__':

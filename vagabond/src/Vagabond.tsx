@@ -25,7 +25,7 @@ export const Vagabond: React.FC<{ semSom?: boolean }> = ({ semSom }) => {
   return (
     <AbsoluteFill style={{ backgroundColor: '#E8E4DA' }}>
       <FolhaNoPlano m={M} pl={pl} f={f} sat={saturacao(M, f)} />
-      {!semSom && <Audio src={staticFile('audio/vag-mix.flac')} />}
+      {!semSom && <Audio src={staticFile('audio/vag-mix.mp3')} />}
     </AbsoluteFill>
   );
 };

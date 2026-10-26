@@ -1,0 +1,81 @@
+VAGABOND — o master
+===================
+
+Ensaio de 9min11 (551,27 s, 16.538 frames), 30 fps, montado em Remotion.
+Este pacote tem o projeto pronto e, em public/, só o que o filme usa: o
+papel washi, as peças já tratadas em sumi, os campos de chegada da tinta,
+as máscaras de profundidade e a mixagem final. Nada é gerado na sua
+máquina: o Remotion só compõe.
+
+São __N__ zips. Todos descompactam na mesma pasta "vagabond", em qualquer
+ordem.
+
+
+1. DESCOMPACTAR
+
+No Prompt de Comando (cmd), não no PowerShell, com os __N__ zips numa
+pasta Vagabond-1440p dentro de Downloads:
+
+    mkdir C:\vagabond-projeto
+    cd /d C:\vagabond-projeto
+    for %i in ("D:\USER\Downloads\Vagabond-1440p\vagabond-parte-*.zip") do tar -xf "%~i"
+
+Confira:
+
+    dir vagabond\public\pecas
+
+No fim da lista tem que aparecer __PECAS__ arquivo(s). Se aparecer menos,
+falta alguma parte na pasta.
+
+
+2. INSTALAR (uma vez)
+
+Precisa do Node.js 18 ou mais novo (o mesmo do Vinland) e de internet: o
+Remotion baixa o navegador dele no primeiro render. As fontes já estão
+dentro das peças; não baixa fonte nenhuma.
+
+    cd vagabond
+    npm install
+
+
+3. RENDERIZAR O MASTER (2560x1440)
+
+    npx remotion render src/index.ts Vagabond out/vagabond-master-1440p.mp4 --scale=1.3333333333 --crf=16 --color-space=bt709 --timeout=120000
+
+- Sai em out\vagabond-master-1440p.mp4: 2560x1440, 30 fps, H.264 CRF 16,
+  yuv420p, faststart, 9min11, com a mixagem final (__LUFS__ LUFS,
+  __TP__ dBTP).
+- O arquivo tem uns 4 GB (o grão do papel pede bitrate). Deixe uns 12 GB
+  livres no disco.
+- Num computador de 4 núcleos leva perto de duas horas. Deixe a janela
+  aberta até terminar.
+
+Por que 1440p: o briefing manda subir em 1440p. Todo o material foi
+tratado na escala de 1440p (as peças de plano fechado, mais finas ainda),
+então nada é esticado.
+
+Não troque os parâmetros. O grão do washi é ruído fino de propósito e o
+CRF 16 é o que segura a aguada e o papel vazio sem degrau: medido no
+próprio arquivo comprimido, o grão ficou em __GRAO__ (alvo da casa: 6 a 8).
+O --color-space=bt709 mantém o tom do papel.
+
+
+4. VER O FILME ANTES (opcional)
+
+    npx remotion studio
+
+Abre no navegador em http://localhost:3000 (composição "Vagabond").
+
+
+5. ANTES DE PUBLICAR
+
+- Legenda: deixe o YouTube gerar, baixe o SRT e corrija os nomes
+  próprios (a automática erra todos: Koboku Meigekizu, Ganryūjima,
+  Reigandō, Terao Magonojō, revista Morning).
+- A citação do Go Rin no Sho na tela é a tradução do roteiro. Se usar a
+  da edição brasileira, troque na descrição; se não, a descrição diz
+  "tradução livre".
+- Não entraram, como os documentos mandam: o Shōmen Daruma (o acervo não
+  foi nomeado) e a foto do monumento (não é a pedra de 1654; a pedra
+  aparece só como texto).
+- As fontes da descrição estão em docs/vagabond-FONTES.md, no repositório.

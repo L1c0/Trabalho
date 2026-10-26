@@ -16,10 +16,11 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import montagem as M  # noqa: E402
-from montagem import corte, w, empurra, deriva, parado, borda_suave, borda_tinta, caixa_alta, avanco  # noqa: E402
+from montagem import corte, w, empurra, deriva, parado, borda_suave, borda_tinta, borda_lados, caixa_alta, avanco  # noqa: E402
 from sumi import EBG, EBG7, OSW, ANT  # noqa: E402
 
 MG = 180            # margem esquerda da tipografia
+MARCAS = {}         # posições que um bloco guarda para outro reenquadrar
 ROT = 0.22          # tracking dos rótulos (Oswald)
 
 
@@ -44,7 +45,11 @@ def numero(t, c=150):
 # --------------------------------------------------------------------- #
 # o Koboku Meigekizu em pé no meio da folha: 432 x 1000 px de quadro, com o
 # material na resolução da foto (2048 px de altura) para o plano fechado
-PX0, PY0, PW, PH = 744, 40, 432, 1000
+# (a base sangra para fora do quadro embaixo: a aguada do pé do galho não
+# pode terminar numa linha reta)
+PH = 1040
+PW = PH * 885 / 2048
+PX0, PY0 = 960 - PW / 2, 60
 
 
 def no_koboku(u, v):
@@ -55,8 +60,9 @@ def no_koboku(u, v):
 def pintura(m, folha_id, chega=None, plano=None, entradas=None, janela=None):
     f = m.folha(folha_id, tom='washi')
     f.peca('koboku', 'p01-koboku-meigekizu.jpg', PX0, PY0, ht=PH, tipo='sumi', res=2048 / (PH * M.K),
-           mascara=borda_suave(0.03), chega=chega, entradas=entradas, janela=janela, borda=0.24, plano=plano,
-           achatar=160, branco_pct=40, preto_pct=0.05, mordida=0.12, fibra=0.04, firmeza=0.0, gama=1.0)
+           mascara=borda_lados(0.2, 0.06, 0.02, 0.05), chega=chega, entradas=entradas, janela=janela, borda=0.24,
+           plano=plano,
+           achatar=900, branco_pct=25, preto_pct=0.5, mordida=0.12, fibra=0.04, firmeza=0.0, gama=1.0)
     return f
 
 
@@ -69,9 +75,10 @@ def bloco_a(m):
     c1, c2, c3, c4, c5 = corte(296), corte(466), corte(624), corte(737), corte(904)
     m.plano(0, c1, f, *empurra(1.45, 935, 420, c1))
     m.plano(c1, c2, f, *empurra(1.0, 960, 540, c2 - c1))
-    m.plano(c2, c3, f, *empurra(2.0, passaro[0], passaro[1] + 30, c3 - c2))
+    # 1,9x: o mais apertado que a foto aguenta (BRIEFING §6)
+    m.plano(c2, c3, f, *empurra(1.84, passaro[0], passaro[1] + 30, c3 - c2))
     m.plano(c3, c4, f, *deriva(1.6, 1480, 1520, 600))
-    m.plano(c4, c5, f, *empurra(2.0, lagarta[0], lagarta[1], c5 - c4))
+    m.plano(c4, c5, f, *empurra(1.84, lagarta[0], lagarta[1], c5 - c4))
     # o nome da pintura, à direita, no papel vazio
     tx = 1290
     f.texto('titulo', [corpo('Koboku Meigekizu', 58)], tx, 430, chega=(w('Koboku') - 2, 18))
@@ -120,6 +127,7 @@ def bloco_b(m, ini):
         linhas_y[nome] = y
         y += 50 * 1.45
     y += 60
+    MARCAS['registros-1645'] = y
     linha_com_numero(f, 'morte-data', '1645', '19º dia do 5º mês de Shōhō 2', MG, y,
                      chega_num=(w('1645', 2000) - 2, 18), chega_txt=(w('Décimo', 1940) - 2, 18))
     # "ninguém falsifica folha de pagamento": o pincel sublinha o valor
@@ -417,7 +425,7 @@ def bloco_f(m, ini):
 
     # o que a pedra diz do duelo
     c10 = corte(8669)
-    m.plano(c9, c10, p, *empurra(1.15, 900, ys['ganryu'] + 20, c10 - c9))
+    m.plano(c9, c10, p, *empurra(1.06, 900, 500, c10 - c9))
     return c10, n
 
 
@@ -453,7 +461,7 @@ def bloco_g(m, ini):
     c3 = corte(9210)
     m.plano(c2, c3, g, *empurra(1.0, 960, 540, c3 - c2))
     c4 = corte(9380)
-    m.plano(c3, c4, g, *empurra(1.15, 900, 700, c4 - c3))
+    m.plano(c3, c4, g, *empurra(1.15, 900, 640, c4 - c3))
     return c4
 
 
@@ -532,7 +540,7 @@ def bloco_i(m, ini):
 
     # Reigandō
     g = m.folha('reigando', tom='washi')
-    g.peca('boca', 'l01-reigando-boca.jpg', 160, 90, ht=900, tipo='cor', chega=(c1 + 2, 22), res=1.5,
+    g.peca('boca', 'l01-reigando-boca.jpg', 160, 90, ht=900, tipo='cor', chega=(c1 + 2, 22), res=1.8,
            entradas=[(0.4, 0.5)], mascara=borda_tinta(0.012))
     gx = 160 + 900 * 2404 / 1944 + 70
     g.texto('nome', [forte('Reigandō', 84)], gx, 380, chega=(w('Heigandu') - 3, 18))
@@ -552,7 +560,8 @@ def bloco_i(m, ini):
 
     # dois anos escrevendo: a boca da caverna, mais perto
     c4 = corte(11088)
-    m.plano(c3, c4, g, *empurra(1.5, 160 + 0.42 * 900 * 2404 / 1944, 90 + 0.38 * 900, c4 - c3))
+    # 1,85x: a menor escala em que a foto (sem a borda mordida) cobre o quadro
+    m.plano(c3, c4, g, *empurra(1.85, 160 + 450 * 2404 / 1944, 450, c4 - c3))
 
     # terminou, e entregou
     t = m.folha('entrega', tom='velho')
@@ -595,8 +604,7 @@ def bloco_i(m, ini):
 
     # sete dias depois: a papelada de novo, na data da morte
     c7 = corte(11822)
-    yb = [c for c in m.folhas['registros'].camadas if c['id'].endswith('morte-data-n')][0]
-    m.plano(c6, c7, 'registros', *empurra(1.35, 700, yb['y'] + 60, c7 - c6))
+    m.plano(c6, c7, 'registros', *empurra(1.35, 700, MARCAS['registros-1645'] - 10, c7 - c6))
     # organizou, entregou, parou de respirar. Na ordem certa.
     c8 = corte(12038)
     m.plano(c7, c8, d, *empurra(1.0, 960, 540, c8 - c7))
@@ -679,12 +687,13 @@ def bloco_j(m, ini):
     # onze anos
     o = m.folha('onze', tom='limpo')
     o.texto('onze', [numero('onze anos', 200)], 960, 420, ancora='centro', chega=(w('11', 14000) - 3, 20))
-    c11 = corte(14041)
+    # "onze anos" segura até "travou": o respiro de 70 ms antes da palavra
+    c11 = corte(14127, folga=6, minimo=6)
     m.plano(c10, c11, o, *parado(1.0, 960, 540))
     # a obra que travou no meio: a página com muito branco
     q = m.folha('branco', tom='washi')
     q.peca('m11', 'm11.jpg', 302, 60, ht=960, tipo='sumi', chega=(c11 + 2, 22), entradas=[(0.69, 0.62)])
-    c12 = corte(14204)
+    c12 = corte(14290)
     m.plano(c11, c12, q, *deriva(1.0, 940, 980, 540))
 
     # dívidas diferentes
@@ -702,9 +711,12 @@ def bloco_j(m, ini):
     c15 = corte(14764)
     m.plano(c14, c15, 'dokkodo', *deriva(1.0, 980, 940, 540))
 
-    # o Inoue deve a ilha
-    p = m.folha('praia', tom='washi')
-    p.peca('m01', 'm01.png', 620, 40, ht=1000, tipo='sumi', chega=(c15 + 2, 20), entradas=[(0.4, 0.3)])
+    # o Inoue deve a ilha: Ganryūjima hoje, o duelo virado estátua (o
+    # Musashi de bronze segura o remo do Niten-ki)
+    p = m.folha('ilha', tom='washi')
+    p.peca('l05', 'l05-ganryujima-estatuas.jpg', 300, 40, ht=1000, tipo='cor', chega=(c15 + 2, 20),
+           entradas=[(0.7, 0.45)], mascara=borda_tinta(0.012))
+    p.texto('nome', [rotulo('GANRYŪJIMA · HOJE', 24)], 1360, 520, tinta='sumi2', chega=(w('ilha', 14790) - 2, 16))
     c16 = corte(14904)
     m.plano(c15, c16, p, *empurra(1.0, 960, 540, c16 - c15))
     # dois homens e uma espada
@@ -748,26 +760,57 @@ def fecho(m, ini):
 
 
 # --------------------------------------------------------------------- #
-PARTITURA = [[0, 0.0, 0], [1384, 0.05, 0], [2550, 0.10, 0], [4458, 0.0, 0], [4650, 0.35, 0],
-             [6726, 0.60, 0], [8669, 0.80, 0], [9442, 1.0, 0], [10392, 0.40, 1], [12038, 0.12, 0],
-             [15532, 0.0, 0]]
+#  A PARTITURA                                                          #
+# --------------------------------------------------------------------- #
+# Os pontos do AUDIO.md (frame, saturação). Cada virada cai no corte que
+# abre o bloco dela, nunca no meio de um plano: os cortes vêm da pausa real
+# da fala e às vezes ficam dezenas de frames antes da marca do documento
+# (9442 "E o nome" é dito em 9380). O 40% da caverna drena em linha reta até
+# o 12% do Inoue; depois do pico do kabuki a saturação nunca sobe.
+PARTITURA_DOC = [(0, 0.0), (1384, 0.05), (2550, 0.10), (4458, 0.0), (4650, 0.35), (6726, 0.60), (8669, 0.80),
+                 (9442, 1.0), (10392, 0.40), (12038, 0.12), (15532, 0.0)]
+
+
+def partitura(m, ini):
+    cortes = sorted({p['de'] for p in m.planos})
+
+    def perto(f):
+        return min(cortes, key=lambda c: abs(c - f))
+    frames = [0, perto(1384), perto(2550), perto(4458), ini['E'], ini['F'], ini['G'], ini['H'], ini['I'],
+              ini['J'], ini['K']]
+    pts = [[f, sat, 1 if doc == 10392 else 0] for f, (doc, sat) in zip(frames, PARTITURA_DOC)]
+    assert all(a[0] < b[0] for a, b in zip(pts, pts[1:])), pts
+    pico = [p[0] for p in pts].index(ini['H'])
+    assert all(a[1] >= b[1] for a, b in zip(pts[pico:], pts[pico + 1:])), 'a saturação subiu depois do pico'
+    for (doc, _), p in zip(PARTITURA_DOC, pts):
+        if doc != p[0]:
+            print(f'  partitura: {doc} -> corte {p[0]}')
+    return pts
 
 
 def principal():
     papel, fibra = M.papel_e_fibra()
     m = M.Montagem()
+    ini = {}
     fim = bloco_a(m)
     fim = bloco_b(m, fim)
     fim = bloco_c(m, fim)
+    ini['E'] = fim
     fim = bloco_e(m, fim)
+    ini['F'] = fim
     fim, _ = bloco_f(m, fim)
+    ini['G'] = fim
     fim = bloco_g(m, fim)
+    ini['H'] = fim
     fim = bloco_h(m, fim)
     fim = chamada(m, fim)
+    ini['I'] = fim
     fim = bloco_i(m, fim)
+    ini['J'] = fim
     fim = bloco_j(m, fim)
+    ini['K'] = fim
     fecho(m, fim)
-    m.escrever(papel, fibra, PARTITURA)
+    m.escrever(papel, fibra, partitura(m, ini))
 
 
 if __name__ == '__main__':
