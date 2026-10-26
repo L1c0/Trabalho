@@ -47,7 +47,7 @@ dentro das peças; não baixa fonte nenhuma.
   __TP__ dBTP).
 - O arquivo tem uns 4 GB (o grão do papel pede bitrate). Deixe uns 12 GB
   livres no disco.
-- Num computador de 4 núcleos leva perto de duas horas. Deixe a janela
+- Num computador de 4 núcleos leva de duas a três horas. Deixe a janela
   aberta até terminar.
 
 Por que 1440p: o briefing manda subir em 1440p. Todo o material foi
