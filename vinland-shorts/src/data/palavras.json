@@ -1,0 +1,2870 @@
+{
+"1-contagem": {
+"frames": 781,
+"palavras": [
+{
+"t": "No",
+"cue": 0,
+"de": 4.8,
+"ate": 8.4
+},
+{
+"t": "capítulo",
+"cue": 0,
+"de": 8.4,
+"ate": 24.0
+},
+{
+"t": "96",
+"cue": 0,
+"de": 24.0,
+"ate": 36.0
+},
+{
+"t": "de",
+"cue": 0,
+"de": 36.0,
+"ate": 45.6
+},
+{
+"t": "Vinland",
+"cue": 0,
+"de": 45.6,
+"ate": 55.2
+},
+{
+"t": "Saga,",
+"cue": 0,
+"de": 55.2,
+"ate": 67.2
+},
+{
+"t": "o",
+"cue": 0,
+"de": 67.2,
+"ate": 81.6
+},
+{
+"t": "Thorfinn",
+"cue": 0,
+"de": 81.6,
+"ate": 85.2
+},
+{
+"t": "leva",
+"cue": 0,
+"de": 96.0,
+"ate": 108.0
+},
+{
+"t": "cem",
+"cue": 0,
+"de": 108.0,
+"ate": 120.0
+},
+{
+"t": "socos",
+"cue": 0,
+"de": 120.0,
+"ate": 131.1
+},
+{
+"t": "na",
+"cue": 0,
+"de": 134.1,
+"ate": 137.1
+},
+{
+"t": "cara.",
+"cue": 0,
+"de": 134.1,
+"ate": 141.6
+},
+{
+"t": "Ele",
+"cue": 1,
+"de": 148.8,
+"ate": 153.0
+},
+{
+"t": "não",
+"cue": 1,
+"de": 153.0,
+"ate": 160.8
+},
+{
+"t": "revida",
+"cue": 1,
+"de": 160.8,
+"ate": 175.2
+},
+{
+"t": "nenhum.",
+"cue": 1,
+"de": 175.2,
+"ate": 180.9
+},
+{
+"t": "O",
+"cue": 2,
+"de": 192.0,
+"ate": 196.8
+},
+{
+"t": "Yukimura",
+"cue": 2,
+"de": 196.8,
+"ate": 220.8
+},
+{
+"t": "desenha",
+"cue": 2,
+"de": 220.8,
+"ate": 230.4
+},
+{
+"t": "a",
+"cue": 2,
+"de": 230.4,
+"ate": 235.2
+},
+{
+"t": "contagem",
+"cue": 2,
+"de": 235.2,
+"ate": 247.2
+},
+{
+"t": "na",
+"cue": 2,
+"de": 247.2,
+"ate": 250.2
+},
+{
+"t": "página:",
+"cue": 2,
+"de": 251.4,
+"ate": 267.6
+},
+{
+"t": "dezessete,",
+"cue": 2,
+"de": 267.6,
+"ate": 283.2
+},
+{
+"t": "dezoito,",
+"cue": 2,
+"de": 283.2,
+"ate": 298.8
+},
+{
+"t": "dezenove.",
+"cue": 2,
+"de": 298.8,
+"ate": 311.1
+},
+{
+"t": "E",
+"cue": 3,
+"de": 314.4,
+"ate": 318.3
+},
+{
+"t": "a",
+"cue": 3,
+"de": 318.3,
+"ate": 321.6
+},
+{
+"t": "contagem",
+"cue": 3,
+"de": 321.6,
+"ate": 333.6
+},
+{
+"t": "é",
+"cue": 3,
+"de": 333.6,
+"ate": 337.2
+},
+{
+"t": "o",
+"cue": 3,
+"de": 337.2,
+"ate": 340.8
+},
+{
+"t": "argumento.",
+"cue": 3,
+"de": 340.8,
+"ate": 352.5
+},
+{
+"t": "Não",
+"cue": 4,
+"de": 360.0,
+"ate": 365.1
+},
+{
+"t": "é",
+"cue": 4,
+"de": 365.1,
+"ate": 369.6
+},
+{
+"t": "uma",
+"cue": 4,
+"de": 369.6,
+"ate": 374.4
+},
+{
+"t": "surra",
+"cue": 4,
+"de": 374.4,
+"ate": 386.4
+},
+{
+"t": "dramática,",
+"cue": 4,
+"de": 386.4,
+"ate": 405.6
+},
+{
+"t": "é",
+"cue": 4,
+"de": 405.6,
+"ate": 410.4
+},
+{
+"t": "uma",
+"cue": 4,
+"de": 410.4,
+"ate": 413.4
+},
+{
+"t": "conta.",
+"cue": 4,
+"de": 415.8,
+"ate": 421.2
+},
+{
+"t": "Cem",
+"cue": 5,
+"de": 430.8,
+"ate": 444.0
+},
+{
+"t": "é",
+"cue": 5,
+"de": 444.0,
+"ate": 448.8
+},
+{
+"t": "um",
+"cue": 5,
+"de": 448.8,
+"ate": 451.8
+},
+{
+"t": "número",
+"cue": 5,
+"de": 451.2,
+"ate": 460.8
+},
+{
+"t": "que",
+"cue": 5,
+"de": 460.8,
+"ate": 465.6
+},
+{
+"t": "você",
+"cue": 5,
+"de": 465.6,
+"ate": 470.4
+},
+{
+"t": "consegue",
+"cue": 5,
+"de": 470.4,
+"ate": 482.4
+},
+{
+"t": "imaginar",
+"cue": 5,
+"de": 482.4,
+"ate": 497.7
+},
+{
+"t": "inteiro.",
+"cue": 5,
+"de": 501.6,
+"ate": 509.1
+},
+{
+"t": "No",
+"cue": 6,
+"de": 520.8,
+"ate": 524.4
+},
+{
+"t": "fim",
+"cue": 6,
+"de": 524.4,
+"ate": 540.8
+},
+{
+"t": "o",
+"cue": 6,
+"de": 540.8,
+"ate": 543.8
+},
+{
+"t": "Thorfinn",
+"cue": 6,
+"de": 556.0,
+"ate": 560.4
+},
+{
+"t": "está",
+"cue": 6,
+"de": 573.3,
+"ate": 580.8
+},
+{
+"t": "destruído,",
+"cue": 6,
+"de": 580.8,
+"ate": 602.4
+},
+{
+"t": "de",
+"cue": 6,
+"de": 602.4,
+"ate": 606.0
+},
+{
+"t": "pé,",
+"cue": 6,
+"de": 607.2,
+"ate": 621.6
+},
+{
+"t": "e",
+"cue": 6,
+"de": 621.6,
+"ate": 626.7
+},
+{
+"t": "diz",
+"cue": 6,
+"de": 626.7,
+"ate": 636.0
+},
+{
+"t": "quatro",
+"cue": 6,
+"de": 636.0,
+"ate": 641.1
+},
+{
+"t": "palavras:",
+"cue": 6,
+"de": 643.5,
+"ate": 659.4
+},
+{
+"t": "eu",
+"cue": 7,
+"de": 663.9,
+"ate": 667.2
+},
+{
+"t": "não",
+"cue": 7,
+"de": 667.2,
+"ate": 672.0
+},
+{
+"t": "tenho",
+"cue": 7,
+"de": 672.0,
+"ate": 681.6
+},
+{
+"t": "inimigos.",
+"cue": 7,
+"de": 681.6,
+"ate": 695.4
+},
+{
+"t": "Quantos",
+"cue": 8,
+"de": 703.2,
+"ate": 715.2
+},
+{
+"t": "você",
+"cue": 8,
+"de": 715.2,
+"ate": 724.8
+},
+{
+"t": "aguentaria",
+"cue": 8,
+"de": 724.8,
+"ate": 746.4
+},
+{
+"t": "antes",
+"cue": 8,
+"de": 746.4,
+"ate": 751.2
+},
+{
+"t": "de",
+"cue": 8,
+"de": 751.2,
+"ate": 756.0
+},
+{
+"t": "revidar?",
+"cue": 8,
+"de": 756.0,
+"ate": 767.7
+}
+],
+"cues": [
+{
+"de": 0.0,
+"ate": 145.2,
+"linhas": [
+"No capítulo 96 de Vinland Saga,",
+"o Thorfinn leva cem socos na cara."
+]
+},
+{
+"de": 147.0,
+"ate": 199.2,
+"linhas": [
+"Ele não revida nenhum."
+]
+},
+{
+"de": 201.0,
+"ate": 322.2,
+"linhas": [
+"O Yukimura desenha a contagem na",
+"página: dezessete, dezoito, dezenove."
+]
+},
+{
+"de": 324.0,
+"ate": 358.2,
+"linhas": [
+"E a contagem é o argumento."
+]
+},
+{
+"de": 360.0,
+"ate": 439.2,
+"linhas": [
+"Não é uma surra dramática, é uma conta."
+]
+},
+{
+"de": 441.0,
+"ate": 526.2,
+"linhas": [
+"Cem é um número que você",
+"consegue imaginar inteiro."
+]
+},
+{
+"de": 528.0,
+"ate": 643.2,
+"linhas": [
+"No fim o Thorfinn está",
+"destruído, de pé, e diz quatro palavras:"
+]
+},
+{
+"de": 645.0,
+"ate": 706.2,
+"linhas": [
+"eu não tenho inimigos."
+]
+},
+{
+"de": 708.0,
+"ate": 779.1,
+"linhas": [
+"Quantos você aguentaria antes de revidar?"
+]
+}
+]
+},
+"2-anel": {
+"frames": 1261,
+"palavras": [
+{
+"t": "Em",
+"cue": 0,
+"de": 4.8,
+"ate": 8.1
+},
+{
+"t": "993",
+"cue": 0,
+"de": 8.1,
+"ate": 40.8
+},
+{
+"t": "o",
+"cue": 0,
+"de": 40.8,
+"ate": 43.8
+},
+{
+"t": "Sol",
+"cue": 0,
+"de": 43.2,
+"ate": 52.8
+},
+{
+"t": "soltou",
+"cue": 0,
+"de": 52.8,
+"ate": 57.0
+},
+{
+"t": "uma",
+"cue": 0,
+"de": 76.5,
+"ate": 79.5
+},
+{
+"t": "tempestade",
+"cue": 0,
+"de": 83.4,
+"ate": 100.5
+},
+{
+"t": "de",
+"cue": 0,
+"de": 103.2,
+"ate": 106.2
+},
+{
+"t": "partículas",
+"cue": 0,
+"de": 103.2,
+"ate": 119.1
+},
+{
+"t": "tão",
+"cue": 0,
+"de": 122.1,
+"ate": 129.6
+},
+{
+"t": "grande",
+"cue": 0,
+"de": 129.6,
+"ate": 138.9
+},
+{
+"t": "que",
+"cue": 1,
+"de": 139.2,
+"ate": 143.1
+},
+{
+"t": "ela",
+"cue": 1,
+"de": 143.1,
+"ate": 148.8
+},
+{
+"t": "ficou",
+"cue": 1,
+"de": 148.8,
+"ate": 158.4
+},
+{
+"t": "registrada",
+"cue": 1,
+"de": 158.4,
+"ate": 166.8
+},
+{
+"t": "em",
+"cue": 1,
+"de": 180.0,
+"ate": 183.0
+},
+{
+"t": "todas",
+"cue": 1,
+"de": 183.6,
+"ate": 189.6
+},
+{
+"t": "as",
+"cue": 1,
+"de": 189.6,
+"ate": 194.4
+},
+{
+"t": "árvores",
+"cue": 1,
+"de": 194.4,
+"ate": 208.8
+},
+{
+"t": "vivas",
+"cue": 1,
+"de": 208.8,
+"ate": 225.6
+},
+{
+"t": "do",
+"cue": 1,
+"de": 225.6,
+"ate": 228.6
+},
+{
+"t": "planeta",
+"cue": 1,
+"de": 233.1,
+"ate": 249.6
+},
+{
+"t": "ao",
+"cue": 1,
+"de": 249.6,
+"ate": 252.6
+},
+{
+"t": "mesmo",
+"cue": 1,
+"de": 252.0,
+"ate": 259.2
+},
+{
+"t": "tempo.",
+"cue": 1,
+"de": 259.2,
+"ate": 262.2
+},
+{
+"t": "Um",
+"cue": 2,
+"de": 273.6,
+"ate": 279.0
+},
+{
+"t": "pico",
+"cue": 2,
+"de": 279.0,
+"ate": 282.0
+},
+{
+"t": "de",
+"cue": 2,
+"de": 290.4,
+"ate": 309.6
+},
+{
+"t": "carbono-14,",
+"cue": 2,
+"de": 309.6,
+"ate": 317.7
+},
+{
+"t": "no",
+"cue": 2,
+"de": 328.8,
+"ate": 333.6
+},
+{
+"t": "anel",
+"cue": 2,
+"de": 333.6,
+"ate": 343.2
+},
+{
+"t": "daquele",
+"cue": 2,
+"de": 343.2,
+"ate": 355.2
+},
+{
+"t": "ano.",
+"cue": 2,
+"de": 355.2,
+"ate": 358.2
+},
+{
+"t": "Em",
+"cue": 3,
+"de": 369.6,
+"ate": 384.0
+},
+{
+"t": "L'Anse",
+"cue": 3,
+"de": 384.0,
+"ate": 398.4
+},
+{
+"t": "aux",
+"cue": 3,
+"de": 398.4,
+"ate": 412.8
+},
+{
+"t": "Meadows,",
+"cue": 3,
+"de": 412.8,
+"ate": 415.8
+},
+{
+"t": "na",
+"cue": 3,
+"de": 427.2,
+"ate": 431.1
+},
+{
+"t": "ponta",
+"cue": 3,
+"de": 431.1,
+"ate": 444.0
+},
+{
+"t": "norte",
+"cue": 3,
+"de": 444.0,
+"ate": 453.6
+},
+{
+"t": "da",
+"cue": 3,
+"de": 453.6,
+"ate": 458.4
+},
+{
+"t": "Terra",
+"cue": 3,
+"de": 458.4,
+"ate": 468.0
+},
+{
+"t": "Nova,",
+"cue": 3,
+"de": 468.0,
+"ate": 477.9
+},
+{
+"t": "tem",
+"cue": 4,
+"de": 484.2,
+"ate": 489.6
+},
+{
+"t": "madeira",
+"cue": 4,
+"de": 489.6,
+"ate": 501.6
+},
+{
+"t": "cortada",
+"cue": 4,
+"de": 501.6,
+"ate": 513.6
+},
+{
+"t": "por",
+"cue": 4,
+"de": 513.6,
+"ate": 523.2
+},
+{
+"t": "machado",
+"cue": 4,
+"de": 523.2,
+"ate": 532.8
+},
+{
+"t": "de",
+"cue": 4,
+"de": 532.8,
+"ate": 535.8
+},
+{
+"t": "metal.",
+"cue": 4,
+"de": 535.2,
+"ate": 552.0
+},
+{
+"t": "Os",
+"cue": 5,
+"de": 552.0,
+"ate": 555.9
+},
+{
+"t": "nórdicos",
+"cue": 5,
+"de": 555.9,
+"ate": 576.0
+},
+{
+"t": "tinham",
+"cue": 5,
+"de": 576.0,
+"ate": 585.6
+},
+{
+"t": "machado",
+"cue": 5,
+"de": 585.6,
+"ate": 600.0
+},
+{
+"t": "de",
+"cue": 5,
+"de": 600.0,
+"ate": 603.0
+},
+{
+"t": "metal.",
+"cue": 5,
+"de": 605.1,
+"ate": 609.0
+},
+{
+"t": "Os",
+"cue": 5,
+"de": 619.5,
+"ate": 622.5
+},
+{
+"t": "habitantes",
+"cue": 5,
+"de": 619.5,
+"ate": 627.0
+},
+{
+"t": "do",
+"cue": 5,
+"de": 636.0,
+"ate": 640.8
+},
+{
+"t": "lugar,",
+"cue": 5,
+"de": 640.8,
+"ate": 652.8
+},
+{
+"t": "não.",
+"cue": 5,
+"de": 652.8,
+"ate": 658.5
+},
+{
+"t": "Então",
+"cue": 6,
+"de": 672.0,
+"ate": 676.2
+},
+{
+"t": "os",
+"cue": 6,
+"de": 676.2,
+"ate": 684.0
+},
+{
+"t": "pesquisadores",
+"cue": 6,
+"de": 684.0,
+"ate": 703.2
+},
+{
+"t": "acharam",
+"cue": 6,
+"de": 703.2,
+"ate": 715.2
+},
+{
+"t": "o",
+"cue": 6,
+"de": 715.2,
+"ate": 720.0
+},
+{
+"t": "anel",
+"cue": 6,
+"de": 720.0,
+"ate": 729.6
+},
+{
+"t": "de",
+"cue": 6,
+"de": 729.6,
+"ate": 732.6
+},
+{
+"t": "993",
+"cue": 6,
+"de": 732.0,
+"ate": 752.1
+},
+{
+"t": "nessa",
+"cue": 6,
+"de": 763.2,
+"ate": 772.8
+},
+{
+"t": "madeira",
+"cue": 6,
+"de": 772.8,
+"ate": 784.8
+},
+{
+"t": "e",
+"cue": 7,
+"de": 784.8,
+"ate": 787.8
+},
+{
+"t": "contaram",
+"cue": 7,
+"de": 790.8,
+"ate": 798.3
+},
+{
+"t": "para",
+"cue": 7,
+"de": 813.6,
+"ate": 820.8
+},
+{
+"t": "fora,",
+"cue": 7,
+"de": 820.8,
+"ate": 828.3
+},
+{
+"t": "um",
+"cue": 7,
+"de": 837.6,
+"ate": 840.6
+},
+{
+"t": "anel",
+"cue": 7,
+"de": 843.6,
+"ate": 853.2
+},
+{
+"t": "por",
+"cue": 7,
+"de": 856.2,
+"ate": 861.6
+},
+{
+"t": "ano,",
+"cue": 7,
+"de": 861.6,
+"ate": 865.8
+},
+{
+"t": "até",
+"cue": 7,
+"de": 871.2,
+"ate": 880.8
+},
+{
+"t": "a",
+"cue": 7,
+"de": 880.8,
+"ate": 883.8
+},
+{
+"t": "casca.",
+"cue": 7,
+"de": 885.0,
+"ate": 892.8
+},
+{
+"t": "Vinte",
+"cue": 8,
+"de": 892.8,
+"ate": 895.8
+},
+{
+"t": "e",
+"cue": 8,
+"de": 902.4,
+"ate": 912.0
+},
+{
+"t": "oito",
+"cue": 8,
+"de": 912.0,
+"ate": 921.6
+},
+{
+"t": "anéis.",
+"cue": 8,
+"de": 921.6,
+"ate": 932.0
+},
+{
+"t": "Mil",
+"cue": 8,
+"de": 932.0,
+"ate": 942.4
+},
+{
+"t": "e",
+"cue": 8,
+"de": 942.4,
+"ate": 952.8
+},
+{
+"t": "vinte",
+"cue": 8,
+"de": 952.8,
+"ate": 963.2
+},
+{
+"t": "e",
+"cue": 8,
+"de": 963.2,
+"ate": 966.2
+},
+{
+"t": "um.",
+"cue": 8,
+"de": 973.6,
+"ate": 986.7
+},
+{
+"t": "Não",
+"cue": 9,
+"de": 986.7,
+"ate": 991.2
+},
+{
+"t": "\"por",
+"cue": 9,
+"de": 991.2,
+"ate": 998.4
+},
+{
+"t": "volta",
+"cue": 9,
+"de": 998.4,
+"ate": 1005.6
+},
+{
+"t": "do",
+"cue": 9,
+"de": 1008.3,
+"ate": 1017.6
+},
+{
+"t": "ano",
+"cue": 9,
+"de": 1017.6,
+"ate": 1029.9
+},
+{
+"t": "mil\".",
+"cue": 9,
+"de": 1047.6,
+"ate": 1080.0
+},
+{
+"t": "O",
+"cue": 9,
+"de": 1080.0,
+"ate": 1083.0
+},
+{
+"t": "ano",
+"cue": 9,
+"de": 1080.0,
+"ate": 1089.6
+},
+{
+"t": "exato",
+"cue": 9,
+"de": 1089.6,
+"ate": 1101.6
+},
+{
+"t": "em",
+"cue": 9,
+"de": 1101.6,
+"ate": 1106.4
+},
+{
+"t": "que",
+"cue": 9,
+"de": 1106.4,
+"ate": 1111.2
+},
+{
+"t": "a",
+"cue": 9,
+"de": 1111.2,
+"ate": 1116.0
+},
+{
+"t": "árvore",
+"cue": 9,
+"de": 1116.0,
+"ate": 1130.4
+},
+{
+"t": "caiu.",
+"cue": 9,
+"de": 1130.4,
+"ate": 1139.1
+},
+{
+"t": "Que",
+"cue": 10,
+"de": 1147.2,
+"ate": 1156.8
+},
+{
+"t": "outra",
+"cue": 10,
+"de": 1156.8,
+"ate": 1164.0
+},
+{
+"t": "data",
+"cue": 10,
+"de": 1164.0,
+"ate": 1173.6
+},
+{
+"t": "da",
+"cue": 10,
+"de": 1173.6,
+"ate": 1178.4
+},
+{
+"t": "história",
+"cue": 10,
+"de": 1178.4,
+"ate": 1181.4
+},
+{
+"t": "antiga",
+"cue": 10,
+"de": 1190.4,
+"ate": 1204.8
+},
+{
+"t": "você",
+"cue": 10,
+"de": 1204.8,
+"ate": 1214.4
+},
+{
+"t": "sabe",
+"cue": 10,
+"de": 1214.4,
+"ate": 1224.0
+},
+{
+"t": "com",
+"cue": 10,
+"de": 1224.0,
+"ate": 1228.8
+},
+{
+"t": "essa",
+"cue": 10,
+"de": 1228.8,
+"ate": 1232.4
+},
+{
+"t": "precisão?",
+"cue": 10,
+"de": 1235.1,
+"ate": 1250.1
+}
+],
+"cues": [
+{
+"de": 0.0,
+"ate": 112.2,
+"linhas": [
+"Em 993 o Sol soltou uma",
+"tempestade de partículas tão grande"
+]
+},
+{
+"de": 114.0,
+"ate": 268.2,
+"linhas": [
+"que ela ficou registrada em todas as",
+"árvores vivas do planeta ao mesmo tempo."
+]
+},
+{
+"de": 270.0,
+"ate": 358.2,
+"linhas": [
+"Um pico de",
+"carbono-14, no anel daquele ano."
+]
+},
+{
+"de": 360.0,
+"ate": 436.2,
+"linhas": [
+"Em L'Anse aux Meadows, na",
+"ponta norte da Terra Nova,"
+]
+},
+{
+"de": 438.0,
+"ate": 538.2,
+"linhas": [
+"tem madeira cortada por machado de metal."
+]
+},
+{
+"de": 540.0,
+"ate": 658.2,
+"linhas": [
+"Os nórdicos tinham machado de",
+"metal. Os habitantes do lugar, não."
+]
+},
+{
+"de": 660.0,
+"ate": 742.2,
+"linhas": [
+"Então os pesquisadores",
+"acharam o anel de 993 nessa madeira"
+]
+},
+{
+"de": 744.0,
+"ate": 892.2,
+"linhas": [
+"e contaram para fora, um",
+"anel por ano, até a casca."
+]
+},
+{
+"de": 894.0,
+"ate": 988.2,
+"linhas": [
+"Vinte e oito anéis. Mil e vinte e um."
+]
+},
+{
+"de": 990.0,
+"ate": 1138.2,
+"linhas": [
+"Não \"por volta do ano mil\". O",
+"ano exato em que a árvore caiu."
+]
+},
+{
+"de": 1140.0,
+"ate": 1259.7,
+"linhas": [
+"Que outra data da história",
+"antiga você sabe com essa precisão?"
+]
+}
+]
+},
+"3-sagas": {
+"frames": 1257,
+"palavras": [
+{
+"t": "Tudo",
+"cue": 0,
+"de": 14.4,
+"ate": 24.6
+},
+{
+"t": "que",
+"cue": 0,
+"de": 24.6,
+"ate": 31.2
+},
+{
+"t": "a",
+"cue": 0,
+"de": 31.2,
+"ate": 34.2
+},
+{
+"t": "gente",
+"cue": 0,
+"de": 33.6,
+"ate": 40.8
+},
+{
+"t": "sabe",
+"cue": 0,
+"de": 40.8,
+"ate": 50.4
+},
+{
+"t": "sobre",
+"cue": 0,
+"de": 50.4,
+"ate": 55.2
+},
+{
+"t": "a",
+"cue": 0,
+"de": 55.2,
+"ate": 58.2
+},
+{
+"t": "viagem",
+"cue": 0,
+"de": 57.6,
+"ate": 69.6
+},
+{
+"t": "dos",
+"cue": 0,
+"de": 69.6,
+"ate": 74.4
+},
+{
+"t": "nórdicos",
+"cue": 0,
+"de": 74.4,
+"ate": 93.6
+},
+{
+"t": "para",
+"cue": 0,
+"de": 93.6,
+"ate": 98.4
+},
+{
+"t": "a",
+"cue": 0,
+"de": 98.4,
+"ate": 101.4
+},
+{
+"t": "América",
+"cue": 0,
+"de": 100.8,
+"ate": 108.9
+},
+{
+"t": "vem",
+"cue": 1,
+"de": 117.6,
+"ate": 124.8
+},
+{
+"t": "de",
+"cue": 1,
+"de": 124.8,
+"ate": 129.6
+},
+{
+"t": "duas",
+"cue": 1,
+"de": 129.6,
+"ate": 136.8
+},
+{
+"t": "sagas",
+"cue": 1,
+"de": 136.8,
+"ate": 151.2
+},
+{
+"t": "islandesas.",
+"cue": 1,
+"de": 151.2,
+"ate": 172.5
+},
+{
+"t": "E",
+"cue": 2,
+"de": 187.2,
+"ate": 196.8
+},
+{
+"t": "elas",
+"cue": 2,
+"de": 196.8,
+"ate": 206.4
+},
+{
+"t": "discordam",
+"cue": 2,
+"de": 206.4,
+"ate": 225.6
+},
+{
+"t": "em",
+"cue": 2,
+"de": 225.6,
+"ate": 228.6
+},
+{
+"t": "quase",
+"cue": 2,
+"de": 228.0,
+"ate": 233.4
+},
+{
+"t": "tudo.",
+"cue": 2,
+"de": 236.4,
+"ate": 242.1
+},
+{
+"t": "Uma",
+"cue": 3,
+"de": 249.3,
+"ate": 256.8
+},
+{
+"t": "diz",
+"cue": 3,
+"de": 256.8,
+"ate": 271.5
+},
+{
+"t": "sessenta",
+"cue": 3,
+"de": 275.4,
+"ate": 290.4
+},
+{
+"t": "homens.",
+"cue": 3,
+"de": 290.4,
+"ate": 304.2
+},
+{
+"t": "A",
+"cue": 3,
+"de": 306.9,
+"ate": 309.9
+},
+{
+"t": "outra",
+"cue": 3,
+"de": 306.9,
+"ate": 319.2
+},
+{
+"t": "diz",
+"cue": 3,
+"de": 319.2,
+"ate": 327.6
+},
+{
+"t": "cento",
+"cue": 3,
+"de": 329.4,
+"ate": 339.6
+},
+{
+"t": "e",
+"cue": 3,
+"de": 339.6,
+"ate": 349.8
+},
+{
+"t": "quarenta.",
+"cue": 3,
+"de": 349.8,
+"ate": 353.1
+},
+{
+"t": "Uma",
+"cue": 4,
+"de": 363.0,
+"ate": 367.2
+},
+{
+"t": "dá",
+"cue": 4,
+"de": 367.2,
+"ate": 374.4
+},
+{
+"t": "ao",
+"cue": 4,
+"de": 374.4,
+"ate": 377.4
+},
+{
+"t": "Thorfinn",
+"cue": 4,
+"de": 387.6,
+"ate": 393.6
+},
+{
+"t": "o",
+"cue": 4,
+"de": 400.8,
+"ate": 403.8
+},
+{
+"t": "crédito",
+"cue": 4,
+"de": 405.6,
+"ate": 417.9
+},
+{
+"t": "por",
+"cue": 4,
+"de": 420.6,
+"ate": 423.6
+},
+{
+"t": "coisas",
+"cue": 4,
+"de": 420.6,
+"ate": 429.6
+},
+{
+"t": "que",
+"cue": 4,
+"de": 429.6,
+"ate": 434.4
+},
+{
+"t": "a",
+"cue": 4,
+"de": 434.4,
+"ate": 437.4
+},
+{
+"t": "outra",
+"cue": 4,
+"de": 436.8,
+"ate": 444.0
+},
+{
+"t": "atribui",
+"cue": 4,
+"de": 446.4,
+"ate": 458.4
+},
+{
+"t": "a",
+"cue": 4,
+"de": 458.4,
+"ate": 463.2
+},
+{
+"t": "outras",
+"cue": 4,
+"de": 463.2,
+"ate": 475.2
+},
+{
+"t": "pessoas.",
+"cue": 4,
+"de": 475.2,
+"ate": 484.8
+},
+{
+"t": "As",
+"cue": 5,
+"de": 494.4,
+"ate": 501.6
+},
+{
+"t": "duas",
+"cue": 5,
+"de": 501.6,
+"ate": 513.6
+},
+{
+"t": "foram",
+"cue": 5,
+"de": 513.6,
+"ate": 523.2
+},
+{
+"t": "escritas",
+"cue": 5,
+"de": 523.2,
+"ate": 544.8
+},
+{
+"t": "mais",
+"cue": 5,
+"de": 544.8,
+"ate": 549.6
+},
+{
+"t": "de",
+"cue": 5,
+"de": 549.6,
+"ate": 560.4
+},
+{
+"t": "duzentos",
+"cue": 5,
+"de": 560.4,
+"ate": 571.2
+},
+{
+"t": "anos",
+"cue": 5,
+"de": 571.2,
+"ate": 578.4
+},
+{
+"t": "depois",
+"cue": 5,
+"de": 578.4,
+"ate": 581.4
+},
+{
+"t": "dos",
+"cue": 5,
+"de": 588.0,
+"ate": 595.2
+},
+{
+"t": "fatos.",
+"cue": 5,
+"de": 595.2,
+"ate": 599.4
+},
+{
+"t": "E",
+"cue": 6,
+"de": 614.4,
+"ate": 621.3
+},
+{
+"t": "a",
+"cue": 6,
+"de": 621.3,
+"ate": 624.3
+},
+{
+"t": "cópia",
+"cue": 6,
+"de": 621.3,
+"ate": 633.6
+},
+{
+"t": "mais",
+"cue": 6,
+"de": 633.6,
+"ate": 638.4
+},
+{
+"t": "antiga",
+"cue": 6,
+"de": 638.4,
+"ate": 648.0
+},
+{
+"t": "que",
+"cue": 6,
+"de": 648.0,
+"ate": 655.2
+},
+{
+"t": "sobrou",
+"cue": 6,
+"de": 655.2,
+"ate": 667.2
+},
+{
+"t": "de",
+"cue": 6,
+"de": 667.2,
+"ate": 670.2
+},
+{
+"t": "uma",
+"cue": 6,
+"de": 669.6,
+"ate": 674.4
+},
+{
+"t": "delas",
+"cue": 6,
+"de": 674.4,
+"ate": 684.0
+},
+{
+"t": "foi",
+"cue": 6,
+"de": 684.0,
+"ate": 691.2
+},
+{
+"t": "feita",
+"cue": 6,
+"de": 691.2,
+"ate": 698.4
+},
+{
+"t": "por",
+"cue": 6,
+"de": 698.4,
+"ate": 701.4
+},
+{
+"t": "um",
+"cue": 6,
+"de": 700.8,
+"ate": 705.6
+},
+{
+"t": "homem",
+"cue": 6,
+"de": 705.6,
+"ate": 708.6
+},
+{
+"t": "chamado",
+"cue": 7,
+"de": 715.2,
+"ate": 742.8
+},
+{
+"t": "Haukr",
+"cue": 7,
+"de": 742.8,
+"ate": 748.2
+},
+{
+"t": "Erlendsson,",
+"cue": 7,
+"de": 766.4,
+"ate": 783.0
+},
+{
+"t": "que",
+"cue": 7,
+"de": 792.0,
+"ate": 795.6
+},
+{
+"t": "dizia",
+"cue": 7,
+"de": 795.6,
+"ate": 808.8
+},
+{
+"t": "descender",
+"cue": 7,
+"de": 808.8,
+"ate": 823.2
+},
+{
+"t": "do",
+"cue": 7,
+"de": 823.2,
+"ate": 827.1
+},
+{
+"t": "Thorfinn.",
+"cue": 7,
+"de": 840.0,
+"ate": 843.0
+},
+{
+"t": "Quando",
+"cue": 8,
+"de": 856.8,
+"ate": 864.0
+},
+{
+"t": "a",
+"cue": 8,
+"de": 864.0,
+"ate": 867.0
+},
+{
+"t": "gente",
+"cue": 8,
+"de": 866.4,
+"ate": 871.2
+},
+{
+"t": "diz",
+"cue": 8,
+"de": 871.2,
+"ate": 876.0
+},
+{
+"t": "que",
+"cue": 8,
+"de": 876.0,
+"ate": 880.8
+},
+{
+"t": "a",
+"cue": 8,
+"de": 880.8,
+"ate": 885.6
+},
+{
+"t": "história",
+"cue": 8,
+"de": 885.6,
+"ate": 892.8
+},
+{
+"t": "desmente",
+"cue": 8,
+"de": 892.8,
+"ate": 919.2
+},
+{
+"t": "Vinland,",
+"cue": 8,
+"de": 919.2,
+"ate": 928.2
+},
+{
+"t": "está",
+"cue": 9,
+"de": 946.5,
+"ate": 955.2
+},
+{
+"t": "citando",
+"cue": 9,
+"de": 955.2,
+"ate": 959.7
+},
+{
+"t": "um",
+"cue": 9,
+"de": 969.6,
+"ate": 972.6
+},
+{
+"t": "texto",
+"cue": 9,
+"de": 974.1,
+"ate": 984.0
+},
+{
+"t": "que",
+"cue": 9,
+"de": 984.0,
+"ate": 987.0
+},
+{
+"t": "já",
+"cue": 9,
+"de": 986.4,
+"ate": 991.2
+},
+{
+"t": "foi",
+"cue": 9,
+"de": 991.2,
+"ate": 998.4
+},
+{
+"t": "mexido",
+"cue": 9,
+"de": 998.4,
+"ate": 1008.3
+},
+{
+"t": "por",
+"cue": 9,
+"de": 1011.6,
+"ate": 1015.2
+},
+{
+"t": "alguém",
+"cue": 9,
+"de": 1015.2,
+"ate": 1024.8
+},
+{
+"t": "que",
+"cue": 10,
+"de": 1024.8,
+"ate": 1027.8
+},
+{
+"t": "queria",
+"cue": 10,
+"de": 1027.2,
+"ate": 1036.8
+},
+{
+"t": "contar",
+"cue": 10,
+"de": 1036.8,
+"ate": 1046.4
+},
+{
+"t": "uma",
+"cue": 10,
+"de": 1046.4,
+"ate": 1051.2
+},
+{
+"t": "história",
+"cue": 10,
+"de": 1051.2,
+"ate": 1060.8
+},
+{
+"t": "melhor.",
+"cue": 10,
+"de": 1060.8,
+"ate": 1067.1
+},
+{
+"t": "Em",
+"cue": 11,
+"de": 1087.2,
+"ate": 1092.0
+},
+{
+"t": "quem",
+"cue": 11,
+"de": 1092.0,
+"ate": 1101.6
+},
+{
+"t": "você",
+"cue": 11,
+"de": 1101.6,
+"ate": 1108.8
+},
+{
+"t": "acredita",
+"cue": 11,
+"de": 1108.8,
+"ate": 1120.5
+},
+{
+"t": "quando",
+"cue": 11,
+"de": 1151.4,
+"ate": 1161.6
+},
+{
+"t": "as",
+"cue": 11,
+"de": 1161.6,
+"ate": 1168.8
+},
+{
+"t": "duas",
+"cue": 11,
+"de": 1168.8,
+"ate": 1178.4
+},
+{
+"t": "fontes",
+"cue": 11,
+"de": 1178.4,
+"ate": 1195.2
+},
+{
+"t": "são",
+"cue": 11,
+"de": 1195.2,
+"ate": 1204.2
+},
+{
+"t": "a",
+"cue": 11,
+"de": 1204.8,
+"ate": 1210.2
+},
+{
+"t": "única",
+"cue": 11,
+"de": 1210.2,
+"ate": 1221.6
+},
+{
+"t": "coisa",
+"cue": 11,
+"de": 1221.6,
+"ate": 1228.8
+},
+{
+"t": "que",
+"cue": 11,
+"de": 1228.8,
+"ate": 1233.6
+},
+{
+"t": "existe?",
+"cue": 11,
+"de": 1233.6,
+"ate": 1247.1
+}
+],
+"cues": [
+{
+"de": 0.0,
+"ate": 100.2,
+"linhas": [
+"Tudo que a gente sabe sobre a",
+"viagem dos nórdicos para a América"
+]
+},
+{
+"de": 102.0,
+"ate": 178.2,
+"linhas": [
+"vem de duas sagas islandesas."
+]
+},
+{
+"de": 180.0,
+"ate": 208.2,
+"linhas": [
+"E elas discordam em quase tudo."
+]
+},
+{
+"de": 210.0,
+"ate": 328.2,
+"linhas": [
+"Uma diz sessenta homens. A",
+"outra diz cento e quarenta."
+]
+},
+{
+"de": 330.0,
+"ate": 478.2,
+"linhas": [
+"Uma dá ao Thorfinn o crédito por",
+"coisas que a outra atribui a outras pessoas."
+]
+},
+{
+"de": 480.0,
+"ate": 598.2,
+"linhas": [
+"As duas foram escritas mais de",
+"duzentos anos depois dos fatos."
+]
+},
+{
+"de": 600.0,
+"ate": 703.2,
+"linhas": [
+"E a cópia mais antiga que sobrou",
+"de uma delas foi feita por um homem"
+]
+},
+{
+"de": 705.0,
+"ate": 838.2,
+"linhas": [
+"chamado Haukr Erlendsson,",
+"que dizia descender do Thorfinn."
+]
+},
+{
+"de": 840.0,
+"ate": 928.2,
+"linhas": [
+"Quando a gente diz que a",
+"história desmente Vinland,"
+]
+},
+{
+"de": 930.0,
+"ate": 1003.2,
+"linhas": [
+"está citando um texto",
+"que já foi mexido por alguém"
+]
+},
+{
+"de": 1005.0,
+"ate": 1048.2,
+"linhas": [
+"que queria contar uma história melhor."
+]
+},
+{
+"de": 1050.0,
+"ate": 1255.2,
+"linhas": [
+"Em quem você acredita quando as",
+"duas fontes são a única coisa que existe?"
+]
+}
+]
+},
+"4-oficina": {
+"frames": 1213,
+"palavras": [
+{
+"t": "Em",
+"cue": 0,
+"de": 9.6,
+"ate": 25.8
+},
+{
+"t": "L'Anse",
+"cue": 0,
+"de": 25.8,
+"ate": 42.0
+},
+{
+"t": "aux",
+"cue": 0,
+"de": 42.0,
+"ate": 58.2
+},
+{
+"t": "Meadows",
+"cue": 0,
+"de": 58.2,
+"ate": 62.7
+},
+{
+"t": "tem",
+"cue": 0,
+"de": 77.1,
+"ate": 81.6
+},
+{
+"t": "oito",
+"cue": 0,
+"de": 86.7,
+"ate": 96.0
+},
+{
+"t": "construções",
+"cue": 0,
+"de": 96.0,
+"ate": 110.4
+},
+{
+"t": "de",
+"cue": 0,
+"de": 110.4,
+"ate": 113.4
+},
+{
+"t": "turfa.",
+"cue": 0,
+"de": 116.4,
+"ate": 126.3
+},
+{
+"t": "Não",
+"cue": 1,
+"de": 136.8,
+"ate": 139.8
+},
+{
+"t": "é",
+"cue": 1,
+"de": 136.8,
+"ate": 146.4
+},
+{
+"t": "uma",
+"cue": 1,
+"de": 146.4,
+"ate": 151.2
+},
+{
+"t": "cidade.",
+"cue": 1,
+"de": 151.2,
+"ate": 168.0
+},
+{
+"t": "É",
+"cue": 1,
+"de": 168.0,
+"ate": 175.2
+},
+{
+"t": "menos",
+"cue": 1,
+"de": 175.2,
+"ate": 182.4
+},
+{
+"t": "do",
+"cue": 1,
+"de": 182.4,
+"ate": 187.2
+},
+{
+"t": "que",
+"cue": 1,
+"de": 187.2,
+"ate": 192.0
+},
+{
+"t": "uma",
+"cue": 1,
+"de": 192.0,
+"ate": 199.2
+},
+{
+"t": "aldeia.",
+"cue": 1,
+"de": 199.2,
+"ate": 210.6
+},
+{
+"t": "E",
+"cue": 2,
+"de": 226.2,
+"ate": 230.4
+},
+{
+"t": "o",
+"cue": 2,
+"de": 230.4,
+"ate": 233.4
+},
+{
+"t": "que",
+"cue": 2,
+"de": 240.0,
+"ate": 246.9
+},
+{
+"t": "os",
+"cue": 2,
+"de": 246.9,
+"ate": 254.4
+},
+{
+"t": "arqueólogos",
+"cue": 2,
+"de": 254.4,
+"ate": 278.4
+},
+{
+"t": "acharam",
+"cue": 2,
+"de": 278.4,
+"ate": 295.2
+},
+{
+"t": "dentro",
+"cue": 2,
+"de": 295.2,
+"ate": 304.8
+},
+{
+"t": "delas",
+"cue": 2,
+"de": 304.8,
+"ate": 317.4
+},
+{
+"t": "foi",
+"cue": 2,
+"de": 324.0,
+"ate": 333.6
+},
+{
+"t": "quase",
+"cue": 2,
+"de": 333.6,
+"ate": 343.2
+},
+{
+"t": "nada:",
+"cue": 2,
+"de": 343.2,
+"ate": 349.5
+},
+{
+"t": "ferramenta",
+"cue": 3,
+"de": 360.0,
+"ate": 376.8
+},
+{
+"t": "de",
+"cue": 3,
+"de": 376.8,
+"ate": 391.2
+},
+{
+"t": "carpintaria,",
+"cue": 3,
+"de": 391.2,
+"ate": 405.6
+},
+{
+"t": "rebite",
+"cue": 3,
+"de": 405.6,
+"ate": 424.8
+},
+{
+"t": "de",
+"cue": 3,
+"de": 424.8,
+"ate": 427.8
+},
+{
+"t": "barco,",
+"cue": 3,
+"de": 427.2,
+"ate": 433.2
+},
+{
+"t": "restos",
+"cue": 3,
+"de": 441.6,
+"ate": 453.6
+},
+{
+"t": "de",
+"cue": 3,
+"de": 453.6,
+"ate": 456.6
+},
+{
+"t": "ferro",
+"cue": 3,
+"de": 456.0,
+"ate": 470.4
+},
+{
+"t": "trabalhado.",
+"cue": 3,
+"de": 470.4,
+"ate": 484.2
+},
+{
+"t": "Material",
+"cue": 4,
+"de": 496.8,
+"ate": 525.6
+},
+{
+"t": "de",
+"cue": 4,
+"de": 525.6,
+"ate": 530.4
+},
+{
+"t": "conserto.",
+"cue": 4,
+"de": 530.4,
+"ate": 539.1
+},
+{
+"t": "O",
+"cue": 5,
+"de": 552.0,
+"ate": 556.2
+},
+{
+"t": "lugar",
+"cue": 5,
+"de": 556.2,
+"ate": 565.2
+},
+{
+"t": "pode",
+"cue": 5,
+"de": 567.6,
+"ate": 573.6
+},
+{
+"t": "nunca",
+"cue": 5,
+"de": 573.6,
+"ate": 580.8
+},
+{
+"t": "ter",
+"cue": 5,
+"de": 580.8,
+"ate": 585.6
+},
+{
+"t": "sido",
+"cue": 5,
+"de": 585.6,
+"ate": 592.8
+},
+{
+"t": "a",
+"cue": 5,
+"de": 592.8,
+"ate": 595.8
+},
+{
+"t": "colônia",
+"cue": 5,
+"de": 596.1,
+"ate": 607.2
+},
+{
+"t": "que",
+"cue": 5,
+"de": 607.2,
+"ate": 612.0
+},
+{
+"t": "as",
+"cue": 5,
+"de": 612.0,
+"ate": 615.0
+},
+{
+"t": "sagas",
+"cue": 5,
+"de": 614.4,
+"ate": 628.8
+},
+{
+"t": "descrevem.",
+"cue": 5,
+"de": 628.8,
+"ate": 640.2
+},
+{
+"t": "Pode",
+"cue": 6,
+"de": 652.8,
+"ate": 662.4
+},
+{
+"t": "ter",
+"cue": 6,
+"de": 662.4,
+"ate": 667.2
+},
+{
+"t": "sido",
+"cue": 6,
+"de": 667.2,
+"ate": 674.4
+},
+{
+"t": "uma",
+"cue": 6,
+"de": 674.4,
+"ate": 679.2
+},
+{
+"t": "estação",
+"cue": 6,
+"de": 679.2,
+"ate": 691.2
+},
+{
+"t": "de",
+"cue": 6,
+"de": 691.2,
+"ate": 696.0
+},
+{
+"t": "reparo,",
+"cue": 6,
+"de": 696.0,
+"ate": 699.0
+},
+{
+"t": "um",
+"cue": 6,
+"de": 710.4,
+"ate": 714.3
+},
+{
+"t": "ponto",
+"cue": 6,
+"de": 717.9,
+"ate": 724.8
+},
+{
+"t": "de",
+"cue": 6,
+"de": 724.8,
+"ate": 727.8
+},
+{
+"t": "apoio",
+"cue": 6,
+"de": 727.2,
+"ate": 730.2
+},
+{
+"t": "para",
+"cue": 6,
+"de": 739.8,
+"ate": 744.0
+},
+{
+"t": "seguir",
+"cue": 6,
+"de": 744.0,
+"ate": 758.4
+},
+{
+"t": "viagem.",
+"cue": 6,
+"de": 758.4,
+"ate": 770.1
+},
+{
+"t": "E",
+"cue": 7,
+"de": 780.0,
+"ate": 786.3
+},
+{
+"t": "eles",
+"cue": 7,
+"de": 786.3,
+"ate": 792.0
+},
+{
+"t": "foram",
+"cue": 7,
+"de": 792.0,
+"ate": 804.0
+},
+{
+"t": "embora",
+"cue": 7,
+"de": 804.0,
+"ate": 816.0
+},
+{
+"t": "em",
+"cue": 7,
+"de": 816.0,
+"ate": 820.8
+},
+{
+"t": "ordem.",
+"cue": 7,
+"de": 820.8,
+"ate": 831.6
+},
+{
+"t": "Esvaziaram",
+"cue": 8,
+"de": 842.1,
+"ate": 860.4
+},
+{
+"t": "tudo",
+"cue": 8,
+"de": 864.3,
+"ate": 871.2
+},
+{
+"t": "e",
+"cue": 8,
+"de": 871.2,
+"ate": 874.2
+},
+{
+"t": "não",
+"cue": 8,
+"de": 873.6,
+"ate": 878.4
+},
+{
+"t": "deixaram",
+"cue": 8,
+"de": 878.4,
+"ate": 890.4
+},
+{
+"t": "ninguém",
+"cue": 8,
+"de": 890.4,
+"ate": 900.0
+},
+{
+"t": "para",
+"cue": 8,
+"de": 900.0,
+"ate": 903.3
+},
+{
+"t": "trás.",
+"cue": 8,
+"de": 906.0,
+"ate": 916.5
+},
+{
+"t": "A",
+"cue": 9,
+"de": 920.7,
+"ate": 926.4
+},
+{
+"t": "terra",
+"cue": 9,
+"de": 926.4,
+"ate": 938.4
+},
+{
+"t": "prometida",
+"cue": 9,
+"de": 938.4,
+"ate": 952.8
+},
+{
+"t": "era",
+"cue": 9,
+"de": 952.8,
+"ate": 957.6
+},
+{
+"t": "uma",
+"cue": 9,
+"de": 957.6,
+"ate": 962.4
+},
+{
+"t": "oficina.",
+"cue": 9,
+"de": 962.4,
+"ate": 975.3
+},
+{
+"t": "O",
+"cue": 10,
+"de": 979.2,
+"ate": 986.4
+},
+{
+"t": "que",
+"cue": 10,
+"de": 986.4,
+"ate": 989.4
+},
+{
+"t": "você",
+"cue": 10,
+"de": 986.4,
+"ate": 993.6
+},
+{
+"t": "faria",
+"cue": 10,
+"de": 993.6,
+"ate": 1003.2
+},
+{
+"t": "com",
+"cue": 10,
+"de": 1003.2,
+"ate": 1006.8
+},
+{
+"t": "um",
+"cue": 10,
+"de": 1006.8,
+"ate": 1010.4
+},
+{
+"t": "lugar",
+"cue": 10,
+"de": 1010.4,
+"ate": 1017.6
+},
+{
+"t": "que",
+"cue": 10,
+"de": 1017.6,
+"ate": 1020.6
+},
+{
+"t": "não",
+"cue": 10,
+"de": 1020.0,
+"ate": 1023.0
+},
+{
+"t": "deu",
+"cue": 10,
+"de": 1022.4,
+"ate": 1029.6
+},
+{
+"t": "certo:",
+"cue": 10,
+"de": 1029.6,
+"ate": 1035.0
+},
+{
+"t": "ficava,",
+"cue": 11,
+"de": 1042.8,
+"ate": 1053.6
+},
+{
+"t": "ou",
+"cue": 11,
+"de": 1053.6,
+"ate": 1056.6
+},
+{
+"t": "arrumava",
+"cue": 11,
+"de": 1056.0,
+"ate": 1070.4
+},
+{
+"t": "o",
+"cue": 11,
+"de": 1070.4,
+"ate": 1073.4
+},
+{
+"t": "barco",
+"cue": 11,
+"de": 1072.8,
+"ate": 1076.7
+},
+{
+"t": "e",
+"cue": 11,
+"de": 1080.3,
+"ate": 1086.0
+},
+{
+"t": "seguia?",
+"cue": 11,
+"de": 1086.0,
+"ate": 1095.9
+}
+],
+"cues": [
+{
+"de": 0.0,
+"ate": 118.2,
+"linhas": [
+"Em L'Anse aux Meadows tem",
+"oito construções de turfa."
+]
+},
+{
+"de": 120.0,
+"ate": 208.2,
+"linhas": [
+"Não é uma cidade. É",
+"menos do que uma aldeia."
+]
+},
+{
+"de": 210.0,
+"ate": 328.2,
+"linhas": [
+"E o que os arqueólogos",
+"acharam dentro delas foi quase nada:"
+]
+},
+{
+"de": 330.0,
+"ate": 478.2,
+"linhas": [
+"ferramenta de carpintaria, rebite",
+"de barco, restos de ferro trabalhado."
+]
+},
+{
+"de": 480.0,
+"ate": 538.2,
+"linhas": [
+"Material de conserto."
+]
+},
+{
+"de": 540.0,
+"ate": 628.2,
+"linhas": [
+"O lugar pode nunca ter sido a",
+"colônia que as sagas descrevem."
+]
+},
+{
+"de": 630.0,
+"ate": 748.2,
+"linhas": [
+"Pode ter sido uma estação de reparo,",
+"um ponto de apoio para seguir viagem."
+]
+},
+{
+"de": 750.0,
+"ate": 808.2,
+"linhas": [
+"E eles foram embora em ordem."
+]
+},
+{
+"de": 810.0,
+"ate": 898.2,
+"linhas": [
+"Esvaziaram tudo e não",
+"deixaram ninguém para trás."
+]
+},
+{
+"de": 900.0,
+"ate": 958.2,
+"linhas": [
+"A terra prometida era uma oficina."
+]
+},
+{
+"de": 960.0,
+"ate": 1018.2,
+"linhas": [
+"O que você faria com um",
+"lugar que não deu certo:"
+]
+},
+{
+"de": 1020.0,
+"ate": 1211.1,
+"linhas": [
+"ficava, ou arrumava o barco e seguia?"
+]
+}
+]
+}
+}
