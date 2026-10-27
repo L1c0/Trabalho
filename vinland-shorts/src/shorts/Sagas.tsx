@@ -1,126 +1,104 @@
 import React from 'react';
 import { AbsoluteFill, Audio, staticFile, useCurrentFrame } from 'remotion';
-import chapas from '../data/chapas.json';
-import eventos from '../data/eventos.json';
+import tl from '../data/timeline/3-sagas.json';
 import { Legenda } from '../lib/Legenda';
 import { Chapa, Papel } from '../lib/Papel';
-import { type Batida, escalaBatida, lerp, prog, tremor } from '../lib/movimento';
+import { type Batida, escalaBatida, impacto, lerp, passo, tremor } from '../lib/movimento';
+import { type Camada, ativa, centroTinta } from '../lib/timeline';
 
 /**
- * 3 · AS DUAS SAGAS — sobrepõe. 1257 frames.
+ * 3 · AS DUAS SAGAS — sobrepõe. 1257 frames. Tudo sai de timeline/3-sagas.json.
  *
- * Duas fontes que não ocupam o mesmo plano. A coluna da direita (a Saga de
- * Erik) está mais funda: menor (translateZ -40 em perspective 2400) e
- * andando menos na deriva lateral, então as duas colunas se separam
- * devagar ao longo dos 42 s.
- *
- * Em "cento e quarenta" a chapa da direita desce em Z (1,03 a 1,00)
- * atravessando 468 px até cair, fora de registro, em cima de "sessenta
- * homens", e pousa com batida: onde as duas discordam, a tinta sobrepõe.
- * O mesmo com o crédito, em "outras pessoas". Em "Haukr" as colunas
- * inteiras recuam (0,94, tinta 0,45) e o nome vem de 1,08 para 1,00.
- * A câmera nunca para: empurrão de 2% a cada 10 s.
+ * As camadas são 1080x1920 já posicionadas (âncora de quadro em 0,0). As
+ * duas colunas vivem em planos diferentes sob perspective 2400: a esquerda
+ * em translateZ 0, a direita em -40 (os planos do JSON), e a câmera deriva
+ * 2% da largura ao longo dos 42 s. Em 282 uma cópia de dir-140 a 0,85 de
+ * tinta desce fora de registro: de 1,03 a 1,00 enquanto anda -468, +19 em
+ * 21 frames, e pousa com batida em cima do 60 (o original fica na coluna).
+ * Em 432, o mesmo com o crédito. Em 627 as colunas recuam (0,94, tinta
+ * 0,45, em 27 frames) e haukr entra em 636 de 1,08 em 4 frames. Entre os
+ * eventos, o empurrão de 2% a cada 10 s do LEIA-PRIMEIRO (o JSON não fala
+ * de empurrão).
  */
-const E = eventos['3-sagas'];
-const T = chapas.sagas as unknown as Record<string, { cx: number; cy: number }>;
-const FRAMES = 1257;
-/** a câmera empurra em volta do meio do conteúdo (cabeçalho a "200 anos") */
-const ORIGEM = '540px 745px';
-/** profundidade da coluna da direita: translateZ -40 em perspective 2400 */
-const FUNDO = 2400 / (2400 + 40);
-/** deriva da câmera: 2% da largura em 42 s. A coluna funda anda 35% disso
- * (paralaxe exagerada de propósito: com -40 de profundidade de verdade a
- * separação seria de 0,35 px, invisível) */
-const DERIVA = 0.02 * 1080;
-const DERIVA_FUNDO = 0.35;
-/** a divisória termina logo abaixo de "200 anos": embaixo é a faixa da legenda */
-const FIM_DIVISORIA = 1250;
-
-const BATIDAS: Batida[] = [
-  [E.esq60, 2, 1],
-  [E.dir140.l, 3, -1],
-  [E.esqcred, 2, 1],
-  [E.dircred.l, 3, -1],
-  [E.anos, 2, 1],
-];
-
-/** batida de chegada de uma chapa (1,18 a 1,00 em 3 frames) em volta da tinta */
-const Chega: React.FC<{ nome: string; i: number; f: number }> = ({ nome, i, f }) => {
-  const s = escalaBatida(f, i);
-  if (s === null) return null;
-  return <Chapa src={`3-sagas/${nome}.png`} style={{ transformOrigin: `${T[nome].cx}px ${T[nome].cy}px`, transform: `scale(${s})` }} />;
+const T = tl as unknown as {
+  fundo: string;
+  frames: number;
+  perspective: number;
+  deriva_lateral_pct: number;
+  planos: Record<string, number>;
+  camadas: Camada[];
+  recuo_das_colunas: { frame: number; escala: number; tinta: number; frames: number };
 };
+const R = T.recuo_das_colunas;
+const DERIVA = (T.deriva_lateral_pct / 100) * 1080;
+const EMPURRAO = 0.02 / 300;
+/** o nome que chega não recua com as colunas: é quem está sendo lido */
+const NOME = T.camadas.find((c) => c.efeito === 'batida')!;
+/** o JSON não dá a tremida destas batidas: a de uma batida comum */
+const TREMIDA = 3;
+/** cada desregistro pousa com batida, e o nome bate ao chegar */
+const BATIDAS: Batida[] = T.camadas
+  .filter((c) => c.efeito === 'desregistro' || c.efeito === 'batida')
+  .map((c) => (c.efeito === 'desregistro' ? c.entra + c.frames! - 1 : impacto(c.entra, c.batida_frames)))
+  .sort((a, b) => a - b)
+  .map((i, k): Batida => [i, TREMIDA, k % 2 ? -1 : 1]);
 
-/** o desregistro: a chapa da direita desce em Z e atravessa até a da esquerda */
-const Desce: React.FC<{ nome: string; ev: { a: number; l: number; dx: number; dy: number }; f: number }> = ({ nome, ev, f }) => {
-  if (f < ev.a) return null;
-  const u = prog(f, ev.a, ev.l - ev.a);
-  return (
-    <Chapa
-      src={`3-sagas/${nome}.png`}
-      style={{
-        transformOrigin: `${T[nome].cx}px ${T[nome].cy}px`,
-        transform: `translate(${ev.dx * u}px, ${ev.dy * u}px) scale(${lerp(1.03, 1, u)})`,
-      }}
-    />
-  );
-};
+/** um plano da mesa: a deriva anda no espaço, antes da perspectiva; o recuo encolhe em volta do centro da lente */
+const Plano: React.FC<{ z: number; deriva: number; recuo: number; children: React.ReactNode }> = ({ z, deriva, recuo, children }) => (
+  <div
+    style={{
+      position: 'absolute',
+      inset: 0,
+      transformOrigin: '540px 960px',
+      transform: `translateX(${deriva}px) translateZ(${z}px) scale(${lerp(1, R.escala, recuo)})`,
+      opacity: lerp(1, R.tinta, recuo),
+    }}
+  >
+    {children}
+  </div>
+);
 
 export const Sagas: React.FC = () => {
   const f = useCurrentFrame();
-  const t = f / FRAMES;
-  const emp = 1 + 0.002 * (f / 30);
   const dx = tremor(f, BATIDAS);
-  // o recuo das colunas quando o nome chega
-  const r = prog(f, E.haukr - 2, 8);
-  const recuo: React.CSSProperties = {
-    position: 'absolute',
-    inset: 0,
-    transformOrigin: ORIGEM,
-    transform: `scale(${lerp(1, 0.94, r)})`,
-    opacity: lerp(1, 0.45, r),
+  const emp = 1 + EMPURRAO * f;
+  const deriva = lerp(-DERIVA / 2, DERIVA / 2, f / (T.frames - 1));
+  const r = f < R.frame ? 0 : passo(f, R.frame, R.frames);
+
+  const desenha = (c: Camada) => {
+    if (c.efeito === 'desregistro') {
+      const u = passo(f, c.entra, c.frames!);
+      return (
+        <Chapa
+          src={c.arquivo}
+          style={{
+            transformOrigin: centroTinta(c.arquivo),
+            transform: `translate(${c.dx! * u}px, ${c.dy! * u}px) scale(${lerp(c.escala_de!, 1, u)})`,
+            opacity: c.tinta,
+          }}
+        />
+      );
+    }
+    if (c.efeito === 'batida') {
+      const s = escalaBatida(f, c.entra, c.batida_frames, c.escala_de);
+      return <Chapa src={c.arquivo} style={{ transformOrigin: centroTinta(c.arquivo), transform: `scale(${s})` }} />;
+    }
+    return <Chapa src={c.arquivo} />;
   };
-  const sHaukr = f >= E.haukr - 2 ? lerp(1.08, 1, prog(f, E.haukr - 2, 8)) : null;
+
   return (
     <AbsoluteFill style={{ backgroundColor: '#CCC6B8' }}>
-      <div style={{ position: 'absolute', inset: 0, transform: `translateX(${dx}px)` }}>
-        {/* a coluna funda: o papel, a divisória, a Saga de Erik e o fato comum */}
-        <div
-          style={{
-            position: 'absolute',
-            inset: 0,
-            transformOrigin: ORIGEM,
-            transform: `translateX(${DERIVA * DERIVA_FUNDO * t}px) scale(${emp * FUNDO})`,
-          }}
-        >
-          <Papel nome="papel-sagas" />
-          <div style={recuo}>
-            <Chapa src="3-sagas/divisor.png" style={{ clipPath: `inset(0 0 ${1920 - FIM_DIVISORIA}px 0)` }} />
-            <Chapa src="3-sagas/cabecalho.png" style={{ clipPath: 'inset(0 0 0 540px)' }} />
-            <Chega nome="200-anos" i={E.anos} f={f} />
-          </div>
-        </div>
-        {/* a coluna da frente: a Saga dos Groenlandeses, e onde as chapas da direita caem */}
-        <div
-          style={{
-            position: 'absolute',
-            inset: 0,
-            transformOrigin: ORIGEM,
-            transform: `translateX(${DERIVA * t}px) scale(${emp})`,
-          }}
-        >
-          <div style={recuo}>
-            <Chapa src="3-sagas/cabecalho.png" style={{ clipPath: 'inset(0 540px 0 0)' }} />
-            <Chega nome="esq-60" i={E.esq60} f={f} />
-            <Chega nome="esq-credito" i={E.esqcred} f={f} />
-            <Desce nome="dir-140" ev={E.dir140} f={f} />
-            <Desce nome="dir-credito" ev={E.dircred} f={f} />
-          </div>
-          {sHaukr !== null && (
-            <Chapa
-              src="3-sagas/haukr.png"
-              style={{ transformOrigin: `${T.haukr.cx}px ${T.haukr.cy}px`, transform: `scale(${sHaukr})` }}
-            />
+      <div style={{ position: 'absolute', inset: 0, transformOrigin: '540px 960px', transform: `translateX(${dx}px) scale(${emp})` }}>
+        <div style={{ position: 'absolute', inset: 0, perspective: `${T.perspective}px`, perspectiveOrigin: '540px 960px' }}>
+          <Plano z={0} deriva={deriva} recuo={0}>
+            <Papel src={T.fundo} />
+          </Plano>
+          {T.camadas.map((c, k) =>
+            ativa(c, f) ? (
+              <Plano key={k} z={T.planos[c.arquivo] ?? 0} deriva={deriva} recuo={c === NOME ? 0 : r}>
+                {desenha(c)}
+              </Plano>
+            ) : null,
           )}
         </div>
       </div>

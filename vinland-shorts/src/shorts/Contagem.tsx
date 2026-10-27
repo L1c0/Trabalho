@@ -1,135 +1,70 @@
 import React from 'react';
-import { AbsoluteFill, Audio, Img, staticFile, useCurrentFrame } from 'remotion';
-import chapas from '../data/chapas.json';
-import eventos from '../data/eventos.json';
+import { AbsoluteFill, Audio, staticFile, useCurrentFrame } from 'remotion';
+import tl from '../data/timeline/1-contagem.json';
 import { Legenda } from '../lib/Legenda';
-import { Chapa, Papel } from '../lib/Papel';
-import { type Batida, escalaBatida, lerp, prog, tremor } from '../lib/movimento';
+import { Centro, Chapa, Papel } from '../lib/Papel';
+import { type Batida, escalaBatida, impacto, lerp, passo, tremor } from '../lib/movimento';
+import { type Camada, type Ponto, ativa, centroTinta, curva } from '../lib/timeline';
 
 /**
- * 1 · A CONTAGEM — acumula. 781 frames.
+ * 1 · A CONTAGEM — acumula. 781 frames. Tudo sai de timeline/1-contagem.json.
  *
- * Cem impressões que não se substituem. O numeral da vez cai no centro com
- * a batida (1,18 a 1,00 em 3 frames, o quadro desloca e volta); quando o
- * próximo aparece, ele assenta na grade em 5 frames, perdendo tinta até
- * 0,30. A câmera recua de 1,06 a 1,00 ao longo das cem batidas. Os cinco
- * últimos batem devagar e pesado; o 100 cai em "no FIM". Na frase, o
- * arquivo inteiro recua (0,94, tinta 0,26) e "EU NÃO TENHO INIMIGOS" vem de
- * 1,08 com a batida final.
+ * Um numeral grande por vez, centrado em (540, 1152), entrando com a batida
+ * (1,18 a 1,00 em 3 frames, tremida de 3 px; os cinco últimos em 5 frames e
+ * 5 px). Quando ele sai, o arq do mesmo número assenta: viaja do centro até
+ * a posição do JSON em 5 frames, perdendo tinta de 1,0 a 0,30, e fica até o
+ * fim. A câmera recua de 1,06 a 1,00 batida a batida (camera_escala). Em 645
+ * o arquivo inteiro recua para 0,26 de tinta (e 0,94 de escala, o recuo do
+ * vocabulário) enquanto a frase entra de 1,08 com a batida final.
  */
-type Num = {
-  n: number; gw: number; gh: number; gcx: number; gcy: number; pw: number; ph: number;
-  ax: number; ay: number; alvo: [number, number]; escala: number;
+const T = tl as unknown as {
+  fundo: string;
+  camera_escala: Ponto[];
+  arquivo_recua_em: { frame: number; tinta: number };
+  camadas: Camada[];
 };
-type Imp = { n: number; a: number; i: number; b: number; d: number; lado: number; sai: number };
-
-const NUM = chapas.contagem as unknown as Num[];
-const E = eventos['1-contagem'] as unknown as {
-  impactos: Imp[]; frase: { a: number; i: number; d: number }; recuo: { ini: number; dur: number };
-  camera: { ini: number; fim: number };
-};
-/** onde o numeral da vez cai: o meio da grade */
-const CENTRO = { x: 540, y: 800 };
-const ASSENTA = 5;
-const TINTA_ARQ = 0.3;
-const BATIDAS: Batida[] = [...E.impactos.map((x): Batida => [x.i, x.d, x.lado]), [E.frase.i, E.frase.d, 1]];
-
-const pasta = (n: number, tipo: 'num' | 'arq') => staticFile(`1-contagem/${tipo}-${String(n).padStart(3, '0')}.png`);
-
-/** O numeral da vez, grande, no centro. */
-const Grande: React.FC<{ c: Num; escala: number }> = ({ c, escala }) => (
-  <Img
-    src={pasta(c.n, 'num')}
-    style={{
-      position: 'absolute',
-      left: CENTRO.x - c.gw / 2,
-      top: CENTRO.y - c.gh / 2,
-      width: c.gw,
-      height: c.gh,
-      transformOrigin: `${c.gcx}px ${c.gcy}px`,
-      transform: `scale(${escala})`,
-    }}
-  />
-);
-
-/** assentar: do centro até a posição de arquivo, encolhendo e perdendo tinta. */
-const Viajando: React.FC<{ c: Num; u: number }> = ({ c, u }) => {
-  const x0 = CENTRO.x - c.gw / 2 + c.gcx;
-  const y0 = CENTRO.y - c.gh / 2 + c.gcy;
-  const x = lerp(x0, c.alvo[0], u);
-  const y = lerp(y0, c.alvo[1], u);
-  return (
-    <Img
-      src={pasta(c.n, 'num')}
-      style={{
-        position: 'absolute',
-        left: x - c.gcx,
-        top: y - c.gcy,
-        width: c.gw,
-        height: c.gh,
-        transformOrigin: `${c.gcx}px ${c.gcy}px`,
-        transform: `scale(${lerp(1, c.escala, u)})`,
-        opacity: lerp(1, TINTA_ARQ, u),
-      }}
-    />
-  );
-};
+const FRASE = T.camadas.find((c) => c.arquivo.endsWith('/frase.png'))!;
+const NUMS = T.camadas.filter((c) => c.ancora === 'centro' && c.efeito === 'batida');
+/** o arquivo recua enquanto a frase entra: no tempo da batida dela */
+const RECUO = { ini: T.arquivo_recua_em.frame, n: FRASE.batida_frames!, tinta: T.arquivo_recua_em.tinta, escala: 0.94 };
+/** a tremida da frase o JSON não dá: a de uma batida comum */
+const TREMIDA = 3;
+const BATIDAS: Batida[] = [
+  ...NUMS.map((c, k): Batida => [impacto(c.entra, c.batida_frames), c.tremida_px!, k % 2 ? -1 : 1]),
+  [impacto(FRASE.entra, FRASE.batida_frames), TREMIDA, NUMS.length % 2 ? -1 : 1],
+];
 
 export const Contagem: React.FC = () => {
   const f = useCurrentFrame();
-  const cam = lerp(1.06, 1.0, prog(f, E.camera.ini, E.camera.fim - E.camera.ini));
+  const cam = curva(T.camera_escala, 'escala', f);
   const dx = tremor(f, BATIDAS);
-  const r = prog(f, E.recuo.ini, E.recuo.dur);
-  const arquivados: React.ReactNode[] = [];
-  const viajando: React.ReactNode[] = [];
-  const noCentro: React.ReactNode[] = [];
-  E.impactos.forEach((x, k) => {
-    const c = NUM[k];
-    if (f < x.a) return;
-    if (f < x.sai) {
-      noCentro.push(<Grande key={c.n} c={c} escala={escalaBatida(f, x.i, x.b) ?? 1} />);
-    } else if (f < x.sai + ASSENTA) {
-      viajando.push(<Viajando key={c.n} c={c} u={(f - x.sai + 1) / ASSENTA} />);
-    } else {
-      arquivados.push(
-        <Img
-          key={c.n}
-          src={pasta(c.n, 'arq')}
-          style={{ position: 'absolute', left: c.ax - c.pw / 2, top: c.ay - c.ph / 2, width: c.pw, height: c.ph, opacity: TINTA_ARQ }}
-        />,
+  const r = passo(f, RECUO.ini, RECUO.n);
+  const sr = lerp(1, RECUO.escala, f < RECUO.ini ? 0 : r);
+
+  const desenha = (c: Camada) => {
+    if (c.ancora === 'quadro') {
+      if (c.efeito !== 'batida') return <Chapa key={c.arquivo} src={c.arquivo} />;
+      const s = escalaBatida(f, c.entra, c.batida_frames, c.escala_de);
+      return (
+        <Chapa key={c.arquivo} src={c.arquivo} style={{ transformOrigin: centroTinta(c.arquivo), transform: `scale(${s})` }} />
       );
     }
-  });
-  const sFrase = escalaBatida(f, E.frase.i, 3, 1.08);
+    if (c.efeito === 'batida') {
+      return <Centro key={c.arquivo} src={c.arquivo} x={c.x!} y={c.y!} escala={escalaBatida(f, c.entra, c.batida_frames)} />;
+    }
+    // assentar: do centro até a posição do arquivo, perdendo tinta; depois o recuo em volta do meio do quadro
+    const u = passo(f, c.entra, c.assentar_frames!);
+    const x = lerp(c.de_x!, c.x!, u);
+    const y = lerp(c.de_y!, c.y!, u);
+    const tinta = f < RECUO.ini ? lerp(1, c.tinta!, u) : lerp(c.tinta!, RECUO.tinta, r);
+    return <Centro key={c.arquivo} src={c.arquivo} x={540 + (x - 540) * sr} y={960 + (y - 960) * sr} escala={sr} tinta={tinta} />;
+  };
+
   return (
     <AbsoluteFill style={{ backgroundColor: '#CCC6B8' }}>
-      <div
-        style={{
-          position: 'absolute',
-          inset: 0,
-          transformOrigin: '540px 960px',
-          transform: `translateX(${dx}px) scale(${cam})`,
-        }}
-      >
-        <Papel nome="papel-socos" />
-        <Chapa src="1-contagem/cartela.png" />
-        {/* o arquivo: recua inteiro quando a frase chega */}
-        <div
-          style={{
-            position: 'absolute',
-            inset: 0,
-            transformOrigin: '540px 960px',
-            transform: `scale(${lerp(1, 0.94, r)})`,
-            opacity: lerp(1, 0.26 / TINTA_ARQ, r),
-          }}
-        >
-          {arquivados}
-          {viajando}
-        </div>
-        {noCentro}
-        {sFrase !== null && (
-          <Chapa src="1-contagem/frase.png" style={{ transformOrigin: '305px 902px', transform: `scale(${sFrase})` }} />
-        )}
+      <div style={{ position: 'absolute', inset: 0, transformOrigin: '540px 960px', transform: `translateX(${dx}px) scale(${cam})` }}>
+        <Papel src={T.fundo} />
+        {T.camadas.map((c) => (ativa(c, f) ? desenha(c) : null))}
       </div>
       <Legenda short="1-contagem" />
       <Audio src={staticFile('audio/mix-1-contagem.flac')} />

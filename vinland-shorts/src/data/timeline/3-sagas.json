@@ -1,0 +1,102 @@
+{
+ "fps": 30,
+ "largura": 1080,
+ "altura": 1920,
+ "frames": 1257,
+ "fundo": "comum/papel-sagas.jpg",
+ "audio": "audio/3-sagas.mp3",
+ "nota": "Todas as camadas sao 1080x1920 ja posicionadas. ancora=quadro, x=0 y=0.",
+ "perspective": 2400,
+ "deriva_lateral_pct": 2.0,
+ "planos": {
+  "3-sagas/esq-60.png": 0,
+  "3-sagas/esq-credito.png": 0,
+  "3-sagas/dir-140.png": -40,
+  "3-sagas/dir-credito.png": -40
+ },
+ "camadas": [
+  {
+   "arquivo": "3-sagas/cabecalho.png",
+   "ancora": "quadro",
+   "entra": 18,
+   "sai": 1257
+  },
+  {
+   "arquivo": "3-sagas/divisor.png",
+   "ancora": "quadro",
+   "entra": 18,
+   "sai": 1257
+  },
+  {
+   "arquivo": "3-sagas/esq-60.png",
+   "ancora": "quadro",
+   "entra": 207,
+   "sai": 1257
+  },
+  {
+   "arquivo": "3-sagas/dir-140.png",
+   "ancora": "quadro",
+   "entra": 228,
+   "sai": 1257
+  },
+  {
+   "arquivo": "3-sagas/dir-140.png",
+   "papel": "copia que desce fora de registro",
+   "ancora": "quadro",
+   "entra": 282,
+   "sai": 1257,
+   "tinta": 0.85,
+   "efeito": "desregistro",
+   "dx": -468,
+   "dy": 19,
+   "escala_de": 1.03,
+   "frames": 21
+  },
+  {
+   "arquivo": "3-sagas/esq-credito.png",
+   "ancora": "quadro",
+   "entra": 357,
+   "sai": 1257
+  },
+  {
+   "arquivo": "3-sagas/dir-credito.png",
+   "ancora": "quadro",
+   "entra": 378,
+   "sai": 1257
+  },
+  {
+   "arquivo": "3-sagas/dir-credito.png",
+   "papel": "copia que desce fora de registro",
+   "ancora": "quadro",
+   "entra": 432,
+   "sai": 1257,
+   "tinta": 0.85,
+   "efeito": "desregistro",
+   "dx": -468,
+   "dy": 17,
+   "escala_de": 1.03,
+   "frames": 21
+  },
+  {
+   "arquivo": "3-sagas/200-anos.png",
+   "ancora": "quadro",
+   "entra": 507,
+   "sai": 1257
+  },
+  {
+   "arquivo": "3-sagas/haukr.png",
+   "ancora": "quadro",
+   "entra": 636,
+   "sai": 1257,
+   "efeito": "batida",
+   "escala_de": 1.08,
+   "batida_frames": 4
+  }
+ ],
+ "recuo_das_colunas": {
+  "frame": 627,
+  "escala": 0.94,
+  "tinta": 0.45,
+  "frames": 27
+ }
+}

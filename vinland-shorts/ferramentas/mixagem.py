@@ -3,17 +3,17 @@
 
 A narração NÃO é renormalizada (LEIA-PRIMEIRO: -16,0 LUFS / -1,5 dBFS antes
 do MP3; renormalizar só empilha mais um passo de ganho). Os efeitos são
-somados por cima, nos frames de src/data/eventos.json (os mesmos que a
-imagem usa), e só os picos que passarem de -1,5 dBTP com a soma levam um
-limitador em 4x (soxr), como nos Shorts do Houseki.
+somados por cima, nos frames dos timeline.json (src/data/timeline/, os
+mesmos que a imagem lê), e só os picos que passarem de -1,5 dBTP com a soma
+levam um limitador em 4x (soxr), como nos Shorts do Houseki.
 
 Os efeitos são ruído filtrado em banda estreita, nunca clique digital (o
 ataque tem 1 a 2 ms em cosseno), sem whoosh, riser ou sub-grave:
 
-  batida de chapa   cada numeral da contagem               pico -24 dBFS
-  tique de madeira  cada anel que cruza a linha            pico -22 dBFS
-  chapa pousando    os dois desregistros das sagas         pico -20 dBFS
-  papel levantando  cada casa (e rótulo, achados) que sai  pico -26 dBFS
+  batida de chapa   cada numeral da contagem, no impacto       pico -24 dBFS
+  tique de madeira  cada anel que cruza a linha (tiques)       pico -22 dBFS
+  chapa pousando    os dois desregistros das sagas, no pouso   pico -20 dBFS
+  papel levantando  cada casa que sai (descolar_de)            pico -26 dBFS
 
 Cada ocorrência tem a sua semente: cem batidas iguais viram metralhadora.
 Trilha e leito de sala ficam para depois da montagem fechada.
@@ -33,7 +33,8 @@ PROJ = sys.argv[1]
 A = os.path.join(PROJ, 'public/audio')
 SR = 48000
 FPS = 30
-EV = json.load(open(os.path.join(PROJ, 'src/data/eventos.json')))
+TL = {s: json.load(open(os.path.join(PROJ, f'src/data/timeline/{s}.json'), encoding='utf-8'))
+      for s in ('1-contagem', '2-anel', '3-sagas', '4-oficina')}
 
 
 def le(arq):
@@ -110,29 +111,33 @@ def levanta(g):
 def efeitos(sid, n):
     g = np.random.default_rng(int(sid[0]) * 1000 + 7)
     trilha = np.zeros(n)
-    ev = EV[sid]
+    tl = TL[sid]
     def poe(f, som):
         i = int(round(f / FPS * SR))
         k = min(len(som), n - i)
         trilha[i:i + k] += som[:k]
     if sid == '1-contagem':
-        for x in ev['impactos']:
-            poe(x['i'], batida(g, pesada=x['n'] > 95))
+        # o impacto é o frame em que a batida chega a 1,00; os cinco últimos (5 frames) são os pesados
+        for c in tl['camadas']:
+            if c['ancora'] == 'centro' and c.get('efeito') == 'batida':
+                poe(c['entra'] + c['batida_frames'] - 1, batida(g, pesada=c['batida_frames'] > 3))
     elif sid == '2-anel':
-        for t in ev['tiques']:
+        for t in tl['tiques_frames']:
             poe(t, tique(g))
     elif sid == '3-sagas':
-        poe(ev['dir140']['l'], pousa(g))
-        poe(ev['dircred']['l'], pousa(g))
+        for c in tl['camadas']:
+            if c.get('efeito') == 'desregistro':
+                poe(c['entra'] + c['frames'] - 1, pousa(g))
     elif sid == '4-oficina':
-        for e in ev['saidas']:
-            poe(e, levanta(g))
+        for c in tl['camadas']:
+            if c.get('efeito') == 'descolar':
+                poe(c['descolar_de'], levanta(g))
     return np.stack([trilha, trilha], 1)
 
 
 def main():
     for sid in ('1-contagem', '2-anel', '3-sagas', '4-oficina'):
-        frames = EV[sid]['frames']
+        frames = TL[sid]['frames']
         n = int(round(frames / FPS * SR))
         voz = le(os.path.join(A, sid + '.mp3'))
         mix = np.zeros((n, 2))

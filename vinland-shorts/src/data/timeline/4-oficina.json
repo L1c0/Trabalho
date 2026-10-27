@@ -1,0 +1,139 @@
+{
+ "fps": 30,
+ "largura": 1080,
+ "altura": 1920,
+ "frames": 1213,
+ "fundo": "comum/papel-oficina.jpg",
+ "audio": "audio/4-oficina.mp3",
+ "nota": "Primeiro frame ja completo: as 8 casas e o rotulo entram ate o frame 36.",
+ "perspective": 2200,
+ "camera_rotateX": [
+  {
+   "frame": 0,
+   "graus": 11
+  },
+  {
+   "frame": 777,
+   "graus": 4
+  },
+  {
+   "frame": 1213,
+   "graus": 4
+  }
+ ],
+ "camadas": [
+  {
+   "arquivo": "4-oficina/rotulo.png",
+   "ancora": "quadro",
+   "entra": 12,
+   "sai": 1213
+  },
+  {
+   "arquivo": "4-oficina/casa-1.png",
+   "ancora": "quadro",
+   "entra": 0,
+   "sai": 791,
+   "efeito": "descolar",
+   "mascara": "4-oficina/mascara-1.png",
+   "descolar_de": 777,
+   "descolar_frames": 14,
+   "sobe_px": 6
+  },
+  {
+   "arquivo": "4-oficina/casa-2.png",
+   "ancora": "quadro",
+   "entra": 0,
+   "sai": 806,
+   "efeito": "descolar",
+   "mascara": "4-oficina/mascara-2.png",
+   "descolar_de": 792,
+   "descolar_frames": 14,
+   "sobe_px": 6
+  },
+  {
+   "arquivo": "4-oficina/casa-3.png",
+   "ancora": "quadro",
+   "entra": 0,
+   "sai": 821,
+   "efeito": "descolar",
+   "mascara": "4-oficina/mascara-3.png",
+   "descolar_de": 807,
+   "descolar_frames": 14,
+   "sobe_px": 6
+  },
+  {
+   "arquivo": "4-oficina/casa-4.png",
+   "ancora": "quadro",
+   "entra": 0,
+   "sai": 836,
+   "efeito": "descolar",
+   "mascara": "4-oficina/mascara-4.png",
+   "descolar_de": 822,
+   "descolar_frames": 14,
+   "sobe_px": 6
+  },
+  {
+   "arquivo": "4-oficina/casa-5.png",
+   "ancora": "quadro",
+   "entra": 0,
+   "sai": 851,
+   "efeito": "descolar",
+   "mascara": "4-oficina/mascara-5.png",
+   "descolar_de": 837,
+   "descolar_frames": 14,
+   "sobe_px": 6
+  },
+  {
+   "arquivo": "4-oficina/casa-6.png",
+   "ancora": "quadro",
+   "entra": 0,
+   "sai": 866,
+   "efeito": "descolar",
+   "mascara": "4-oficina/mascara-6.png",
+   "descolar_de": 852,
+   "descolar_frames": 14,
+   "sobe_px": 6
+  },
+  {
+   "arquivo": "4-oficina/casa-7.png",
+   "ancora": "quadro",
+   "entra": 0,
+   "sai": 881,
+   "efeito": "descolar",
+   "mascara": "4-oficina/mascara-7.png",
+   "descolar_de": 867,
+   "descolar_frames": 14,
+   "sobe_px": 6
+  },
+  {
+   "arquivo": "4-oficina/casa-8.png",
+   "ancora": "quadro",
+   "entra": 0,
+   "sai": 896,
+   "efeito": "descolar",
+   "mascara": "4-oficina/mascara-8.png",
+   "descolar_de": 882,
+   "descolar_frames": 14,
+   "sobe_px": 6
+  },
+  {
+   "arquivo": "4-oficina/achados.png",
+   "ancora": "quadro",
+   "entra": 330,
+   "sai": 900
+  },
+  {
+   "arquivo": "4-oficina/fecho.png",
+   "ancora": "quadro",
+   "entra": 918,
+   "sai": 1213,
+   "efeito": "batida",
+   "escala_de": 1.06,
+   "batida_frames": 4
+  }
+ ],
+ "segura_vazio": {
+  "de_frame": 900,
+  "ate_frame": 918
+ }
+}

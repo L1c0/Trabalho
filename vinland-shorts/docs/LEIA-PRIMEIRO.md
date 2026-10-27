@@ -1,5 +1,28 @@
 # Vinland — quatro Shorts verticais
 
+> ## LEIA ISTO PRIMEIRO
+>
+> **Cada Short tem um `timeline.json`.** Ele é a fonte da verdade: diz
+> cada camada, a posição exata, o frame em que entra, o frame em que sai,
+> e o efeito. O resto deste documento explica o *porquê*; o JSON diz o
+> *quê*. Onde os dois divergirem, vale o JSON.
+>
+> **Três coisas que não dá pra inferir das peças e já quebraram uma
+> montagem:**
+>
+> 1. **Na contagem, só UM numeral grande aparece por vez.** Os
+>    `num-NNN.png` são peças de ~690×465 que vão **centradas em
+>    x=540, y=1152**, uma de cada vez. Os `arq-NNN.png` é que acumulam,
+>    cada um na posição do JSON, e ficam até o fim. Colocar os cem juntos
+>    empilha tudo no mesmo lugar.
+> 2. **`anel-9000.jpg` tem 1080×9000 e NÃO pode ser escalado pra caber no
+>    quadro.** Ele é percorrido por uma janela de 1920 de altura, com a
+>    posição em `camera_y` do JSON. Escalar pra caber destrói o Short.
+> 3. **As camadas de `3-sagas/` e `4-oficina/` já são 1080×1920
+>    posicionadas.** Entram com âncora de quadro em x=0, y=0 — não
+>    recentralizar, não redimensionar.
+
+
 Canal **@MangaEm60**. Montar quatro Shorts **1080×1920, 30 fps** em
 Remotion. Narração gravada, cortada e normalizada. As chapas impressas vêm
 prontas, como **camadas com alfa**. Falta a câmera.

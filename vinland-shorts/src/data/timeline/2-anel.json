@@ -1,0 +1,697 @@
+{
+ "fps": 30,
+ "largura": 1080,
+ "altura": 1920,
+ "frames": 1261,
+ "audio": "audio/2-anel.mp3",
+ "chapa": {
+  "arquivo": "2-anel/anel-9000.jpg",
+  "largura": 1080,
+  "altura": 9000,
+  "recorte": "janela de 1920 de altura em camera_y. NAO escalar para caber.",
+  "rotateX_graus": 5,
+  "perspective": 2600,
+  "deriva_lateral_pct": 1.5
+ },
+ "camera_y": [
+  {
+   "frame": 0,
+   "y": 0.0
+  },
+  {
+   "frame": 15,
+   "y": 0.3
+  },
+  {
+   "frame": 30,
+   "y": 0.8
+  },
+  {
+   "frame": 45,
+   "y": 1.4
+  },
+  {
+   "frame": 60,
+   "y": 2.1
+  },
+  {
+   "frame": 75,
+   "y": 2.9
+  },
+  {
+   "frame": 90,
+   "y": 3.7
+  },
+  {
+   "frame": 105,
+   "y": 4.6
+  },
+  {
+   "frame": 120,
+   "y": 5.5
+  },
+  {
+   "frame": 135,
+   "y": 6.5
+  },
+  {
+   "frame": 150,
+   "y": 7.5
+  },
+  {
+   "frame": 165,
+   "y": 8.6
+  },
+  {
+   "frame": 180,
+   "y": 9.7
+  },
+  {
+   "frame": 195,
+   "y": 10.9
+  },
+  {
+   "frame": 210,
+   "y": 12.1
+  },
+  {
+   "frame": 225,
+   "y": 13.3
+  },
+  {
+   "frame": 240,
+   "y": 14.6
+  },
+  {
+   "frame": 255,
+   "y": 15.8
+  },
+  {
+   "frame": 270,
+   "y": 17.2
+  },
+  {
+   "frame": 285,
+   "y": 18.5
+  },
+  {
+   "frame": 300,
+   "y": 19.9
+  },
+  {
+   "frame": 315,
+   "y": 21.3
+  },
+  {
+   "frame": 330,
+   "y": 22.7
+  },
+  {
+   "frame": 345,
+   "y": 24.2
+  },
+  {
+   "frame": 360,
+   "y": 25.7
+  },
+  {
+   "frame": 375,
+   "y": 27.2
+  },
+  {
+   "frame": 390,
+   "y": 28.7
+  },
+  {
+   "frame": 405,
+   "y": 30.3
+  },
+  {
+   "frame": 420,
+   "y": 31.9
+  },
+  {
+   "frame": 435,
+   "y": 33.5
+  },
+  {
+   "frame": 450,
+   "y": 35.1
+  },
+  {
+   "frame": 465,
+   "y": 36.7
+  },
+  {
+   "frame": 480,
+   "y": 38.4
+  },
+  {
+   "frame": 495,
+   "y": 40.1
+  },
+  {
+   "frame": 510,
+   "y": 41.8
+  },
+  {
+   "frame": 525,
+   "y": 43.6
+  },
+  {
+   "frame": 540,
+   "y": 45.3
+  },
+  {
+   "frame": 555,
+   "y": 47.1
+  },
+  {
+   "frame": 570,
+   "y": 48.9
+  },
+  {
+   "frame": 585,
+   "y": 50.7
+  },
+  {
+   "frame": 600,
+   "y": 52.5
+  },
+  {
+   "frame": 615,
+   "y": 54.4
+  },
+  {
+   "frame": 630,
+   "y": 56.2
+  },
+  {
+   "frame": 645,
+   "y": 58.1
+  },
+  {
+   "frame": 660,
+   "y": 60.0
+  },
+  {
+   "frame": 675,
+   "y": 468.2
+  },
+  {
+   "frame": 690,
+   "y": 876.5
+  },
+  {
+   "frame": 705,
+   "y": 1284.7
+  },
+  {
+   "frame": 720,
+   "y": 1692.9
+  },
+  {
+   "frame": 735,
+   "y": 2101.2
+  },
+  {
+   "frame": 750,
+   "y": 2509.4
+  },
+  {
+   "frame": 765,
+   "y": 2917.6
+  },
+  {
+   "frame": 780,
+   "y": 3325.9
+  },
+  {
+   "frame": 795,
+   "y": 3734.1
+  },
+  {
+   "frame": 810,
+   "y": 4142.4
+  },
+  {
+   "frame": 825,
+   "y": 4550.6
+  },
+  {
+   "frame": 840,
+   "y": 4958.8
+  },
+  {
+   "frame": 855,
+   "y": 5367.1
+  },
+  {
+   "frame": 870,
+   "y": 5775.3
+  },
+  {
+   "frame": 885,
+   "y": 6183.5
+  },
+  {
+   "frame": 900,
+   "y": 6591.8
+  },
+  {
+   "frame": 915,
+   "y": 7000.0
+  },
+  {
+   "frame": 930,
+   "y": 7000.0
+  },
+  {
+   "frame": 945,
+   "y": 7000.0
+  },
+  {
+   "frame": 960,
+   "y": 7000.0
+  },
+  {
+   "frame": 975,
+   "y": 7000.0
+  },
+  {
+   "frame": 990,
+   "y": 7000.0
+  },
+  {
+   "frame": 1005,
+   "y": 7000.0
+  },
+  {
+   "frame": 1020,
+   "y": 7000.0
+  },
+  {
+   "frame": 1035,
+   "y": 7000.0
+  },
+  {
+   "frame": 1050,
+   "y": 7000.0
+  },
+  {
+   "frame": 1065,
+   "y": 7000.0
+  },
+  {
+   "frame": 1080,
+   "y": 7000.0
+  },
+  {
+   "frame": 1095,
+   "y": 7000.0
+  },
+  {
+   "frame": 1110,
+   "y": 7000.0
+  },
+  {
+   "frame": 1125,
+   "y": 7000.0
+  },
+  {
+   "frame": 1140,
+   "y": 7000.0
+  },
+  {
+   "frame": 1155,
+   "y": 7000.0
+  },
+  {
+   "frame": 1170,
+   "y": 7000.0
+  },
+  {
+   "frame": 1185,
+   "y": 7000.0
+  },
+  {
+   "frame": 1200,
+   "y": 7000.0
+  },
+  {
+   "frame": 1215,
+   "y": 7000.0
+  },
+  {
+   "frame": 1230,
+   "y": 7000.0
+  },
+  {
+   "frame": 1245,
+   "y": 7000.0
+  },
+  {
+   "frame": 1260,
+   "y": 7000.0
+  },
+  {
+   "frame": 1260,
+   "y": 7000.0
+  }
+ ],
+ "tiques_frames": [
+  660,
+  669,
+  676,
+  689,
+  695,
+  702,
+  715,
+  726,
+  736,
+  745,
+  756,
+  768,
+  774,
+  783,
+  796,
+  805,
+  813,
+  824,
+  835,
+  845,
+  852,
+  861,
+  868,
+  879,
+  887,
+  898,
+  907,
+  915
+ ],
+ "nota": "A travessia e LINEAR entre 660 e 915. Parada dura, sem desaceleracao.",
+ "empurrao_final": {
+  "de_frame": 915,
+  "ate_frame": 1261,
+  "escala_de": 1.0,
+  "escala_ate": 1.03
+ },
+ "camadas": [
+  {
+   "arquivo": "2-anel/regua.png",
+   "ancora": "quadro",
+   "entra": 0,
+   "sai": 1261
+  },
+  {
+   "arquivo": "2-anel/ano-993.png",
+   "ancora": "centro",
+   "x": 780,
+   "y": 1120,
+   "entra": 0,
+   "sai": 660,
+   "efeito": "corte",
+   "solavanco_px": 1
+  },
+  {
+   "arquivo": "2-anel/ano-994.png",
+   "ancora": "centro",
+   "x": 780,
+   "y": 1120,
+   "entra": 660,
+   "sai": 669,
+   "efeito": "corte",
+   "solavanco_px": 1
+  },
+  {
+   "arquivo": "2-anel/ano-995.png",
+   "ancora": "centro",
+   "x": 780,
+   "y": 1120,
+   "entra": 669,
+   "sai": 676,
+   "efeito": "corte",
+   "solavanco_px": 1
+  },
+  {
+   "arquivo": "2-anel/ano-996.png",
+   "ancora": "centro",
+   "x": 780,
+   "y": 1120,
+   "entra": 676,
+   "sai": 689,
+   "efeito": "corte",
+   "solavanco_px": 1
+  },
+  {
+   "arquivo": "2-anel/ano-997.png",
+   "ancora": "centro",
+   "x": 780,
+   "y": 1120,
+   "entra": 689,
+   "sai": 695,
+   "efeito": "corte",
+   "solavanco_px": 1
+  },
+  {
+   "arquivo": "2-anel/ano-998.png",
+   "ancora": "centro",
+   "x": 780,
+   "y": 1120,
+   "entra": 695,
+   "sai": 702,
+   "efeito": "corte",
+   "solavanco_px": 1
+  },
+  {
+   "arquivo": "2-anel/ano-999.png",
+   "ancora": "centro",
+   "x": 780,
+   "y": 1120,
+   "entra": 702,
+   "sai": 715,
+   "efeito": "corte",
+   "solavanco_px": 1
+  },
+  {
+   "arquivo": "2-anel/ano-1000.png",
+   "ancora": "centro",
+   "x": 780,
+   "y": 1120,
+   "entra": 715,
+   "sai": 726,
+   "efeito": "corte",
+   "solavanco_px": 1
+  },
+  {
+   "arquivo": "2-anel/ano-1001.png",
+   "ancora": "centro",
+   "x": 780,
+   "y": 1120,
+   "entra": 726,
+   "sai": 736,
+   "efeito": "corte",
+   "solavanco_px": 1
+  },
+  {
+   "arquivo": "2-anel/ano-1002.png",
+   "ancora": "centro",
+   "x": 780,
+   "y": 1120,
+   "entra": 736,
+   "sai": 745,
+   "efeito": "corte",
+   "solavanco_px": 1
+  },
+  {
+   "arquivo": "2-anel/ano-1003.png",
+   "ancora": "centro",
+   "x": 780,
+   "y": 1120,
+   "entra": 745,
+   "sai": 756,
+   "efeito": "corte",
+   "solavanco_px": 1
+  },
+  {
+   "arquivo": "2-anel/ano-1004.png",
+   "ancora": "centro",
+   "x": 780,
+   "y": 1120,
+   "entra": 756,
+   "sai": 768,
+   "efeito": "corte",
+   "solavanco_px": 1
+  },
+  {
+   "arquivo": "2-anel/ano-1005.png",
+   "ancora": "centro",
+   "x": 780,
+   "y": 1120,
+   "entra": 768,
+   "sai": 774,
+   "efeito": "corte",
+   "solavanco_px": 1
+  },
+  {
+   "arquivo": "2-anel/ano-1006.png",
+   "ancora": "centro",
+   "x": 780,
+   "y": 1120,
+   "entra": 774,
+   "sai": 783,
+   "efeito": "corte",
+   "solavanco_px": 1
+  },
+  {
+   "arquivo": "2-anel/ano-1007.png",
+   "ancora": "centro",
+   "x": 780,
+   "y": 1120,
+   "entra": 783,
+   "sai": 796,
+   "efeito": "corte",
+   "solavanco_px": 1
+  },
+  {
+   "arquivo": "2-anel/ano-1008.png",
+   "ancora": "centro",
+   "x": 780,
+   "y": 1120,
+   "entra": 796,
+   "sai": 805,
+   "efeito": "corte",
+   "solavanco_px": 1
+  },
+  {
+   "arquivo": "2-anel/ano-1009.png",
+   "ancora": "centro",
+   "x": 780,
+   "y": 1120,
+   "entra": 805,
+   "sai": 813,
+   "efeito": "corte",
+   "solavanco_px": 1
+  },
+  {
+   "arquivo": "2-anel/ano-1010.png",
+   "ancora": "centro",
+   "x": 780,
+   "y": 1120,
+   "entra": 813,
+   "sai": 824,
+   "efeito": "corte",
+   "solavanco_px": 1
+  },
+  {
+   "arquivo": "2-anel/ano-1011.png",
+   "ancora": "centro",
+   "x": 780,
+   "y": 1120,
+   "entra": 824,
+   "sai": 835,
+   "efeito": "corte",
+   "solavanco_px": 1
+  },
+  {
+   "arquivo": "2-anel/ano-1012.png",
+   "ancora": "centro",
+   "x": 780,
+   "y": 1120,
+   "entra": 835,
+   "sai": 845,
+   "efeito": "corte",
+   "solavanco_px": 1
+  },
+  {
+   "arquivo": "2-anel/ano-1013.png",
+   "ancora": "centro",
+   "x": 780,
+   "y": 1120,
+   "entra": 845,
+   "sai": 852,
+   "efeito": "corte",
+   "solavanco_px": 1
+  },
+  {
+   "arquivo": "2-anel/ano-1014.png",
+   "ancora": "centro",
+   "x": 780,
+   "y": 1120,
+   "entra": 852,
+   "sai": 861,
+   "efeito": "corte",
+   "solavanco_px": 1
+  },
+  {
+   "arquivo": "2-anel/ano-1015.png",
+   "ancora": "centro",
+   "x": 780,
+   "y": 1120,
+   "entra": 861,
+   "sai": 868,
+   "efeito": "corte",
+   "solavanco_px": 1
+  },
+  {
+   "arquivo": "2-anel/ano-1016.png",
+   "ancora": "centro",
+   "x": 780,
+   "y": 1120,
+   "entra": 868,
+   "sai": 879,
+   "efeito": "corte",
+   "solavanco_px": 1
+  },
+  {
+   "arquivo": "2-anel/ano-1017.png",
+   "ancora": "centro",
+   "x": 780,
+   "y": 1120,
+   "entra": 879,
+   "sai": 887,
+   "efeito": "corte",
+   "solavanco_px": 1
+  },
+  {
+   "arquivo": "2-anel/ano-1018.png",
+   "ancora": "centro",
+   "x": 780,
+   "y": 1120,
+   "entra": 887,
+   "sai": 898,
+   "efeito": "corte",
+   "solavanco_px": 1
+  },
+  {
+   "arquivo": "2-anel/ano-1019.png",
+   "ancora": "centro",
+   "x": 780,
+   "y": 1120,
+   "entra": 898,
+   "sai": 907,
+   "efeito": "corte",
+   "solavanco_px": 1
+  },
+  {
+   "arquivo": "2-anel/ano-1020.png",
+   "ancora": "centro",
+   "x": 780,
+   "y": 1120,
+   "entra": 907,
+   "sai": 915,
+   "efeito": "corte",
+   "solavanco_px": 1
+  },
+  {
+   "arquivo": "2-anel/ano-1021.png",
+   "ancora": "centro",
+   "x": 780,
+   "y": 1120,
+   "entra": 915,
+   "sai": 1261,
+   "efeito": "corte",
+   "solavanco_px": 1
+  }
+ ]
+}
