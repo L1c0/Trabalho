@@ -4,15 +4,19 @@
 `docs/LEIA-PRIMEIRO.md`. `src/IntroScene.tsx`, `src/Root.tsx` e
 `src/pos.json` vieram prontos e estão sem alteração.
 
-**Pendente: o render.** Faltam dois itens do pacote:
+**Pendente: o render.** Faltam os três vídeos do zip "PLANOS":
+`planicie-188f.mp4`, `cidade-188f.mp4` e `mercado-188f.mp4`, com 188 frames
+cada. Os clipes da v1 (`plano-*.mp4`, de 3,6 s, 3,6 s e 4,1 s) não servem:
+a v2 usa 184, 141 e 188 frames dos planos. O `tratado.jpg` da v2 também
+não bate com nenhum quadro do mercado da v1 (correlação máxima de 0,21);
+ele vem de um momento depois do fim daquele clipe.
 
-1. **Os três vídeos do zip "PLANOS"**, cortes de 6,2 s cada. A v2 usa
-   184, 141 e 188 frames dos planos; os da v1 têm 107, 107 e 122.
-2. **O `tratado.jpg` da v2**, a face de trás da carta na virada. O da v1
-   não casa com o mercado novo.
+Já estão em `public/`:
 
-Já estão em `public/` as 12 palavras (t01 a t12, nos tamanhos do
-`pos.json`), o `papel.jpg` e a `trilha.mp3`, os dois iguais aos da v1.
+- as 12 palavras, de t01 a t12, nos tamanhos do `pos.json`;
+- o `tratado.jpg` da v2;
+- o `papel.jpg` e a `trilha.mp3`, os dois iguais aos da v1;
+- as fontes Playfair 600 e Playfair itálico 500, que o código não usa.
 
 ## Render
 

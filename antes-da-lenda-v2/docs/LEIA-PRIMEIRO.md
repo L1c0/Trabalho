@@ -16,6 +16,15 @@ escritos. **Não reprojeta a câmera nem os tempos.**
 Os `.tsx` vão para `src/`, todo o resto para `public/`.
 Os vídeos **já estão cortados e em 30 fps**: `startFrom` é zero.
 
+**Confere antes de renderizar.** Os três têm que ter **188 frames
+(6,267 s)** cada. Se algum tiver 3,6 s ou 4,1 s, é da v1 — apaga e usa
+os `*-188f.mp4`. O componente pede 184 frames da planície, 141 da cidade
+e 188 do mercado; com os clipes da v1 a imagem trava antes do corte.
+
+```
+ffprobe -v error -show_entries stream=nb_frames -of csv=p=0 planicie-188f.mp4
+```
+
 ---
 
 ## Dois atos

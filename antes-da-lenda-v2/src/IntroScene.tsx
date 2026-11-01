@@ -197,16 +197,16 @@ export const IntroScene: React.FC = () => {
         {/* FRENTE: o jogo. A lenda. */}
         <AbsoluteFill style={{backfaceVisibility: 'hidden'}}>
           <Sequence from={0} durationInFrames={CORTE_CIDADE}>
-            <Plano src="plano-planicie.mp4" />
+            <Plano src="planicie-188f.mp4" />
           </Sequence>
           <Sequence
             from={CORTE_CIDADE}
             durationInFrames={CORTE_MERCADO - CORTE_CIDADE}
           >
-            <Plano src="plano-cidade.mp4" />
+            <Plano src="cidade-188f.mp4" />
           </Sequence>
           <Sequence from={CORTE_MERCADO} durationInFrames={VIRADA - CORTE_MERCADO + 2}>
-            <Plano src="plano-mercado.mp4" />
+            <Plano src="mercado-188f.mp4" />
           </Sequence>
         </AbsoluteFill>
 
