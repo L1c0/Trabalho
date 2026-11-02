@@ -142,3 +142,11 @@ para conferência.
   - É x264 em duas passadas a 9,9 Mb/s, feito do mesmo intermediário.
   - Contra o master dá SSIM 0,982 e PSNR 45,3 dB na luma.
   - O áudio é o mesmo do master.
+
+## Observação sobre o DEPOIS
+
+O DEPOIS (w10) sai em f511, o próprio corte da virada. Toda palavra se
+apaga em 6 frames depois do `sai`, então ele se dissolve por cima da
+imagem em nanquim até o f516. As outras palavras saem 5 frames antes do
+corte delas. O tempo ficou como veio. Para ele sumir no corte, como as
+outras, basta trocar o 511 da w10 por 506 em `PALAVRAS`.
