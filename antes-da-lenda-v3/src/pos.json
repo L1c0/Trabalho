@@ -1,0 +1,101 @@
+{
+ "w01": {
+  "peca": "w01.png",
+  "x": 609,
+  "y": 545,
+  "w": 702,
+  "h": 77,
+  "texto": "EM 1899",
+  "corpo": 103
+ },
+ "w02": {
+  "peca": "w02.png",
+  "x": 210,
+  "y": 706,
+  "w": 500,
+  "h": 100,
+  "texto": "um homem",
+  "corpo": 124
+ },
+ "w03": {
+  "peca": "w03.png",
+  "x": 1294,
+  "y": 398,
+  "w": 416,
+  "h": 69,
+  "texto": "uma terra",
+  "corpo": 118
+ },
+ "w04": {
+  "peca": "w04.png",
+  "x": 249,
+  "y": 614,
+  "w": 1421,
+  "h": 69,
+  "texto": "QUE JÁ TINHA ACABADO",
+  "corpo": 62
+ },
+ "w05": {
+  "peca": "w05.png",
+  "x": 210,
+  "y": 330,
+  "w": 395,
+  "h": 117,
+  "texto": "ninguém",
+  "corpo": 122
+ },
+ "w06": {
+  "peca": "w06.png",
+  "x": 651,
+  "y": 613,
+  "w": 617,
+  "h": 71,
+  "texto": "AVISOU",
+  "corpo": 95
+ },
+ "w07": {
+  "peca": "w07.png",
+  "x": 1372,
+  "y": 428,
+  "w": 338,
+  "h": 95,
+  "texto": "o bando",
+  "corpo": 120
+ },
+ "w08": {
+  "peca": "w08.png",
+  "x": 316,
+  "y": 334,
+  "w": 1287,
+  "h": 66,
+  "texto": "TUDO QUE VOCÊ SABE",
+  "corpo": 61
+ },
+ "w09": {
+  "peca": "w09.png",
+  "x": 764,
+  "y": 497,
+  "w": 391,
+  "h": 129,
+  "texto": "foi escrito",
+  "corpo": 111
+ },
+ "w10": {
+  "peca": "w10.png",
+  "x": 557,
+  "y": 708,
+  "w": 806,
+  "h": 97,
+  "texto": "DEPOIS",
+  "corpo": 132
+ },
+ "w11": {
+  "peca": "w11.png",
+  "x": 357,
+  "y": 749,
+  "w": 1205,
+  "h": 56,
+  "texto": "ESTOU COM MEDO",
+  "corpo": 74
+ }
+}
