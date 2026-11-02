@@ -53,6 +53,36 @@ As fontes estão em `ferramentas/fontes/`. São do Fontsource 5.1.0, sob
 licença OFL, e as licenças vão junto. Os PNGs ficam fora do git, como o
 resto da mídia, e o script os refaz.
 
+## O ATRAVESSA refeito
+
+O `planicie-texto.mp4` do pacote já vinha com o ATRAVESSA quebrado. A
+máscara do Arthur também pegava o mato escuro dos dois lados, porque
+preenche cada linha entre os pixels escuros das pontas. Com isso, ela
+apagava o T inteiro, o alto do R e pedaços dos dois primeiros A, e fazia
+o segundo S piscar. Com o seu ok, o plano foi refeito por
+`ferramentas/atravessa.py`.
+
+- A base é o `planicie.mp4`, que é o mesmo take, quadro a quadro, sem o
+  texto.
+- O texto reproduz o do pacote, com as medidas tiradas dele:
+  - Montserrat 600, corpo 112,3, letra a letra sem kerning;
+  - 53 px (0,47 em) entre as letras;
+  - origem em x=400 e linha de base em y=647;
+  - creme `F8F0E2`.
+
+  Nas letras que vieram inteiras, as bordas batem a até 1,7 px.
+- Cada letra entra inteira nos mesmos quadros do pacote: 24, 28, 33, 37,
+  42, 46, 51, 55 e 59 do arquivo.
+- A máscara é só o corpo do Arthur. É a mancha escura (luminância < 38)
+  ligada à coluna mais escura do centro, a no máximo 130 px dela, com a
+  borda suave. Na altura do texto ela fica entre x=802 e x=968.
+- A cor passa pela mesma conversão do arquivo do pacote: BT.601, faixa
+  tv, etiqueta bt470bg. Fora do texto, a diferença média para o original
+  é de 1,4 a 1,8 níveis, que é ruído de compressão.
+
+O arquivo do pacote fica guardado em `public/planicie-texto-pacote.mp4`.
+O código da cena não mudou e continua lendo `planicie-texto.mp4`.
+
 ## Trilha
 
 O `audio-intro.mp3` vai como veio (−14,9 LUFS). O LEIA avisa que a música
