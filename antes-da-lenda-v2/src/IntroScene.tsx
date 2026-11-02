@@ -26,6 +26,7 @@ import React from 'react';
 import {
   AbsoluteFill,
   Audio,
+  Freeze,
   Img,
   OffthreadVideo,
   Sequence,
@@ -187,11 +188,20 @@ export const IntroScene: React.FC = () => {
         perspectiveOrigin: '50% 50%',
       }}
     >
+      {/* ------------------------------------------------- a pilha, no ato 2 */}
+      {/* [montagem] a pilha vem ANTES da carta: sem preserve-3d no pai, as camadas
+          se empilham pela ordem do DOM, e depois da carta ela era desenhada por
+          cima do tratado. */}
+      {f > VIRADA + VIRADA_DUR ? <Pilha recuo={recuo} /> : null}
+
       {/* ------------------------------------------- A CARTA DE DUAS FACES */}
+      {/* [montagem] translateZ antes do rotateY: depois de girar 180° o eixo Z
+          da carta aponta para a câmera, e o recuo virava avanço (a carta crescia
+          e, passado o valor da perspectiva, sumia atrás da câmera). */}
       <AbsoluteFill
         style={{
           transformStyle: 'preserve-3d',
-          transform: `rotateY(${giro}deg) translateZ(${-recuo}px)`,
+          transform: `translateZ(${-recuo}px) rotateY(${giro}deg)`,
         }}
       >
         {/* FRENTE: o jogo. A lenda. */}
@@ -208,6 +218,14 @@ export const IntroScene: React.FC = () => {
           <Sequence from={CORTE_MERCADO} durationInFrames={VIRADA - CORTE_MERCADO + 2}>
             <Plano src="mercado-188f.mp4" />
           </Sequence>
+          {/* [montagem] o clipe acaba no 512, no começo do giro; sem isto a face
+              da frente girava vazia (preta) até ficar de perfil. Segura o último
+              quadro até a carta virar. */}
+          <Sequence from={VIRADA + 2} durationInFrames={VIRADA_DUR}>
+            <Freeze frame={VIRADA - CORTE_MERCADO + 1}>
+              <Plano src="mercado-188f.mp4" />
+            </Freeze>
+          </Sequence>
         </AbsoluteFill>
 
         {/* VERSO: a mesma imagem impressa. O registro. */}
@@ -223,9 +241,6 @@ export const IntroScene: React.FC = () => {
           />
         </AbsoluteFill>
       </AbsoluteFill>
-
-      {/* ------------------------------------------------- a pilha, no ato 2 */}
-      {f > VIRADA + VIRADA_DUR ? <Pilha recuo={recuo} /> : null}
 
       {/* ---------------------------------------- as palavras, em profundidade */}
       {f < VIRADA ? (
