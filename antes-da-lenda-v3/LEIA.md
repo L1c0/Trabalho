@@ -68,7 +68,39 @@ ela tem que ser trocada, e o corte em 19,5 s tem que continuar no lugar.
 2. redução por Lanczos para 1920×1080, em x264 CRF 16 preset slow,
    yuv420p, com o áudio copiado e faststart.
 
-A única adição é a matriz bt709 nos dois passos.
+São duas adições:
+
+- A matriz bt709 nos dois passos.
+- **O áudio é adiantado em 2048 amostras no passo 2.** O AAC que o
+  Remotion grava começa com 2048 amostras de priming, e a edit list dele
+  não as desconta. Assim, o som tocava 42,7 ms atrasado (1,3 frame). O
+  corte da música caía depois do corte da imagem em 19,5 s, e as batidas
+  vinham depois das palavras. O passo 2 continua copiando o áudio, sem
+  recodificar. Ele só adianta a trilha, e o muxer grava a edit list que
+  pula o priming.
+  - Conferido: o áudio do master bate com o `audio-intro.mp3` amostra a
+    amostra (deslocamento 0, correlação 1,0000).
+  - O mesmo atraso está na v2 (medido em `antes-da-lenda-v2/out/`).
+
+`bash ferramentas/render.sh passo2` refaz só o passo 2 a partir do
+`out/intro-2x.mp4`. `bash ferramentas/envio.sh` faz a versão de envio,
+abaixo de 30 MiB, do mesmo intermediário. Ela usa x264 em duas passadas e
+leva a mesma correção do áudio.
 
 `node ferramentas/quadros.mjs 412 458 488 619` gera quadros soltos em 2×
 para conferência.
+
+## Conferência do master
+
+- 690 frames, 23,0 s de vídeo, 1920×1080, yuv420p bt709, faststart.
+- Os cortes caem nos frames 64, 124, 169, 229, 274, 319, 364, 409, 454,
+  484, 511 e 585, todos os da tabela de planos.
+  - A virada é em 17,03 s (f511), e o close entra em 19,5 s (f585).
+  - O de 124 é mais suave porque junta dois planos da planície.
+- Áudio:
+  - a música cai abaixo de −30 dB em 19,49 s;
+  - a fala passa de −20 dB em 20,51 s;
+  - os dois tempos são iguais aos do `audio-intro.mp3`.
+- −14,9 LUFS integrado, pico −1,7 dBFS, como na origem.
+- O letterbox está preto (luminância máxima 2 de 255), e não há quadro
+  preto.
