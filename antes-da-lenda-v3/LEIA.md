@@ -104,3 +104,11 @@ para conferência.
 - −14,9 LUFS integrado, pico −1,7 dBFS, como na origem.
 - O letterbox está preto (luminância máxima 2 de 255), e não há quadro
   preto.
+
+## Arquivos
+
+- `out/antes-da-lenda-v3.mp4`: o master, em CRF 16, com 42,8 MiB.
+- `out/antes-da-lenda-v3-envio.mp4`: a versão de envio, com 27,8 MiB.
+  - É x264 em duas passadas a 9,9 Mb/s, feito do mesmo intermediário.
+  - Contra o master dá SSIM 0,982 e PSNR 45,3 dB na luma.
+  - O áudio é o mesmo do master.
