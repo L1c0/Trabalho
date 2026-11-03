@@ -125,3 +125,24 @@ Remotion não desconta. Sem isso, o som tocaria 42,7 ms atrasado.
 `bash ferramentas/envio.sh S1` faz a versão abaixo de 30 MiB, da mesma
 saída do Remotion. `node ferramentas/quadros.mjs --comp=S1 0 160 …` gera
 quadros soltos para conferência.
+
+## Conferência dos quatro
+
+| | quadros | duração | tamanho | LUFS | pico |
+|---|---|---|---|---|---|
+| S1 | 1729 | 57,63 s | 19,1 MiB | −14,9 | −4,3 dBFS |
+| S2 | 1294 | 43,13 s | 23,5 MiB | −14,9 | −4,3 dBFS |
+| S3 | 1619 | 53,97 s | 25,6 MiB | −15,0 | −4,2 dBFS |
+| S4 | 1482 | 49,41 s | 31,9 MiB | −14,8 | −4,4 dBFS |
+
+- Os quatro saem em 1080×1920, yuv420p, bt709, 30 fps e faststart.
+- O áudio de cada um bate com o seu mp3 amostra a amostra (deslocamento
+  0, correlação 1,0000).
+- Os mp3 são mono. O Remotion os passa para estéreo com −3 dB em cada
+  canal: o LUFS integrado fica igual ao do mp3 (−14,8 a −15,0), e o pico
+  fica 3 dB abaixo.
+- Na passada quadro a quadro, as maiores diferenças entre quadros
+  seguidos são os deslizes da folha e os cortes. Não há quadro preto
+  (a luminância nunca cai abaixo de 146).
+- O S4 passa de 30 MiB, então foi feita
+  `out/vagabond-s4-o-remo-envio.mp4` com `ferramentas/envio.sh`.
