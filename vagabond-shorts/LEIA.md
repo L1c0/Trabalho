@@ -145,4 +145,6 @@ quadros soltos para conferência.
   seguidos são os deslizes da folha e os cortes. Não há quadro preto
   (a luminância nunca cai abaixo de 146).
 - O S4 passa de 30 MiB, então foi feita
-  `out/vagabond-s4-o-remo-envio.mp4` com `ferramentas/envio.sh`.
+  `out/vagabond-s4-o-remo-envio.mp4` com `ferramentas/envio.sh`. Ela tem
+  27,6 MiB e 4,4 Mb/s de vídeo, e contra o master dá SSIM 0,993 e PSNR
+  49,1 dB na luma. O áudio é o mesmo.
