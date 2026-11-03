@@ -1,0 +1,38 @@
+{
+ "dur": 1619,
+ "planos": [
+  [
+   0,
+   250,
+   "s3-p1",
+   "s3-l1",
+   "Kojiro — o retrato"
+  ],
+  [
+   250,
+   460,
+   "s3-p2",
+   null,
+   "os dois frente a frente"
+  ],
+  [
+   1140,
+   1330,
+   "s3-p4",
+   "s3-l3",
+   "as estatuas — 'existem dois Kojiro'"
+  ]
+ ],
+ "papel": [
+  [
+   460,
+   1140,
+   "a idade muda / 1654 / GANRYU"
+  ],
+  [
+   1330,
+   1619,
+   "um deles foi inventado, e a cartela"
+  ]
+ ]
+}

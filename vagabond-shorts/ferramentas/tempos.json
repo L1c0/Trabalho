@@ -1,0 +1,44 @@
+{
+  "_leia": "Grupos de blocos de cada trecho de papel e o quadro em que cada grupo começa. Dentro do grupo, os blocos entram em cascata, 10 quadros depois do fim da entrada do anterior. Os quadros foram estimados pelas pausas da narração (pausas de 120 ms ou mais), sem transcrição. 'passo' é o passo entre traços (S1), 'ficam' são os 12 traços que ficam quando os outros 48 saem (S1), e 'varre' é a duração da varredura do eixo (S4).",
+  "s1": [
+    {"em": 152, "blocos": ["r1", "n60"]},
+    {"em": 326, "blocos": ["r2"]},
+    {"em": 428, "blocos": ["s1", "n1654", "r3"]},
+    {"em": 618, "blocos": ["tracos"], "passo": 8},
+    {"em": 1104, "blocos": ["s2"]},
+    {"em": 1382, "ficam": ["v000", "v001", "v002", "v003", "x00", "v010", "v011", "v012", "v013", "x01", "v020", "v021"]},
+    {"em": 1492, "blocos": ["r4"]},
+    {"em": 1537, "blocos": ["n12"]},
+    {"em": 1697, "blocos": ["fim"]}
+  ],
+  "s2": [
+    {"em": 514, "blocos": ["r0"]},
+    {"em": 549, "blocos": ["r1", "r2"]},
+    {"em": 669, "blocos": ["prancha", "colchete"]},
+    {"em": 960, "blocos": ["s1"]},
+    {"em": 1033, "blocos": ["n96", "r3"]},
+    {"em": 1264, "blocos": ["fim"]}
+  ],
+  "s3": [
+    {"em": 462, "blocos": ["r1"]},
+    {"em": 540, "blocos": ["s1"]},
+    {"em": 589, "blocos": ["s2"]},
+    {"em": 637, "blocos": ["s3"]},
+    {"em": 700, "blocos": ["s4"]},
+    {"em": 792, "blocos": ["r2", "n1654"]},
+    {"em": 870, "blocos": ["s5", "ganryu"]},
+    {"em": 990, "blocos": ["r3"]},
+    {"em": 1058, "blocos": ["s6", "s7"]},
+    {"em": 1439, "blocos": ["r4"]},
+    {"em": 1585, "blocos": ["fim"]}
+  ],
+  "s4": [
+    {"em": 814, "blocos": ["r2"]},
+    {"em": 898, "blocos": ["s5", "s6"]},
+    {"em": 972, "blocos": ["r3", "n164", "r4"]},
+    {"em": 1124, "blocos": ["regua"], "varre": 100},
+    {"em": 1248, "blocos": ["s7"]},
+    {"em": 1414, "blocos": ["s8", "s9"]},
+    {"em": 1450, "blocos": ["fim"]}
+  ]
+}

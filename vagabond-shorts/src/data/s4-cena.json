@@ -1,0 +1,73 @@
+{
+ "dur": 1482,
+ "planos": [
+  [
+   0,
+   100,
+   "s4-p1",
+   "s4-l1",
+   "o barco e os remos"
+  ],
+  [
+   100,
+   182,
+   "s4-p2",
+   "s4-l2",
+   "o triptico inteiro — 1612, Funajima"
+  ],
+  [
+   182,
+   302,
+   "s4-p3",
+   "s4-l3",
+   "Sasaki Kojiro"
+  ],
+  [
+   302,
+   462,
+   "s4-p4",
+   "s4-l4",
+   "a arma em close — e de ACO"
+  ],
+  [
+   462,
+   537,
+   "s4-p5",
+   null,
+   "a espada do Kojiro"
+  ],
+  [
+   537,
+   647,
+   "s4-p2",
+   "s4-l5",
+   "o triptico de novo"
+  ],
+  [
+   647,
+   792,
+   "s4-p6",
+   null,
+   "Musashi saltando"
+  ],
+  [
+   1296,
+   1412,
+   "s4-p7",
+   "s4-l6",
+   "as estatuas modernas — 'nao foi testemunha'"
+  ]
+ ],
+ "papel": [
+  [
+   792,
+   1296,
+   "a tese e a regua do tempo"
+  ],
+  [
+   1412,
+   1482,
+   "a cartela"
+  ]
+ ]
+}

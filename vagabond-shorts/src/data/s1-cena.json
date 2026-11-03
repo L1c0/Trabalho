@@ -1,0 +1,31 @@
+{
+ "dur": 1729,
+ "planos": [
+  [
+   0,
+   150,
+   "s1-p1",
+   "s1-l1",
+   "a batalha — '60 duelos e nao perdeu nenhum'"
+  ],
+  [
+   1240,
+   1380,
+   "s1-p2",
+   "s1-l2",
+   "'voce nunca teve como saber'"
+  ]
+ ],
+ "papel": [
+  [
+   150,
+   1240,
+   "as fontes e os 60 tracos"
+  ],
+  [
+   1380,
+   1729,
+   "sobram 12, e a cartela"
+  ]
+ ]
+}
