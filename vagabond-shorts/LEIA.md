@@ -108,17 +108,20 @@ cascata, os deslizes e a conferência são refeitos sozinhos.
 
 ## Render
 
-`bash ferramentas/render.sh [S1 S2 S3 S4]` faz o render em dois passos:
+`bash ferramentas/render.sh [S1 S2 S3 S4]` renderiza em 1x: 1080×1920,
+x264 CRF 16, preset slow, yuv420p, matriz bt709. É a receita do Houseki.
 
-1. `--scale=2 --crf=14 --pixel-format=yuv444p --gl=angle`, matriz bt709,
-   com x264 `veryfast`. É só o intermediário: no preset padrão, o encode
-   de 2160×3840 tomava metade da CPU e o render passaria de 4 horas;
-2. redução por Lanczos para 1080×1920, em x264 CRF 16 preset slow,
-   yuv420p, com faststart.
+- A folha, as peças de tipo e as legendas saem pixel a pixel.
+- Os planos são reduzidos uma vez, com Lanczos, para 1134×2016, o tamanho
+  no fim do empurrão (`ferramentas/planos.py`). Assim, o Chrome só os
+  reamostra entre 0,95x e 1x, e a retícula do mangá não vira moiré.
+- O render em 2x, com redução depois, levaria quatro vezes mais tempo
+  (cerca de 3 horas para os quatro) sem ganho: a folha já sai exata em 1x.
 
-O áudio é copiado e adiantado nas 2048 amostras de priming que o AAC do
+Depois do render, o vídeo é copiado sem recodificar, com faststart. O
+áudio também é copiado, adiantado nas 2048 amostras de priming que o AAC do
 Remotion não desconta. Sem isso, o som tocaria 42,7 ms atrasado.
 
-`bash ferramentas/envio.sh S1` faz a versão abaixo de 30 MiB a partir do
-mesmo intermediário. `node ferramentas/quadros.mjs --comp=S1 0 160 …` gera
-quadros soltos em 2× para conferência.
+`bash ferramentas/envio.sh S1` faz a versão abaixo de 30 MiB, da mesma
+saída do Remotion. `node ferramentas/quadros.mjs --comp=S1 0 160 …` gera
+quadros soltos para conferência.

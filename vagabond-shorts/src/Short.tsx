@@ -8,7 +8,8 @@ import agenda from './data/agenda.json';
  *
  * - Planos: a imagem de 1350x2400 mostrada a 1080x1920 cresce de 1,00 para
  *   1,05 ao longo do plano (nunca amplia um pixel). Corte seco com 4 quadros
- *   de ganho de opacidade.
+ *   de ganho de opacidade. O render é em 1x, e o plano vem reduzido com
+ *   Lanczos para 1134x2016 (o tamanho no fim do empurrão).
  * - Legenda: no canto inferior esquerdo, x=135, sobre a tarja de papel.
  * - Papel: a folha impressa com as peças por cima, cada uma na posição do
  *   pos.json. Quando e como cada peça entra, e onde a folha está, vêm de
@@ -134,7 +135,8 @@ const Plano: React.FC<{ f: number; a: number; b: number; src: string; leg: strin
   const q = freia(c01((f - (a + 6) + 1) / 6));
   return (
     <AbsoluteFill style={{ overflow: 'hidden' }}>
-      <Img src={staticFile(`${src}.jpg`)} style={{ position: 'absolute', left: 0, top: 0, width: W, height: H, transform: `scale(${escala})` }} />
+      {/* public/planos/: o plano já reduzido com Lanczos para 1134x2016 (ferramentas/planos.py) */}
+      <Img src={staticFile(`planos/${src}.jpg`)} style={{ position: 'absolute', left: 0, top: 0, width: W, height: H, transform: `scale(${escala})` }} />
       {leg ? (
         <div
           style={{

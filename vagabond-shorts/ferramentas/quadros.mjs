@@ -1,4 +1,4 @@
-// Quadros soltos para conferência, sem renderizar o vídeo (no dobro, como no
+// Quadros soltos para conferência, sem renderizar o vídeo (em 1x, como no
 // render final):  node ferramentas/quadros.mjs --comp=S1 [--gl=angle] 0 60 518 ...
 import { bundle } from '@remotion/bundler';
 import { renderStill, selectComposition } from '@remotion/renderer';
@@ -15,7 +15,7 @@ const serveUrl = await bundle({ entryPoint: path.join(raiz, 'src/index.ts'), pub
 const composition = await selectComposition({ serveUrl, id: comp, inputProps: {}, chromiumOptions: { gl } });
 for (const f of args.filter((a) => !a.startsWith('--')).map(Number)) {
   const t0 = Date.now();
-  await renderStill({ composition, serveUrl, frame: f, output: path.join(saida, `${comp}-q${f}.png`), inputProps: {}, scale: 2,
+  await renderStill({ composition, serveUrl, frame: f, output: path.join(saida, `${comp}-q${f}.png`), inputProps: {}, scale: 1,
     chromiumOptions: { gl }, timeoutInMilliseconds: 120000 });
   console.log(`q${f}.png  ${Date.now() - t0} ms`);
 }
