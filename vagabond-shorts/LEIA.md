@@ -110,7 +110,9 @@ cascata, os deslizes e a conferência são refeitos sozinhos.
 
 `bash ferramentas/render.sh [S1 S2 S3 S4]` faz o render em dois passos:
 
-1. `--scale=2 --crf=14 --pixel-format=yuv444p --gl=angle`, matriz bt709;
+1. `--scale=2 --crf=14 --pixel-format=yuv444p --gl=angle`, matriz bt709,
+   com x264 `veryfast`. É só o intermediário: no preset padrão, o encode
+   de 2160×3840 tomava metade da CPU e o render passaria de 4 horas;
 2. redução por Lanczos para 1080×1920, em x264 CRF 16 preset slow,
    yuv420p, com faststart.
 

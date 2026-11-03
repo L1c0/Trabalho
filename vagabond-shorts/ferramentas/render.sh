@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Render dos Shorts, um a um, em dois passos (a receita da casa):
-#   1. 2160x3840 (--scale=2), CRF 14, yuv444p, matriz bt709;
+#   1. 2160x3840 (--scale=2), CRF 14, yuv444p, matriz bt709, x264 veryfast
+#      (é só o intermediário; o encode final é slow);
 #   2. Lanczos para 1080x1920, x264 CRF 16 preset slow, yuv420p, etiquetas
 #      bt709, áudio copiado, faststart.
 # O AAC que o Remotion grava começa com 2048 amostras de priming que a edit
@@ -32,7 +33,7 @@ nome() {
 for id in "${ids[@]}"; do
   if [ "$passo1" = 1 ]; then
     npx remotion render src/index.ts "$id" "out/$id-2x.mp4" --scale=2 --crf=14 --pixel-format=yuv444p \
-      --color-space=bt709 --concurrency=4 --gl="$gl" --timeout=120000 --log=error
+      --color-space=bt709 --x264-preset=veryfast --concurrency=4 --gl="$gl" --timeout=120000 --log=error
   fi
   ffmpeg -hide_banner -loglevel error -y -i "out/$id-2x.mp4" -itsoffset -0.042666667 -i "out/$id-2x.mp4" \
     -map 0:v:0 -map 1:a:0 -vf "scale=1080:1920:flags=lanczos" \
