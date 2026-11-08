@@ -1,0 +1,46 @@
+ANTES DA LENDA · Red Dead Redemption 2 — o vídeo longo
+12:29 · 1920x1080 · 30 fps · 22.470 quadros
+
+Este é o projeto pronto para renderizar o master no seu computador. Já
+vem tudo: as 16 chapas, a trilha mixada, os 13 clipes e o código. A
+prévia que foi junto serve só para assistir; o vídeo bom é este.
+
+COMO RENDERIZAR
+
+1. Descompacte TODAS as partes (reddead-parte-01-de-NN.zip etc.) na
+   mesma pasta. Cada uma cria a pasta reddead-video/ e põe lá a sua
+   parte; a ordem não importa.
+
+2. Instale o Node.js 18 ou mais novo (nodejs.org), se ainda não tiver.
+
+3. Abra um terminal dentro da pasta reddead-video/ e rode:
+
+       npm ci
+       node ferramentas/render.mjs
+
+   O primeiro comando baixa o Remotion (uma vez só). O segundo faz o
+   vídeo e mostra a porcentagem. O master sai em:
+
+       out/reddead-master.mp4
+
+   Ele fica com uns __TAMANHO__ e leva de __TEMPO__, conforme o
+   computador. É esse arquivo que vai para o YouTube.
+
+4. Para testar antes, com só um trecho (10 s de um clipe):
+
+       node ferramentas/render.mjs --frames=3180-3479
+
+O QUE O RENDER FAZ
+
+- Vídeo: x264, CRF 16, preset slow, yuv420p, cor bt709.
+- Áudio: a trilha mixada, sem mexer no volume (−14,6 LUFS).
+- No fim, o próprio script acerta um atraso de 42,7 ms que o Remotion
+  deixaria no áudio (o priming do AAC). Não precisa fazer nada.
+
+SE DER ERRO
+
+- "npx" não encontrado: o Node não está instalado ou o terminal foi
+  aberto antes da instalação. Feche e abra o terminal de novo.
+- Erro de GPU ou de vídeo em branco: rode com
+      node ferramentas/render.mjs --gl=swangle
+- Falta de espaço: o render precisa de uns 3 GB livres em disco.

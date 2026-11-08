@@ -1,6 +1,7 @@
 import React from 'react';
-import { AbsoluteFill, Audio, Img, OffthreadVideo, Sequence, staticFile, useCurrentFrame } from 'remotion';
+import { AbsoluteFill, Audio, Freeze, Img, OffthreadVideo, staticFile, useCurrentFrame } from 'remotion';
 import pacote from './data/pacote.json';
+import quadrosDosClipes from './data/clipes.json';
 
 /**
  * ANTES DA LENDA · Red Dead Redemption 2 — o vídeo longo (docs/PACOTE.json)
@@ -13,7 +14,7 @@ import pacote from './data/pacote.json';
  *   da altura. A chapa tem 2400x1350, então nunca amplia;
  * - clipe: nenhum movimento extra. A cor é saturação 0,72, contraste 1,07,
  *   sombra quente, vinheta e grão 5. Tudo é feito aqui, sobre o vídeo
- *   original, para o pacote de render só precisar dos arquivos do jogo.
+ *   original, para o pacote de render só precisar dos trechos do jogo.
  *
  * `clipes: false` desenha um cartão no lugar de cada clipe (o arquivo e o
  * trecho), para conferir chapas, cortes e trilha sem os vídeos.
@@ -95,16 +96,21 @@ const Clipe: React.FC<{ c: Cena; f: number; clipes: boolean }> = ({ c, f, clipes
       </AbsoluteFill>
     );
   }
+  // cada clipe veio já cortado no trecho da cena: public/clipes/cNN-X.mp4
+  // (NN = a cena, X = o clipe). Nos 3 quadros em que ele fica por baixo da
+  // cena seguinte, segura o último quadro do arquivo.
+  const arq = `c${String(c.i).padStart(2, '0')}-${c.clipe}.mp4`;
+  const total = (quadrosDosClipes as Record<string, number>)[arq];
+  const k = Math.min(f - c.entra_f, total - 1);
   return (
     <AbsoluteFill style={{ overflow: 'hidden', backgroundColor: '#000' }}>
-      <Sequence from={c.entra_f} layout="none">
+      <Freeze frame={k}>
         <OffthreadVideo
-          src={staticFile(`clipes/${c.arquivo_origem}`)}
-          startFrom={Math.round((c.origem_entra_s ?? 0) * 30)}
+          src={staticFile(`clipes/${arq}`)}
           muted
-          style={{ width: W, height: H, objectFit: 'cover', filter: 'saturate(0.72) contrast(1.07)' }}
+          style={{ width: W, height: H, filter: 'saturate(0.72) contrast(1.07)' }}
         />
-      </Sequence>
+      </Freeze>
       <Cor f={f} />
     </AbsoluteFill>
   );
