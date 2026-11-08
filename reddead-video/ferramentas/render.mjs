@@ -1,5 +1,5 @@
 // Render do master em qualquer sistema (Windows, macOS, Linux):
-//   node ferramentas/render.mjs [--frames=3180-3479] [--gl=angle]
+//   node ferramentas/render.mjs [--crf=16] [--frames=3180-3479] [--gl=angle]
 // 1. Remotion: 1920x1080, x264 CRF 16 preset slow, yuv420p, matriz bt709
 //    -> out/reddead-render.mp4
 // 2. O ffmpeg que vem com o Remotion copia vídeo e áudio sem recodificar.
@@ -17,6 +17,7 @@ const raiz = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const args = process.argv.slice(2);
 const gl = (args.find((a) => a.startsWith('--gl=')) ?? '').slice(5) || undefined;
 const trecho = args.find((a) => a.startsWith('--frames='));
+const crf = Number((args.find((a) => a.startsWith('--crf=')) ?? '--crf=16').slice(6));
 const frameRange = trecho ? trecho.slice(9).split('-').map(Number) : null;
 const suf = frameRange ? `-${frameRange[0]}-${frameRange[1]}` : '';
 const out = path.join(raiz, 'out');
@@ -37,7 +38,7 @@ await renderMedia({
   codec: 'h264',
   outputLocation: bruto,
   inputProps,
-  crf: 16,
+  crf,
   pixelFormat: 'yuv420p',
   x264Preset: 'slow',
   colorSpace: 'bt709',

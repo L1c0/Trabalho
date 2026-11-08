@@ -6,26 +6,19 @@ chapas) e da trilha `28c3e776-reddead-TRILHA-mixada.mp3`, que vira
 `public/trilha.mp3` sem nenhuma alteração. A trilha tem 749,06 s e
 −14,6 LUFS.
 
-## Situação: faltam os 8 vídeos do jogo
+## Os clipes
 
-Os clipes são trechos de gravações do jogo que não vieram no pacote. Eles
-cobrem uns 6 dos 12 minutos. Cada arquivo vai em `public/clipes/` com o
-nome exato:
+Os clipes chegaram já cortados por cena, em `rd-clipes-1de7` a `7de7`:
+são 13 arquivos `cNN-X.mp4`, em que NN é a cena e X é o clipe. Todos têm
+1920×1080, 30 fps constantes e nenhum áudio.
 
-| clipe | arquivo | trechos usados (s) |
-|---|---|---|
-| A | `1000417094.mp4` | 12–52,92 · 118–135,94 · 108–143,58 |
-| B | `1000417101.mp4` | 20–46 |
-| E | `142e74fe-1000417122.mp4` | 8–48 |
-| F | `1000417129.mp4` | 96–108,2 · 0–40,26 · 41–52,74 · 60–116 |
-| G | `292f4bb8-1000417136.mp4` | 2–24,12 |
-| H | `1000414839.mp4` | 0–14 |
-| I | `1000414840.mp4` | 0–11,2 |
-| J | `1000414855.mp4` | 0–40,48 |
+Cada arquivo tem exatamente os quadros da sua cena. Quatro deles têm um
+quadro a mais, por arredondamento. As contagens estão em
+`src/data/clipes.json`. A cena toca o arquivo do começo, e nos 3 quadros
+da dissolução seguinte segura o último quadro.
 
-Até eles chegarem, `--sem-clipes` desenha um cartão no lugar de cada
-clipe, com o arquivo e o trecho. Isso serve para conferir chapas, cortes
-e trilha.
+`--sem-clipes` desenha um cartão no lugar de cada clipe, com o arquivo de
+origem e o trecho.
 
 ## Como a montagem segue o pacote
 
@@ -68,3 +61,32 @@ O pacote foi seguido assim:
 
 `node ferramentas/quadros.mjs [--sem-clipes] 0 500 1016 …` grava os
 quadros em `out/quadros/`.
+
+## Entrega
+
+O master de 12:29 passa de 3 GB, e o envio aceita no máximo 30 MiB por
+arquivo. Por escolha sua, a entrega tem duas partes:
+
+- **A prévia.** `bash ferramentas/previa.sh` gera um arquivo de até
+  30 MiB: 640×360, x264 em duas passadas, áudio AAC de 80 kb/s. Ela sai
+  da cópia de conferência feita aqui (`bash ferramentas/render.sh
+  --rapido`, com x264 veryfast e CRF 18, que só serve para isso).
+- **O pacote de render.** `python3 -I ferramentas/pacote.py
+  ferramentas/LEIA-PRIMEIRO-pacote.txt` gera 6 zips de até 29 MiB, com o
+  projeto, as chapas, a trilha e os 13 clipes. No outro computador:
+  - `npm ci`;
+  - `node ferramentas/render.mjs`, que roda em Windows, macOS e Linux.
+    Faz o master em x264 CRF 16 preset slow e acerta o atraso do AAC com
+    o ffmpeg que vem com o Remotion.
+
+  Testei o pacote do zero: descompactei os 6 zips numa pasta vazia, rodei
+  `npm ci` e rendi trechos com `render.mjs`. O resultado sai em
+  1920×1080, com a cor etiquetada bt709 e o áudio.
+
+O tamanho do master em CRF 16, medido nos trechos, é de cerca de 3,4 GB:
+
+- os clipes rendem cerca de 26 Mb/s;
+- as chapas rendem cerca de 52 Mb/s, porque a janela que desliza sobre
+  o grão impresso muda todos os pixels a cada quadro.
+
+Com `--crf=18`, o arquivo fica com uns 2 GB.

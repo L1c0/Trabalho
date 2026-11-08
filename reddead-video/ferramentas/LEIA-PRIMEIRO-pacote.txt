@@ -23,8 +23,16 @@ COMO RENDERIZAR
 
        out/reddead-master.mp4
 
-   Ele fica com uns __TAMANHO__ e leva de __TEMPO__, conforme o
+   Ele fica com uns 3,5 GB e leva de 1 a 4 horas, conforme o
    computador. É esse arquivo que vai para o YouTube.
+
+   Quer um arquivo menor? Use CRF 18 (uns 2 GB, sem diferença que se
+   veja):
+
+       node ferramentas/render.mjs --crf=18
+
+   O tamanho vem quase todo das chapas: a janela que desliza sobre o
+   grão impresso nelas muda todos os pixels a cada quadro.
 
 4. Para testar antes, com só um trecho (10 s de um clipe):
 
@@ -32,7 +40,8 @@ COMO RENDERIZAR
 
 O QUE O RENDER FAZ
 
-- Vídeo: x264, CRF 16, preset slow, yuv420p, cor bt709.
+- Vídeo: x264, CRF 16 (ou o que você passar), preset slow, yuv420p,
+  cor bt709.
 - Áudio: a trilha mixada, sem mexer no volume (−14,6 LUFS).
 - No fim, o próprio script acerta um atraso de 42,7 ms que o Remotion
   deixaria no áudio (o priming do AAC). Não precisa fazer nada.
@@ -43,4 +52,4 @@ SE DER ERRO
   aberto antes da instalação. Feche e abra o terminal de novo.
 - Erro de GPU ou de vídeo em branco: rode com
       node ferramentas/render.mjs --gl=swangle
-- Falta de espaço: o render precisa de uns 3 GB livres em disco.
+- Falta de espaço: o render precisa de uns 10 GB livres em disco.
