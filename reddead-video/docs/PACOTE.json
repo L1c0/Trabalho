@@ -1,0 +1,636 @@
+{
+ "formato": {
+  "larg": 1920,
+  "alt": 1080,
+  "fps": 30,
+  "dur_s": 749.0,
+  "dur_f": 22470
+ },
+ "audio": {
+  "arquivo": "trilha.mp3",
+  "dur_s": 749.064,
+  "composicao": "narracao intacta + faixa2 como cama com sidechain + faixa1 na abertura",
+  "obs": "se preferir remixar: a faixa 2 e a cama porque poe so 30% da energia na banda da voz"
+ },
+ "regras": [
+  "NADA de rotateX/rotateY/perspective/translateZ/paralaxe/preserve-3d",
+  "toda perspectiva ja esta assada nas chapas",
+  "corte seco entre cenas, 4 quadros de opacidade",
+  "chapa: so o crop que desliza. Clipe: nenhum movimento extra"
+ ],
+ "cenas": [
+  {
+   "i": 0,
+   "entra_s": 0.0,
+   "sai_s": 33.88,
+   "dur_s": 33.88,
+   "entra_f": 0,
+   "sai_f": 1016,
+   "dur_f": 1016,
+   "tipo": "chapa",
+   "arquivo": "chapas/p01-abertura.jpg",
+   "movimento": {
+    "tipo": "crop_desliza",
+    "de_x": 140,
+    "para_x": 340,
+    "y": "centro",
+    "janela": [
+     1920,
+     1080
+    ],
+    "obs": "a chapa tem 2400x1350; a janela desliza 200px. Nunca amplia."
+   }
+  },
+  {
+   "i": 1,
+   "entra_s": 33.88,
+   "sai_s": 50.2,
+   "dur_s": 16.32,
+   "entra_f": 1016,
+   "sai_f": 1506,
+   "dur_f": 490,
+   "tipo": "chapa",
+   "arquivo": "chapas/p02-papel.jpg",
+   "movimento": {
+    "tipo": "crop_desliza",
+    "de_x": 140,
+    "para_x": 340,
+    "y": "centro",
+    "janela": [
+     1920,
+     1080
+    ],
+    "obs": "a chapa tem 2400x1350; a janela desliza 200px. Nunca amplia."
+   }
+  },
+  {
+   "i": 2,
+   "entra_s": 50.2,
+   "sai_s": 62.4,
+   "dur_s": 12.2,
+   "entra_f": 1506,
+   "sai_f": 1872,
+   "dur_f": 366,
+   "tipo": "clipe",
+   "clipe": "F",
+   "arquivo_origem": "1000417129.mp4",
+   "origem_entra_s": 96,
+   "origem_sai_s": 108.2,
+   "movimento": {
+    "tipo": "nenhum",
+    "obs": "o plano ja se move. Nao acrescentar camera."
+   },
+   "cor": "saturacao 0.72 · contraste 1.07 · sombra quente · vinheta · grao 5"
+  },
+  {
+   "i": 3,
+   "entra_s": 62.4,
+   "sai_s": 80.0,
+   "dur_s": 17.6,
+   "entra_f": 1872,
+   "sai_f": 2400,
+   "dur_f": 528,
+   "tipo": "chapa",
+   "arquivo": "chapas/p05-1899.jpg",
+   "movimento": {
+    "tipo": "crop_desliza",
+    "de_x": 140,
+    "para_x": 340,
+    "y": "centro",
+    "janela": [
+     1920,
+     1080
+    ],
+    "obs": "a chapa tem 2400x1350; a janela desliza 200px. Nunca amplia."
+   },
+   "obs": "A nevasca e real, do proprio video de prologo dele, em 1,00x. A cinematica tem credito de elenco queimado em quase tudo: medi e so 160-165s estao limpos.",
+   "alternativa_em_movimento": {
+    "arquivo_origem": "1000417160.mp4",
+    "entra_s": 160.0,
+    "sai_s": 166.5,
+    "crop": "1920:810:0:135  (tira a tarja de cutscene)",
+    "obs": "7s uteis apenas. Se usar, repete em ping-pong pra cobrir os 17,6s do bloco, ou segura a chapa parada. NAO esticar: a tarja volta e os creditos entram em 166,5s."
+   }
+  },
+  {
+   "i": 4,
+   "entra_s": 80.0,
+   "sai_s": 106.0,
+   "dur_s": 26.0,
+   "entra_f": 2400,
+   "sai_f": 3180,
+   "dur_f": 780,
+   "tipo": "clipe",
+   "clipe": "B",
+   "arquivo_origem": "1000417101.mp4",
+   "origem_entra_s": 20,
+   "origem_sai_s": 46.0,
+   "movimento": {
+    "tipo": "nenhum",
+    "obs": "o plano ja se move. Nao acrescentar camera."
+   },
+   "cor": "saturacao 0.72 · contraste 1.07 · sombra quente · vinheta · grao 5"
+  },
+  {
+   "i": 5,
+   "entra_s": 106.0,
+   "sai_s": 146.92,
+   "dur_s": 40.92,
+   "entra_f": 3180,
+   "sai_f": 4408,
+   "dur_f": 1228,
+   "tipo": "clipe",
+   "clipe": "A",
+   "arquivo_origem": "1000417094.mp4",
+   "origem_entra_s": 12,
+   "origem_sai_s": 52.92,
+   "movimento": {
+    "tipo": "nenhum",
+    "obs": "o plano ja se move. Nao acrescentar camera."
+   },
+   "cor": "saturacao 0.72 · contraste 1.07 · sombra quente · vinheta · grao 5"
+  },
+  {
+   "i": 6,
+   "entra_s": 146.92,
+   "sai_s": 156.0,
+   "dur_s": 9.08,
+   "entra_f": 4408,
+   "sai_f": 4680,
+   "dur_f": 272,
+   "tipo": "chapa",
+   "arquivo": "chapas/p03-tuberculose.jpg",
+   "movimento": {
+    "tipo": "crop_desliza",
+    "de_x": 140,
+    "para_x": 340,
+    "y": "centro",
+    "janela": [
+     1920,
+     1080
+    ],
+    "obs": "a chapa tem 2400x1350; a janela desliza 200px. Nunca amplia."
+   }
+  },
+  {
+   "i": 7,
+   "entra_s": 156.0,
+   "sai_s": 165.4,
+   "dur_s": 9.4,
+   "entra_f": 4680,
+   "sai_f": 4962,
+   "dur_f": 282,
+   "tipo": "chapa",
+   "arquivo": "chapas/p04-194.jpg",
+   "movimento": {
+    "tipo": "crop_desliza",
+    "de_x": 140,
+    "para_x": 340,
+    "y": "centro",
+    "janela": [
+     1920,
+     1080
+    ],
+    "obs": "a chapa tem 2400x1350; a janela desliza 200px. Nunca amplia."
+   }
+  },
+  {
+   "i": 8,
+   "entra_s": 165.4,
+   "sai_s": 186.0,
+   "dur_s": 20.6,
+   "entra_f": 4962,
+   "sai_f": 5580,
+   "dur_f": 618,
+   "tipo": "chapa",
+   "arquivo": "chapas/p05b-remedios.jpg",
+   "movimento": {
+    "tipo": "crop_desliza",
+    "de_x": 140,
+    "para_x": 340,
+    "y": "centro",
+    "janela": [
+     1920,
+     1080
+    ],
+    "obs": "a chapa tem 2400x1350; a janela desliza 200px. Nunca amplia."
+   }
+  },
+  {
+   "i": 9,
+   "entra_s": 186.0,
+   "sai_s": 207.06,
+   "dur_s": 21.06,
+   "entra_f": 5580,
+   "sai_f": 6212,
+   "dur_f": 632,
+   "tipo": "chapa",
+   "arquivo": "chapas/p05-44anos.jpg",
+   "movimento": {
+    "tipo": "crop_desliza",
+    "de_x": 140,
+    "para_x": 340,
+    "y": "centro",
+    "janela": [
+     1920,
+     1080
+    ],
+    "obs": "a chapa tem 2400x1350; a janela desliza 200px. Nunca amplia."
+   }
+  },
+  {
+   "i": 10,
+   "entra_s": 207.06,
+   "sai_s": 225.0,
+   "dur_s": 17.94,
+   "entra_f": 6212,
+   "sai_f": 6750,
+   "dur_f": 538,
+   "tipo": "clipe",
+   "clipe": "A",
+   "arquivo_origem": "1000417094.mp4",
+   "origem_entra_s": 118,
+   "origem_sai_s": 135.94,
+   "movimento": {
+    "tipo": "nenhum",
+    "obs": "o plano ja se move. Nao acrescentar camera."
+   },
+   "cor": "saturacao 0.72 · contraste 1.07 · sombra quente · vinheta · grao 5"
+  },
+  {
+   "i": 11,
+   "entra_s": 225.0,
+   "sai_s": 265.26,
+   "dur_s": 40.26,
+   "entra_f": 6750,
+   "sai_f": 7958,
+   "dur_f": 1208,
+   "tipo": "clipe",
+   "clipe": "F",
+   "arquivo_origem": "1000417129.mp4",
+   "origem_entra_s": 0,
+   "origem_sai_s": 40.26,
+   "movimento": {
+    "tipo": "nenhum",
+    "obs": "o plano ja se move. Nao acrescentar camera."
+   },
+   "cor": "saturacao 0.72 · contraste 1.07 · sombra quente · vinheta · grao 5"
+  },
+  {
+   "i": 12,
+   "entra_s": 265.26,
+   "sai_s": 277.0,
+   "dur_s": 11.74,
+   "entra_f": 7958,
+   "sai_f": 8310,
+   "dur_f": 352,
+   "tipo": "clipe",
+   "clipe": "F",
+   "arquivo_origem": "1000417129.mp4",
+   "origem_entra_s": 41,
+   "origem_sai_s": 52.74,
+   "movimento": {
+    "tipo": "nenhum",
+    "obs": "o plano ja se move. Nao acrescentar camera."
+   },
+   "cor": "saturacao 0.72 · contraste 1.07 · sombra quente · vinheta · grao 5"
+  },
+  {
+   "i": 13,
+   "entra_s": 277.0,
+   "sai_s": 295.0,
+   "dur_s": 18.0,
+   "entra_f": 8310,
+   "sai_f": 8850,
+   "dur_f": 540,
+   "tipo": "chapa",
+   "arquivo": "chapas/p06-boletim.jpg",
+   "movimento": {
+    "tipo": "crop_desliza",
+    "de_x": 140,
+    "para_x": 340,
+    "y": "centro",
+    "janela": [
+     1920,
+     1080
+    ],
+    "obs": "a chapa tem 2400x1350; a janela desliza 200px. Nunca amplia."
+   }
+  },
+  {
+   "i": 14,
+   "entra_s": 295.0,
+   "sai_s": 309.18,
+   "dur_s": 14.18,
+   "entra_f": 8850,
+   "sai_f": 9275,
+   "dur_f": 425,
+   "tipo": "chapa",
+   "arquivo": "chapas/p06b-mapa.jpg",
+   "movimento": {
+    "tipo": "crop_desliza",
+    "de_x": 140,
+    "para_x": 340,
+    "y": "centro",
+    "janela": [
+     1920,
+     1080
+    ],
+    "obs": "a chapa tem 2400x1350; a janela desliza 200px. Nunca amplia."
+   }
+  },
+  {
+   "i": 15,
+   "entra_s": 309.18,
+   "sai_s": 335.54,
+   "dur_s": 26.36,
+   "entra_f": 9275,
+   "sai_f": 10066,
+   "dur_f": 791,
+   "tipo": "chapa",
+   "arquivo": "chapas/p07-turner.jpg",
+   "movimento": {
+    "tipo": "crop_desliza",
+    "de_x": 140,
+    "para_x": 340,
+    "y": "centro",
+    "janela": [
+     1920,
+     1080
+    ],
+    "obs": "a chapa tem 2400x1350; a janela desliza 200px. Nunca amplia."
+   }
+  },
+  {
+   "i": 16,
+   "entra_s": 335.54,
+   "sai_s": 342.0,
+   "dur_s": 6.46,
+   "entra_f": 10066,
+   "sai_f": 10260,
+   "dur_f": 194,
+   "tipo": "chapa",
+   "arquivo": "chapas/p08-tabela.jpg",
+   "movimento": {
+    "tipo": "crop_desliza",
+    "de_x": 140,
+    "para_x": 340,
+    "y": "centro",
+    "janela": [
+     1920,
+     1080
+    ],
+    "obs": "a chapa tem 2400x1350; a janela desliza 200px. Nunca amplia."
+   }
+  },
+  {
+   "i": 17,
+   "entra_s": 342.0,
+   "sai_s": 382.48,
+   "dur_s": 40.48,
+   "entra_f": 10260,
+   "sai_f": 11474,
+   "dur_f": 1214,
+   "tipo": "clipe",
+   "clipe": "J",
+   "arquivo_origem": "1000414855.mp4",
+   "origem_entra_s": 0,
+   "origem_sai_s": 40.48,
+   "movimento": {
+    "tipo": "nenhum",
+    "obs": "o plano ja se move. Nao acrescentar camera."
+   },
+   "cor": "saturacao 0.72 · contraste 1.07 · sombra quente · vinheta · grao 5"
+  },
+  {
+   "i": 18,
+   "entra_s": 382.48,
+   "sai_s": 420.0,
+   "dur_s": 37.52,
+   "entra_f": 11474,
+   "sai_f": 12600,
+   "dur_f": 1126,
+   "tipo": "chapa",
+   "arquivo": "chapas/p09-fortworth.jpg",
+   "movimento": {
+    "tipo": "crop_desliza",
+    "de_x": 140,
+    "para_x": 340,
+    "y": "centro",
+    "janela": [
+     1920,
+     1080
+    ],
+    "obs": "a chapa tem 2400x1350; a janela desliza 200px. Nunca amplia."
+   }
+  },
+  {
+   "i": 19,
+   "entra_s": 420.0,
+   "sai_s": 457.0,
+   "dur_s": 37.0,
+   "entra_f": 12600,
+   "sai_f": 13710,
+   "dur_f": 1110,
+   "tipo": "chapa",
+   "arquivo": "chapas/p10-circular.jpg",
+   "movimento": {
+    "tipo": "crop_desliza",
+    "de_x": 140,
+    "para_x": 340,
+    "y": "centro",
+    "janela": [
+     1920,
+     1080
+    ],
+    "obs": "a chapa tem 2400x1350; a janela desliza 200px. Nunca amplia."
+   }
+  },
+  {
+   "i": 20,
+   "entra_s": 457.0,
+   "sai_s": 518.88,
+   "dur_s": 61.88,
+   "entra_f": 13710,
+   "sai_f": 15566,
+   "dur_f": 1856,
+   "tipo": "chapa",
+   "arquivo": "chapas/p11-sem-fonte.jpg",
+   "movimento": {
+    "tipo": "crop_desliza",
+    "de_x": 140,
+    "para_x": 340,
+    "y": "centro",
+    "janela": [
+     1920,
+     1080
+    ],
+    "obs": "a chapa tem 2400x1350; a janela desliza 200px. Nunca amplia."
+   }
+  },
+  {
+   "i": 21,
+   "entra_s": 518.88,
+   "sai_s": 541.0,
+   "dur_s": 22.12,
+   "entra_f": 15566,
+   "sai_f": 16230,
+   "dur_f": 664,
+   "tipo": "clipe",
+   "clipe": "G",
+   "arquivo_origem": "292f4bb8-1000417136.mp4",
+   "origem_entra_s": 2,
+   "origem_sai_s": 24.12,
+   "movimento": {
+    "tipo": "nenhum",
+    "obs": "o plano ja se move. Nao acrescentar camera."
+   },
+   "cor": "saturacao 0.72 · contraste 1.07 · sombra quente · vinheta · grao 5"
+  },
+  {
+   "i": 22,
+   "entra_s": 541.0,
+   "sai_s": 555.0,
+   "dur_s": 14.0,
+   "entra_f": 16230,
+   "sai_f": 16650,
+   "dur_f": 420,
+   "tipo": "clipe",
+   "clipe": "H",
+   "arquivo_origem": "1000414839.mp4",
+   "origem_entra_s": 0,
+   "origem_sai_s": 14.0,
+   "movimento": {
+    "tipo": "nenhum",
+    "obs": "o plano ja se move. Nao acrescentar camera."
+   },
+   "cor": "saturacao 0.72 · contraste 1.07 · sombra quente · vinheta · grao 5"
+  },
+  {
+   "i": 23,
+   "entra_s": 555.0,
+   "sai_s": 566.2,
+   "dur_s": 11.2,
+   "entra_f": 16650,
+   "sai_f": 16986,
+   "dur_f": 336,
+   "tipo": "clipe",
+   "clipe": "I",
+   "arquivo_origem": "1000414840.mp4",
+   "origem_entra_s": 0,
+   "origem_sai_s": 11.2,
+   "movimento": {
+    "tipo": "nenhum",
+    "obs": "o plano ja se move. Nao acrescentar camera."
+   },
+   "cor": "saturacao 0.72 · contraste 1.07 · sombra quente · vinheta · grao 5"
+  },
+  {
+   "i": 24,
+   "entra_s": 566.2,
+   "sai_s": 601.78,
+   "dur_s": 35.58,
+   "entra_f": 16986,
+   "sai_f": 18053,
+   "dur_f": 1067,
+   "tipo": "clipe",
+   "clipe": "A",
+   "arquivo_origem": "1000417094.mp4",
+   "origem_entra_s": 108,
+   "origem_sai_s": 143.58,
+   "movimento": {
+    "tipo": "nenhum",
+    "obs": "o plano ja se move. Nao acrescentar camera."
+   },
+   "cor": "saturacao 0.72 · contraste 1.07 · sombra quente · vinheta · grao 5"
+  },
+  {
+   "i": 25,
+   "entra_s": 601.78,
+   "sai_s": 638.0,
+   "dur_s": 36.22,
+   "entra_f": 18053,
+   "sai_f": 19140,
+   "dur_f": 1087,
+   "tipo": "chapa",
+   "arquivo": "chapas/p12-fecho.jpg",
+   "movimento": {
+    "tipo": "crop_desliza",
+    "de_x": 140,
+    "para_x": 340,
+    "y": "centro",
+    "janela": [
+     1920,
+     1080
+    ],
+    "obs": "a chapa tem 2400x1350; a janela desliza 200px. Nunca amplia."
+   }
+  },
+  {
+   "i": 26,
+   "entra_s": 638.0,
+   "sai_s": 678.0,
+   "dur_s": 40.0,
+   "entra_f": 19140,
+   "sai_f": 20340,
+   "dur_f": 1200,
+   "tipo": "clipe",
+   "clipe": "E",
+   "arquivo_origem": "142e74fe-1000417122.mp4",
+   "origem_entra_s": 8,
+   "origem_sai_s": 48.0,
+   "movimento": {
+    "tipo": "nenhum",
+    "obs": "o plano ja se move. Nao acrescentar camera."
+   },
+   "cor": "saturacao 0.72 · contraste 1.07 · sombra quente · vinheta · grao 5"
+  },
+  {
+   "i": 27,
+   "entra_s": 678.0,
+   "sai_s": 734.0,
+   "dur_s": 56.0,
+   "entra_f": 20340,
+   "sai_f": 22020,
+   "dur_f": 1680,
+   "tipo": "clipe",
+   "clipe": "F",
+   "arquivo_origem": "1000417129.mp4",
+   "origem_entra_s": 60,
+   "origem_sai_s": 116.0,
+   "movimento": {
+    "tipo": "nenhum",
+    "obs": "o plano ja se move. Nao acrescentar camera."
+   },
+   "cor": "saturacao 0.72 · contraste 1.07 · sombra quente · vinheta · grao 5"
+  },
+  {
+   "i": 28,
+   "entra_s": 734.0,
+   "sai_s": 749.0,
+   "dur_s": 15.0,
+   "entra_f": 22020,
+   "sai_f": 22470,
+   "dur_f": 450,
+   "tipo": "chapa",
+   "arquivo": "chapas/p13-cartela.jpg",
+   "movimento": {
+    "tipo": "crop_desliza",
+    "de_x": 140,
+    "para_x": 340,
+    "y": "centro",
+    "janela": [
+     1920,
+     1080
+    ],
+    "obs": "a chapa tem 2400x1350; a janela desliza 200px. Nunca amplia."
+   }
+  }
+ ],
+ "pendencias": [
+  "pickup de audio em 4:38 — o boletim e de ABRIL DE 1891, oito anos antes, nao 1890/nove",
+  "conferir de ouvido: 6:23 John Swartz (nao Schwartz), 6:29 Butch (nao Bud), 8:43 Saint Denis",
+  "bloco 20 (7:37-8:38) pede 50s dele em camera; hoje esta coberto so pela chapa p11",
+  "a HUD do jogo esta em DINAMICA, nao desligada — aparece e some sozinha"
+ ]
+}
