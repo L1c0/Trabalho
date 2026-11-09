@@ -7,10 +7,9 @@
   "dur_f": 22470
  },
  "audio": {
-  "arquivo": "trilha.mp3",
-  "dur_s": 749.064,
-  "composicao": "narracao intacta + faixa2 como cama com sidechain + faixa1 na abertura",
-  "obs": "se preferir remixar: a faixa 2 e a cama porque poe so 30% da energia na banda da voz"
+  "arquivo": "trilha-v2.mp3",
+  "dur_s": 749.088,
+  "obs": "envelope DESENHADO seguindo a partitura de cor, sem sidechain. Silencio absoluto em 8:38-8:58 (a frase sem fonte) e no fecho."
  },
  "regras": [
   "NADA de rotateX/rotateY/perspective/translateZ/paralaxe/preserve-3d",
@@ -28,17 +27,476 @@
    "sai_f": 1016,
    "dur_f": 1016,
    "tipo": "chapa",
-   "arquivo": "chapas/p01-abertura.jpg",
    "movimento": {
-    "tipo": "crop_desliza",
-    "de_x": 140,
-    "para_x": 340,
-    "y": "centro",
-    "janela": [
-     1920,
-     1080
-    ],
-    "obs": "a chapa tem 2400x1350; a janela desliza 200px. Nunca amplia."
+    "tipo": "empurrao_escala",
+    "de": 1.0,
+    "para": 1.05,
+    "obs": "ESCALA, nao deslize. Deslize uniforme o olho adapta em 2s e le como parado. 4 a 7% ao longo da cena, velocidade constante, sem easing."
+   },
+   "fundo": "pecas/p01-abertura/_fundo.jpg",
+   "pecas": [
+    {
+     "id": "t00",
+     "arq": "pecas/p01-abertura/t00.png",
+     "x": 360,
+     "y": 262,
+     "w": 848,
+     "h": 26,
+     "classe": "corpo"
+    },
+    {
+     "id": "l0100",
+     "arq": "pecas/p01-abertura/l0100.png",
+     "x": 366,
+     "y": 334,
+     "w": 83,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0101",
+     "arq": "pecas/p01-abertura/l0101.png",
+     "x": 458,
+     "y": 334,
+     "w": 132,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0102",
+     "arq": "pecas/p01-abertura/l0102.png",
+     "x": 640,
+     "y": 334,
+     "w": 113,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0103",
+     "arq": "pecas/p01-abertura/l0103.png",
+     "x": 763,
+     "y": 334,
+     "w": 83,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0104",
+     "arq": "pecas/p01-abertura/l0104.png",
+     "x": 852,
+     "y": 334,
+     "w": 84,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0105",
+     "arq": "pecas/p01-abertura/l0105.png",
+     "x": 990,
+     "y": 334,
+     "w": 84,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0106",
+     "arq": "pecas/p01-abertura/l0106.png",
+     "x": 1084,
+     "y": 334,
+     "w": 71,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0107",
+     "arq": "pecas/p01-abertura/l0107.png",
+     "x": 1206,
+     "y": 334,
+     "w": 132,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0108",
+     "arq": "pecas/p01-abertura/l0108.png",
+     "x": 1349,
+     "y": 334,
+     "w": 84,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0109",
+     "arq": "pecas/p01-abertura/l0109.png",
+     "x": 1443,
+     "y": 334,
+     "w": 160,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0110",
+     "arq": "pecas/p01-abertura/l0110.png",
+     "x": 1609,
+     "y": 334,
+     "w": 71,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0200",
+     "arq": "pecas/p01-abertura/l0200.png",
+     "x": 360,
+     "y": 330,
+     "w": 83,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0201",
+     "arq": "pecas/p01-abertura/l0201.png",
+     "x": 452,
+     "y": 330,
+     "w": 132,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0202",
+     "arq": "pecas/p01-abertura/l0202.png",
+     "x": 634,
+     "y": 330,
+     "w": 113,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0203",
+     "arq": "pecas/p01-abertura/l0203.png",
+     "x": 757,
+     "y": 330,
+     "w": 83,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0204",
+     "arq": "pecas/p01-abertura/l0204.png",
+     "x": 846,
+     "y": 330,
+     "w": 84,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0205",
+     "arq": "pecas/p01-abertura/l0205.png",
+     "x": 984,
+     "y": 330,
+     "w": 84,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0206",
+     "arq": "pecas/p01-abertura/l0206.png",
+     "x": 1078,
+     "y": 330,
+     "w": 71,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0207",
+     "arq": "pecas/p01-abertura/l0207.png",
+     "x": 1200,
+     "y": 330,
+     "w": 132,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0208",
+     "arq": "pecas/p01-abertura/l0208.png",
+     "x": 1343,
+     "y": 330,
+     "w": 84,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0209",
+     "arq": "pecas/p01-abertura/l0209.png",
+     "x": 1437,
+     "y": 330,
+     "w": 160,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0210",
+     "arq": "pecas/p01-abertura/l0210.png",
+     "x": 1603,
+     "y": 330,
+     "w": 71,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0300",
+     "arq": "pecas/p01-abertura/l0300.png",
+     "x": 366,
+     "y": 546,
+     "w": 177,
+     "h": 234,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0301",
+     "arq": "pecas/p01-abertura/l0301.png",
+     "x": 553,
+     "y": 546,
+     "w": 71,
+     "h": 234,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0302",
+     "arq": "pecas/p01-abertura/l0302.png",
+     "x": 675,
+     "y": 546,
+     "w": 84,
+     "h": 234,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0303",
+     "arq": "pecas/p01-abertura/l0303.png",
+     "x": 768,
+     "y": 546,
+     "w": 34,
+     "h": 234,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0304",
+     "arq": "pecas/p01-abertura/l0304.png",
+     "x": 812,
+     "y": 546,
+     "w": 84,
+     "h": 234,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0305",
+     "arq": "pecas/p01-abertura/l0305.png",
+     "x": 906,
+     "y": 546,
+     "w": 84,
+     "h": 234,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0306",
+     "arq": "pecas/p01-abertura/l0306.png",
+     "x": 998,
+     "y": 546,
+     "w": 83,
+     "h": 234,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0307",
+     "arq": "pecas/p01-abertura/l0307.png",
+     "x": 1091,
+     "y": 546,
+     "w": 71,
+     "h": 234,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0308",
+     "arq": "pecas/p01-abertura/l0308.png",
+     "x": 1169,
+     "y": 546,
+     "w": 132,
+     "h": 234,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0309",
+     "arq": "pecas/p01-abertura/l0309.png",
+     "x": 1351,
+     "y": 546,
+     "w": 220,
+     "h": 234,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0310",
+     "arq": "pecas/p01-abertura/l0310.png",
+     "x": 1578,
+     "y": 546,
+     "w": 177,
+     "h": 234,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0400",
+     "arq": "pecas/p01-abertura/l0400.png",
+     "x": 360,
+     "y": 542,
+     "w": 177,
+     "h": 234,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0401",
+     "arq": "pecas/p01-abertura/l0401.png",
+     "x": 547,
+     "y": 542,
+     "w": 71,
+     "h": 234,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0402",
+     "arq": "pecas/p01-abertura/l0402.png",
+     "x": 669,
+     "y": 542,
+     "w": 84,
+     "h": 234,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0403",
+     "arq": "pecas/p01-abertura/l0403.png",
+     "x": 762,
+     "y": 542,
+     "w": 34,
+     "h": 234,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0404",
+     "arq": "pecas/p01-abertura/l0404.png",
+     "x": 806,
+     "y": 542,
+     "w": 84,
+     "h": 234,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0405",
+     "arq": "pecas/p01-abertura/l0405.png",
+     "x": 900,
+     "y": 542,
+     "w": 84,
+     "h": 234,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0406",
+     "arq": "pecas/p01-abertura/l0406.png",
+     "x": 992,
+     "y": 542,
+     "w": 83,
+     "h": 234,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0407",
+     "arq": "pecas/p01-abertura/l0407.png",
+     "x": 1085,
+     "y": 542,
+     "w": 71,
+     "h": 234,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0408",
+     "arq": "pecas/p01-abertura/l0408.png",
+     "x": 1163,
+     "y": 542,
+     "w": 132,
+     "h": 234,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0409",
+     "arq": "pecas/p01-abertura/l0409.png",
+     "x": 1345,
+     "y": 542,
+     "w": 220,
+     "h": 234,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0410",
+     "arq": "pecas/p01-abertura/l0410.png",
+     "x": 1572,
+     "y": 542,
+     "w": 177,
+     "h": 234,
+     "classe": "impacto"
+    },
+    {
+     "id": "t05",
+     "arq": "pecas/p01-abertura/t05.png",
+     "x": 360,
+     "y": 952,
+     "w": 40,
+     "h": 47,
+     "classe": "corpo"
+    }
+   ],
+   "entra_f_por_peca": {
+    "t00": 4,
+    "l0200": 180,
+    "l0100": 183,
+    "l0201": 186,
+    "l0101": 189,
+    "l0202": 192,
+    "l0102": 195,
+    "l0203": 198,
+    "l0103": 201,
+    "l0204": 204,
+    "l0104": 207,
+    "l0205": 210,
+    "l0105": 213,
+    "l0206": 216,
+    "l0106": 219,
+    "l0207": 222,
+    "l0107": 225,
+    "l0208": 228,
+    "l0108": 231,
+    "l0209": 234,
+    "l0109": 237,
+    "l0210": 240,
+    "l0110": 243,
+    "l0400": 270,
+    "l0300": 273,
+    "l0401": 276,
+    "l0301": 279,
+    "l0402": 282,
+    "l0302": 285,
+    "l0403": 288,
+    "l0303": 291,
+    "l0404": 294,
+    "l0304": 297,
+    "l0405": 300,
+    "l0305": 303,
+    "l0406": 306,
+    "l0306": 309,
+    "l0407": 312,
+    "l0307": 315,
+    "l0408": 318,
+    "l0308": 321,
+    "l0409": 324,
+    "l0309": 327,
+    "l0410": 330,
+    "l0310": 333,
+    "t05": 360
    }
   },
   {
@@ -50,17 +508,116 @@
    "sai_f": 1506,
    "dur_f": 490,
    "tipo": "chapa",
-   "arquivo": "chapas/p02-papel.jpg",
    "movimento": {
-    "tipo": "crop_desliza",
-    "de_x": 140,
-    "para_x": 340,
-    "y": "centro",
-    "janela": [
-     1920,
-     1080
-    ],
-    "obs": "a chapa tem 2400x1350; a janela desliza 200px. Nunca amplia."
+    "tipo": "empurrao_escala",
+    "de": 1.0,
+    "para": 1.05,
+    "obs": "ESCALA, nao deslize. Deslize uniforme o olho adapta em 2s e le como parado. 4 a 7% ao longo da cena, velocidade constante, sem easing."
+   },
+   "fundo": "pecas/p02-papel/_fundo.jpg",
+   "pecas": [
+    {
+     "id": "l0000",
+     "arq": "pecas/p02-papel/l0000.png",
+     "x": 340,
+     "y": 420,
+     "w": 209,
+     "h": 144,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0001",
+     "arq": "pecas/p02-papel/l0001.png",
+     "x": 555,
+     "y": 420,
+     "w": 154,
+     "h": 144,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0002",
+     "arq": "pecas/p02-papel/l0002.png",
+     "x": 741,
+     "y": 420,
+     "w": 127,
+     "h": 144,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0003",
+     "arq": "pecas/p02-papel/l0003.png",
+     "x": 898,
+     "y": 420,
+     "w": 209,
+     "h": 144,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0004",
+     "arq": "pecas/p02-papel/l0004.png",
+     "x": 1113,
+     "y": 420,
+     "w": 80,
+     "h": 144,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0100",
+     "arq": "pecas/p02-papel/l0100.png",
+     "x": 340,
+     "y": 573,
+     "w": 330,
+     "h": 144,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0101",
+     "arq": "pecas/p02-papel/l0101.png",
+     "x": 676,
+     "y": 573,
+     "w": 157,
+     "h": 144,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0200",
+     "arq": "pecas/p02-papel/l0200.png",
+     "x": 340,
+     "y": 726,
+     "w": 407,
+     "h": 103,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0201",
+     "arq": "pecas/p02-papel/l0201.png",
+     "x": 779,
+     "y": 726,
+     "w": 191,
+     "h": 103,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0202",
+     "arq": "pecas/p02-papel/l0202.png",
+     "x": 1003,
+     "y": 726,
+     "w": 254,
+     "h": 103,
+     "classe": "impacto"
+    }
+   ],
+   "entra_f_por_peca": {
+    "l0000": 1020,
+    "l0001": 1023,
+    "l0002": 1026,
+    "l0003": 1029,
+    "l0004": 1032,
+    "l0100": 1140,
+    "l0101": 1143,
+    "l0200": 1200,
+    "l0201": 1203,
+    "l0202": 1206
    }
   },
   {
@@ -80,7 +637,22 @@
     "tipo": "nenhum",
     "obs": "o plano ja se move. Nao acrescentar camera."
    },
-   "cor": "saturacao 0.72 · contraste 1.07 · sombra quente · vinheta · grao 5"
+   "cor": "saturacao 0.72 · contraste 1.07 · sombra quente · vinheta · grao 5",
+   "lettering": [
+    {
+     "id": "g00",
+     "arq": "g00.png",
+     "cena": 2,
+     "t_s": 57.0,
+     "frame": 1710,
+     "classe": "tarja",
+     "texto": "UM DOCUMENTO ESPECÍFICO. COM DATA.",
+     "x": 135,
+     "y": 900,
+     "w": 929,
+     "h": 47
+    }
+   ]
   },
   {
    "i": 3,
@@ -91,17 +663,11 @@
    "sai_f": 2400,
    "dur_f": 528,
    "tipo": "chapa",
-   "arquivo": "chapas/p05-1899.jpg",
    "movimento": {
-    "tipo": "crop_desliza",
-    "de_x": 140,
-    "para_x": 340,
-    "y": "centro",
-    "janela": [
-     1920,
-     1080
-    ],
-    "obs": "a chapa tem 2400x1350; a janela desliza 200px. Nunca amplia."
+    "tipo": "empurrao_escala",
+    "de": 1.0,
+    "para": 1.05,
+    "obs": "ESCALA, nao deslize. Deslize uniforme o olho adapta em 2s e le como parado. 4 a 7% ao longo da cena, velocidade constante, sem easing."
    },
    "obs": "A nevasca e real, do proprio video de prologo dele, em 1,00x. A cinematica tem credito de elenco queimado em quase tudo: medi e so 160-165s estao limpos.",
    "alternativa_em_movimento": {
@@ -110,6 +676,71 @@
     "sai_s": 166.5,
     "crop": "1920:810:0:135  (tira a tarja de cutscene)",
     "obs": "7s uteis apenas. Se usar, repete em ping-pong pra cobrir os 17,6s do bloco, ou segura a chapa parada. NAO esticar: a tarja volta e os creditos entram em 166,5s."
+   },
+   "fundo": "pecas/p05-1899/_fundo.jpg",
+   "pecas": [
+    {
+     "id": "l0000",
+     "arq": "pecas/p05-1899/l0000.png",
+     "x": 340,
+     "y": 300,
+     "w": 88,
+     "h": 265,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0001",
+     "arq": "pecas/p05-1899/l0001.png",
+     "x": 439,
+     "y": 300,
+     "w": 136,
+     "h": 265,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0002",
+     "arq": "pecas/p05-1899/l0002.png",
+     "x": 584,
+     "y": 300,
+     "w": 138,
+     "h": 265,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0003",
+     "arq": "pecas/p05-1899/l0003.png",
+     "x": 729,
+     "y": 300,
+     "w": 138,
+     "h": 265,
+     "classe": "impacto"
+    },
+    {
+     "id": "t01",
+     "arq": "pecas/p05-1899/t01.png",
+     "x": 340,
+     "y": 700,
+     "w": 609,
+     "h": 47,
+     "classe": "corpo"
+    },
+    {
+     "id": "t02",
+     "arq": "pecas/p05-1899/t02.png",
+     "x": 376,
+     "y": 1154,
+     "w": 751,
+     "h": 22,
+     "classe": "corpo"
+    }
+   ],
+   "entra_f_por_peca": {
+    "l0000": 1950,
+    "l0001": 1953,
+    "l0002": 1956,
+    "l0003": 1959,
+    "t01": 2040,
+    "t02": 2130
    }
   },
   {
@@ -129,7 +760,35 @@
     "tipo": "nenhum",
     "obs": "o plano ja se move. Nao acrescentar camera."
    },
-   "cor": "saturacao 0.72 · contraste 1.07 · sombra quente · vinheta · grao 5"
+   "cor": "saturacao 0.72 · contraste 1.07 · sombra quente · vinheta · grao 5",
+   "lettering": [
+    {
+     "id": "g01",
+     "arq": "g01.png",
+     "cena": 4,
+     "t_s": 90.0,
+     "frame": 2700,
+     "classe": "impacto",
+     "texto": "VINTE ANOS DE OFÍCIO",
+     "x": 135,
+     "y": 760,
+     "w": 792,
+     "h": 116
+    },
+    {
+     "id": "g02",
+     "arq": "g02.png",
+     "cena": 4,
+     "t_s": 98.0,
+     "frame": 2940,
+     "classe": "tarja",
+     "texto": "E O OFÍCIO É SER BANDIDO",
+     "x": 135,
+     "y": 900,
+     "w": 615,
+     "h": 47
+    }
+   ]
   },
   {
    "i": 5,
@@ -148,7 +807,35 @@
     "tipo": "nenhum",
     "obs": "o plano ja se move. Nao acrescentar camera."
    },
-   "cor": "saturacao 0.72 · contraste 1.07 · sombra quente · vinheta · grao 5"
+   "cor": "saturacao 0.72 · contraste 1.07 · sombra quente · vinheta · grao 5",
+   "lettering": [
+    {
+     "id": "g03",
+     "arq": "g03.png",
+     "cena": 5,
+     "t_s": 112.0,
+     "frame": 3360,
+     "classe": "tarja",
+     "texto": "SERVIÇO DE ROTINA",
+     "x": 135,
+     "y": 900,
+     "w": 453,
+     "h": 45
+    },
+    {
+     "id": "g04",
+     "arq": "g04.png",
+     "cena": 5,
+     "t_s": 131.0,
+     "frame": 3930,
+     "classe": "tarja",
+     "texto": "ELE BATE ASSIM MESMO",
+     "x": 135,
+     "y": 900,
+     "w": 537,
+     "h": 35
+    }
+   ]
   },
   {
    "i": 6,
@@ -159,17 +846,126 @@
    "sai_f": 4680,
    "dur_f": 272,
    "tipo": "chapa",
-   "arquivo": "chapas/p03-tuberculose.jpg",
    "movimento": {
-    "tipo": "crop_desliza",
-    "de_x": 140,
-    "para_x": 340,
-    "y": "centro",
-    "janela": [
-     1920,
-     1080
-    ],
-    "obs": "a chapa tem 2400x1350; a janela desliza 200px. Nunca amplia."
+    "tipo": "empurrao_escala",
+    "de": 1.0,
+    "para": 1.05,
+    "obs": "ESCALA, nao deslize. Deslize uniforme o olho adapta em 2s e le como parado. 4 a 7% ao longo da cena, velocidade constante, sem easing."
+   },
+   "fundo": "pecas/p03-tuberculose/_fundo.jpg",
+   "pecas": [
+    {
+     "id": "l0000",
+     "arq": "pecas/p03-tuberculose/l0000.png",
+     "x": 340,
+     "y": 520,
+     "w": 114,
+     "h": 264,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0001",
+     "arq": "pecas/p03-tuberculose/l0001.png",
+     "x": 461,
+     "y": 520,
+     "w": 126,
+     "h": 264,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0002",
+     "arq": "pecas/p03-tuberculose/l0002.png",
+     "x": 603,
+     "y": 520,
+     "w": 127,
+     "h": 264,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0003",
+     "arq": "pecas/p03-tuberculose/l0003.png",
+     "x": 743,
+     "y": 520,
+     "w": 107,
+     "h": 264,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0004",
+     "arq": "pecas/p03-tuberculose/l0004.png",
+     "x": 862,
+     "y": 520,
+     "w": 127,
+     "h": 264,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0005",
+     "arq": "pecas/p03-tuberculose/l0005.png",
+     "x": 1000,
+     "y": 520,
+     "w": 128,
+     "h": 264,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0006",
+     "arq": "pecas/p03-tuberculose/l0006.png",
+     "x": 1137,
+     "y": 520,
+     "w": 126,
+     "h": 264,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0007",
+     "arq": "pecas/p03-tuberculose/l0007.png",
+     "x": 1279,
+     "y": 520,
+     "w": 105,
+     "h": 264,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0008",
+     "arq": "pecas/p03-tuberculose/l0008.png",
+     "x": 1393,
+     "y": 520,
+     "w": 128,
+     "h": 264,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0009",
+     "arq": "pecas/p03-tuberculose/l0009.png",
+     "x": 1532,
+     "y": 520,
+     "w": 127,
+     "h": 264,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0010",
+     "arq": "pecas/p03-tuberculose/l0010.png",
+     "x": 1672,
+     "y": 520,
+     "w": 107,
+     "h": 264,
+     "classe": "impacto"
+    }
+   ],
+   "entra_f_por_peca": {
+    "l0000": 4412,
+    "l0001": 4415,
+    "l0002": 4418,
+    "l0003": 4421,
+    "l0004": 4424,
+    "l0005": 4427,
+    "l0006": 4430,
+    "l0007": 4433,
+    "l0008": 4436,
+    "l0009": 4439,
+    "l0010": 4442
    }
   },
   {
@@ -181,17 +977,76 @@
    "sai_f": 4962,
    "dur_f": 282,
    "tipo": "chapa",
-   "arquivo": "chapas/p04-194.jpg",
    "movimento": {
-    "tipo": "crop_desliza",
-    "de_x": 140,
-    "para_x": 340,
-    "y": "centro",
-    "janela": [
-     1920,
-     1080
-    ],
-    "obs": "a chapa tem 2400x1350; a janela desliza 200px. Nunca amplia."
+    "tipo": "empurrao_escala",
+    "de": 1.0,
+    "para": 1.05,
+    "obs": "ESCALA, nao deslize. Deslize uniforme o olho adapta em 2s e le como parado. 4 a 7% ao longo da cena, velocidade constante, sem easing."
+   },
+   "fundo": "pecas/p04-194/_fundo.jpg",
+   "pecas": [
+    {
+     "id": "l0000",
+     "arq": "pecas/p04-194/l0000.png",
+     "x": 340,
+     "y": 300,
+     "w": 134,
+     "h": 403,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0001",
+     "arq": "pecas/p04-194/l0001.png",
+     "x": 494,
+     "y": 300,
+     "w": 432,
+     "h": 403,
+     "classe": "impacto"
+    },
+    {
+     "id": "t01",
+     "arq": "pecas/p04-194/t01.png",
+     "x": 340,
+     "y": 820,
+     "w": 1064,
+     "h": 46,
+     "classe": "corpo"
+    },
+    {
+     "id": "t02",
+     "arq": "pecas/p04-194/t02.png",
+     "x": 340,
+     "y": 900,
+     "w": 888,
+     "h": 31,
+     "classe": "corpo"
+    },
+    {
+     "id": "t03",
+     "arq": "pecas/p04-194/t03.png",
+     "x": 340,
+     "y": 950,
+     "w": 420,
+     "h": 29,
+     "classe": "corpo"
+    },
+    {
+     "id": "t04",
+     "arq": "pecas/p04-194/t04.png",
+     "x": 376,
+     "y": 1154,
+     "w": 528,
+     "h": 22,
+     "classe": "corpo"
+    }
+   ],
+   "entra_f_por_peca": {
+    "l0000": 4740,
+    "l0001": 4743,
+    "t01": 4740,
+    "t02": 4890,
+    "t03": 4950,
+    "t04": 4950
    }
   },
   {
@@ -203,17 +1058,136 @@
    "sai_f": 5580,
    "dur_f": 618,
    "tipo": "chapa",
-   "arquivo": "chapas/p05b-remedios.jpg",
    "movimento": {
-    "tipo": "crop_desliza",
-    "de_x": 140,
-    "para_x": 340,
-    "y": "centro",
-    "janela": [
-     1920,
-     1080
-    ],
-    "obs": "a chapa tem 2400x1350; a janela desliza 200px. Nunca amplia."
+    "tipo": "empurrao_escala",
+    "de": 1.0,
+    "para": 1.05,
+    "obs": "ESCALA, nao deslize. Deslize uniforme o olho adapta em 2s e le como parado. 4 a 7% ao longo da cena, velocidade constante, sem easing."
+   },
+   "fundo": "pecas/p05b-remedios/_fundo.jpg",
+   "pecas": [
+    {
+     "id": "l0000",
+     "arq": "pecas/p05b-remedios/l0000.png",
+     "x": 340,
+     "y": 240,
+     "w": 145,
+     "h": 293,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0001",
+     "arq": "pecas/p05b-remedios/l0001.png",
+     "x": 498,
+     "y": 240,
+     "w": 155,
+     "h": 293,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0002",
+     "arq": "pecas/p05b-remedios/l0002.png",
+     "x": 666,
+     "y": 240,
+     "w": 145,
+     "h": 293,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0003",
+     "arq": "pecas/p05b-remedios/l0003.png",
+     "x": 823,
+     "y": 240,
+     "w": 155,
+     "h": 293,
+     "classe": "impacto"
+    },
+    {
+     "id": "t01",
+     "arq": "pecas/p05b-remedios/t01.png",
+     "x": 340,
+     "y": 700,
+     "w": 864,
+     "h": 43,
+     "classe": "corpo"
+    },
+    {
+     "id": "t02",
+     "arq": "pecas/p05b-remedios/t02.png",
+     "x": 340,
+     "y": 790,
+     "w": 471,
+     "h": 45,
+     "classe": "corpo"
+    },
+    {
+     "id": "t03",
+     "arq": "pecas/p05b-remedios/t03.png",
+     "x": 340,
+     "y": 858,
+     "w": 299,
+     "h": 58,
+     "classe": "corpo"
+    },
+    {
+     "id": "t04",
+     "arq": "pecas/p05b-remedios/t04.png",
+     "x": 340,
+     "y": 926,
+     "w": 489,
+     "h": 58,
+     "classe": "corpo"
+    },
+    {
+     "id": "t05",
+     "arq": "pecas/p05b-remedios/t05.png",
+     "x": 340,
+     "y": 994,
+     "w": 231,
+     "h": 45,
+     "classe": "corpo"
+    },
+    {
+     "id": "t06",
+     "arq": "pecas/p05b-remedios/t06.png",
+     "x": 340,
+     "y": 1062,
+     "w": 431,
+     "h": 45,
+     "classe": "corpo"
+    },
+    {
+     "id": "t07",
+     "arq": "pecas/p05b-remedios/t07.png",
+     "x": 340,
+     "y": 1130,
+     "w": 609,
+     "h": 45,
+     "classe": "corpo"
+    },
+    {
+     "id": "t08",
+     "arq": "pecas/p05b-remedios/t08.png",
+     "x": 376,
+     "y": 1154,
+     "w": 819,
+     "h": 22,
+     "classe": "corpo"
+    }
+   ],
+   "entra_f_por_peca": {
+    "l0000": 4980,
+    "l0001": 4983,
+    "l0002": 4986,
+    "l0003": 4989,
+    "t01": 5040,
+    "t02": 5070,
+    "t03": 5160,
+    "t04": 5220,
+    "t05": 5280,
+    "t06": 5370,
+    "t07": 5490,
+    "t08": 5550
    }
   },
   {
@@ -225,17 +1199,216 @@
    "sai_f": 6212,
    "dur_f": 632,
    "tipo": "chapa",
-   "arquivo": "chapas/p05-44anos.jpg",
    "movimento": {
-    "tipo": "crop_desliza",
-    "de_x": 140,
-    "para_x": 340,
-    "y": "centro",
-    "janela": [
-     1920,
-     1080
-    ],
-    "obs": "a chapa tem 2400x1350; a janela desliza 200px. Nunca amplia."
+    "tipo": "empurrao_escala",
+    "de": 1.0,
+    "para": 1.05,
+    "obs": "ESCALA, nao deslize. Deslize uniforme o olho adapta em 2s e le como parado. 4 a 7% ao longo da cena, velocidade constante, sem easing."
+   },
+   "fundo": "pecas/p05-44anos/_fundo.jpg",
+   "pecas": [
+    {
+     "id": "t00",
+     "arq": "pecas/p05-44anos/t00.png",
+     "x": 384,
+     "y": 910,
+     "w": 70,
+     "h": 20,
+     "classe": "corpo"
+    },
+    {
+     "id": "t01",
+     "arq": "pecas/p05-44anos/t01.png",
+     "x": 566,
+     "y": 910,
+     "w": 69,
+     "h": 20,
+     "classe": "corpo"
+    },
+    {
+     "id": "t02",
+     "arq": "pecas/p05-44anos/t02.png",
+     "x": 748,
+     "y": 910,
+     "w": 70,
+     "h": 20,
+     "classe": "corpo"
+    },
+    {
+     "id": "t03",
+     "arq": "pecas/p05-44anos/t03.png",
+     "x": 931,
+     "y": 910,
+     "w": 69,
+     "h": 20,
+     "classe": "corpo"
+    },
+    {
+     "id": "t04",
+     "arq": "pecas/p05-44anos/t04.png",
+     "x": 1113,
+     "y": 910,
+     "w": 70,
+     "h": 20,
+     "classe": "corpo"
+    },
+    {
+     "id": "t05",
+     "arq": "pecas/p05-44anos/t05.png",
+     "x": 1295,
+     "y": 910,
+     "w": 69,
+     "h": 20,
+     "classe": "corpo"
+    },
+    {
+     "id": "t06",
+     "arq": "pecas/p05-44anos/t06.png",
+     "x": 1477,
+     "y": 910,
+     "w": 70,
+     "h": 20,
+     "classe": "corpo"
+    },
+    {
+     "id": "t07",
+     "arq": "pecas/p05-44anos/t07.png",
+     "x": 1660,
+     "y": 910,
+     "w": 69,
+     "h": 20,
+     "classe": "corpo"
+    },
+    {
+     "id": "t08",
+     "arq": "pecas/p05-44anos/t08.png",
+     "x": 1842,
+     "y": 910,
+     "w": 70,
+     "h": 20,
+     "classe": "corpo"
+    },
+    {
+     "id": "l0900",
+     "arq": "pecas/p05-44anos/l0900.png",
+     "x": 388,
+     "y": 530,
+     "w": 195,
+     "h": 97,
+     "classe": "impacto"
+    },
+    {
+     "id": "t10",
+     "arq": "pecas/p05-44anos/t10.png",
+     "x": 390,
+     "y": 630,
+     "w": 323,
+     "h": 29,
+     "classe": "corpo"
+    },
+    {
+     "id": "l1100",
+     "arq": "pecas/p05-44anos/l1100.png",
+     "x": 1782,
+     "y": 530,
+     "w": 193,
+     "h": 97,
+     "classe": "impacto"
+    },
+    {
+     "id": "t12",
+     "arq": "pecas/p05-44anos/t12.png",
+     "x": 1637,
+     "y": 630,
+     "w": 336,
+     "h": 29,
+     "classe": "corpo"
+    },
+    {
+     "id": "l1300",
+     "arq": "pecas/p05-44anos/l1300.png",
+     "x": 340,
+     "y": 180,
+     "w": 221,
+     "h": 202,
+     "classe": "impacto"
+    },
+    {
+     "id": "l1301",
+     "arq": "pecas/p05-44anos/l1301.png",
+     "x": 614,
+     "y": 180,
+     "w": 106,
+     "h": 202,
+     "classe": "impacto"
+    },
+    {
+     "id": "l1302",
+     "arq": "pecas/p05-44anos/l1302.png",
+     "x": 728,
+     "y": 180,
+     "w": 98,
+     "h": 202,
+     "classe": "impacto"
+    },
+    {
+     "id": "l1303",
+     "arq": "pecas/p05-44anos/l1303.png",
+     "x": 839,
+     "y": 180,
+     "w": 98,
+     "h": 202,
+     "classe": "impacto"
+    },
+    {
+     "id": "l1304",
+     "arq": "pecas/p05-44anos/l1304.png",
+     "x": 945,
+     "y": 180,
+     "w": 98,
+     "h": 202,
+     "classe": "impacto"
+    },
+    {
+     "id": "t14",
+     "arq": "pecas/p05-44anos/t14.png",
+     "x": 340,
+     "y": 450,
+     "w": 970,
+     "h": 49,
+     "classe": "corpo"
+    },
+    {
+     "id": "t15",
+     "arq": "pecas/p05-44anos/t15.png",
+     "x": 376,
+     "y": 1154,
+     "w": 1043,
+     "h": 22,
+     "classe": "corpo"
+    }
+   ],
+   "entra_f_por_peca": {
+    "t00": 5640,
+    "t01": 5640,
+    "t02": 5640,
+    "t03": 5640,
+    "t04": 5640,
+    "t05": 5640,
+    "t06": 5640,
+    "t07": 5640,
+    "t08": 5640,
+    "l0900": 5670,
+    "t10": 5730,
+    "l1100": 5790,
+    "t12": 5850,
+    "l1300": 5910,
+    "l1301": 5913,
+    "l1302": 5916,
+    "l1303": 5919,
+    "l1304": 5922,
+    "t14": 5970,
+    "t15": 6030
    }
   },
   {
@@ -255,7 +1428,35 @@
     "tipo": "nenhum",
     "obs": "o plano ja se move. Nao acrescentar camera."
    },
-   "cor": "saturacao 0.72 · contraste 1.07 · sombra quente · vinheta · grao 5"
+   "cor": "saturacao 0.72 · contraste 1.07 · sombra quente · vinheta · grao 5",
+   "lettering": [
+    {
+     "id": "g05",
+     "arq": "g05.png",
+     "cena": 10,
+     "t_s": 213.0,
+     "frame": 6390,
+     "classe": "tarja",
+     "texto": "A MEDICINA OCIDENTAL INTEIRA",
+     "x": 135,
+     "y": 900,
+     "w": 740,
+     "h": 35
+    },
+    {
+     "id": "g06",
+     "arq": "g06.png",
+     "cena": 10,
+     "t_s": 219.0,
+     "frame": 6570,
+     "classe": "impacto",
+     "texto": "DE MÃOS VAZIAS",
+     "x": 135,
+     "y": 760,
+     "w": 616,
+     "h": 113
+    }
+   ]
   },
   {
    "i": 11,
@@ -274,7 +1475,48 @@
     "tipo": "nenhum",
     "obs": "o plano ja se move. Nao acrescentar camera."
    },
-   "cor": "saturacao 0.72 · contraste 1.07 · sombra quente · vinheta · grao 5"
+   "cor": "saturacao 0.72 · contraste 1.07 · sombra quente · vinheta · grao 5",
+   "lettering": [
+    {
+     "id": "g07",
+     "arq": "g07.png",
+     "cena": 11,
+     "t_s": 232.0,
+     "frame": 6960,
+     "classe": "impacto",
+     "texto": "UM ÚLTIMO GOLPE",
+     "x": 135,
+     "y": 760,
+     "w": 675,
+     "h": 116
+    },
+    {
+     "id": "g08",
+     "arq": "g08.png",
+     "cena": 11,
+     "t_s": 236.0,
+     "frame": 7080,
+     "classe": "impacto",
+     "texto": "TAHITI",
+     "x": 135,
+     "y": 760,
+     "w": 223,
+     "h": 89
+    },
+    {
+     "id": "g09",
+     "arq": "g09.png",
+     "cena": 11,
+     "t_s": 257.0,
+     "frame": 7710,
+     "classe": "tarja",
+     "texto": "ELE NÃO TROCA A LEITURA",
+     "x": 135,
+     "y": 900,
+     "w": 605,
+     "h": 46
+    }
+   ]
   },
   {
    "i": 12,
@@ -293,7 +1535,22 @@
     "tipo": "nenhum",
     "obs": "o plano ja se move. Nao acrescentar camera."
    },
-   "cor": "saturacao 0.72 · contraste 1.07 · sombra quente · vinheta · grao 5"
+   "cor": "saturacao 0.72 · contraste 1.07 · sombra quente · vinheta · grao 5",
+   "lettering": [
+    {
+     "id": "g10",
+     "arq": "g10.png",
+     "cena": 12,
+     "t_s": 267.0,
+     "frame": 8010,
+     "classe": "impacto",
+     "texto": "ELE AUMENTA O VOLUME",
+     "x": 135,
+     "y": 760,
+     "w": 900,
+     "h": 91
+    }
+   ]
   },
   {
    "i": 13,
@@ -304,17 +1561,236 @@
    "sai_f": 8850,
    "dur_f": 540,
    "tipo": "chapa",
-   "arquivo": "chapas/p06-boletim.jpg",
    "movimento": {
-    "tipo": "crop_desliza",
-    "de_x": 140,
-    "para_x": 340,
-    "y": "centro",
-    "janela": [
-     1920,
-     1080
-    ],
-    "obs": "a chapa tem 2400x1350; a janela desliza 200px. Nunca amplia."
+    "tipo": "empurrao_escala",
+    "de": 1.0,
+    "para": 1.05,
+    "obs": "ESCALA, nao deslize. Deslize uniforme o olho adapta em 2s e le como parado. 4 a 7% ao longo da cena, velocidade constante, sem easing."
+   },
+   "fundo": "pecas/p06-boletim/_fundo.jpg",
+   "pecas": [
+    {
+     "id": "t00",
+     "arq": "pecas/p06-boletim/t00.png",
+     "x": 340,
+     "y": 180,
+     "w": 738,
+     "h": 38,
+     "classe": "corpo"
+    },
+    {
+     "id": "t01",
+     "arq": "pecas/p06-boletim/t01.png",
+     "x": 340,
+     "y": 242,
+     "w": 725,
+     "h": 38,
+     "classe": "corpo"
+    },
+    {
+     "id": "t02",
+     "arq": "pecas/p06-boletim/t02.png",
+     "x": 340,
+     "y": 304,
+     "w": 712,
+     "h": 38,
+     "classe": "corpo"
+    },
+    {
+     "id": "t03",
+     "arq": "pecas/p06-boletim/t03.png",
+     "x": 340,
+     "y": 366,
+     "w": 740,
+     "h": 38,
+     "classe": "corpo"
+    },
+    {
+     "id": "t04",
+     "arq": "pecas/p06-boletim/t04.png",
+     "x": 340,
+     "y": 428,
+     "w": 617,
+     "h": 38,
+     "classe": "corpo"
+    },
+    {
+     "id": "l0500",
+     "arq": "pecas/p06-boletim/l0500.png",
+     "x": 340,
+     "y": 600,
+     "w": 358,
+     "h": 103,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0501",
+     "arq": "pecas/p06-boletim/l0501.png",
+     "x": 705,
+     "y": 600,
+     "w": 193,
+     "h": 103,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0600",
+     "arq": "pecas/p06-boletim/l0600.png",
+     "x": 340,
+     "y": 753,
+     "w": 98,
+     "h": 103,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0601",
+     "arq": "pecas/p06-boletim/l0601.png",
+     "x": 468,
+     "y": 753,
+     "w": 105,
+     "h": 103,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0602",
+     "arq": "pecas/p06-boletim/l0602.png",
+     "x": 579,
+     "y": 753,
+     "w": 99,
+     "h": 103,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0603",
+     "arq": "pecas/p06-boletim/l0603.png",
+     "x": 709,
+     "y": 753,
+     "w": 226,
+     "h": 103,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0700",
+     "arq": "pecas/p06-boletim/l0700.png",
+     "x": 340,
+     "y": 906,
+     "w": 155,
+     "h": 113,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0701",
+     "arq": "pecas/p06-boletim/l0701.png",
+     "x": 526,
+     "y": 906,
+     "w": 269,
+     "h": 113,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0702",
+     "arq": "pecas/p06-boletim/l0702.png",
+     "x": 825,
+     "y": 906,
+     "w": 194,
+     "h": 113,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0800",
+     "arq": "pecas/p06-boletim/l0800.png",
+     "x": 340,
+     "y": 1060,
+     "w": 65,
+     "h": 103,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0801",
+     "arq": "pecas/p06-boletim/l0801.png",
+     "x": 411,
+     "y": 1060,
+     "w": 51,
+     "h": 103,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0802",
+     "arq": "pecas/p06-boletim/l0802.png",
+     "x": 468,
+     "y": 1060,
+     "w": 110,
+     "h": 103,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0803",
+     "arq": "pecas/p06-boletim/l0803.png",
+     "x": 608,
+     "y": 1060,
+     "w": 51,
+     "h": 103,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0804",
+     "arq": "pecas/p06-boletim/l0804.png",
+     "x": 665,
+     "y": 1060,
+     "w": 43,
+     "h": 103,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0805",
+     "arq": "pecas/p06-boletim/l0805.png",
+     "x": 738,
+     "y": 1060,
+     "w": 150,
+     "h": 103,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0806",
+     "arq": "pecas/p06-boletim/l0806.png",
+     "x": 894,
+     "y": 1060,
+     "w": 282,
+     "h": 103,
+     "classe": "impacto"
+    },
+    {
+     "id": "t09",
+     "arq": "pecas/p06-boletim/t09.png",
+     "x": 376,
+     "y": 1154,
+     "w": 1231,
+     "h": 22,
+     "classe": "corpo"
+    }
+   ],
+   "entra_f_por_peca": {
+    "t00": 8314,
+    "t01": 8340,
+    "t02": 8430,
+    "t03": 8490,
+    "t04": 8550,
+    "l0500": 8550,
+    "l0501": 8553,
+    "l0600": 8610,
+    "l0601": 8613,
+    "l0602": 8616,
+    "l0603": 8619,
+    "l0700": 8670,
+    "l0701": 8673,
+    "l0702": 8676,
+    "l0800": 8730,
+    "l0801": 8733,
+    "l0802": 8736,
+    "l0803": 8739,
+    "l0804": 8742,
+    "l0805": 8745,
+    "l0806": 8748,
+    "t09": 8820
    }
   },
   {
@@ -326,17 +1802,49 @@
    "sai_f": 9275,
    "dur_f": 425,
    "tipo": "chapa",
-   "arquivo": "chapas/p06b-mapa.jpg",
    "movimento": {
-    "tipo": "crop_desliza",
-    "de_x": 140,
-    "para_x": 340,
-    "y": "centro",
-    "janela": [
-     1920,
-     1080
-    ],
-    "obs": "a chapa tem 2400x1350; a janela desliza 200px. Nunca amplia."
+    "tipo": "empurrao_escala",
+    "de": 1.0,
+    "para": 1.05,
+    "obs": "ESCALA, nao deslize. Deslize uniforme o olho adapta em 2s e le como parado. 4 a 7% ao longo da cena, velocidade constante, sem easing."
+   },
+   "fundo": "pecas/p06b-mapa/_fundo.jpg",
+   "pecas": [
+    {
+     "id": "t00",
+     "arq": "pecas/p06b-mapa/t00.png",
+     "x": 340,
+     "y": 1070,
+     "w": 1653,
+     "h": 36,
+     "classe": "corpo"
+    },
+    {
+     "id": "t01",
+     "arq": "pecas/p06b-mapa/t01.png",
+     "x": 376,
+     "y": 1154,
+     "w": 1334,
+     "h": 22,
+     "classe": "corpo"
+    }
+   ],
+   "entra_f_por_peca": {
+    "t00": 8880,
+    "t01": 8970
+   },
+   "mapa_vetorial": {
+    "svg": "mapa/eua-fronteira.svg",
+    "foto_do_atlas": "mapa/rand-mcnally-1890-foto.jpg",
+    "camadas": {
+     "nacao": "#nacao-contorno — o contorno dos 48 contiguos",
+     "estados": "#uf-* — 49 caminhos, um por estado",
+     "fronteira_1880": "#linha-1880 — a linha continua",
+     "fronteira_1890": "#caco-00..11 — 12 cacos",
+     "nucleos": "#nucleo-00..25 — 26 nucleos isolados"
+    },
+    "sugestao": "a linha de 1880 se desenha em 40 quadros; depois ela some e os 12 cacos aparecem; os 26 nucleos estalam um a um, 3 quadros entre eles. E a frase do boletim acontecendo na tela.",
+    "dado_vs_esquema": "DADO: a geografia (us-atlas 3.0.1, Albers) e a posicao do meridiano 99 W, derivada do Colorado (retangulo exato 102 03'W-109 03'W = 34,91 px/grau). ESQUEMA: a linha e os nucleos. Nao tenho densidade de 1890 por condado e nao finjo que tenho. ROTULAR 'esquema' na tela."
    }
   },
   {
@@ -348,17 +1856,136 @@
    "sai_f": 10066,
    "dur_f": 791,
    "tipo": "chapa",
-   "arquivo": "chapas/p07-turner.jpg",
    "movimento": {
-    "tipo": "crop_desliza",
-    "de_x": 140,
-    "para_x": 340,
-    "y": "centro",
-    "janela": [
-     1920,
-     1080
-    ],
-    "obs": "a chapa tem 2400x1350; a janela desliza 200px. Nunca amplia."
+    "tipo": "empurrao_escala",
+    "de": 1.0,
+    "para": 1.05,
+    "obs": "ESCALA, nao deslize. Deslize uniforme o olho adapta em 2s e le como parado. 4 a 7% ao longo da cena, velocidade constante, sem easing."
+   },
+   "fundo": "pecas/p07-turner/_fundo.jpg",
+   "pecas": [
+    {
+     "id": "l0000",
+     "arq": "pecas/p07-turner/l0000.png",
+     "x": 340,
+     "y": 220,
+     "w": 117,
+     "h": 353,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0001",
+     "arq": "pecas/p07-turner/l0001.png",
+     "x": 472,
+     "y": 220,
+     "w": 180,
+     "h": 353,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0002",
+     "arq": "pecas/p07-turner/l0002.png",
+     "x": 666,
+     "y": 220,
+     "w": 183,
+     "h": 353,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0003",
+     "arq": "pecas/p07-turner/l0003.png",
+     "x": 856,
+     "y": 220,
+     "w": 181,
+     "h": 353,
+     "classe": "impacto"
+    },
+    {
+     "id": "t01",
+     "arq": "pecas/p07-turner/t01.png",
+     "x": 340,
+     "y": 700,
+     "w": 318,
+     "h": 54,
+     "classe": "corpo"
+    },
+    {
+     "id": "t02",
+     "arq": "pecas/p07-turner/t02.png",
+     "x": 340,
+     "y": 790,
+     "w": 1106,
+     "h": 37,
+     "classe": "corpo"
+    },
+    {
+     "id": "t03",
+     "arq": "pecas/p07-turner/t03.png",
+     "x": 340,
+     "y": 840,
+     "w": 1112,
+     "h": 37,
+     "classe": "corpo"
+    },
+    {
+     "id": "t04",
+     "arq": "pecas/p07-turner/t04.png",
+     "x": 340,
+     "y": 890,
+     "w": 1106,
+     "h": 38,
+     "classe": "corpo"
+    },
+    {
+     "id": "t05",
+     "arq": "pecas/p07-turner/t05.png",
+     "x": 340,
+     "y": 990,
+     "w": 787,
+     "h": 35,
+     "classe": "corpo"
+    },
+    {
+     "id": "t06",
+     "arq": "pecas/p07-turner/t06.png",
+     "x": 340,
+     "y": 1040,
+     "w": 1067,
+     "h": 37,
+     "classe": "corpo"
+    },
+    {
+     "id": "t07",
+     "arq": "pecas/p07-turner/t07.png",
+     "x": 340,
+     "y": 1090,
+     "w": 1130,
+     "h": 30,
+     "classe": "corpo"
+    },
+    {
+     "id": "t08",
+     "arq": "pecas/p07-turner/t08.png",
+     "x": 376,
+     "y": 1154,
+     "w": 1129,
+     "h": 22,
+     "classe": "corpo"
+    }
+   ],
+   "entra_f_por_peca": {
+    "l0000": 9300,
+    "l0001": 9303,
+    "l0002": 9306,
+    "l0003": 9309,
+    "t01": 9360,
+    "t02": 9450,
+    "t03": 9510,
+    "t04": 9570,
+    "t05": 9630,
+    "t06": 9690,
+    "t07": 9720,
+    "t08": 9810
    }
   },
   {
@@ -370,17 +1997,296 @@
    "sai_f": 10260,
    "dur_f": 194,
    "tipo": "chapa",
-   "arquivo": "chapas/p08-tabela.jpg",
    "movimento": {
-    "tipo": "crop_desliza",
-    "de_x": 140,
-    "para_x": 340,
-    "y": "centro",
-    "janela": [
-     1920,
-     1080
-    ],
-    "obs": "a chapa tem 2400x1350; a janela desliza 200px. Nunca amplia."
+    "tipo": "empurrao_escala",
+    "de": 1.0,
+    "para": 1.05,
+    "obs": "ESCALA, nao deslize. Deslize uniforme o olho adapta em 2s e le como parado. 4 a 7% ao longo da cena, velocidade constante, sem easing."
+   },
+   "fundo": "pecas/p08-tabela/_fundo.jpg",
+   "pecas": [
+    {
+     "id": "t00",
+     "arq": "pecas/p08-tabela/t00.png",
+     "x": 360,
+     "y": 262,
+     "w": 749,
+     "h": 34,
+     "classe": "corpo"
+    },
+    {
+     "id": "l0100",
+     "arq": "pecas/p08-tabela/l0100.png",
+     "x": 366,
+     "y": 334,
+     "w": 91,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0101",
+     "arq": "pecas/p08-tabela/l0101.png",
+     "x": 463,
+     "y": 334,
+     "w": 177,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0102",
+     "arq": "pecas/p08-tabela/l0102.png",
+     "x": 647,
+     "y": 334,
+     "w": 84,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0103",
+     "arq": "pecas/p08-tabela/l0103.png",
+     "x": 738,
+     "y": 334,
+     "w": 84,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0104",
+     "arq": "pecas/p08-tabela/l0104.png",
+     "x": 830,
+     "y": 334,
+     "w": 83,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0105",
+     "arq": "pecas/p08-tabela/l0105.png",
+     "x": 966,
+     "y": 334,
+     "w": 84,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0106",
+     "arq": "pecas/p08-tabela/l0106.png",
+     "x": 1059,
+     "y": 334,
+     "w": 83,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0107",
+     "arq": "pecas/p08-tabela/l0107.png",
+     "x": 1151,
+     "y": 334,
+     "w": 132,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0108",
+     "arq": "pecas/p08-tabela/l0108.png",
+     "x": 1290,
+     "y": 334,
+     "w": 91,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0200",
+     "arq": "pecas/p08-tabela/l0200.png",
+     "x": 360,
+     "y": 330,
+     "w": 91,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0201",
+     "arq": "pecas/p08-tabela/l0201.png",
+     "x": 457,
+     "y": 330,
+     "w": 177,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0202",
+     "arq": "pecas/p08-tabela/l0202.png",
+     "x": 641,
+     "y": 330,
+     "w": 84,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0203",
+     "arq": "pecas/p08-tabela/l0203.png",
+     "x": 732,
+     "y": 330,
+     "w": 84,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0204",
+     "arq": "pecas/p08-tabela/l0204.png",
+     "x": 824,
+     "y": 330,
+     "w": 83,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0205",
+     "arq": "pecas/p08-tabela/l0205.png",
+     "x": 960,
+     "y": 330,
+     "w": 84,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0206",
+     "arq": "pecas/p08-tabela/l0206.png",
+     "x": 1053,
+     "y": 330,
+     "w": 83,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0207",
+     "arq": "pecas/p08-tabela/l0207.png",
+     "x": 1145,
+     "y": 330,
+     "w": 132,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0208",
+     "arq": "pecas/p08-tabela/l0208.png",
+     "x": 1284,
+     "y": 330,
+     "w": 91,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0300",
+     "arq": "pecas/p08-tabela/l0300.png",
+     "x": 366,
+     "y": 546,
+     "w": 167,
+     "h": 168,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0301",
+     "arq": "pecas/p08-tabela/l0301.png",
+     "x": 540,
+     "y": 546,
+     "w": 84,
+     "h": 168,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0302",
+     "arq": "pecas/p08-tabela/l0302.png",
+     "x": 631,
+     "y": 546,
+     "w": 71,
+     "h": 168,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0303",
+     "arq": "pecas/p08-tabela/l0303.png",
+     "x": 710,
+     "y": 546,
+     "w": 161,
+     "h": 168,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0400",
+     "arq": "pecas/p08-tabela/l0400.png",
+     "x": 360,
+     "y": 542,
+     "w": 167,
+     "h": 168,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0401",
+     "arq": "pecas/p08-tabela/l0401.png",
+     "x": 534,
+     "y": 542,
+     "w": 84,
+     "h": 168,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0402",
+     "arq": "pecas/p08-tabela/l0402.png",
+     "x": 625,
+     "y": 542,
+     "w": 71,
+     "h": 168,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0403",
+     "arq": "pecas/p08-tabela/l0403.png",
+     "x": 704,
+     "y": 542,
+     "w": 161,
+     "h": 168,
+     "classe": "impacto"
+    },
+    {
+     "id": "t05",
+     "arq": "pecas/p08-tabela/t05.png",
+     "x": 360,
+     "y": 952,
+     "w": 40,
+     "h": 47,
+     "classe": "corpo"
+    }
+   ],
+   "entra_f_por_peca": {
+    "t00": 10080,
+    "l0200": 10080,
+    "l0100": 10083,
+    "l0201": 10086,
+    "l0101": 10089,
+    "l0202": 10092,
+    "l0102": 10095,
+    "l0203": 10098,
+    "l0103": 10101,
+    "l0204": 10104,
+    "l0104": 10107,
+    "l0205": 10110,
+    "l0105": 10113,
+    "l0206": 10116,
+    "l0106": 10119,
+    "l0207": 10122,
+    "l0107": 10125,
+    "l0208": 10128,
+    "l0108": 10131,
+    "l0400": 10140,
+    "l0300": 10143,
+    "l0401": 10146,
+    "l0301": 10149,
+    "l0402": 10152,
+    "l0302": 10155,
+    "l0403": 10158,
+    "l0303": 10161,
+    "t05": 10140
    }
   },
   {
@@ -400,7 +2306,35 @@
     "tipo": "nenhum",
     "obs": "o plano ja se move. Nao acrescentar camera."
    },
-   "cor": "saturacao 0.72 · contraste 1.07 · sombra quente · vinheta · grao 5"
+   "cor": "saturacao 0.72 · contraste 1.07 · sombra quente · vinheta · grao 5",
+   "lettering": [
+    {
+     "id": "g11",
+     "arq": "g11.png",
+     "cena": 17,
+     "t_s": 366.0,
+     "frame": 10980,
+     "classe": "tarja",
+     "texto": "ISSO NÃO É DERROTA",
+     "x": 135,
+     "y": 900,
+     "w": 481,
+     "h": 47
+    },
+    {
+     "id": "g12",
+     "arq": "g12.png",
+     "cena": 17,
+     "t_s": 372.0,
+     "frame": 11160,
+     "classe": "impacto",
+     "texto": "É OBSOLESCÊNCIA",
+     "x": 135,
+     "y": 760,
+     "w": 646,
+     "h": 116
+    }
+   ]
   },
   {
    "i": 18,
@@ -411,17 +2345,156 @@
    "sai_f": 12600,
    "dur_f": 1126,
    "tipo": "chapa",
-   "arquivo": "chapas/p09-fortworth.jpg",
    "movimento": {
-    "tipo": "crop_desliza",
-    "de_x": 140,
-    "para_x": 340,
-    "y": "centro",
-    "janela": [
-     1920,
-     1080
-    ],
-    "obs": "a chapa tem 2400x1350; a janela desliza 200px. Nunca amplia."
+    "tipo": "empurrao_escala",
+    "de": 1.0,
+    "para": 1.05,
+    "obs": "ESCALA, nao deslize. Deslize uniforme o olho adapta em 2s e le como parado. 4 a 7% ao longo da cena, velocidade constante, sem easing."
+   },
+   "fundo": "pecas/p09-fortworth/_fundo.jpg",
+   "pecas": [
+    {
+     "id": "l0000",
+     "arq": "pecas/p09-fortworth/l0000.png",
+     "x": 340,
+     "y": 300,
+     "w": 83,
+     "h": 202,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0001",
+     "arq": "pecas/p09-fortworth/l0001.png",
+     "x": 432,
+     "y": 300,
+     "w": 81,
+     "h": 202,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0002",
+     "arq": "pecas/p09-fortworth/l0002.png",
+     "x": 521,
+     "y": 300,
+     "w": 185,
+     "h": 202,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0100",
+     "arq": "pecas/p09-fortworth/l0100.png",
+     "x": 340,
+     "y": 599,
+     "w": 97,
+     "h": 202,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0101",
+     "arq": "pecas/p09-fortworth/l0101.png",
+     "x": 445,
+     "y": 599,
+     "w": 98,
+     "h": 202,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0102",
+     "arq": "pecas/p09-fortworth/l0102.png",
+     "x": 551,
+     "y": 599,
+     "w": 208,
+     "h": 202,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0103",
+     "arq": "pecas/p09-fortworth/l0103.png",
+     "x": 767,
+     "y": 599,
+     "w": 208,
+     "h": 202,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0104",
+     "arq": "pecas/p09-fortworth/l0104.png",
+     "x": 983,
+     "y": 599,
+     "w": 155,
+     "h": 202,
+     "classe": "impacto"
+    },
+    {
+     "id": "t02",
+     "arq": "pecas/p09-fortworth/t02.png",
+     "x": 340,
+     "y": 840,
+     "w": 1067,
+     "h": 34,
+     "classe": "corpo"
+    },
+    {
+     "id": "t03",
+     "arq": "pecas/p09-fortworth/t03.png",
+     "x": 340,
+     "y": 892,
+     "w": 1130,
+     "h": 38,
+     "classe": "corpo"
+    },
+    {
+     "id": "t04",
+     "arq": "pecas/p09-fortworth/t04.png",
+     "x": 340,
+     "y": 944,
+     "w": 1157,
+     "h": 38,
+     "classe": "corpo"
+    },
+    {
+     "id": "t05",
+     "arq": "pecas/p09-fortworth/t05.png",
+     "x": 340,
+     "y": 996,
+     "w": 1153,
+     "h": 38,
+     "classe": "corpo"
+    },
+    {
+     "id": "t06",
+     "arq": "pecas/p09-fortworth/t06.png",
+     "x": 340,
+     "y": 1100,
+     "w": 880,
+     "h": 37,
+     "classe": "corpo"
+    },
+    {
+     "id": "t07",
+     "arq": "pecas/p09-fortworth/t07.png",
+     "x": 376,
+     "y": 1154,
+     "w": 751,
+     "h": 22,
+     "classe": "corpo"
+    }
+   ],
+   "entra_f_por_peca": {
+    "l0000": 11490,
+    "l0001": 11493,
+    "l0002": 11496,
+    "l0100": 11580,
+    "l0101": 11583,
+    "l0102": 11586,
+    "l0103": 11589,
+    "l0104": 11592,
+    "t02": 11670,
+    "t03": 11730,
+    "t04": 11790,
+    "t05": 11880,
+    "t06": 11940,
+    "t07": 12030
    }
   },
   {
@@ -433,17 +2506,176 @@
    "sai_f": 13710,
    "dur_f": 1110,
    "tipo": "chapa",
-   "arquivo": "chapas/p10-circular.jpg",
    "movimento": {
-    "tipo": "crop_desliza",
-    "de_x": 140,
-    "para_x": 340,
-    "y": "centro",
-    "janela": [
-     1920,
-     1080
-    ],
-    "obs": "a chapa tem 2400x1350; a janela desliza 200px. Nunca amplia."
+    "tipo": "empurrao_escala",
+    "de": 1.0,
+    "para": 1.05,
+    "obs": "ESCALA, nao deslize. Deslize uniforme o olho adapta em 2s e le como parado. 4 a 7% ao longo da cena, velocidade constante, sem easing."
+   },
+   "fundo": "pecas/p10-circular/_fundo.jpg",
+   "pecas": [
+    {
+     "id": "l0000",
+     "arq": "pecas/p10-circular/l0000.png",
+     "x": 340,
+     "y": 300,
+     "w": 134,
+     "h": 148,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0001",
+     "arq": "pecas/p10-circular/l0001.png",
+     "x": 518,
+     "y": 300,
+     "w": 73,
+     "h": 148,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0002",
+     "arq": "pecas/p10-circular/l0002.png",
+     "x": 600,
+     "y": 300,
+     "w": 61,
+     "h": 148,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0003",
+     "arq": "pecas/p10-circular/l0003.png",
+     "x": 705,
+     "y": 300,
+     "w": 115,
+     "h": 148,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0004",
+     "arq": "pecas/p10-circular/l0004.png",
+     "x": 826,
+     "y": 300,
+     "w": 78,
+     "h": 148,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0005",
+     "arq": "pecas/p10-circular/l0005.png",
+     "x": 910,
+     "y": 300,
+     "w": 29,
+     "h": 148,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0006",
+     "arq": "pecas/p10-circular/l0006.png",
+     "x": 946,
+     "y": 300,
+     "w": 73,
+     "h": 148,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0100",
+     "arq": "pecas/p10-circular/l0100.png",
+     "x": 340,
+     "y": 521,
+     "w": 73,
+     "h": 148,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0101",
+     "arq": "pecas/p10-circular/l0101.png",
+     "x": 422,
+     "y": 521,
+     "w": 61,
+     "h": 148,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0102",
+     "arq": "pecas/p10-circular/l0102.png",
+     "x": 524,
+     "y": 521,
+     "w": 50,
+     "h": 148,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0103",
+     "arq": "pecas/p10-circular/l0103.png",
+     "x": 580,
+     "y": 521,
+     "w": 212,
+     "h": 148,
+     "classe": "impacto"
+    },
+    {
+     "id": "t02",
+     "arq": "pecas/p10-circular/t02.png",
+     "x": 340,
+     "y": 780,
+     "w": 1084,
+     "h": 38,
+     "classe": "corpo"
+    },
+    {
+     "id": "t03",
+     "arq": "pecas/p10-circular/t03.png",
+     "x": 340,
+     "y": 832,
+     "w": 1088,
+     "h": 38,
+     "classe": "corpo"
+    },
+    {
+     "id": "t04",
+     "arq": "pecas/p10-circular/t04.png",
+     "x": 340,
+     "y": 884,
+     "w": 1015,
+     "h": 37,
+     "classe": "corpo"
+    },
+    {
+     "id": "t05",
+     "arq": "pecas/p10-circular/t05.png",
+     "x": 340,
+     "y": 988,
+     "w": 1038,
+     "h": 38,
+     "classe": "corpo"
+    },
+    {
+     "id": "t06",
+     "arq": "pecas/p10-circular/t06.png",
+     "x": 376,
+     "y": 1154,
+     "w": 974,
+     "h": 25,
+     "classe": "corpo"
+    }
+   ],
+   "entra_f_por_peca": {
+    "l0000": 12630,
+    "l0001": 12633,
+    "l0002": 12636,
+    "l0003": 12639,
+    "l0004": 12642,
+    "l0005": 12645,
+    "l0006": 12648,
+    "l0100": 12690,
+    "l0101": 12693,
+    "l0102": 12696,
+    "l0103": 12699,
+    "t02": 12720,
+    "t03": 12810,
+    "t04": 12900,
+    "t05": 12960,
+    "t06": 13020
    }
   },
   {
@@ -455,17 +2687,196 @@
    "sai_f": 15566,
    "dur_f": 1856,
    "tipo": "chapa",
-   "arquivo": "chapas/p11-sem-fonte.jpg",
    "movimento": {
-    "tipo": "crop_desliza",
-    "de_x": 140,
-    "para_x": 340,
-    "y": "centro",
-    "janela": [
-     1920,
-     1080
-    ],
-    "obs": "a chapa tem 2400x1350; a janela desliza 200px. Nunca amplia."
+    "tipo": "empurrao_escala",
+    "de": 1.0,
+    "para": 1.05,
+    "obs": "ESCALA, nao deslize. Deslize uniforme o olho adapta em 2s e le como parado. 4 a 7% ao longo da cena, velocidade constante, sem easing."
+   },
+   "fundo": "pecas/p11-sem-fonte/_fundo.jpg",
+   "pecas": [
+    {
+     "id": "t00",
+     "arq": "pecas/p11-sem-fonte/t00.png",
+     "x": 340,
+     "y": 250,
+     "w": 1123,
+     "h": 51,
+     "classe": "corpo"
+    },
+    {
+     "id": "t01",
+     "arq": "pecas/p11-sem-fonte/t01.png",
+     "x": 340,
+     "y": 326,
+     "w": 1066,
+     "h": 41,
+     "classe": "corpo"
+    },
+    {
+     "id": "t02",
+     "arq": "pecas/p11-sem-fonte/t02.png",
+     "x": 340,
+     "y": 430,
+     "w": 374,
+     "h": 28,
+     "classe": "corpo"
+    },
+    {
+     "id": "t03",
+     "arq": "pecas/p11-sem-fonte/t03.png",
+     "x": 380,
+     "y": 492,
+     "w": 449,
+     "h": 27,
+     "classe": "corpo"
+    },
+    {
+     "id": "t04",
+     "arq": "pecas/p11-sem-fonte/t04.png",
+     "x": 380,
+     "y": 548,
+     "w": 516,
+     "h": 35,
+     "classe": "corpo"
+    },
+    {
+     "id": "t05",
+     "arq": "pecas/p11-sem-fonte/t05.png",
+     "x": 380,
+     "y": 604,
+     "w": 190,
+     "h": 34,
+     "classe": "corpo"
+    },
+    {
+     "id": "t06",
+     "arq": "pecas/p11-sem-fonte/t06.png",
+     "x": 380,
+     "y": 660,
+     "w": 709,
+     "h": 34,
+     "classe": "corpo"
+    },
+    {
+     "id": "t07",
+     "arq": "pecas/p11-sem-fonte/t07.png",
+     "x": 340,
+     "y": 740,
+     "w": 404,
+     "h": 42,
+     "classe": "corpo"
+    },
+    {
+     "id": "t08",
+     "arq": "pecas/p11-sem-fonte/t08.png",
+     "x": 380,
+     "y": 802,
+     "w": 234,
+     "h": 27,
+     "classe": "corpo"
+    },
+    {
+     "id": "t09",
+     "arq": "pecas/p11-sem-fonte/t09.png",
+     "x": 380,
+     "y": 858,
+     "w": 385,
+     "h": 34,
+     "classe": "corpo"
+    },
+    {
+     "id": "t10",
+     "arq": "pecas/p11-sem-fonte/t10.png",
+     "x": 380,
+     "y": 914,
+     "w": 428,
+     "h": 35,
+     "classe": "corpo"
+    },
+    {
+     "id": "t11",
+     "arq": "pecas/p11-sem-fonte/t11.png",
+     "x": 380,
+     "y": 970,
+     "w": 731,
+     "h": 28,
+     "classe": "corpo"
+    },
+    {
+     "id": "l1200",
+     "arq": "pecas/p11-sem-fonte/l1200.png",
+     "x": 340,
+     "y": 1010,
+     "w": 191,
+     "h": 95,
+     "classe": "impacto"
+    },
+    {
+     "id": "l1201",
+     "arq": "pecas/p11-sem-fonte/l1201.png",
+     "x": 555,
+     "y": 1010,
+     "w": 72,
+     "h": 95,
+     "classe": "impacto"
+    },
+    {
+     "id": "l1202",
+     "arq": "pecas/p11-sem-fonte/l1202.png",
+     "x": 650,
+     "y": 1010,
+     "w": 122,
+     "h": 95,
+     "classe": "impacto"
+    },
+    {
+     "id": "l1203",
+     "arq": "pecas/p11-sem-fonte/l1203.png",
+     "x": 794,
+     "y": 1010,
+     "w": 121,
+     "h": 95,
+     "classe": "impacto"
+    },
+    {
+     "id": "l1204",
+     "arq": "pecas/p11-sem-fonte/l1204.png",
+     "x": 937,
+     "y": 1010,
+     "w": 161,
+     "h": 95,
+     "classe": "impacto"
+    },
+    {
+     "id": "t13",
+     "arq": "pecas/p11-sem-fonte/t13.png",
+     "x": 376,
+     "y": 1154,
+     "w": 113,
+     "h": 21,
+     "classe": "corpo"
+    }
+   ],
+   "entra_f_por_peca": {
+    "t00": 13714,
+    "t01": 13770,
+    "t02": 13830,
+    "t03": 13890,
+    "t04": 13950,
+    "t05": 14010,
+    "t06": 14070,
+    "t07": 14160,
+    "t08": 14220,
+    "t09": 14280,
+    "t10": 14340,
+    "t11": 14400,
+    "l1200": 14460,
+    "l1201": 14463,
+    "l1202": 14466,
+    "l1203": 14469,
+    "l1204": 14472,
+    "t13": 14520
    }
   },
   {
@@ -485,7 +2896,35 @@
     "tipo": "nenhum",
     "obs": "o plano ja se move. Nao acrescentar camera."
    },
-   "cor": "saturacao 0.72 · contraste 1.07 · sombra quente · vinheta · grao 5"
+   "cor": "saturacao 0.72 · contraste 1.07 · sombra quente · vinheta · grao 5",
+   "lettering": [
+    {
+     "id": "g13",
+     "arq": "g13.png",
+     "cena": 21,
+     "t_s": 526.0,
+     "frame": 15780,
+     "classe": "impacto",
+     "texto": "1895",
+     "x": 135,
+     "y": 760,
+     "w": 183,
+     "h": 91
+    },
+    {
+     "id": "g14",
+     "arq": "g14.png",
+     "cena": 21,
+     "t_s": 533.0,
+     "frame": 15990,
+     "classe": "tarja",
+     "texto": "A LINHA ANNUNCIATION FOI ELETRIFICADA",
+     "x": 135,
+     "y": 900,
+     "w": 978,
+     "h": 35
+    }
+   ]
   },
   {
    "i": 22,
@@ -504,7 +2943,22 @@
     "tipo": "nenhum",
     "obs": "o plano ja se move. Nao acrescentar camera."
    },
-   "cor": "saturacao 0.72 · contraste 1.07 · sombra quente · vinheta · grao 5"
+   "cor": "saturacao 0.72 · contraste 1.07 · sombra quente · vinheta · grao 5",
+   "lettering": [
+    {
+     "id": "g15",
+     "arq": "g15.png",
+     "cena": 22,
+     "t_s": 548.0,
+     "frame": 16440,
+     "classe": "impacto",
+     "texto": "O FUTURO JÁ TINHA CHEGADO",
+     "x": 135,
+     "y": 760,
+     "w": 1064,
+     "h": 116
+    }
+   ]
   },
   {
    "i": 23,
@@ -523,7 +2977,22 @@
     "tipo": "nenhum",
     "obs": "o plano ja se move. Nao acrescentar camera."
    },
-   "cor": "saturacao 0.72 · contraste 1.07 · sombra quente · vinheta · grao 5"
+   "cor": "saturacao 0.72 · contraste 1.07 · sombra quente · vinheta · grao 5",
+   "lettering": [
+    {
+     "id": "g16",
+     "arq": "g16.png",
+     "cena": 23,
+     "t_s": 558.0,
+     "frame": 16740,
+     "classe": "tarja",
+     "texto": "A DOIS DIAS DE CAVALO DO ACAMPAMENTO",
+     "x": 135,
+     "y": 900,
+     "w": 991,
+     "h": 35
+    }
+   ]
   },
   {
    "i": 24,
@@ -542,7 +3011,35 @@
     "tipo": "nenhum",
     "obs": "o plano ja se move. Nao acrescentar camera."
    },
-   "cor": "saturacao 0.72 · contraste 1.07 · sombra quente · vinheta · grao 5"
+   "cor": "saturacao 0.72 · contraste 1.07 · sombra quente · vinheta · grao 5",
+   "lettering": [
+    {
+     "id": "g17",
+     "arq": "g17.png",
+     "cena": 24,
+     "t_s": 575.0,
+     "frame": 17250,
+     "classe": "impacto",
+     "texto": "ELE TEM PRAZO",
+     "x": 135,
+     "y": 760,
+     "w": 562,
+     "h": 91
+    },
+    {
+     "id": "g18",
+     "arq": "g18.png",
+     "cena": 24,
+     "t_s": 592.0,
+     "frame": 17760,
+     "classe": "tarja",
+     "texto": "QUE TIPO DE HOMEM VAI FICAR NO REGISTRO",
+     "x": 135,
+     "y": 900,
+     "w": 1043,
+     "h": 41
+    }
+   ]
   },
   {
    "i": 25,
@@ -553,17 +3050,116 @@
    "sai_f": 19140,
    "dur_f": 1087,
    "tipo": "chapa",
-   "arquivo": "chapas/p12-fecho.jpg",
    "movimento": {
-    "tipo": "crop_desliza",
-    "de_x": 140,
-    "para_x": 340,
-    "y": "centro",
-    "janela": [
-     1920,
-     1080
-    ],
-    "obs": "a chapa tem 2400x1350; a janela desliza 200px. Nunca amplia."
+    "tipo": "empurrao_escala",
+    "de": 1.0,
+    "para": 1.05,
+    "obs": "ESCALA, nao deslize. Deslize uniforme o olho adapta em 2s e le como parado. 4 a 7% ao longo da cena, velocidade constante, sem easing."
+   },
+   "fundo": "pecas/p12-fecho/_fundo.jpg",
+   "pecas": [
+    {
+     "id": "t00",
+     "arq": "pecas/p12-fecho/t00.png",
+     "x": 340,
+     "y": 380,
+     "w": 706,
+     "h": 44,
+     "classe": "corpo"
+    },
+    {
+     "id": "l0100",
+     "arq": "pecas/p12-fecho/l0100.png",
+     "x": 340,
+     "y": 460,
+     "w": 64,
+     "h": 146,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0101",
+     "arq": "pecas/p12-fecho/l0101.png",
+     "x": 412,
+     "y": 460,
+     "w": 115,
+     "h": 146,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0200",
+     "arq": "pecas/p12-fecho/l0200.png",
+     "x": 340,
+     "y": 681,
+     "w": 78,
+     "h": 146,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0201",
+     "arq": "pecas/p12-fecho/l0201.png",
+     "x": 424,
+     "y": 681,
+     "w": 59,
+     "h": 146,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0202",
+     "arq": "pecas/p12-fecho/l0202.png",
+     "x": 490,
+     "y": 681,
+     "w": 153,
+     "h": 146,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0203",
+     "arq": "pecas/p12-fecho/l0203.png",
+     "x": 649,
+     "y": 681,
+     "w": 29,
+     "h": 146,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0204",
+     "arq": "pecas/p12-fecho/l0204.png",
+     "x": 686,
+     "y": 681,
+     "w": 73,
+     "h": 146,
+     "classe": "impacto"
+    },
+    {
+     "id": "t03",
+     "arq": "pecas/p12-fecho/t03.png",
+     "x": 340,
+     "y": 880,
+     "w": 423,
+     "h": 37,
+     "classe": "corpo"
+    },
+    {
+     "id": "t04",
+     "arq": "pecas/p12-fecho/t04.png",
+     "x": 376,
+     "y": 1154,
+     "w": 751,
+     "h": 22,
+     "classe": "corpo"
+    }
+   ],
+   "entra_f_por_peca": {
+    "t00": 18090,
+    "l0100": 18150,
+    "l0101": 18153,
+    "l0200": 18210,
+    "l0201": 18213,
+    "l0202": 18216,
+    "l0203": 18219,
+    "l0204": 18222,
+    "t03": 18270,
+    "t04": 18330
    }
   },
   {
@@ -583,7 +3179,22 @@
     "tipo": "nenhum",
     "obs": "o plano ja se move. Nao acrescentar camera."
    },
-   "cor": "saturacao 0.72 · contraste 1.07 · sombra quente · vinheta · grao 5"
+   "cor": "saturacao 0.72 · contraste 1.07 · sombra quente · vinheta · grao 5",
+   "lettering": [
+    {
+     "id": "g19",
+     "arq": "g19.png",
+     "cena": 26,
+     "t_s": 655.0,
+     "frame": 19650,
+     "classe": "impacto",
+     "texto": "PREENCHENDO PAPEL NO BANCO",
+     "x": 135,
+     "y": 760,
+     "w": 1163,
+     "h": 91
+    }
+   ]
   },
   {
    "i": 27,
@@ -602,7 +3213,35 @@
     "tipo": "nenhum",
     "obs": "o plano ja se move. Nao acrescentar camera."
    },
-   "cor": "saturacao 0.72 · contraste 1.07 · sombra quente · vinheta · grao 5"
+   "cor": "saturacao 0.72 · contraste 1.07 · sombra quente · vinheta · grao 5",
+   "lettering": [
+    {
+     "id": "g20",
+     "arq": "g20.png",
+     "cena": 27,
+     "t_s": 694.0,
+     "frame": 20820,
+     "classe": "tarja",
+     "texto": "NÃO VAI TER REUNIÃO",
+     "x": 135,
+     "y": 900,
+     "w": 501,
+     "h": 46
+    },
+    {
+     "id": "g21",
+     "arq": "g21.png",
+     "cena": 27,
+     "t_s": 700.0,
+     "frame": 21000,
+     "classe": "impacto",
+     "texto": "VAI TER UMA PLANILHA",
+     "x": 135,
+     "y": 760,
+     "w": 845,
+     "h": 90
+    }
+   ]
   },
   {
    "i": 28,
@@ -613,17 +3252,396 @@
    "sai_f": 22470,
    "dur_f": 450,
    "tipo": "chapa",
-   "arquivo": "chapas/p13-cartela.jpg",
    "movimento": {
-    "tipo": "crop_desliza",
-    "de_x": 140,
-    "para_x": 340,
-    "y": "centro",
-    "janela": [
-     1920,
-     1080
-    ],
-    "obs": "a chapa tem 2400x1350; a janela desliza 200px. Nunca amplia."
+    "tipo": "empurrao_escala",
+    "de": 1.0,
+    "para": 1.05,
+    "obs": "ESCALA, nao deslize. Deslize uniforme o olho adapta em 2s e le como parado. 4 a 7% ao longo da cena, velocidade constante, sem easing."
+   },
+   "fundo": "pecas/p13-cartela/_fundo.jpg",
+   "pecas": [
+    {
+     "id": "t00",
+     "arq": "pecas/p13-cartela/t00.png",
+     "x": 360,
+     "y": 262,
+     "w": 1101,
+     "h": 40,
+     "classe": "corpo"
+    },
+    {
+     "id": "l0100",
+     "arq": "pecas/p13-cartela/l0100.png",
+     "x": 366,
+     "y": 334,
+     "w": 83,
+     "h": 187,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0101",
+     "arq": "pecas/p13-cartela/l0101.png",
+     "x": 457,
+     "y": 334,
+     "w": 71,
+     "h": 187,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0102",
+     "arq": "pecas/p13-cartela/l0102.png",
+     "x": 535,
+     "y": 334,
+     "w": 132,
+     "h": 187,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0103",
+     "arq": "pecas/p13-cartela/l0103.png",
+     "x": 674,
+     "y": 334,
+     "w": 91,
+     "h": 187,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0104",
+     "arq": "pecas/p13-cartela/l0104.png",
+     "x": 772,
+     "y": 334,
+     "w": 84,
+     "h": 187,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0105",
+     "arq": "pecas/p13-cartela/l0105.png",
+     "x": 862,
+     "y": 334,
+     "w": 91,
+     "h": 187,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0106",
+     "arq": "pecas/p13-cartela/l0106.png",
+     "x": 1002,
+     "y": 334,
+     "w": 177,
+     "h": 187,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0107",
+     "arq": "pecas/p13-cartela/l0107.png",
+     "x": 1189,
+     "y": 334,
+     "w": 71,
+     "h": 187,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0108",
+     "arq": "pecas/p13-cartela/l0108.png",
+     "x": 1305,
+     "y": 334,
+     "w": 88,
+     "h": 187,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0109",
+     "arq": "pecas/p13-cartela/l0109.png",
+     "x": 1400,
+     "y": 334,
+     "w": 71,
+     "h": 187,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0110",
+     "arq": "pecas/p13-cartela/l0110.png",
+     "x": 1478,
+     "y": 334,
+     "w": 132,
+     "h": 187,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0200",
+     "arq": "pecas/p13-cartela/l0200.png",
+     "x": 360,
+     "y": 330,
+     "w": 83,
+     "h": 187,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0201",
+     "arq": "pecas/p13-cartela/l0201.png",
+     "x": 451,
+     "y": 330,
+     "w": 71,
+     "h": 187,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0202",
+     "arq": "pecas/p13-cartela/l0202.png",
+     "x": 529,
+     "y": 330,
+     "w": 132,
+     "h": 187,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0203",
+     "arq": "pecas/p13-cartela/l0203.png",
+     "x": 668,
+     "y": 330,
+     "w": 91,
+     "h": 187,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0204",
+     "arq": "pecas/p13-cartela/l0204.png",
+     "x": 766,
+     "y": 330,
+     "w": 84,
+     "h": 187,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0205",
+     "arq": "pecas/p13-cartela/l0205.png",
+     "x": 856,
+     "y": 330,
+     "w": 91,
+     "h": 187,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0206",
+     "arq": "pecas/p13-cartela/l0206.png",
+     "x": 996,
+     "y": 330,
+     "w": 177,
+     "h": 187,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0207",
+     "arq": "pecas/p13-cartela/l0207.png",
+     "x": 1183,
+     "y": 330,
+     "w": 71,
+     "h": 187,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0208",
+     "arq": "pecas/p13-cartela/l0208.png",
+     "x": 1299,
+     "y": 330,
+     "w": 88,
+     "h": 187,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0209",
+     "arq": "pecas/p13-cartela/l0209.png",
+     "x": 1394,
+     "y": 330,
+     "w": 71,
+     "h": 187,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0210",
+     "arq": "pecas/p13-cartela/l0210.png",
+     "x": 1472,
+     "y": 330,
+     "w": 132,
+     "h": 187,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0300",
+     "arq": "pecas/p13-cartela/l0300.png",
+     "x": 366,
+     "y": 546,
+     "w": 75,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0301",
+     "arq": "pecas/p13-cartela/l0301.png",
+     "x": 447,
+     "y": 546,
+     "w": 71,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0302",
+     "arq": "pecas/p13-cartela/l0302.png",
+     "x": 525,
+     "y": 546,
+     "w": 132,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0303",
+     "arq": "pecas/p13-cartela/l0303.png",
+     "x": 712,
+     "y": 546,
+     "w": 84,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0304",
+     "arq": "pecas/p13-cartela/l0304.png",
+     "x": 804,
+     "y": 546,
+     "w": 161,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0305",
+     "arq": "pecas/p13-cartela/l0305.png",
+     "x": 972,
+     "y": 546,
+     "w": 83,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0306",
+     "arq": "pecas/p13-cartela/l0306.png",
+     "x": 1062,
+     "y": 546,
+     "w": 84,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0400",
+     "arq": "pecas/p13-cartela/l0400.png",
+     "x": 360,
+     "y": 542,
+     "w": 75,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0401",
+     "arq": "pecas/p13-cartela/l0401.png",
+     "x": 441,
+     "y": 542,
+     "w": 71,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0402",
+     "arq": "pecas/p13-cartela/l0402.png",
+     "x": 519,
+     "y": 542,
+     "w": 132,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0403",
+     "arq": "pecas/p13-cartela/l0403.png",
+     "x": 706,
+     "y": 542,
+     "w": 84,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0404",
+     "arq": "pecas/p13-cartela/l0404.png",
+     "x": 798,
+     "y": 542,
+     "w": 161,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0405",
+     "arq": "pecas/p13-cartela/l0405.png",
+     "x": 966,
+     "y": 542,
+     "w": 83,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "l0406",
+     "arq": "pecas/p13-cartela/l0406.png",
+     "x": 1056,
+     "y": 542,
+     "w": 84,
+     "h": 170,
+     "classe": "impacto"
+    },
+    {
+     "id": "t05",
+     "arq": "pecas/p13-cartela/t05.png",
+     "x": 360,
+     "y": 952,
+     "w": 615,
+     "h": 23,
+     "classe": "corpo"
+    }
+   ],
+   "entra_f_por_peca": {
+    "t00": 22050,
+    "l0200": 22080,
+    "l0100": 22083,
+    "l0201": 22086,
+    "l0101": 22089,
+    "l0202": 22092,
+    "l0102": 22095,
+    "l0203": 22098,
+    "l0103": 22101,
+    "l0204": 22104,
+    "l0104": 22107,
+    "l0205": 22110,
+    "l0105": 22113,
+    "l0206": 22116,
+    "l0106": 22119,
+    "l0207": 22122,
+    "l0107": 22125,
+    "l0208": 22128,
+    "l0108": 22131,
+    "l0209": 22134,
+    "l0109": 22137,
+    "l0210": 22140,
+    "l0110": 22143,
+    "l0400": 22080,
+    "l0300": 22083,
+    "l0401": 22086,
+    "l0301": 22089,
+    "l0402": 22092,
+    "l0302": 22095,
+    "l0403": 22098,
+    "l0303": 22101,
+    "l0404": 22104,
+    "l0304": 22107,
+    "l0405": 22110,
+    "l0305": 22113,
+    "l0406": 22116,
+    "l0306": 22119,
+    "t05": 22230
    }
   }
  ],
@@ -632,5 +3650,170 @@
   "conferir de ouvido: 6:23 John Swartz (nao Schwartz), 6:29 Butch (nao Bud), 8:43 Saint Denis",
   "bloco 20 (7:37-8:38) pede 50s dele em camera; hoje esta coberto so pela chapa p11",
   "a HUD do jogo esta em DINAMICA, nao desligada — aparece e some sozinha"
- ]
+ ],
+ "partitura_de_cor": {
+  "fps": 30,
+  "dur_s": 749.0,
+  "dur_f": 22470,
+  "obs": "saturacao 0-100 em % do original. temperatura -100 frio a +100 quente. Entre viradas, interpola LINEAR. Virada com seca=true e corte seco: troca num frame so.",
+  "viradas": [
+   {
+    "frame": 0,
+    "t_s": 0.0,
+    "saturacao": 0,
+    "temperatura": 0,
+    "seca": false,
+    "bloco": "abertura — abstrata. Nao existe Oeste ainda, so a ideia"
+   },
+   {
+    "frame": 998,
+    "t_s": 33.26,
+    "saturacao": 0,
+    "temperatura": 10,
+    "seca": false,
+    "bloco": "o papel. Cinza de escritorio"
+   },
+   {
+    "frame": 1872,
+    "t_s": 62.4,
+    "saturacao": 55,
+    "temperatura": 55,
+    "seca": false,
+    "bloco": "1899 — o Oeste entra em cena, e a cor entra com ele"
+   },
+   {
+    "frame": 2400,
+    "t_s": 80.0,
+    "saturacao": 88,
+    "temperatura": 70,
+    "seca": false,
+    "bloco": "a competencia. O ponto mais quente do video inteiro"
+   },
+   {
+    "frame": 4393,
+    "t_s": 146.44,
+    "saturacao": 82,
+    "temperatura": 62,
+    "seca": false,
+    "bloco": "a cobranca. Ainda quente: ele ainda e bom nisso"
+   },
+   {
+    "frame": 4680,
+    "t_s": 156.0,
+    "saturacao": 10,
+    "temperatura": -5,
+    "seca": true,
+    "bloco": "TUBERCULOSE. A cor cai de um golpe, num corte seco"
+   },
+   {
+    "frame": 5580,
+    "t_s": 186.0,
+    "saturacao": 6,
+    "temperatura": -10,
+    "seca": false,
+    "bloco": "nada. O ponto mais frio ate aqui"
+   },
+   {
+    "frame": 6759,
+    "t_s": 225.31,
+    "saturacao": 48,
+    "temperatura": 40,
+    "seca": false,
+    "bloco": "Dutch. A cor volta porque ELE ainda acredita"
+   },
+   {
+    "frame": 8310,
+    "t_s": 277.0,
+    "saturacao": 5,
+    "temperatura": -15,
+    "seca": false,
+    "bloco": "o documento. Papel nao tem cor"
+   },
+   {
+    "frame": 10260,
+    "t_s": 342.0,
+    "saturacao": 34,
+    "temperatura": 30,
+    "seca": false,
+    "bloco": "obsolescencia, sobre a planicie"
+   },
+   {
+    "frame": 11486,
+    "t_s": 382.85,
+    "saturacao": 5,
+    "temperatura": -15,
+    "seca": false,
+    "bloco": "Fort Worth. O papel de novo"
+   },
+   {
+    "frame": 13710,
+    "t_s": 457.0,
+    "saturacao": 8,
+    "temperatura": -12,
+    "seca": false,
+    "bloco": "a circular se espalhando"
+   },
+   {
+    "frame": 15553,
+    "t_s": 518.44,
+    "saturacao": 0,
+    "temperatura": -30,
+    "seca": true,
+    "bloco": "A FRASE QUE EU NAO USEI. Zero absoluto. O unico bloco sem cor nenhuma"
+   },
+   {
+    "frame": 16230,
+    "t_s": 541.0,
+    "saturacao": 72,
+    "temperatura": -55,
+    "seca": true,
+    "bloco": "SAINT DENIS. Sobe — mas FRIO. Luz eletrica, nao sol"
+   },
+   {
+    "frame": 16977,
+    "t_s": 565.9,
+    "saturacao": 44,
+    "temperatura": 10,
+    "seca": false,
+    "bloco": "as contas do Arthur. Drenando"
+   },
+   {
+    "frame": 19140,
+    "t_s": 638.0,
+    "saturacao": 26,
+    "temperatura": 18,
+    "seca": false,
+    "bloco": "o epilogo. John, a escritura"
+   },
+   {
+    "frame": 20340,
+    "t_s": 678.0,
+    "saturacao": 12,
+    "temperatura": 8,
+    "seca": false,
+    "bloco": "escritura e papel"
+   },
+   {
+    "frame": 21420,
+    "t_s": 714.0,
+    "saturacao": 0,
+    "temperatura": 0,
+    "seca": false,
+    "bloco": "o fecho. Volta a zero, de onde saiu"
+   }
+  ]
+ },
+ "regra_movimento": {
+  "letra_impacto": "3 quadros entre letras",
+  "entrada": "8 quadros, deslocamento 24px, opacidade. Sem mola, sem overshoot.",
+  "corpo": "entra na batida da fala"
+ },
+ "medicao": {
+  "eventos_visuais": 382,
+  "por_minuto": 30.6,
+  "antes": 29,
+  "antes_por_minuto": 2.3,
+  "obs": "inclui os 89 elementos animaveis do mapa vetorial"
+ },
+ "mapa": "mapa/eua-fronteira.svg"
 }

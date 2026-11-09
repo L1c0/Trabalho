@@ -1,31 +1,36 @@
-ANTES DA LENDA · RED DEAD REDEMPTION 2 — o master
-=================================================
+ANTES DA LENDA · RED DEAD REDEMPTION 2 — o master (versão 3)
+==============================================================
 
 Vídeo longo de 12min29 (749 s, 22.470 frames), 1920x1080, 30 fps,
-montado em Remotion. Este pacote tem o projeto pronto e, em public/,
-tudo o que o vídeo usa: as 16 chapas, os 13 clipes do jogo, o grão e a
-trilha mixada. Nada é gerado na sua máquina: o Remotion só compõe.
+montado em Remotion a partir do pacote v3 e da trilha v2. Este pacote tem
+o projeto pronto e, em public/, tudo o que o vídeo usa: as 16 chapas
+(fundo e peças), os 22 letterings, os 13 clipes do jogo, o grão e a
+trilha v2. Nada é gerado na sua máquina: o Remotion só compõe.
 
-São 6 zips. Todos descompactam na mesma pasta "reddead-video", em
-qualquer ordem.
+São __N__ zips, com nome reddead-v3-parte-... (diferente do pacote
+anterior, para não misturar). Todos descompactam na mesma pasta
+"reddead-video", em qualquer ordem. Use uma pasta nova (C:\reddead-v3),
+não a do pacote anterior.
 
 
 1. DESCOMPACTAR
 
-No Prompt de Comando (cmd), não no PowerShell, com os 6 zips numa
-pasta RedDead dentro de Downloads:
+No Prompt de Comando (cmd), não no PowerShell, com os __N__ zips na pasta
+"Video Red dead" dentro de Downloads:
 
-    mkdir C:\reddead-projeto
-    cd /d C:\reddead-projeto
-    for %i in ("D:\USER\Downloads\RedDead\reddead-parte-*.zip") do tar -xf "%~i"
+    mkdir C:\reddead-v3
+    cd /d C:\reddead-v3
+    for %i in ("D:\USER\Downloads\Video Red dead\reddead-v3-parte-*.zip") do tar -xf "%~i"
 
-Confira:
+Se a pasta "Video Red dead" estiver em outro lugar, troque o caminho
+entre aspas. Confira:
 
     dir reddead-video\public\clipes
-    dir reddead-video\public\chapas
+    dir /s reddead-video\public\pecas
 
-No fim da primeira lista tem que aparecer 13 arquivo(s), e no fim da
-segunda, 16 arquivo(s). Se aparecer menos, falta alguma parte na pasta.
+No fim da primeira lista tem que aparecer 13 arquivo(s). No fim da
+segunda, em "Total de arquivos listados", __PECAS__ arquivo(s). Se aparecer
+menos, falta alguma parte na pasta.
 
 
 2. INSTALAR (uma vez)
@@ -42,24 +47,24 @@ de internet: o Remotion baixa o navegador dele no primeiro render.
     node ferramentas/render.mjs
 
 - Sai em out\reddead-master.mp4: 1920x1080, 30 fps, H.264 CRF 16,
-  yuv420p, cor bt709, faststart, 12min29, com a trilha mixada como veio
-  (−14,6 LUFS).
+  yuv420p, cor bt709, faststart, 12min29, com a trilha v2 como veio
+  (−15,4 LUFS).
 - O próprio comando acerta, no fim, um atraso de 42,7 ms que o Remotion
   deixaria no áudio (o priming do AAC). Não precisa fazer nada.
-- O arquivo tem uns 3,5 GB: a janela que desliza sobre o grão impresso
-  nas chapas muda todos os pixels a cada quadro. Deixe uns 10 GB livres
-  no disco.
+- O arquivo tem __GB16__: o empurrão de escala das chapas muda
+  todos os pixels a cada quadro. Deixe uns 10 GB livres no disco.
 - Num computador de 4 núcleos leva de três a quatro horas. Deixe a
   janela aberta até aparecer "pronto: out\reddead-master.mp4".
 
-Quer um arquivo menor (uns 2,7 GB, sem diferença que se veja)? Troque o
+Quer um arquivo menor (__GB18__, sem diferença que se veja)? Troque o
 comando por:
 
     node ferramentas/render.mjs --crf=18
 
-Para testar antes, só 10 segundos de um clipe (leva um minuto):
+Para testar antes, só a cena do mapa (14 segundos, leva alguns
+minutos):
 
-    node ferramentas/render.mjs --frames=3180-3479
+    node ferramentas/render.mjs --frames=8850-9274
 
 Se der erro de GPU ou o vídeo sair em branco, rode com --gl=swangle no
 fim do comando.
@@ -85,7 +90,5 @@ Pendências que vieram no próprio pacote:
 - A HUD do jogo está em modo dinâmico: aparece e some sozinha em alguns
   clipes.
 
-E uma da montagem:
-
-- A chapa p12-fecho veio em 1920x1080 e fica parada; as outras deslizam
-  200 px. Se tiver a versão de 2400x1350, ela entra no lugar.
+O que mudou na montagem, e por quê, está no LEIA.md, dentro da pasta
+reddead-video.
