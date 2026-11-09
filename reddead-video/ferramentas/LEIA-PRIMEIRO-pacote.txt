@@ -1,55 +1,91 @@
-ANTES DA LENDA · Red Dead Redemption 2 — o vídeo longo
-12:29 · 1920x1080 · 30 fps · 22.470 quadros
+ANTES DA LENDA · RED DEAD REDEMPTION 2 — o master
+=================================================
 
-Este é o projeto pronto para renderizar o master no seu computador. Já
-vem tudo: as 16 chapas, a trilha mixada, os 13 clipes e o código. A
-prévia que foi junto serve só para assistir; o vídeo bom é este.
+Vídeo longo de 12min29 (749 s, 22.470 frames), 1920x1080, 30 fps,
+montado em Remotion. Este pacote tem o projeto pronto e, em public/,
+tudo o que o vídeo usa: as 16 chapas, os 13 clipes do jogo, o grão e a
+trilha mixada. Nada é gerado na sua máquina: o Remotion só compõe.
 
-COMO RENDERIZAR
+São 6 zips. Todos descompactam na mesma pasta "reddead-video", em
+qualquer ordem.
 
-1. Descompacte TODAS as partes (reddead-parte-01-de-NN.zip etc.) na
-   mesma pasta. Cada uma cria a pasta reddead-video/ e põe lá a sua
-   parte; a ordem não importa.
 
-2. Instale o Node.js 18 ou mais novo (nodejs.org), se ainda não tiver.
+1. DESCOMPACTAR
 
-3. Abra um terminal dentro da pasta reddead-video/ e rode:
+No Prompt de Comando (cmd), não no PowerShell, com os 6 zips numa
+pasta RedDead dentro de Downloads:
 
-       npm ci
-       node ferramentas/render.mjs
+    mkdir C:\reddead-projeto
+    cd /d C:\reddead-projeto
+    for %i in ("D:\USER\Downloads\RedDead\reddead-parte-*.zip") do tar -xf "%~i"
 
-   O primeiro comando baixa o Remotion (uma vez só). O segundo faz o
-   vídeo e mostra a porcentagem. O master sai em:
+Confira:
 
-       out/reddead-master.mp4
+    dir reddead-video\public\clipes
+    dir reddead-video\public\chapas
 
-   Ele fica com uns 3,5 GB e leva de 1 a 4 horas, conforme o
-   computador. É esse arquivo que vai para o YouTube.
+No fim da primeira lista tem que aparecer 13 arquivo(s), e no fim da
+segunda, 16 arquivo(s). Se aparecer menos, falta alguma parte na pasta.
 
-   Quer um arquivo menor? Use CRF 18 (uns 2 GB, sem diferença que se
-   veja):
 
-       node ferramentas/render.mjs --crf=18
+2. INSTALAR (uma vez)
 
-   O tamanho vem quase todo das chapas: a janela que desliza sobre o
-   grão impresso nelas muda todos os pixels a cada quadro.
+Precisa do Node.js 18 ou mais novo (o mesmo do Vagabond e do Vinland) e
+de internet: o Remotion baixa o navegador dele no primeiro render.
 
-4. Para testar antes, com só um trecho (10 s de um clipe):
+    cd reddead-video
+    npm install
 
-       node ferramentas/render.mjs --frames=3180-3479
 
-O QUE O RENDER FAZ
+3. RENDERIZAR O MASTER (1920x1080)
 
-- Vídeo: x264, CRF 16 (ou o que você passar), preset slow, yuv420p,
-  cor bt709.
-- Áudio: a trilha mixada, sem mexer no volume (−14,6 LUFS).
-- No fim, o próprio script acerta um atraso de 42,7 ms que o Remotion
+    node ferramentas/render.mjs
+
+- Sai em out\reddead-master.mp4: 1920x1080, 30 fps, H.264 CRF 16,
+  yuv420p, cor bt709, faststart, 12min29, com a trilha mixada como veio
+  (−14,6 LUFS).
+- O próprio comando acerta, no fim, um atraso de 42,7 ms que o Remotion
   deixaria no áudio (o priming do AAC). Não precisa fazer nada.
+- O arquivo tem uns 3,5 GB: a janela que desliza sobre o grão impresso
+  nas chapas muda todos os pixels a cada quadro. Deixe uns 10 GB livres
+  no disco.
+- Num computador de 4 núcleos leva de três a quatro horas. Deixe a
+  janela aberta até aparecer "pronto: out\reddead-master.mp4".
 
-SE DER ERRO
+Quer um arquivo menor (uns 2 GB, sem diferença que se veja)? Troque o
+comando por:
 
-- "npx" não encontrado: o Node não está instalado ou o terminal foi
-  aberto antes da instalação. Feche e abra o terminal de novo.
-- Erro de GPU ou de vídeo em branco: rode com
-      node ferramentas/render.mjs --gl=swangle
-- Falta de espaço: o render precisa de uns 10 GB livres em disco.
+    node ferramentas/render.mjs --crf=18
+
+Para testar antes, só 10 segundos de um clipe (leva um minuto):
+
+    node ferramentas/render.mjs --frames=3180-3479
+
+Se der erro de GPU ou o vídeo sair em branco, rode com --gl=swangle no
+fim do comando.
+
+
+4. VER O VÍDEO ANTES (opcional)
+
+    npx remotion studio
+
+Abre no navegador em http://localhost:3000 (composição "RedDead").
+
+
+5. ANTES DE PUBLICAR
+
+Pendências que vieram no próprio pacote:
+
+- Pickup de áudio em 4:38: o boletim é de ABRIL DE 1891, oito anos
+  antes, e não de 1890 nem "nove".
+- Conferir de ouvido: 6:23 John Swartz (não Schwartz), 6:29 Butch (não
+  Bud), 8:43 Saint Denis.
+- O bloco 20 (7:37–8:38) pede 50 s dele em câmera; hoje é coberto só
+  pela chapa p11.
+- A HUD do jogo está em modo dinâmico: aparece e some sozinha em alguns
+  clipes.
+
+E uma da montagem:
+
+- A chapa p12-fecho veio em 1920x1080 e fica parada; as outras deslizam
+  200 px. Se tiver a versão de 2400x1350, ela entra no lugar.
