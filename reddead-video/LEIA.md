@@ -139,8 +139,8 @@ quadros em `out/quadros/`.
 
 ## Entrega
 
-O master passa de 3 GB, e o envio aceita no máximo 30 MiB por arquivo. A
-entrega tem duas partes:
+O master tem cerca de 1,7 GB, e o envio aceita no máximo 30 MiB por
+arquivo. A entrega tem duas partes:
 
 - **A prévia.** `bash ferramentas/previa.sh` gera um arquivo de até
   30 MiB: 640×360, x264 em duas passadas, áudio AAC de 80 kb/s. Ela sai da
@@ -155,3 +155,22 @@ entrega tem duas partes:
   - `node ferramentas/render.mjs`, que roda em Windows, macOS e Linux.
     Faz o master em x264 CRF 16 preset slow e acerta o atraso do AAC com o
     ffmpeg que vem com o Remotion.
+
+Testei o pacote do zero:
+- descompactei os 6 zips numa pasta vazia;
+- rodei `npm ci`;
+- rendi sete trechos com `render.mjs`.
+
+O resultado sai em 1920×1080, com a cor etiquetada bt709 e o áudio.
+
+O tamanho do master em CRF 16, medido nesses trechos, é de cerca de 1,7 GB:
+- as chapas rendem de 9 a 16 Mb/s;
+- os clipes rendem de 11 a 28 Mb/s.
+
+É menos da metade da v1. O empurrão de escala parte do centro e mexe poucos
+pixels por quadro, então comprime muito melhor que o deslize da v1, que
+reamostrava a chapa inteira a cada quadro.
+
+Com `--crf=18`, o master fica com cerca de 1,2 GB. Aqui, com 4 núcleos, os
+trechos renderam a 4–6 quadros por segundo, o que dá cerca de 1h20 para o
+vídeo inteiro.

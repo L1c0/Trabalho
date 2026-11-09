@@ -51,13 +51,13 @@ de internet: o Remotion baixa o navegador dele no primeiro render.
   (−15,4 LUFS).
 - O próprio comando acerta, no fim, um atraso de 42,7 ms que o Remotion
   deixaria no áudio (o priming do AAC). Não precisa fazer nada.
-- O arquivo tem __GB16__: o empurrão de escala das chapas muda
-  todos os pixels a cada quadro. Deixe uns 10 GB livres no disco.
-- Num computador de 4 núcleos leva de três a quatro horas. Deixe a
-  janela aberta até aparecer "pronto: out\reddead-master.mp4".
+- O arquivo tem cerca de 1,7 GB. Deixe uns 5 GB livres no disco: o
+  render grava uma cópia intermediária antes do master.
+- Num computador de 4 núcleos leva de uma hora e meia a duas horas.
+  Deixe a janela aberta até aparecer "pronto: out\reddead-master.mp4".
 
-Quer um arquivo menor (__GB18__, sem diferença que se veja)? Troque o
-comando por:
+Quer um arquivo menor (cerca de 1,2 GB, sem diferença que se veja)?
+Troque o comando por:
 
     node ferramentas/render.mjs --crf=18
 
