@@ -171,6 +171,6 @@ O tamanho do master em CRF 16, medido nesses trechos, é de cerca de 1,7 GB:
 pixels por quadro, então comprime muito melhor que o deslize da v1, que
 reamostrava a chapa inteira a cada quadro.
 
-Com `--crf=18`, o master fica com cerca de 1,2 GB. Aqui, com 4 núcleos, os
+Com `--crf=18`, o master fica com cerca de 1,2 GB. Com `--crf=12`, a qualidade máxima que faz sentido, fica com cerca de 2,8 GB: nos mesmos trechos, o CRF 12 deu de 1,3 a 1,8 vez o tamanho do CRF 16. Aqui, com 4 núcleos, os
 trechos renderam a 4–6 quadros por segundo, o que dá cerca de 1h20 para o
 vídeo inteiro.

@@ -61,6 +61,12 @@ Troque o comando por:
 
     node ferramentas/render.mjs --crf=18
 
+Quer a qualidade máxima, para reeditar ou exportar de novo em outro
+programa? Use CRF 12. O arquivo fica com cerca de 2,8 GB, e o render
+leva um pouco mais:
+
+    node ferramentas/render.mjs --crf=12
+
 Para testar antes, só a cena do mapa (14 segundos, leva alguns
 minutos):
 
