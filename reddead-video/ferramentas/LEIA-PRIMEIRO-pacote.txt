@@ -52,7 +52,7 @@ de internet: o Remotion baixa o navegador dele no primeiro render.
 - Num computador de 4 núcleos leva de três a quatro horas. Deixe a
   janela aberta até aparecer "pronto: out\reddead-master.mp4".
 
-Quer um arquivo menor (uns 2 GB, sem diferença que se veja)? Troque o
+Quer um arquivo menor (uns 2,7 GB, sem diferença que se veja)? Troque o
 comando por:
 
     node ferramentas/render.mjs --crf=18

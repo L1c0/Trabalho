@@ -83,10 +83,11 @@ arquivo. Por escolha sua, a entrega tem duas partes:
   `npm ci` e rendi trechos com `render.mjs`. O resultado sai em
   1920×1080, com a cor etiquetada bt709 e o áudio.
 
-O tamanho do master em CRF 16, medido nos trechos, é de cerca de 3,4 GB:
+O tamanho do master em CRF 16, medido nos trechos, é de cerca de 3,5 GB:
 
 - os clipes rendem cerca de 26 Mb/s;
 - as chapas rendem cerca de 52 Mb/s, porque a janela que desliza sobre
   o grão impresso muda todos os pixels a cada quadro.
 
-Com `--crf=18`, o arquivo fica com uns 2 GB.
+Com `--crf=18`, o arquivo fica com uns 2,7 GB (medido nos mesmos
+trechos: 30% a menos).
