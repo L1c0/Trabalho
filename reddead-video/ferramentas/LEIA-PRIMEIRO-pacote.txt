@@ -7,7 +7,7 @@ o projeto pronto e, em public/, tudo o que o vídeo usa: as 16 chapas
 (fundo e peças), os 22 letterings, os 13 clipes do jogo, o grão e a
 trilha v2. Nada é gerado na sua máquina: o Remotion só compõe.
 
-São __N__ zips, com nome reddead-v3-parte-... (diferente do pacote
+São 6 zips, com nome reddead-v3-parte-... (diferente do pacote
 anterior, para não misturar). Todos descompactam na mesma pasta
 "reddead-video", em qualquer ordem. Use uma pasta nova (C:\reddead-v3),
 não a do pacote anterior.
@@ -15,7 +15,7 @@ não a do pacote anterior.
 
 1. DESCOMPACTAR
 
-No Prompt de Comando (cmd), não no PowerShell, com os __N__ zips na pasta
+No Prompt de Comando (cmd), não no PowerShell, com os 6 zips na pasta
 "Video Red dead" dentro de Downloads:
 
     mkdir C:\reddead-v3
@@ -28,9 +28,9 @@ entre aspas. Confira:
     dir reddead-video\public\clipes
     dir /s reddead-video\public\pecas
 
-No fim da primeira lista tem que aparecer 13 arquivo(s). No fim da
-segunda, em "Total de arquivos listados", __PECAS__ arquivo(s). Se aparecer
-menos, falta alguma parte na pasta.
+No fim da primeira lista tem que aparecer 13 arquivo(s). A segunda é
+longa; no fim dela, no total, tem que aparecer 323 arquivo(s). Se
+aparecer menos, falta alguma parte na pasta.
 
 
 2. INSTALAR (uma vez)
