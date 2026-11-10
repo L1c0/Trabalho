@@ -2,10 +2,11 @@ ANTES DA LENDA · RED DEAD REDEMPTION 2 — o master (versão 3)
 ==============================================================
 
 Vídeo longo de 12min29 (749 s, 22.470 frames), 1920x1080, 30 fps,
-montado em Remotion a partir do pacote v3 e da trilha v2. Este pacote tem
+montado em Remotion a partir do pacote v3. Este pacote tem
 o projeto pronto e, em public/, tudo o que o vídeo usa: as 16 chapas
 (fundo e peças), os 22 letterings, os 13 clipes do jogo, o grão e a
-trilha v2. Nada é gerado na sua máquina: o Remotion só compõe.
+trilha mixada (a da v1, com a música mais baixa). Nada é gerado na sua
+máquina: o Remotion só compõe.
 
 São 6 zips, com nome reddead-v3-parte-... (diferente do pacote
 anterior, para não misturar). Todos descompactam na mesma pasta
@@ -47,8 +48,8 @@ de internet: o Remotion baixa o navegador dele no primeiro render.
     node ferramentas/render.mjs
 
 - Sai em out\reddead-master.mp4: 1920x1080, 30 fps, H.264 CRF 16,
-  yuv420p, cor bt709, faststart, 12min29, com a trilha v2 como veio
-  (−15,4 LUFS).
+  yuv420p, cor bt709, faststart, 12min29, com a trilha como veio
+  (−14,6 LUFS).
 - O próprio comando acerta, no fim, um atraso de 42,7 ms que o Remotion
   deixaria no áudio (o priming do AAC). Não precisa fazer nada.
 - O arquivo tem cerca de 1,7 GB. Deixe uns 5 GB livres no disco: o
@@ -74,6 +75,12 @@ minutos):
 
 Se der erro de GPU ou o vídeo sair em branco, rode com --gl=swangle no
 fim do comando.
+
+Trocou só a trilha (public\trilha.mp3) depois de renderizar? Não precisa
+renderizar de novo: este comando troca o áudio do master pronto em uns
+dois minutos, sem mexer na imagem:
+
+    npx remotion ffmpeg -i out\reddead-master.mp4 -i public\trilha.mp3 -map 0:v:0 -map 1:a:0 -c:v copy -c:a aac -b:a 320k -shortest -movflags +faststart out\reddead-master-novo-audio.mp4
 
 
 4. VER O VÍDEO ANTES (opcional)

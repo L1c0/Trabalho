@@ -6,10 +6,25 @@ arquivos:
 - o pacote `1810bb4b-reddead-PACOTE-v3.zip`: PACOTE.json, coreografia,
   partitura de cor, as 16 chapas em fundo + peças, os 22 letterings sobre o
   jogo e o mapa vetorial;
-- a trilha `a35cd317-reddead-TRILHA-v2.mp3`, que vira `public/trilha.mp3`
-  sem nenhuma alteração. Ela tem 749,09 s, −15,4 LUFS e está alinhada à v1
-  (deslocamento 0). O "silêncio absoluto" de 8:38–8:58 e do fecho, citado no
-  pacote, é da música: a voz continua.
+- a trilha mixada da v1, `28c3e776-reddead-TRILHA-mixada.mp3`, que vira
+  `public/trilha.mp3` sem nenhuma alteração. Ela tem 749,06 s e −14,6 LUFS.
+
+### Por que a trilha da v1
+
+A v3 saiu primeiro com a trilha v2 (`a35cd317-reddead-TRILHA-v2.mp3`).
+
+- **O problema:** a música ficou alta demais para ser fundo. Medido nas
+  pausas entre as frases, entre 1:00 e 2:20 a música ficava só 8 a 10 dB
+  abaixo da voz.
+- **A troca:** voz e música vêm mixadas num arquivo só, então não dá para
+  baixar só a música. Por escolha sua, voltou a trilha da v1, em que a
+  música fica de 17 a 24 dB abaixo da voz.
+- **A narração:** é a mesma nas duas. A da v1 está 5 ms mais tarde,
+  imperceptível.
+- **O que se perde:** o desenho da v2, em que a música some em 8:38–8:58 e
+  no fecho.
+
+Para voltar à v2, ou usar uma mixagem nova, basta trocar `public/trilha.mp3`.
 
 Os 13 clipes do jogo são os mesmos da v1: `public/clipes/cNN-X.mp4`, em que
 NN é a cena e X é o clipe. As contagens de quadros estão em
@@ -18,12 +33,12 @@ NN é a cena e X é o clipe. As contagens de quadros estão em
 ## Como montar do zero
 
 ```
-python3 -I ferramentas/prepara-v3.py <pasta rd-v3 do pacote> <trilha-v2.mp3>
+python3 -I ferramentas/prepara-v3.py <pasta rd-v3 do pacote> <reddead-TRILHA-mixada.mp3>
 ```
 
 Esse comando monta `public/` (sem os clipes) e `src/data/`:
 
-- copia as peças, a trilha e a fonte;
+- copia as peças e a trilha;
 - separa do fundo o que agora entra sozinho (veja abaixo);
 - alinha os letterings pela linha de base;
 - converte o mapa.

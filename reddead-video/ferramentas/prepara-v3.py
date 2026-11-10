@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """
-Monta public/ e src/data/ a partir do pacote v3 e da trilha v2:
+Monta public/ e src/data/ a partir do pacote v3 e da trilha (a mixada da v1;
+veja o LEIA.md):
 
-  python3 -I ferramentas/prepara-v3.py <pasta rd-v3> <trilha-v2.mp3>
+  python3 -I ferramentas/prepara-v3.py <pasta rd-v3> <trilha.mp3>
 
 O pacote fica intacto. O que este script faz:
 
