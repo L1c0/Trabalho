@@ -103,20 +103,31 @@ export const Divida: React.FC<Cena> = ({ f, clipes }) => {
       dx={t.x}
       dy={t.y}
     >
-      <Sombra f={f} ini={s(106.0)} fim={s(113.2)} />
+      <Sombra f={f} ini={s(106.0)} fim={s(138.5)} />
       <Tarja f={f} ini={s(106.0)} fim={s(109.0)} texto="20 HORAS DE JOGO DEPOIS" y={190} />
       <Tarja f={f} ini={s(107.3)} fim={s(109.0)} texto="ELE VAI COBRAR UMA DÍVIDA" y={800} tempos={P(107.34, 107.54, 107.7, 108.02, 108.24)} />
       <Impacto f={f} ini={s(109.1)} fim={s(113.1)} texto="SERVIÇO DE ROTINA" tempos={P(109.16, 109.68, 109.82)} por="palavra" y={620} tam={150} />
       <Tarja f={f} ini={s(111.1)} fim={s(113.1)} texto="JÁ FEZ CENTENAS DE VEZES" y={800} tempos={P(111.64, 111.78, 112.04, 112.56, 112.76)} />
 
-      <Sombra f={f} ini={s(122.5)} fim={s(130.6)} />
+      {/* o devedor e o ancinho */}
+      <Tarja f={f} ini={s(113.3)} fim={s(118.8)} texto="O DEVEDOR ESTÁ NO ROÇADO DA PRÓPRIA CASA" y={748} tempos={P(113.34, 113.68, 114.04, 114.26, 114.38, 114.86, 115.0, 115.28)} />
+      <Tarja f={f} ini={s(116.8)} fim={s(118.8)} texto="TENTA SE DEFENDER COM UM ANCINHO" y={820} cor={COR.creme} tempos={P(116.88, 117.16, 117.28, 117.64, 117.86, 117.92)} />
+      <Tarja f={f} ini={s(119.0)} fim={s(122.3)} texto="ARTHUR TOMA O ANCINHO" y={748} tempos={P(119.0, 119.46, 119.86, 119.94)} />
+      <Tarja f={f} ini={s(120.8)} fim={s(122.3)} texto="E DERRUBA O HOMEM NO CHÃO." y={820} cor={COR.creme} tempos={P(120.86, 121.0, 121.3, 121.4, 121.6, 121.74)} />
       <Impacto f={f} ini={s(122.6)} fim={s(123.7)} texto="E BATE." estilo="bate" por="palavra" passo={3} y={600} tam={230} barra={false} />
       <Tarja f={f} ini={s(123.9)} fim={s(125.2)} texto="O SUJEITO ESTÁ DOENTE" y={800} />
       <Tarja f={f} ini={s(125.34)} fim={s(127.1)} texto="DE UM JEITO QUE DÁ PRA VER" y={800} tempos={P(125.86, 126.0, 126.08, 126.3, 126.46, 126.58, 126.76)} />
       <Impacto f={f} ini={s(127.5)} fim={s(130.5)} texto={'ELE BATE\nASSIM MESMO'} tempos={P(127.6, 127.94, 128.64, 128.86)} por="palavra" y={500} tam={150} />
       <Tarja f={f} ini={s(129.2)} fim={s(130.5)} texto="PORQUE É O SERVIÇO" y={830} cor={COR.creme} />
 
-      {/* a tosse: um pulso vermelho nas bordas */}
+      {/* a tosse */}
+      <Tarja f={f} ini={s(130.7)} fim={s(134.2)} texto="ENCOSTADO NA CERCA, SEM AR, O HOMEM" y={540} tempos={P(130.78, 131.26, 131.46, 131.72, 132.02, 132.28, 132.32)} />
+      <Impacto f={f} ini={s(132.5)} fim={s(134.2)} texto="TOSSE SANGUE" y={620} tam={176} cor={COR.vermelho} tempos={P(132.54, 132.88)} por="palavra" />
+      <Tarja f={f} ini={s(133.1)} fim={s(134.2)} texto="NA CARA DO ARTHUR." y={830} cor={COR.creme} tempos={P(133.16, 133.3, 133.52, 133.7)} />
+      <Tarja f={f} ini={s(134.4)} fim={s(138.4)} texto="A MULHER E O FILHO CHEGAM CORRENDO" y={748} tempos={P(134.4, 134.6, 134.8, 134.92, 135.02, 135.26, 135.7)} />
+      <Tarja f={f} ini={s(136.4)} fim={s(138.4)} texto="PRA LEVANTAR ELE DO CHÃO." y={820} cor={COR.creme} tempos={P(136.44, 137.08, 137.58, 137.78, 137.96)} />
+      <Tarja f={f} ini={s(138.7)} fim={s(139.25)} texto="É ASSIM:" y={800} />
+      {/* um pulso vermelho nas bordas */}
       {sangue > 0 && (
         <AbsoluteFill style={{ background: 'radial-gradient(ellipse at 50% 50%, rgba(205,18,15,0) 45%, rgba(205,18,15,0.75) 100%)', opacity: sangue * 0.8, mixBlendMode: 'multiply' }} />
       )}
