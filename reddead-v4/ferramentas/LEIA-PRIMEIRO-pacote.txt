@@ -45,7 +45,7 @@ internet: o Remotion baixa o navegador dele no primeiro render.
     npm install
 
 
-3. TESTAR A ABERTURA (recomendado, leva poucos minutos)
+3. TESTAR A ABERTURA (recomendado, leva um ou dois minutos)
 
     node ferramentas/render.mjs --frames=0-299
 
@@ -62,18 +62,21 @@ Se esse arquivo abrir e tocar certo, o render inteiro vai funcionar.
   yuv420p, cor bt709, faststart, 12min34.
 - O próprio comando acerta, no fim, um atraso de 42,7 ms que o Remotion
   deixaria no áudio (o priming do AAC). Não precisa fazer nada.
-- O arquivo tem cerca de @TAMANHO@. Deixe uns 6 GB livres no disco: o
-  render grava uma cópia intermediária e apaga quando termina.
-- Num computador de 4 núcleos leva cerca de @TEMPO@. Deixe a janela
-  aberta até aparecer "pronto: out\reddead-v4-master.mp4".
+- O arquivo tem cerca de 1,5 GB (estimado por quatro trechos medidos).
+  Deixe uns 5 GB livres no disco: o render grava uma cópia intermediária
+  e apaga quando termina.
+- Num computador de 4 núcleos leva cerca de uma hora (até uma hora e
+  meia numa máquina mais lenta). Deixe a janela aberta até aparecer
+  "pronto: out\reddead-v4-master.mp4".
 
-Quer um arquivo menor, sem diferença que se veja? Troque o comando por:
+Quer um arquivo menor (por volta de 1,1 GB), sem diferença que se veja?
+Troque o comando por:
 
     node ferramentas/render.mjs --crf=18
 
 Quer a qualidade máxima, para reeditar ou exportar de novo em outro
-programa? Use CRF 12 (o arquivo fica bem maior e o render leva um pouco
-mais):
+programa? Use CRF 12 (o arquivo fica por volta de 2,5 GB e o render leva
+um pouco mais):
 
     node ferramentas/render.mjs --crf=12
 

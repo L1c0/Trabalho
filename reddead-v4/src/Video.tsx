@@ -53,10 +53,12 @@ export const Video: React.FC<{ clipes: boolean }> = ({ clipes }) => {
     <AbsoluteFill style={{ backgroundColor: '#000' }}>
       {f < VINHETA + 4 && <Vinheta f={f} />}
       {C && <C f={fb} clipes={clipes} />}
-      {/* o som: a vinheta (só música, 4,4 s), o silêncio, e a trilha com a voz a partir de B0 */}
+      {/* o som: a vinheta (só música, 4,4 s), o silêncio, e a trilha com a voz a partir de B0.
+          O primeiro segundo da trilha tem só o chiado de fundo da gravação: fica mudo até 0,93 s
+          e abre em dois quadros, logo antes de a voz entrar (1,03 s), para o silêncio ser de verdade. */}
       <Audio src={staticFile('vinheta.mp3')} />
       <Sequence from={B0}>
-        <Audio src={staticFile('trilha.mp3')} />
+        <Audio src={staticFile('trilha.mp3')} volume={(q) => (q <= 28 ? 0 : q >= 30 ? 1 : (q - 28) / 2)} />
       </Sequence>
     </AbsoluteFill>
   );

@@ -10,7 +10,7 @@ Refação completa do vídeo em Remotion. O vídeo tem 1920×1080 a 30 fps e
 | --- | --- | --- |
 | Vinheta | 0–131 (4,4 s) | Abertura de série, só com música: a linha vermelha acende, abre em "ANTES DA LENDA", a câmera mergulha na letra e a tela vira faixas de luz. |
 | Silêncio | 132–173 (1,4 s) | Tela preta e silêncio de verdade, até a voz. |
-| Vídeo | 174 em diante | A voz entra no quadro 174 (5,8 s). A trilha começa no quadro 144; o primeiro segundo dela já é silêncio. |
+| Vídeo | 174 em diante | A voz entra no quadro 175 (5,85 s). A trilha começa no quadro 144; o primeiro segundo dela só tem o chiado de fundo da gravação e fica mudo. |
 
 Todo o resto do vídeo está em tempo de trilha: o quadro do vídeo é o quadro
 da trilha mais 144 (`B0` em `src/tempo.ts`).
@@ -51,7 +51,9 @@ da trilha mais 144 (`B0` em `src/tempo.ts`).
   separada. Se você tiver o arquivo da música, dá para refazer a vinheta com
   ele:
   `python3 -I ferramentas/vinheta-som.py <musica> <segundo de início> <ganho>`.
-- `public/trilha.mp3`: a trilha mixada da v1, sem alteração.
+- `public/trilha.mp3`: a trilha mixada da v1, sem alteração no arquivo. No
+  vídeo, o primeiro segundo dela (antes da voz) fica mudo, para o silêncio
+  depois da vinheta ser absoluto.
 
 ## Como renderizar
 
@@ -60,7 +62,8 @@ npm install
 node ferramentas/render.mjs
 ```
 
-Sai `out/reddead-v4-master.mp4` (H.264 CRF 16, yuv420p, bt709, faststart).
+Sai `out/reddead-v4-master.mp4` (H.264 CRF 16, yuv420p, bt709, faststart),
+com cerca de 1,5 GB. Em 4 núcleos o render leva cerca de uma hora.
 `--crf=18` dá um arquivo menor, `--crf=12` a qualidade máxima,
 `--frames=a-b` renderiza só um trecho e `--gl=swangle` resolve erro de GPU.
 
