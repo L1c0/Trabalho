@@ -15,6 +15,8 @@ const INICIO: Record<string, number> = {
   // Os 19 primeiros quadros eram outro plano, com um menu do jogo na tela, e
   // depois vinha um mergulho no preto até o quadro 31.
   'c04-B.mp4': 32,
+  // Os 18 primeiros quadros são a passagem de outro plano, mais escura e sem cor.
+  'c22-H.mp4': 20,
 };
 
 /** Remendos: uma caixa recebe a imagem do próprio clipe deslocada, com borda suave. */

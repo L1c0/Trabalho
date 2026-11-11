@@ -24,13 +24,13 @@ export const Sombra: React.FC<{ f: number; ini: number; fim: number; lado?: 'esq
   return <AbsoluteFill style={{ background: fundo, opacity: op, pointerEvents: 'none' }} />;
 };
 
-type Base = { f: number; ini: number; fim: number; texto: string; x?: number; y?: number; tam?: number; cor?: string; tempos?: number[] };
+type Base = { f: number; ini: number; fim?: number; texto: string; x?: number; y?: number; tam?: number; cor?: string; tempos?: number[] };
 
 /** Linha de impacto: Anton grande, com a barra vermelha que nasce antes dela. */
 export const Impacto: React.FC<Base & { estilo?: Estilo; por?: 'letra' | 'palavra'; passo?: number; barra?: boolean; alinhar?: 'esq' | 'centro'; destaque?: Record<number, string> }> = ({
   f,
   ini,
-  fim,
+  fim = 1e9,
   texto,
   x = 135,
   y = 660,
@@ -83,7 +83,7 @@ export const Impacto: React.FC<Base & { estilo?: Estilo; por?: 'letra' | 'palavr
 export const Tarja: React.FC<Base & { por?: 'letra' | 'palavra'; passo?: number; corFundo?: string }> = ({
   f,
   ini,
-  fim,
+  fim = 1e9,
   texto,
   x = 135,
   y = 820,
@@ -151,7 +151,7 @@ export const Centro: React.FC<{
 };
 
 /** Máquina de escrever: texto mono que aparece letra a letra, com cursor. */
-export const Maquina: React.FC<Base & { cps?: number; fundo?: boolean; larg?: number }> = ({ f, ini, fim, texto, x = 135, y = 800, tam = 40, cor = COR.papel, cps = 22, fundo = true, larg }) => {
+export const Maquina: React.FC<Base & { cps?: number; fundo?: boolean; larg?: number }> = ({ f, ini, fim = 1e9, texto, x = 135, y = 800, tam = 40, cor = COR.papel, cps = 22, fundo = true, larg }) => {
   if (f < ini || f > fim + 10) return null;
   const n = Math.floor(((f - ini) / 30) * cps);
   const some = 1 - prog(f, fim, 8);
@@ -178,7 +178,7 @@ export const Maquina: React.FC<Base & { cps?: number; fundo?: boolean; larg?: nu
 };
 
 /** Etiqueta pequena que estala na tela. */
-export const Etiqueta: React.FC<Base & { giro?: number; fundo?: string }> = ({ f, ini, fim, texto, x = 135, y = 500, tam = 34, cor = COR.preto, giro = 0, fundo = COR.creme }) => {
+export const Etiqueta: React.FC<Base & { giro?: number; fundo?: string }> = ({ f, ini, fim = 1e9, texto, x = 135, y = 500, tam = 34, cor = COR.preto, giro = 0, fundo = COR.creme }) => {
   if (f < ini || f > fim + 8) return null;
   const e = saiExpo(prog(f, ini, 7));
   const some = 1 - prog(f, fim, 6);
@@ -204,7 +204,7 @@ export const Etiqueta: React.FC<Base & { giro?: number; fundo?: string }> = ({ f
 };
 
 /** Carimbo: entra grande, bate e fica torto, com tinta falhada. */
-export const Carimbo: React.FC<Base & { giro?: number }> = ({ f, ini, fim, texto, x = 1100, y = 500, tam = 110, cor = COR.vermelho, giro = -9 }) => {
+export const Carimbo: React.FC<Base & { giro?: number }> = ({ f, ini, fim = 1e9, texto, x = 1100, y = 500, tam = 110, cor = COR.vermelho, giro = -9 }) => {
   if (f < ini || f > fim + 8) return null;
   const e = saiExpo(prog(f, ini, 6));
   const some = 1 - prog(f, fim, 8);
@@ -231,7 +231,7 @@ export const Carimbo: React.FC<Base & { giro?: number }> = ({ f, ini, fim, texto
 };
 
 /** Texto que acende falhando, com brilho: luz elétrica. */
-export const Eletrico: React.FC<Base & { alinhar?: 'esq' | 'centro'; brilho?: string }> = ({ f, ini, fim, texto, x = 135, y = 640, tam = 140, cor = '#F4F1E6', alinhar = 'esq', brilho = '#9fd4ff' }) => {
+export const Eletrico: React.FC<Base & { alinhar?: 'esq' | 'centro'; brilho?: string }> = ({ f, ini, fim = 1e9, texto, x = 135, y = 640, tam = 140, cor = '#F4F1E6', alinhar = 'esq', brilho = '#9fd4ff' }) => {
   if (f < ini || f > fim + 10) return null;
   const t = prog(f, ini, 16);
   const falha = t < 1 ? (rnd(Math.floor(f / 1), ini) > 0.42 ? 1 : 0.15) : 0.9 + 0.1 * Math.sin(f * 1.7) * (rnd(Math.floor(f / 3), 5) > 0.85 ? 3 : 0.3);

@@ -1,11 +1,10 @@
 import React from 'react';
 import { AbsoluteFill } from 'remotion';
-import { c01, COR, mapa, mix, prog, saiCubica, saiExpo, tremor, W } from '../kit/base';
+import { c01, COR, mix, prog, saiCubica, saiExpo, tremor, W } from '../kit/base';
 import { Clarao } from '../kit/Cena';
 import { Jogo } from '../kit/Jogo';
 import { Carimbo, Centro, Etiqueta, Impacto, Sombra, Tarja } from '../kit/Letreiro';
-import { Cinetico } from '../kit/Texto';
-import { A, em, M } from '../kit/tipos';
+import { em, M } from '../kit/tipos';
 import { s } from '../tempo';
 
 /**
@@ -53,9 +52,9 @@ export const Competencia: React.FC<Cena> = ({ f, clipes }) => {
       cor={{ sat: 1.0, temp: 0.5 }}
       zoom={1.02 + 0.04 * prog(f, ini, 780) + soco(f, s(89.72), 0.06) + soco(f, s(80.26), 0.025, 14) + soco(f, s(81.3), 0.025, 14) + soco(f, s(82.34), 0.025, 14)}
     >
-      <Sombra f={f} ini={s(79.9)} fim={s(105.4)} />
+      <Sombra f={f} ini={s(79.46)} fim={s(105.4)} />
       {/* sabe laçar, sabe atirar, sabe cobrar: a palavra troca na batida */}
-      <Tarja f={f} ini={s(79.9)} fim={s(83.25)} texto="ARTHUR SABE" y={560} />
+      <Tarja f={f} ini={s(79.46)} fim={s(83.25)} texto="ARTHUR SABE" y={560} tempos={P(79.46, 79.96)} />
       <Impacto f={f} ini={s(80.26)} fim={s(81.22)} texto="LAÇAR" y={640} tam={210} passo={0.8} />
       <Impacto f={f} ini={s(81.3)} fim={s(82.26)} texto="ATIRAR" y={640} tam={210} passo={0.8} />
       <Impacto f={f} ini={s(82.34)} fim={s(83.3)} texto="COBRAR" y={640} tam={210} passo={0.8} cor={COR.vermelho} />
@@ -79,7 +78,7 @@ export const Competencia: React.FC<Cena> = ({ f, clipes }) => {
       <Etiqueta f={f} ini={s(97.6)} fim={s(99.2)} texto="MANHA APRENDIDA APANHANDO" x={770} y={790} tam={44} fundo={COR.vermelho} cor={COR.papel} />
       {/* o produto */}
       <Tarja f={f} ini={s(100.2)} fim={s(102.75)} texto="PRODUTO: TOMAR O QUE É DOS OUTROS" y={800} tempos={P(100.82, 101.38, 101.72, 101.92, 102.04, 102.14, 102.34)} />
-      <Impacto f={f} ini={s(102.8)} fim={s(105.5)} texto={'E O JOGO TE DEIXA\nFICAR BOM NELE.'} tempos={P(102.84, 103.1, 103.2, 103.46, 103.66, 103.94, 104.26, 104.52)} por="palavra" y={560} tam={136} destaque={{ 5: COR.vermelho }} />
+      <Impacto f={f} ini={s(102.8)} fim={s(105.5)} texto={'E O JOGO TE DEIXA\nFICAR BOM NELE.'} tempos={P(102.84, 103.1, 103.2, 103.46, 103.66, 103.94, 104.26, 104.52)} por="palavra" y={560} tam={136} destaque={{ 6: COR.vermelho }} />
     </Jogo>
   );
 };
@@ -137,7 +136,7 @@ export const Divida: React.FC<Cena> = ({ f, clipes }) => {
       />
       {/* "o jogo não sublinha nada": o sublinhado começa e volta atrás */}
       <Centro f={f} ini={s(141.95)} fim={s(143.95)} y={430} escurece={0.45} linhas={[{ texto: 'O JOGO NÃO SUBLINHA NADA.', tempos: P(141.98, 142.44, 142.72, 142.92, 143.4), tam: 130 }]} />
-      {sub > 0.001 && <div style={{ ...em(W / 2 - 60, 588), width: 470, height: 12, background: COR.vermelho, transform: `scaleX(${sub.toFixed(4)})`, transformOrigin: 'left center' }} />}
+      {sub > 0.001 && <div style={{ ...em(W / 2 - 94, 588), width: 462, height: 12, background: COR.vermelho, transform: `scaleX(${sub.toFixed(4)})`, transformOrigin: 'left center' }} />}
       <Sombra f={f} ini={s(144.0)} fim={s(146.6)} />
       <Tarja f={f} ini={s(144.0)} fim={s(146.5)} texto="VOCÊ PASSA POR ALI E SEGUE." y={800} tempos={P(144.06, 144.46, 144.74, 144.96, 145.14, 145.32)} />
       <Clarao f={f} ini={s(122.74)} dur={5} forca={0.35} />
@@ -145,4 +144,3 @@ export const Divida: React.FC<Cena> = ({ f, clipes }) => {
   );
 };
 
-export { mapa };
