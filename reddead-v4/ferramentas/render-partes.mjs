@@ -37,6 +37,7 @@ for (let k = 0; k < n; k++) {
   }
   const tmp = path.join(dir, `tmp-p${String(k).padStart(2, '0')}.mp4`);
   const t0 = Date.now();
+  let ult = -1;
   await renderMedia({
     composition,
     serveUrl,
@@ -54,6 +55,15 @@ for (let k = 0; k < n; k++) {
     chromiumOptions,
     timeoutInMilliseconds: 120000,
     frameRange: [a, b],
+    onBrowserLog: (l) => {
+      if (l.text.includes('[fontes]') || l.type === 'error') console.log(`  [aba] ${l.text.slice(0, 200)}`);
+    },
+    onProgress: ({ renderedFrames }) => {
+      if (renderedFrames % 300 === 0 && renderedFrames !== ult) {
+        ult = renderedFrames;
+        console.log(`  parte ${k}: ${renderedFrames} quadros em ${((Date.now() - t0) / 60000).toFixed(1)} min`);
+      }
+    },
   });
   fs.renameSync(tmp, fim);
   console.log(`parte ${k} (${a}-${b}): pronta em ${((Date.now() - t0) / 60000).toFixed(1)} min`);

@@ -1,0 +1,115 @@
+ANTES DA LENDA · RED DEAD REDEMPTION 2 — o vídeo novo (versão 4)
+================================================================
+
+Vídeo de 12min34 (753,8 s, 22.614 frames), 1920x1080, 30 fps, refeito do
+zero em Remotion. Abre com uma vinheta de 4,4 s só com música, passa por
+1,4 s de tela preta em silêncio e a sua voz entra aos 5,8 s. Este pacote
+tem o projeto pronto e, em public/, tudo o que o vídeo usa: os 13 clipes
+do jogo, as artes, o grão, a trilha mixada (a da v1) e o som da vinheta.
+As fontes vão embutidas no código. Nada é baixado nem gerado na sua
+máquina: o Remotion só compõe.
+
+São 6 zips, com nome reddead-v4-parte-... (diferente dos pacotes
+anteriores, para não misturar). Todos descompactam na mesma pasta
+"reddead-v4", em qualquer ordem. Use uma pasta nova (C:\reddead-v4), não
+a dos pacotes anteriores.
+
+
+1. DESCOMPACTAR
+
+No Prompt de Comando (cmd), não no PowerShell, com os 6 zips na pasta
+"Video Red dead" dentro de Downloads:
+
+    mkdir C:\reddead-v4
+    cd /d C:\reddead-v4
+    for %i in ("D:\USER\Downloads\Video Red dead\reddead-v4-parte-*.zip") do tar -xf "%~i"
+
+Se a pasta "Video Red dead" estiver em outro lugar, troque o caminho
+entre aspas. Confira:
+
+    dir reddead-v4\public\clipes
+    dir reddead-v4\public\arte
+    dir reddead-v4\public
+
+No fim da primeira lista tem que aparecer 13 arquivo(s); no fim da
+segunda, 6 arquivo(s); e a terceira tem que mostrar grao.png, trilha.mp3
+e vinheta.mp3. Se faltar algum, falta alguma parte na pasta.
+
+
+2. INSTALAR (uma vez)
+
+Precisa do Node.js 18 ou mais novo (o mesmo dos outros vídeos) e de
+internet: o Remotion baixa o navegador dele no primeiro render.
+
+    cd reddead-v4
+    npm install
+
+
+3. TESTAR A ABERTURA (recomendado, leva poucos minutos)
+
+    node ferramentas/render.mjs --frames=0-299
+
+Sai out\reddead-v4-master-0-299.mp4, com os 10 primeiros segundos: a
+vinheta com a música, a tela preta em silêncio e o começo da sua fala.
+Se esse arquivo abrir e tocar certo, o render inteiro vai funcionar.
+
+
+4. RENDERIZAR O MASTER (1920x1080)
+
+    node ferramentas/render.mjs
+
+- Sai em out\reddead-v4-master.mp4: 1920x1080, 30 fps, H.264 CRF 16,
+  yuv420p, cor bt709, faststart, 12min34.
+- O próprio comando acerta, no fim, um atraso de 42,7 ms que o Remotion
+  deixaria no áudio (o priming do AAC). Não precisa fazer nada.
+- O arquivo tem cerca de @TAMANHO@. Deixe uns 6 GB livres no disco: o
+  render grava uma cópia intermediária e apaga quando termina.
+- Num computador de 4 núcleos leva cerca de @TEMPO@. Deixe a janela
+  aberta até aparecer "pronto: out\reddead-v4-master.mp4".
+
+Quer um arquivo menor, sem diferença que se veja? Troque o comando por:
+
+    node ferramentas/render.mjs --crf=18
+
+Quer a qualidade máxima, para reeditar ou exportar de novo em outro
+programa? Use CRF 12 (o arquivo fica bem maior e o render leva um pouco
+mais):
+
+    node ferramentas/render.mjs --crf=12
+
+Se der erro de GPU ou o vídeo sair em branco, rode com --gl=swangle no
+fim do comando.
+
+Trocou só a trilha (public\trilha.mp3) depois de renderizar? Nesta
+versão o som tem duas partes (a vinheta e a trilha), então o caminho
+certo é renderizar de novo.
+
+
+5. VER O VÍDEO ANTES (opcional)
+
+    npx remotion studio
+
+Abre no navegador em http://localhost:3000 (composição "RedDead").
+
+
+6. ANTES DE PUBLICAR
+
+- 4:42 — a narração diz "em 1890, nove anos antes". O boletim do censo é
+  de 20 de ABRIL DE 1891 (oito anos antes). A tela mostra "Censo de 1890"
+  e, em letra pequena, a referência certa.
+- 6:40 — a narração diz "dois sentados, três em pé". No retrato real de
+  Fort Worth são TRÊS sentados e DOIS em pé. A ilustração mostra os cinco
+  numa fileira só, para não afirmar o contrário da foto.
+- O retrato de Fort Worth é ilustração (a foto real não veio no pacote) e
+  a tela avisa isso. Se você tiver a foto com licença de uso, dá para
+  trocar.
+- Conferir de ouvido: 6:30 John Swartz (não Schwartz), 6:34 Butch (não
+  Bud), 8:46 Saint Denis.
+- Três trechos dos clipes mostravam menus do jogo (roda de armas, painel
+  do cavalo e um filtro laranja). Cada um virou um cartão de texto, em
+  4:36, 11:16 e 11:23.
+- De 12:19 em diante o lado direito da tela fica livre para os elementos
+  de tela final do YouTube.
+
+O que mudou em relação à versão anterior, e por quê, está no LEIA.md,
+dentro da pasta reddead-v4.

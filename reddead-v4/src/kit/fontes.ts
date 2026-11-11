@@ -3,8 +3,12 @@ import { FONTES_DADOS } from './fontes-dados';
 
 /**
  * As fontes vêm embutidas em base64 (ferramentas/fontes.py) e entram no
- * navegador direto da memória, sem pedido de rede. Assim o render não fica
- * esperando arquivo de fonte.
+ * navegador direto da memória, sem pedido de rede.
+ *
+ * O render só é liberado quando todas estão carregadas. Em vez de esperar a
+ * promessa de `load()`, o estado de cada fonte é lido em intervalos curtos:
+ * num render com várias abas, a promessa de uma aba podia nunca resolver e o
+ * render parava por tempo esgotado.
  */
 const buffer = (b64: string) => {
   const bin = atob(b64);
@@ -13,20 +17,36 @@ const buffer = (b64: string) => {
   return u8.buffer;
 };
 
-let pronto: Promise<unknown> | null = null;
+let pronto: Promise<void> | null = null;
 
 export const carregaFontes = () => {
   if (pronto) return pronto;
   const espera = delayRender('fontes embutidas');
-  pronto = Promise.all(
-    FONTES_DADOS.map((d) => {
-      const ff = new FontFace(d.familia, buffer(d.b64), { weight: String(d.peso), style: d.estilo });
-      (document.fonts as unknown as { add: (f: FontFace) => void }).add(ff);
-      return ff.load();
-    }),
-  )
-    .then(() => continueRender(espera))
-    .catch((e) => cancelRender(e));
+  const t0 = Date.now();
+  const faces = FONTES_DADOS.map((d) => {
+    const ff = new FontFace(d.familia, buffer(d.b64), { weight: String(d.peso), style: d.estilo });
+    (document.fonts as unknown as { add: (f: FontFace) => void }).add(ff);
+    ff.load().catch(() => undefined);
+    return ff;
+  });
+  console.log(`[fontes] criadas: ${faces.map((f) => f.status).join(',')}`);
+  pronto = new Promise<void>((ok) => {
+    const olha = () => {
+      const erro = faces.find((f) => f.status === 'error');
+      if (erro) {
+        cancelRender(new Error(`a fonte ${erro.family} não carregou`));
+        return;
+      }
+      if (faces.every((f) => f.status === 'loaded')) {
+        console.log(`[fontes] prontas em ${Date.now() - t0} ms`);
+        continueRender(espera);
+        ok();
+        return;
+      }
+      setTimeout(olha, 30);
+    };
+    olha();
+  });
   return pronto;
 };
 
