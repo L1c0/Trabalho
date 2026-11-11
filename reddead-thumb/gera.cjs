@@ -1,7 +1,9 @@
 // Gera as thumbs (1280x720) em HTML e tira a foto com o Chromium:
-//   node gera.cjs [a] [a2] [b]   ->  out/thumb-<variante>.png (2560x1440)
+//   node gera.cjs [a] [b] [c] [d]   ->  out/thumb-<variante>.png (2560x1440)
 // Depois, `python3 -I acaba.py` reduz para 1280x720 e grava os JPG.
-// As imagens ficam em img/ (ref.jpg, deserto.png, silhueta.jpg) e as fontes em fontes/.
+// As imagens ficam em img/ (ref.jpg, deserto.png, silhueta.jpg, arthur.jpg) e as fontes em fontes/.
+// A, B e C partem da arte de referência (ref.jpg). A D é uma composição própria: o deserto
+// de fundo e o cavaleiro em silhueta (img/heroi.png, que sai de `python3 -I recorta.py`).
 const { chromium } = require('playwright');
 const fs = require('node:fs');
 const path = require('node:path');
@@ -91,6 +93,9 @@ html,body{margin:0;background:#000}
 .grande .sombra{position:absolute;left:0;top:0;color:#070201;transform:translate(9px,10px);filter:blur(.6px)}
 .grande .brilho{position:absolute;left:0;top:0;color:#000;filter:blur(16px);opacity:.75}
 .grande .tinta{position:relative;filter:url(#pincel)}
+.imp{font-family:'Anton';color:#fff;line-height:.98;letter-spacing:.004em;white-space:nowrap;text-shadow:7px 8px 0 #0b0302,0 0 46px rgba(0,0,0,.75),0 0 12px rgba(0,0,0,.45)}
+.caixa{font-family:'Anton';color:#fff;background:#cb130d;line-height:.98;padding:6px 20px 0;white-space:nowrap;box-shadow:8px 9px 0 #0b0302;letter-spacing:.01em}
+.fita{display:inline-block;margin-top:30px;background:#0b0302;color:#f4ead4;font-family:'Anton';font-size:47px;line-height:1;letter-spacing:.055em;padding:11px 22px 9px 18px;border-left:13px solid #cb130d;white-space:nowrap;box-shadow:0 10px 30px rgba(0,0,0,.5)}
 `;
 
 const FILTROS = `
@@ -205,6 +210,76 @@ VARIANTES.c = () =>
     papel: 'ANTES DA TOSSE',
     papelY: 580,
   });
+
+/* ------------------------------------------------------------------ */
+/* d: feita do zero com as duas fotos. O deserto ao pôr do sol é o fundo */
+/* inteiro; o cavalo empinado da foto da floresta entra recortado em     */
+/* silhueta (recorta.py), na frente do sol; o texto fica à esquerda.     */
+/* ------------------------------------------------------------------ */
+const chao = (sem) => {
+  // capim em silhueta: uma encosta que sobe da esquerda até o pé do cavalo
+  const r = rnd(sem);
+  const pts = [`-10,${H + 10}`];
+  let x = -10;
+  while (x < 760) {
+    const t = Math.min(1, Math.max(0, (x - 250) / 320));
+    const onda = 7 * Math.sin(x / 47) + 4 * Math.sin(x / 19 + 2);
+    const base = H - (46 + onda + 122 * t * t * (3 - 2 * t));
+    const folha = 3 + r() * 11 + (r() > 0.9 ? 10 + r() * 16 : 0);
+    const larg = 3 + r() * 6;
+    pts.push(`${x.toFixed(1)},${(base + 4).toFixed(1)}`, `${(x + larg * (0.15 + r() * 0.7)).toFixed(1)},${(base - folha).toFixed(1)}`, `${(x + larg).toFixed(1)},${(base + 4).toFixed(1)}`);
+    x += larg * (0.6 + r() * 0.5);
+  }
+  pts.push(`760,${H + 10}`);
+  return pts.join(' ');
+};
+
+const poeira = (sem, n) => {
+  const r = rnd(sem);
+  let s = '';
+  for (let i = 0; i < n; i++) {
+    const x = r() * W;
+    const y = 60 + r() * 600;
+    const t = 1.5 + r() * r() * 7;
+    s += `<div style="position:absolute;left:${x.toFixed(0)}px;top:${y.toFixed(0)}px;width:${t.toFixed(1)}px;height:${t.toFixed(1)}px;border-radius:50%;background:#ffe2a0;box-shadow:0 0 ${(t * 2.2).toFixed(0)}px ${(t * 0.7).toFixed(0)}px rgba(255,150,40,.85);opacity:${(0.25 + r() * 0.6).toFixed(2)}"></div>`;
+  }
+  return s;
+};
+
+VARIANTES.d = (o = {}) => {
+  const SOL = [1028, 214];
+  return `
+<div id="t" style="background:#1a0703">
+  <img src="${img('deserto.png')}" style="position:absolute;left:0;top:-66px;width:1280px;height:960px;filter:saturate(1.35) contrast(1.14) brightness(1.06)">
+  <div class="cheio" style="background:linear-gradient(180deg,#ffb23e 0%,#ff9426 34%,#ee6a16 62%,#a82a0a 100%);mix-blend-mode:multiply;opacity:.66"></div>
+  <div class="cheio" style="background:radial-gradient(circle 94px at ${SOL[0]}px ${SOL[1]}px,#fffbe6 0%,#fff0b8 62%,rgba(255,225,140,0) 100%)"></div>
+  <div class="cheio" style="background:radial-gradient(circle 520px at ${SOL[0]}px ${SOL[1]}px,rgba(255,214,120,.92) 0%,rgba(255,150,40,.5) 34%,rgba(255,110,20,0) 72%);mix-blend-mode:screen"></div>
+  <div class="cheio" style="background:repeating-conic-gradient(from 8deg at ${SOL[0]}px ${SOL[1]}px,rgba(255,235,170,.15) 0deg 2.2deg,rgba(255,235,170,0) 2.2deg 9deg,rgba(255,235,170,.08) 9deg 10.4deg,rgba(255,235,170,0) 10.4deg 17deg);-webkit-mask-image:radial-gradient(circle 640px at ${SOL[0]}px ${SOL[1]}px,#000 10%,transparent 100%);mask-image:radial-gradient(circle 640px at ${SOL[0]}px ${SOL[1]}px,#000 10%,transparent 100%);mix-blend-mode:screen"></div>
+  <div class="cheio" style="background:linear-gradient(90deg,rgba(18,4,2,.50) 0%,rgba(18,4,2,.30) 28%,rgba(18,4,2,0) 52%)"></div>
+  <div class="cheio" style="background:radial-gradient(ellipse 760px 430px at 0px 0px,rgba(170,44,8,.85) 0%,rgba(170,44,8,.45) 55%,rgba(170,44,8,0) 100%);mix-blend-mode:multiply"></div>
+
+  <div class="cheio" style="filter:drop-shadow(0 0 16px rgba(255,170,60,.65)) drop-shadow(0 0 3px rgba(255,220,150,.75))">
+    <img src="${img('heroi.png')}" style="position:absolute;left:327px;top:-22px;width:1320px;height:742.5px">
+    <svg class="cheio" viewBox="0 0 ${W} ${H}"><polygon points="${chao(31)}" fill="#0c0403"/></svg>
+  </div>
+  <div class="cheio" style="background:linear-gradient(180deg,rgba(0,0,0,0) 80%,rgba(8,2,1,.75) 100%)"></div>
+  ${poeira(12, 40)}
+
+  <div style="position:absolute;left:52px;top:30px;transform:scale(.6);transform-origin:left top">${logo(0, 0, 1)}</div>
+
+  <div style="position:absolute;left:52px;top:${o.textoY ?? 150}px;transform:rotate(-3deg);transform-origin:left center">
+    <div class="imp" style="font-size:${o.tam1 ?? 172}px">${o.l1 ?? 'ACABOU'}</div>
+    <div style="display:flex;align-items:flex-end;gap:22px;margin-top:2px">
+      <div class="imp" style="font-size:${o.tam2 ?? 172}px">${o.l2 ?? 'EM'}</div>
+      <div class="caixa" style="font-size:${o.tam2 ?? 172}px">${o.destaque ?? '1890'}</div>
+    </div>
+    <div class="fita">${o.fita ?? '9 ANOS ANTES DO JOGO'}</div>
+  </div>
+
+  <div class="cheio" style="background:radial-gradient(ellipse at 50% 46%,rgba(0,0,0,0) 60%,rgba(0,0,0,.52) 100%)"></div>
+  <div class="cheio" style="filter:url(#grao);opacity:.09;mix-blend-mode:overlay"></div>
+</div>`;
+};
 
 (async () => {
   const quais = process.argv.slice(2).length ? process.argv.slice(2) : Object.keys(VARIANTES);

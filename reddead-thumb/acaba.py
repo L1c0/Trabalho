@@ -5,7 +5,7 @@ from pathlib import Path
 from PIL import Image, ImageFilter
 
 RAIZ = Path(__file__).resolve().parent
-NOMES = {'a': 'A-nao-foi-tiro', 'b': 'B-morto-por-um-papel', 'c': 'C-ele-ja-sabia'}
+NOMES = {'a': 'A-nao-foi-tiro', 'b': 'B-morto-por-um-papel', 'c': 'C-ele-ja-sabia', 'd': 'D-acabou-em-1890'}
 for v, nome in NOMES.items():
     src = RAIZ / 'out' / f'thumb-{v}.png'
     if not src.exists():
