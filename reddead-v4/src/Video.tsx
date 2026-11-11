@@ -2,6 +2,7 @@ import React from 'react';
 import { AbsoluteFill, useCurrentFrame } from 'remotion';
 import { Abertura } from './cenas/Abertura';
 import { Documento, Tabela, Turner } from './cenas/Documento';
+import { FortWorth } from './cenas/FortWorth';
 import { Neve1899, Tuberculose } from './cenas/Grafismos1';
 import { Competencia, Divida, SobreIsso } from './cenas/Jogadas1';
 import { Dutch, Medico, Obsolescencia } from './cenas/Jogadas2';
@@ -29,6 +30,7 @@ export const CENAS: { de: number; C: Cena; nome: string }[] = [
   { de: 9432, C: Turner, nome: 'turner' },
   { de: 10050, C: Tabela, nome: 'tabela' },
   { de: 10326, C: Obsolescencia, nome: 'obsolescencia' },
+  { de: 11280, C: FortWorth, nome: 'fort-worth' },
 ];
 
 export const Video: React.FC<{ clipes: boolean }> = ({ clipes }) => {
