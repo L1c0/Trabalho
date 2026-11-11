@@ -2,14 +2,14 @@
 """
 O som da vinheta de abertura (public/vinheta.mp3), feito aqui do zero:
 
-  python3 -I ferramentas/vinheta-som.py [musica.wav inicio_s]
+  python3 -I ferramentas/vinheta-som.py [musica.wav inicio_s [ganho]]
 
 - duas batidas graves, nos quadros 8 e 26 da vinheta (0,267 s e 0,867 s):
   a primeira seca, a segunda funda e longa;
 - uma subida de acorde em ré menor com ar e brilho, que acompanha o mergulho
   nas faixas de luz e acaba em 4,2 s;
-- por baixo, se vier, um trecho da música do vídeo (o arquivo e o segundo em
-  que o trecho começa), entrando e saindo devagar;
+- junto, se vier, um trecho da música do vídeo (o arquivo e o segundo em que
+  o trecho começa), desde o primeiro instante e saindo devagar;
 - depois de 4,4 s, silêncio de verdade (zeros).
 
 Tudo é síntese: senos, ruído filtrado e um eco de sala feito de ruído que
@@ -111,8 +111,8 @@ if len(sys.argv) >= 3:
                          capture_output=True, check=True).stdout
     m = np.frombuffer(raw, np.float32).reshape(-1, 2)
     m = np.pad(m, ((0, max(0, len(t) - len(m))), (0, 0)))[: len(t)]
-    entra = np.clip((t - 0.3) / 0.9, 0, 1)
-    sai = np.clip((FIM - t) / 1.0, 0, 1)
+    entra = np.clip(t / 0.25, 0, 1)
+    sai = np.clip((FIM - t) / 1.3, 0, 1) ** 1.3
     ganho_m = float(sys.argv[3]) if len(sys.argv) >= 4 else 1.0
     x = x + m * (entra * sai)[:, None] * ganho_m
 
@@ -120,7 +120,7 @@ if len(sys.argv) >= 3:
 x *= np.clip((FIM + 0.12 - t) / 0.12, 0, 1)[:, None]
 x[t > FIM + 0.12] = 0
 pico = np.abs(x).max()
-x = x / pico * 10 ** (-1.5 / 20)
+x = x / pico * 10 ** (-5.0 / 20)
 saida = RAIZ / 'out' / 'vinheta.wav'
 saida.parent.mkdir(exist_ok=True)
 with wave.open(str(saida), 'wb') as w:
@@ -129,4 +129,4 @@ with wave.open(str(saida), 'wb') as w:
     w.setframerate(SR)
     w.writeframes((np.clip(x, -1, 1) * 32767).astype('<i2').tobytes())
 subprocess.run(['ffmpeg', '-nostdin', '-v', 'error', '-y', '-i', str(saida), '-c:a', 'libmp3lame', '-b:a', '256k', str(RAIZ / 'public' / 'vinheta.mp3')], check=True)
-print('public/vinheta.mp3: pico -1,5 dBFS, silêncio a partir de %.2f s' % (FIM + 0.12))
+print('public/vinheta.mp3: pico -5 dBFS, silêncio a partir de %.2f s' % (FIM + 0.12))

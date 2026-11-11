@@ -1,11 +1,14 @@
 import React from 'react';
-import { AbsoluteFill, useCurrentFrame } from 'remotion';
+import { AbsoluteFill, Audio, Sequence, staticFile, useCurrentFrame } from 'remotion';
 import { Abertura } from './cenas/Abertura';
 import { Documento, Tabela, Turner } from './cenas/Documento';
+import { Final, Medo } from './cenas/Fim';
 import { FortWorth } from './cenas/FortWorth';
 import { Neve1899, Tuberculose } from './cenas/Grafismos1';
 import { Competencia, Divida, SobreIsso } from './cenas/Jogadas1';
 import { Dutch, Medico, Obsolescencia } from './cenas/Jogadas2';
+import { Contas, Epilogo, SaintDenis, Ultima } from './cenas/Jogadas3';
+import { SemFonte } from './cenas/SemFonte';
 import { Vinheta } from './cenas/Vinheta';
 import { B0, DURACAO as D, s, VINHETA } from './tempo';
 
@@ -31,6 +34,13 @@ export const CENAS: { de: number; C: Cena; nome: string }[] = [
   { de: 10050, C: Tabela, nome: 'tabela' },
   { de: 10326, C: Obsolescencia, nome: 'obsolescencia' },
   { de: 11280, C: FortWorth, nome: 'fort-worth' },
+  { de: 13710, C: SemFonte, nome: 'sem-fonte' },
+  { de: 15552, C: SaintDenis, nome: 'saint-denis' },
+  { de: 16986, C: Contas, nome: 'contas' },
+  { de: 18054, C: Medo, nome: 'medo' },
+  { de: 19140, C: Epilogo, nome: 'epilogo' },
+  { de: 20340, C: Ultima, nome: 'ultima' },
+  { de: 22020, C: Final, nome: 'final' },
 ];
 
 export const Video: React.FC<{ clipes: boolean }> = ({ clipes }) => {
@@ -43,6 +53,11 @@ export const Video: React.FC<{ clipes: boolean }> = ({ clipes }) => {
     <AbsoluteFill style={{ backgroundColor: '#000' }}>
       {f < VINHETA + 4 && <Vinheta f={f} />}
       {C && <C f={fb} clipes={clipes} />}
+      {/* o som: a vinheta (só música, 4,4 s), o silêncio, e a trilha com a voz a partir de B0 */}
+      <Audio src={staticFile('vinheta.mp3')} />
+      <Sequence from={B0}>
+        <Audio src={staticFile('trilha.mp3')} />
+      </Sequence>
     </AbsoluteFill>
   );
 };
