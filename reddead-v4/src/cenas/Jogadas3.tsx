@@ -54,7 +54,7 @@ export const SaintDenis: React.FC<Cena> = ({ f, clipes }) => {
       <Maquina f={f} ini={s(546.3)} fim={s(549.3)} texto={'linha Annunciation:\neletrificada em 1895.'} y={600} tam={54} cps={15} />
       <Tarja f={f} ini={s(549.46)} fim={s(552.0)} texto="EM 1899 AQUELA CIDADE ERA" y={500} tempos={P(549.46, 549.56, 550.4, 550.68, 551.04)} />
       <Eletrico f={f} ini={s(551.22)} fim={s(552.0)} texto="ELÉTRICA." y={580} tam={260} />
-      <Tarja f={f} ini={s(552.08)} fim={s(554.95)} texto="NÃO É QUE O FUTURO ESTAVA CHEGANDO." y={520} tempos={P(552.5, 552.62, 552.68, 552.76, 552.84, 553.12, 553.38)} />
+      <Tarja f={f} ini={s(552.4)} fim={s(554.95)} texto="NÃO É QUE O FUTURO ESTAVA CHEGANDO." y={520} tempos={P(552.5, 552.62, 552.68, 552.76, 552.84, 553.12, 553.38)} />
       <Impacto f={f} ini={s(553.9)} fim={s(554.95)} texto={'O FUTURO JÁ\nTINHA CHEGADO.'} y={600} tam={146} tempos={P(553.92, 554.12, 554.44, 554.6, 554.8)} por="palavra" />
       <Tarja f={f} ini={s(555.2)} fim={s(559.2)} texto="ELE ESTAVA ALI, FUNCIONANDO." y={500} tempos={P(555.2, 555.62, 555.88, 556.08)} />
       <Impacto f={f} ini={s(556.8)} fim={s(559.2)} texto="A 2 DIAS DE CAVALO" y={580} tam={136} tempos={P(556.82, 557.2, 557.38, 557.56, 557.7)} por="palavra" />
@@ -153,7 +153,8 @@ export const Contas: React.FC<Cena> = ({ f, clipes }) => {
           </div>
         ) : null,
       )}
-      <Tarja f={f} ini={s(594.7)} fim={s(601.0)} texto="HORAS DE JOGO CUJA ÚNICA FUNÇÃO É VOCÊ DECIDIR" y={470} tam={38} tempos={P(595.8, 596.08, 596.2, 596.44, 596.72, 596.94, 597.32, 597.52, 597.74)} />
+      <Tarja f={f} ini={s(594.7)} fim={s(601.0)} texto="A ROCKSTAR COLOCOU HORAS DE JOGO" y={400} tam={38} tempos={P(594.7, 594.86, 595.3, 595.8, 596.08, 596.2)} />
+      <Tarja f={f} ini={s(596.36)} fim={s(601.0)} texto="CUJA ÚNICA FUNÇÃO É VOCÊ DECIDIR" y={468} tam={38} cor={COR.creme} tempos={P(596.44, 596.72, 596.94, 597.32, 597.52, 597.74)} />
       <Impacto f={f} ini={s(598.1)} fim={s(601.0)} texto={'QUE TIPO DE HOMEM\nVAI FICAR NO REGISTRO.'} y={550} tam={132} tempos={P(598.2, 598.32, 598.56, 598.7, 598.88, 599.04, 599.24, 599.38)} por="palavra" destaque={{ 7: COR.vermelho }} />
     </Jogo>
   );
@@ -193,7 +194,7 @@ export const Epilogo: React.FC<Cena> = ({ f, clipes }) => {
       <Tarja f={f} ini={s(642.3)} fim={s(643.8)} texto="E QUE FECHA O ARGUMENTO INTEIRO." y={820} cor={COR.creme} tempos={P(642.38, 642.44, 642.54, 642.8, 642.88, 643.28)} />
       <Impacto f={f} ini={s(644.08)} fim={s(645.6)} texto="JOHN MARSTON" y={530} tam={196} tempos={P(644.12, 644.38)} por="palavra" />
       <Etiqueta f={f} ini={s(644.76)} fim={s(645.6)} texto="SOBREVIVE." x={135} y={760} tam={60} fundo={COR.vermelho} cor={COR.papel} />
-      <Tarja f={f} ini={s(645.74)} fim={s(652.65)} texto="O QUE ELE FAZ COM A SOBREVIDA:" y={420} tempos={P(646.16, 646.26, 646.32, 646.46, 646.74, 646.9, 647.0)} />
+      <Tarja f={f} ini={s(646.05)} fim={s(652.65)} texto="O QUE ELE FAZ COM A SOBREVIDA:" y={420} tempos={P(646.16, 646.26, 646.32, 646.46, 646.74, 646.9, 647.0)} />
       <Impacto f={f} ini={s(647.8)} fim={s(649.1)} texto={'COMPRA UM\nTERRENO.'} y={510} tam={150} tempos={P(647.86, 648.22, 648.4)} por="palavra" />
       <Impacto f={f} ini={s(649.14)} fim={s(650.5)} texto={'LEVANTA\nUMA CASA.'} y={510} tam={150} tempos={P(649.18, 649.66, 649.82)} por="palavra" />
       <Impacto f={f} ini={s(650.56)} fim={s(651.6)} texto={'CERCA\nUM PASTO.'} y={510} tam={150} tempos={P(650.6, 651.02, 651.18)} por="palavra" />
@@ -282,9 +283,9 @@ export const Ultima: React.FC<Cena> = ({ f, clipes }) => {
       <Maquina f={f} ini={s(687.74)} fim={s(689.35)} texto="num boletim do censo." y={836} tam={44} cps={18} />
       <Tarja f={f} ini={s(689.42)} fim={s(693.1)} texto="ELE NUNCA IA LER AQUILO." y={748} tempos={P(689.5, 689.64, 690.0, 690.22, 690.44)} />
       <Tarja f={f} ini={s(691.0)} fim={s(693.1)} texto="NEM IA PODER FAZER NADA A RESPEITO." y={820} cor={COR.creme} tempos={P(691.04, 691.18, 691.3, 691.48, 691.74, 691.96, 692.06)} />
-      <Tarja f={f} ini={s(693.44)} fim={s(698.3)} texto="UMA ÚNICA DECISÃO DISPONÍVEL:" y={460} tempos={P(694.02, 694.18, 694.56, 695.02)} />
+      <Tarja f={f} ini={s(693.4)} fim={s(698.3)} texto="ELE TEM UMA ÚNICA DECISÃO DISPONÍVEL:" y={460} tempos={P(693.44, 693.84, 694.02, 694.18, 694.56, 695.02)} />
       <Impacto f={f} ini={s(695.6)} fim={s(698.3)} texto={'O QUE VAI FICAR\nESCRITO SOBRE ELE.'} y={540} tam={144} tempos={P(695.7, 695.88, 696.0, 696.2, 696.62, 697.28, 697.64)} por="palavra" destaque={{ 4: COR.vermelho }} />
-      <Tarja f={f} ini={s(698.62)} fim={s(703.8)} texto="POR ISSO ESSE JOGO PEGOU UM MONTE DE GENTE" y={748} tempos={P(699.6, 699.78, 700.12, 700.28, 700.52, 701.08, 701.2, 701.48, 701.64)} />
+      <Tarja f={f} ini={s(699.5)} fim={s(703.8)} texto="POR ISSO ESSE JOGO PEGOU UM MONTE DE GENTE" y={748} tempos={P(699.6, 699.78, 700.12, 700.28, 700.52, 701.08, 701.2, 701.48, 701.64)} />
       <Tarja f={f} ini={s(701.9)} fim={s(703.8)} texto="QUE NUNCA LIGOU PRA FAROESTE NENHUM." y={820} cor={COR.creme} tempos={P(701.96, 702.06, 702.3, 702.62, 702.76, 703.2)} />
       <Impacto f={f} ini={s(704.5)} fim={s(709.6)} texto={'QUASE NINGUÉM AQUI\nVAI MUDAR O RUMO DA COISA\nEM QUE ESTÁ METIDO.'} y={500} tam={110} tempos={P(704.62, 704.9, 705.52, 706.48, 706.86, 707.18, 707.38, 707.82, 708.52, 708.74, 708.86, 708.9, 709.06)} por="palavra" />
       <Impacto f={f} ini={s(709.8)} fim={s(710.78)} texto={'A PROFISSÃO\nVAI MUDAR.'} y={540} tam={150} tempos={P(709.86, 710.08, 710.44, 710.6)} por="palavra" />

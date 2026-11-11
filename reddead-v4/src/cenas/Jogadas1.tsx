@@ -77,7 +77,7 @@ export const Competencia: React.FC<Cena> = ({ f, clipes }) => {
       <Etiqueta f={f} ini={s(96.46)} fim={s(99.2)} texto="FERRAMENTA" x={390} y={790} tam={44} />
       <Etiqueta f={f} ini={s(97.6)} fim={s(99.2)} texto="MANHA APRENDIDA APANHANDO" x={770} y={790} tam={44} fundo={COR.vermelho} cor={COR.papel} />
       {/* o produto */}
-      <Tarja f={f} ini={s(100.2)} fim={s(102.75)} texto="PRODUTO: TOMAR O QUE É DOS OUTROS" y={800} tempos={P(100.82, 101.38, 101.72, 101.92, 102.04, 102.14, 102.34)} />
+      <Tarja f={f} ini={s(100.7)} fim={s(102.75)} texto="PRODUTO: TOMAR O QUE É DOS OUTROS" y={800} tempos={P(100.82, 101.38, 101.72, 101.92, 102.04, 102.14, 102.34)} />
       <Impacto f={f} ini={s(102.8)} fim={s(105.5)} texto={'E O JOGO TE DEIXA\nFICAR BOM NELE.'} tempos={P(102.84, 103.1, 103.2, 103.46, 103.66, 103.94, 104.26, 104.52)} por="palavra" y={560} tam={136} destaque={{ 6: COR.vermelho }} />
     </Jogo>
   );
@@ -107,7 +107,7 @@ export const Divida: React.FC<Cena> = ({ f, clipes }) => {
       <Tarja f={f} ini={s(106.0)} fim={s(109.0)} texto="20 HORAS DE JOGO DEPOIS" y={190} />
       <Tarja f={f} ini={s(107.3)} fim={s(109.0)} texto="ELE VAI COBRAR UMA DÍVIDA" y={800} tempos={P(107.34, 107.54, 107.7, 108.02, 108.24)} />
       <Impacto f={f} ini={s(109.1)} fim={s(113.1)} texto="SERVIÇO DE ROTINA" tempos={P(109.16, 109.68, 109.82)} por="palavra" y={620} tam={150} />
-      <Tarja f={f} ini={s(111.1)} fim={s(113.1)} texto="JÁ FEZ CENTENAS DE VEZES" y={800} tempos={P(111.64, 111.78, 112.04, 112.56, 112.76)} />
+      <Tarja f={f} ini={s(111.5)} fim={s(113.1)} texto="JÁ FEZ CENTENAS DE VEZES" y={800} tempos={P(111.64, 111.78, 112.04, 112.56, 112.76)} />
 
       {/* o devedor e o ancinho */}
       <Tarja f={f} ini={s(113.3)} fim={s(118.8)} texto="O DEVEDOR ESTÁ NO ROÇADO DA PRÓPRIA CASA" y={748} tempos={P(113.34, 113.68, 114.04, 114.26, 114.38, 114.86, 115.0, 115.28)} />
@@ -116,7 +116,7 @@ export const Divida: React.FC<Cena> = ({ f, clipes }) => {
       <Tarja f={f} ini={s(120.8)} fim={s(122.3)} texto="E DERRUBA O HOMEM NO CHÃO." y={820} cor={COR.creme} tempos={P(120.86, 121.0, 121.3, 121.4, 121.6, 121.74)} />
       <Impacto f={f} ini={s(122.6)} fim={s(123.7)} texto="E BATE." estilo="bate" por="palavra" passo={3} y={600} tam={230} barra={false} />
       <Tarja f={f} ini={s(123.9)} fim={s(125.2)} texto="O SUJEITO ESTÁ DOENTE" y={800} />
-      <Tarja f={f} ini={s(125.34)} fim={s(127.1)} texto="DE UM JEITO QUE DÁ PRA VER" y={800} tempos={P(125.86, 126.0, 126.08, 126.3, 126.46, 126.58, 126.76)} />
+      <Tarja f={f} ini={s(125.3)} fim={s(127.1)} texto="DOENTE DE UM JEITO QUE DÁ PRA VER" y={800} tempos={P(125.34, 125.86, 126.0, 126.08, 126.3, 126.46, 126.58, 126.76)} />
       <Impacto f={f} ini={s(127.5)} fim={s(130.5)} texto={'ELE BATE\nASSIM MESMO'} tempos={P(127.6, 127.94, 128.64, 128.86)} por="palavra" y={500} tam={150} />
       <Tarja f={f} ini={s(129.2)} fim={s(130.5)} texto="PORQUE É O SERVIÇO" y={830} cor={COR.creme} />
 

@@ -68,11 +68,11 @@ export const Medo: React.FC<Cena> = ({ f }) => {
           <Legenda f={f} ini={s(625.42)} x={226} y={748} texto="QUANDO A COISA DESANDA" tam={32} cor={COR.papel} />
         </div>
       )}
-      <Tarja f={f} ini={s(626.84)} fim={s(629.3)} texto="O QUE ELE TEM PRA DIZER NO FIM:" y={360} tempos={P(627.3, 627.38, 627.44, 627.6, 627.8, 627.98, 628.2, 628.36)} />
+      <Tarja f={f} ini={s(627.2)} fim={s(629.3)} texto="O QUE ELE TEM PRA DIZER NO FIM:" y={360} tempos={P(627.3, 627.38, 627.44, 627.6, 627.8, 627.98, 628.2, 628.36)} />
       <Impacto f={f} ini={s(628.7)} fim={s(629.3)} texto="ESTÁ COM MEDO." y={450} tam={176} tempos={P(628.84, 628.98, 629.2)} por="palavra" cor={COR.vermelho} />
       <Impacto f={f} ini={s(629.3)} fim={s(632.6)} texto="NÃO DO TIRO." y={380} tam={160} tempos={P(629.34, 629.88, 630.04)} por="palavra" />
       <Tarja f={f} ini={s(630.5)} fim={s(632.6)} texto="DO TIRO ELE NUNCA TEVE MEDO NENHUM." y={590} tempos={P(630.58, 630.74, 630.96, 631.4, 631.66, 631.9, 632.12)} />
-      <Tarja f={f} ini={s(632.76)} texto="MEDO DA ÚNICA COISA QUE ELE" y={300} tam={38} tempos={P(633.36, 633.5, 633.6, 633.76, 634.12, 634.28)} />
+      <Tarja f={f} ini={s(632.7)} texto="ESTÁ COM MEDO DA ÚNICA COISA QUE ELE" y={300} tam={38} tempos={P(632.76, 633.18, 633.36, 633.5, 633.6, 633.76, 634.12, 634.28)} />
       <Tarja f={f} ini={s(634.3)} texto="NUNCA APRENDEU A ENFRENTAR:" y={366} tam={38} cor={COR.creme} tempos={P(634.4, 634.6, 635.02, 635.12)} />
       <Impacto f={f} ini={s(636.5)} texto={'NÃO TER\nO QUE FAZER.'} y={470} tam={190} tempos={P(636.58, 636.78, 637.02, 637.16, 637.24)} por="palavra" cor={COR.vermelho} />
       <Vinheta forca={0.5} />
@@ -102,7 +102,7 @@ export const Final: React.FC<Cena> = ({ f }) => {
         </Camera>
       </AbsoluteFill>
       <Cinetico texto="SEMANA QUE VEM TEM OUTRO." f={f} ini={0} tempos={P(734.5, 735.06, 735.18, 735.32, 735.46)} por="palavra" dur={7} estilo="mascara" style={em(135, 96, A(112))} />
-      <Tarja f={f} ini={s(736.1)} texto="ME RESPONDE UMA COISA AQUI EMBAIXO" y={270} tempos={P(736.48, 736.58, 736.9, 736.98, 737.16, 738.2)} />
+      <Tarja f={f} ini={s(736.4)} texto="ME RESPONDE UMA COISA AQUI EMBAIXO" y={270} tempos={P(736.48, 736.58, 736.9, 736.98, 737.16, 738.2)} />
       <Tarja f={f} ini={s(739.3)} texto="PORQUE EU LEIO." y={342} cor={COR.creme} tempos={P(739.34, 739.9, 740.04)} />
       {f >= s(737.2) && <div style={{ transform: `translateY(${quica.toFixed(1)}px)` }}><Seta f={f} ini={s(737.2)} dur={10} de={[1010, 262]} para={[1010, 352]} cor={COR.vermelho} larg={9} /></div>}
       {/* a pergunta, como um comentário a escrever */}

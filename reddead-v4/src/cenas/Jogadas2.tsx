@@ -17,12 +17,12 @@ export const Medico: React.FC<Cena> = ({ f, clipes }) => {
   return (
     <Jogo arq="c10-A.mp4" k={f - ini} f={f} id="c10" clipes={clipes} cor={{ sat: 0.35, temp: -0.2 }} zoom={1.02 + 0.04 * prog(f, ini, 539) + soco(f, s(218.82), 0.05)}>
       <Sombra f={f} ini={s(207.7)} fim={s(224.9)} />
-      <Tarja f={f} ini={s(208.06)} fim={s(212.75)} texto="O MÉDICO OLHA PRO ARTHUR E MANDA:" y={500} tempos={P(208.94, 209.08, 209.24, 209.52, 209.74, 210.06, 210.26)} />
+      <Tarja f={f} ini={s(208.8)} fim={s(212.75)} texto="O MÉDICO OLHA PRO ARTHUR E MANDA:" y={500} tempos={P(208.94, 209.08, 209.24, 209.52, 209.74, 210.06, 210.26)} />
       <Impacto f={f} ini={s(210.6)} fim={s(212.75)} texto={'CLIMA SECO\nE DESCANSO.'} tempos={P(211.22, 211.5, 211.88, 211.96)} por="palavra" y={590} tam={146} />
       <Tarja f={f} ini={s(212.86)} fim={s(214.7)} texto="AQUELE MÉDICO NÃO É INCOMPETENTE" y={800} tempos={P(212.86, 213.42, 213.72, 213.88, 213.94)} />
       <Impacto f={f} ini={s(214.8)} fim={s(218.6)} texto={'É A MEDICINA\nOCIDENTAL INTEIRA\nEM 1899.'} tempos={P(215.44, 215.56, 215.68, 216.02, 216.46, 217.16, 217.46)} por="palavra" y={470} tam={128} destaque={{ 6: COR.vermelho }} />
       <Centro f={f} ini={s(218.7)} fim={s(219.72)} y={410} escurece={0.5} linhas={[{ texto: 'DE MÃOS VAZIAS.', tempos: P(218.72, 218.82, 219.08), tam: 200 }]} />
-      <Tarja f={f} ini={s(219.82)} fim={s(224.95)} texto="A SEGUNDA COISA QUE ESSE JOGO FAZ" y={748} tempos={P(220.76, 220.9, 221.12, 221.42, 221.56, 221.72, 221.92)} />
+      <Tarja f={f} ini={s(220.25)} fim={s(224.95)} texto="AQUI COMEÇA A SEGUNDA COISA QUE ESSE JOGO FAZ" y={748} tempos={P(220.34, 220.46, 220.76, 220.9, 221.12, 221.42, 221.56, 221.72, 221.92)} />
       <Tarja f={f} ini={s(222.5)} fim={s(224.95)} texto="E QUE EU QUASE NÃO VEJO EM JOGO NENHUM" y={820} cor={COR.creme} tempos={P(222.58, 223.14, 223.24, 223.42, 224.02, 224.18, 224.46, 224.54, 224.72)} />
     </Jogo>
   );
@@ -189,7 +189,7 @@ export const Dutch: React.FC<Cena> = ({ f, clipes }) => {
       />
       {/* a leitura de 1870 */}
       <Sombra f={f} ini={s(253.9)} fim={s(276.4)} forca={0.86} />
-      <Tarja f={f} ini={s(253.98)} fim={s(259.4)} texto="UMA VIDA INTEIRA EM CIMA DE UMA LEITURA DO MUNDO" y={800} tempos={P(254.72, 254.88, 255.1, 255.66, 255.8, 256.02, 256.16, 256.3, 256.7, 256.86)} />
+      <Tarja f={f} ini={s(254.6)} fim={s(259.4)} texto="UMA VIDA INTEIRA EM CIMA DE UMA LEITURA DO MUNDO" y={800} tempos={P(254.72, 254.88, 255.1, 255.66, 255.8, 256.02, 256.16, 256.3, 256.7, 256.86)} />
       <Impacto f={f} ini={s(257.4)} fim={s(259.4)} texto={'VERDADEIRA\nEM 1870.'} y={470} tam={150} tempos={P(257.54, 258.08, 258.16)} por="palavra" />
       {f >= s(259.55) && f < s(262.75) && (
         <div style={{ ...em(128, 420), opacity: Math.min(saiExpo(prog(f, s(259.55), 6)), 1 - prog(f, s(262.6), 6)) }}>
@@ -235,7 +235,7 @@ export const Obsolescencia: React.FC<Cena> = ({ f, clipes }) => {
       <Tarja f={f} ini={s(344.36)} fim={s(346.95)} texto="PENSE NO QUE ISSO FAZ COM O JOGO QUE VOCÊ JOGOU" y={800} tempos={P(344.36, 344.96, 345.08, 345.2, 345.38, 345.64, 345.92, 346.06, 346.26, 346.38, 346.62)} />
       <Impacto f={f} ini={s(347.1)} fim={s(350.25)} texto={'O BANDO NÃO ESTÁ\nPERDENDO UMA GUERRA.'} y={540} tam={126} tempos={P(347.14, 347.58, 348.42, 348.7, 348.94, 349.4, 349.56)} por="palavra" />
       <Tarja f={f} ini={s(350.38)} fim={s(352.5)} texto="PERDER UMA GUERRA AINDA É ESTAR NUMA GUERRA" y={812} tempos={P(350.38, 350.6, 350.76, 351.08, 351.5, 351.56, 351.8, 352.02)} />
-      <Tarja f={f} ini={s(352.64)} fim={s(357.5)} texto="TRABALHAM DENTRO DE UMA COISA QUE FOI" y={440} tempos={P(353.26, 353.9, 354.2, 354.38, 354.54, 354.82, 354.98)} />
+      <Tarja f={f} ini={s(353.12)} fim={s(357.5)} texto="TRABALHAM DENTRO DE UMA COISA QUE FOI" y={440} tempos={P(353.26, 353.9, 354.2, 354.38, 354.54, 354.82, 354.98)} />
       <Impacto f={f} ini={s(355.9)} fim={s(357.5)} texto={'DECLARADA\nENCERRADA'} y={530} tam={170} tempos={P(355.96, 356.54)} por="palavra" />
       <Carimbo f={f} ini={s(355.16)} fim={s(357.5)} texto="OFICIALMENTE" x={1010} y={560} tam={96} giro={-8} />
       <Maquina f={f} ini={s(357.7)} fim={s(361.35)} texto={'por escrito.\npor um funcionário público.\nquase uma década antes.'} y={590} tam={52} cps={18.5} />
@@ -254,7 +254,8 @@ export const Obsolescencia: React.FC<Cena> = ({ f, clipes }) => {
         ]}
       />
       <Tarja f={f} ini={s(368.2)} fim={s(370.6)} texto="A OBSOLESCÊNCIA NÃO TE DÁ UM INIMIGO PRA MATAR." y={812} tempos={P(368.2, 368.34, 368.96, 369.12, 369.24, 369.38, 369.5, 369.82, 370.0)} />
-      <Tarja f={f} ini={s(370.78)} fim={s(373.75)} texto="COMO ESSES HOMENS MORRERAM DE VERDADE" y={800} tempos={P(371.9, 372.18, 372.36, 372.68, 373.08, 373.2)} />
+      <Tarja f={f} ini={s(370.78)} fim={s(373.75)} texto="MAS EU QUERO TE MOSTRAR" y={748} tempos={P(370.78, 371.3, 371.42, 371.48, 371.6)} />
+      <Tarja f={f} ini={s(371.8)} fim={s(373.75)} texto="COMO ESSES HOMENS MORRERAM DE VERDADE" y={820} cor={COR.creme} tempos={P(371.9, 372.18, 372.36, 372.68, 373.08, 373.2)} />
       <Impacto f={f} ini={s(373.86)} fim={s(375.95)} texto={'NÃO OS DO JOGO.\nOS DE VERDADE.'} y={540} tam={140} tempos={P(374.14, 374.28, 374.44, 374.56, 375.26, 375.42, 375.52)} por="palavra" destaque={{ 4: COR.vermelho, 5: COR.vermelho, 6: COR.vermelho }} />
     </Jogo>
   );
