@@ -1,0 +1,13 @@
+[
+ {"id": "rua", "nota": "Arthur vem andando pela rua da cidade (câmera lenta)", "ini": 142.8, "fim": 145.2, "passo": 1, "corte": [300, 0, 269, 478], "saida": [1080, 1920], "limiar": 0.3},
+ {"id": "revolver", "nota": "na mata, ergue o revólver", "ini": 43.25, "fim": 47.5, "passo": 1, "corte": [200, 0, 360, 478], "saida": [1080, 1434], "limiar": 0.22},
+ {"id": "lua", "nota": "perfil contra a lua", "ini": 18.1, "fim": 22.55, "passo": 1, "corte": [215, 0, 360, 478], "saida": [1080, 1434], "limiar": 0.22, "branco": [[0, 0, 1, 0.07]], "mantem": "base"},
+ {"id": "lua2", "nota": "de costas contra a lua", "ini": 22.75, "fim": 25.45, "passo": 1, "corte": [230, 0, 360, 478], "saida": [1080, 1434], "limiar": 0.22, "branco": [[0, 0, 1, 0.07]], "mantem": "base"},
+ {"id": "morro", "nota": "a cavalo no alto do morro; o cavalo empina", "ini": 67.3, "fim": 76.05, "passo": 1, "corte": [236, 0, 360, 478], "saida": [1080, 1434], "limiar": 0.24, "mantem": "base"},
+ {"id": "raio", "nota": "o cavalo empina com o raio", "ini": 80.95, "fim": 84.2, "passo": 1, "corte": [230, 0, 360, 478], "saida": [1080, 1434], "limiar": 0.1, "largura": 0.22, "branco": [[0, 0, 1, 0.108], [0, 0, 0.3, 0.18], [0.68, 0, 0.32, 0.18], [0.28, 0, 0.42, 0.15, 0.4, 1.7]], "sementes": [[0.45, 0.52], [0.5, 0.55], [0.4, 0.5]], "corroi": 4},
+ {"id": "floresta", "nota": "sai da névoa a cavalo", "ini": 41.2, "fim": 43.15, "passo": 1, "corte": [283, 0, 269, 478], "saida": [1080, 1920], "limiar": 0.3, "sigma_origem": 1.6, "sigma": 3.2},
+ {"id": "coldre", "nota": "de costas, o revólver na mão", "ini": 84.4, "fim": 88.05, "passo": 1, "corte": [110, 0, 360, 478], "saida": [1080, 1434], "limiar": 0.26},
+ {"id": "busto", "nota": "busto na névoa, de frente", "ini": 53.6, "fim": 56.4, "passo": 1, "corte": [0, 0, 360, 478], "saida": [1080, 1434], "limiar": 0.26, "preenche": true, "segue": {"x": 0.5}},
+ {"id": "acampa", "nota": "sentado junto à carroça", "ini": 117.0, "fim": 123.0, "passo": 2, "corte": [180, 0, 600, 478], "saida": [1080, 860], "limiar": 0.3},
+ {"id": "sol", "nota": "de pé no campo, contra o sol", "ini": 0.1, "fim": 9.3, "passo": 2, "corte": [236, 0, 269, 478], "saida": [1080, 1920], "modo": "abs", "limiar": 0.33}
+]

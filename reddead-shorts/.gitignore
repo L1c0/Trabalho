@@ -1,0 +1,9 @@
+node_modules/
+out/
+originais/
+public/takes/
+public/tinta/
+public/audio/
+public/*.jpg
+public/*.png
+__pycache__/
