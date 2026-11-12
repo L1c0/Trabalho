@@ -10,7 +10,7 @@ export const Filtros: React.FC = () => (
       {/* tinta gasta de carimbo: a borda falha e o miolo ganha poros */}
       <filter id="gasto" x="-5%" y="-5%" width="110%" height="110%">
         <feTurbulence type="fractalNoise" baseFrequency="0.035 0.05" numOctaves="2" seed="7" result="n" />
-        <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -3.4 2.25" result="poros" />
+        <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -3.0 2.45" result="poros" />
         <feComposite in="SourceGraphic" in2="poros" operator="in" result="furado" />
         <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="1" seed="3" result="fino" />
         <feDisplacementMap in="furado" in2="fino" scale="3" xChannelSelector="R" yChannelSelector="G" />

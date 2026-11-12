@@ -10,7 +10,7 @@ export const Papel: React.FC<{ cor?: string; children?: React.ReactNode; style?:
 );
 
 /** Textura de papel (multiplica), grão que anda a cada quadro e escurecimento das bordas. Vai por cima da cena inteira. */
-export const Acabamento: React.FC<{ f: number; grao?: number; vinheta?: number; papel?: number }> = ({ f, grao = 0.1, vinheta = 0.28, papel = 1 }) => (
+export const Acabamento: React.FC<{ f: number; grao?: number; vinheta?: number; papel?: number }> = ({ f, grao = 0.07, vinheta = 0.28, papel = 1 }) => (
   <AbsoluteFill style={{ pointerEvents: 'none' }}>
     <Img src={staticFile('papel.jpg')} style={{ position: 'absolute', left: 0, top: 0, width: W, height: H, mixBlendMode: 'multiply', opacity: papel }} />
     <AbsoluteFill style={{ background: `radial-gradient(ellipse 75% 62% at 50% 46%, rgba(0,0,0,0) 55%, rgba(10,4,2,${vinheta}) 100%)` }} />

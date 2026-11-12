@@ -74,26 +74,33 @@ export const Tinta: React.FC<{
 
 /**
  * Dupla exposição: o que está dentro (`children`) só aparece dentro da tinta
- * do take. Fora dela fica o papel. A peça inteira multiplica sobre o fundo.
+ * do take. Em `multiplica`, fora dela fica o papel (a peça escurece o fundo).
+ * Em `clareia`, para fundo escuro, fora dela fica o próprio fundo.
  */
-export const DentroDaTinta: React.FC<{ take: string; k: number; x?: number; y?: number; w?: number; children: React.ReactNode; fundo?: string; style?: React.CSSProperties }> = ({
-  take,
-  k,
-  x = 0,
-  y = 0,
-  w,
-  children,
-  fundo = COR.tinta,
-  style,
-}) => {
+export const DentroDaTinta: React.FC<{
+  take: string;
+  k: number;
+  x?: number;
+  y?: number;
+  w?: number;
+  children: React.ReactNode;
+  fundo?: string;
+  modo?: Mistura;
+  style?: React.CSSProperties;
+}> = ({ take, k, x = 0, y = 0, w, children, fundo = COR.tinta, modo = 'multiplica', style }) => {
   const m = MEDIDA[take];
   const larg = w ?? m.w;
   const alt = (larg * m.h) / m.w;
+  const negativo = modo === 'clareia';
   return (
-    <div style={{ position: 'absolute', left: x, top: y, width: larg, height: alt, mixBlendMode: 'multiply', overflow: 'hidden', clipPath: APARA, ...style }}>
+    <div style={{ position: 'absolute', left: x, top: y, width: larg, height: alt, mixBlendMode: negativo ? 'screen' : 'multiply', overflow: 'hidden', clipPath: APARA, ...style }}>
       <div style={{ position: 'absolute', inset: 0, background: fundo }} />
       {children}
-      <QuadroDe arq={`takes/${take}.mp4`} k={k} style={{ position: 'absolute', left: 0, top: 0, width: '100%', height: '100%', mixBlendMode: 'screen', filter: 'contrast(1.3)' }} />
+      <QuadroDe
+        arq={`takes/${take}.mp4`}
+        k={k}
+        style={{ position: 'absolute', left: 0, top: 0, width: '100%', height: '100%', mixBlendMode: negativo ? 'multiply' : 'screen', filter: negativo ? 'invert(1) contrast(1.3)' : 'contrast(1.3)' }}
+      />
     </div>
   );
 };
@@ -145,7 +152,7 @@ export const Mancha: React.FC<{
 };
 
 /** Mancha que cresce (public/tinta/sangra-N.mp4): `k` é o quadro da mancha, de 0 até ela fechar. */
-export const Sangra: React.FC<{ n?: 1 | 2 | 3; k: number; x: number; y: number; w: number; cor?: string; modo?: Mistura; giro?: number }> = ({
+export const Sangra: React.FC<{ n?: 1 | 2 | 3; k: number; x: number; y: number; w: number; cor?: string; modo?: Mistura; giro?: number; escala?: number }> = ({
   n = 1,
   k,
   x,
@@ -154,11 +161,12 @@ export const Sangra: React.FC<{ n?: 1 | 2 | 3; k: number; x: number; y: number; 
   cor = COR.sangue,
   modo = 'multiplica',
   giro = 0,
+  escala = 1,
 }) => {
   if (k < 0) return null;
   const negativo = modo === 'clareia';
   return (
-    <div style={{ position: 'absolute', left: x, top: y, width: w, height: w, mixBlendMode: negativo ? 'screen' : 'multiply', transform: `rotate(${giro}deg)`, clipPath: APARA }}>
+    <div style={{ position: 'absolute', left: x, top: y, width: w, height: w, mixBlendMode: negativo ? 'screen' : 'multiply', transform: `rotate(${giro}deg) scale(${escala.toFixed(4)})`, clipPath: APARA }}>
       <QuadroDe arq={`tinta/sangra-${n}.mp4`} k={k} style={{ width: '100%', height: '100%', filter: negativo ? 'invert(1) contrast(1.3)' : 'contrast(1.3)' }} />
       <div style={{ position: 'absolute', inset: 0, background: cor, mixBlendMode: negativo ? 'multiply' : 'screen' }} />
     </div>

@@ -5,7 +5,8 @@ import { Acabamento, Pincelada, tPincel } from '../kit/Cena';
 import { Legenda } from '../kit/Legenda';
 import { Filtros } from '../kit/Pecas';
 import { Abertura, Boletim, Data, Escritorio, Linha, Tabela } from './Cenas1';
-import { Atestado, CensuraCena, Citacao, Fechada, Fecho, Mapa, Montanha } from './Cenas2';
+import { Fecho } from '../kit/Fecho';
+import { Atestado, CensuraCena, Citacao, Fechada, Mapa, Montanha } from './Cenas2';
 import { BLOCOS, C, DUR, q, qp } from './tempo';
 
 export const DUR_S1 = DUR;

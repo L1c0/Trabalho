@@ -122,12 +122,19 @@ export const Fechada: React.FC<{ f: number }> = ({ f }) => {
     <Papel cor={COR.sangue}>
       <Camera fundo={COR.sangue} x={tr.x} y={tr.y} rot={tr.rot} escala={1.04 + 0.05 * prog(f, f0, 80)} origem="50% 45%">
         <Sol x={600} y={760} r={520} cor="#d2301c" halo="rgba(255,150,60,0.28)" />
-        <Tinta take="revolver" k={6 + (f - f0) * 1.5} y={486} />
-        <div style={{ position: 'absolute', left: -200, top: 1900, width: W + 400, height: 500, background: COR.tinta }} />
+        <Tinta
+          take="revolver"
+          k={6 + (f - f0) * 1.5}
+          x={-110}
+          y={200}
+          w={1300}
+          style={{ WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,0) 0%, #000 20%)', maskImage: 'linear-gradient(to bottom, rgba(0,0,0,0) 0%, #000 20%)' }}
+        />
+        <div style={{ position: 'absolute', left: -200, top: 1900, width: W + 400, height: 600, background: COR.tinta }} />
         <Brasas f={f} n={44} />
         <Cinetico texto="A FRONTEIRA" f={f} ini={tFront - 3} por="letra" passo={0.8} dur={8} estilo="foco" style={{ position: 'absolute', left: 0, width: W, top: 236, textAlign: 'center', ...Cz(86, COR.osso, 0.22, { fontWeight: 700, paddingLeft: '0.22em', textShadow: '0 4px 24px rgba(0,0,0,0.5)' }) }} />
         <Cinetico texto="AMERICANA" f={f} ini={qp('americana')} por="letra" passo={0.8} dur={8} estilo="foco" style={{ position: 'absolute', left: 0, width: W, top: 348, textAlign: 'center', ...Cz(86, COR.osso, 0.22, { fontWeight: 700, paddingLeft: '0.22em', textShadow: '0 4px 24px rgba(0,0,0,0.5)' }) }} />
-        <Carimbo f={f} t0={tFech} x={540} y={1120} linhas={['FECHADA']} tam={148} cor={COR.osso} giro={-9} />
+        <Carimbo f={f} t0={tFech} x={540} y={1180} linhas={['FECHADA']} tam={148} cor={COR.osso} giro={-9} />
       </Camera>
       <Clarao f={f} ini={tFech} dur={7} forca={0.85} />
     </Papel>
@@ -288,34 +295,5 @@ export const Atestado: React.FC<{ f: number }> = ({ f }) => {
       <Clarao f={f} ini={tAt} dur={6} forca={0.6} />
       <AbsoluteFill style={{ background: COR.tinta, opacity: 0.0 + 0.35 * prog(f, tOb + 20, 40) }} />
     </Papel>
-  );
-};
-
-/**
- * 53,9-55,7 · "Mais um amanhã."
- * O pôr do sol, em cores. É o único plano que não é tinta.
- */
-export const Fecho: React.FC<{ f: number; f0: number; tempos: number[] }> = ({ f, f0, tempos }) => {
-  const entra = saiExpo(prog(f, f0, 14));
-  return (
-    <AbsoluteFill style={{ backgroundColor: '#1a0b05', overflow: 'hidden' }}>
-      <Camera escala={1.12 - 0.07 * prog(f, f0, 70)} origem="46% 40%">
-        <QuadroDe arq="takes/sol-cor.mp4" k={60 + (f - f0) * 1.0} style={{ position: 'absolute', left: 0, top: 0, width: W, height: H, filter: 'saturate(1.25) contrast(1.12) brightness(1.02)' }} />
-        <AbsoluteFill style={{ background: 'linear-gradient(to bottom, rgba(20,8,3,0.25) 0%, rgba(20,8,3,0) 30%, rgba(20,8,3,0) 55%, rgba(20,8,3,0.75) 100%)' }} />
-      </Camera>
-      <AbsoluteFill style={{ background: 'linear-gradient(to bottom, rgba(20,8,3,0) 52%, rgba(20,8,3,0.62) 64%, rgba(20,8,3,0.62) 70%, rgba(20,8,3,0) 82%)' }} />
-      <AbsoluteFill style={{ backgroundColor: '#fff', opacity: 0.9 * (1 - entra) }} />
-      <Cinetico
-        texto="MAIS UM AMANHÃ"
-        f={f}
-        ini={tempos[0]}
-        tempos={tempos}
-        por="palavra"
-        dur={10}
-        estilo="foco"
-        style={{ position: 'absolute', left: 0, width: W, top: 1236, textAlign: 'center', ...Cz(80, COR.osso, 0.2, { fontWeight: 700, paddingLeft: '0.2em', textShadow: '0 4px 30px rgba(0,0,0,0.75)' }) }}
-      />
-      <Traco f={f} t0={tempos[2] + 4} dur={16} x={390} y={1360} w={300} h={5} cor={COR.vermelho} origem="center" />
-    </AbsoluteFill>
   );
 };

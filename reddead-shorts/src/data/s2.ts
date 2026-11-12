@@ -16,9 +16,9 @@ export const FALA_S2 = `
 4.08 a
 4.28 tossir, |
 4.68 a
-4.76 medicina |
+4.76 medicina |*
 5.08 ocidental
-5.52 inteira |
+5.52 inteira |*
 6.08 não
 6.28 tinha
 6.52 nada |*
@@ -125,7 +125,7 @@ export const FALA_S2 = `
 49.38 Ele
 49.50 está |
 49.66 na
-49.98 frente |
+49.98 frente |*
 50.14 de
 50.34 um
 50.55 buraco. |*
